@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://wl13gsmo0kuv"]
+
+[ext_resource type="PackedScene" uid="uid://dmcflf4l5kma4" path="res://room.glb" id="1_80nbo"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_80nbo"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_e2o6t"]
+sky_material = SubResource("ProceduralSkyMaterial_80nbo")
+
+[sub_resource type="Environment" id="Environment_feb5d"]
+background_mode = 2
+sky = SubResource("Sky_e2o6t")
+glow_enabled = true
+
+[node name="Game" type="Node3D" unique_id=264250445]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=29568228]
+environment = SubResource("Environment_feb5d")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2127487382]
+transform = Transform3D(-0.71458316, -0.5662117, -0.41082284, -0.59344804, 0.17971377, 0.7845522, -0.3703921, 0.8044298, -0.46443763, 0, 13.300048, 0)
+shadow_enabled = true
+
+[node name="Room" type="Node" parent="." unique_id=1064110755]
+
+[node name="room" parent="Room" unique_id=1973701582 instance=ExtResource("1_80nbo")]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1581467280]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 11.0135975, 0)
