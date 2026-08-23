@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://wl13gsmo0kuv"]
 
-[ext_resource type="PackedScene" uid="uid://dmcflf4l5kma4" path="res://room.glb" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://g8r2bxectnms" path="res://room.tscn" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://byjbvwekxrks6" path="res://Player.gd" id="1_e2o6t"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_g6lp7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g6lp7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_80nbo"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -16,6 +21,18 @@ glow_enabled = true
 
 [node name="Game" type="Node3D" unique_id=264250445]
 
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=996351064]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.273386, 0)
+script = ExtResource("1_e2o6t")
+
+[node name="Pivot" type="Node3D" parent="CharacterBody3D" unique_id=1275712412]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D/Pivot" unique_id=1088827005]
+mesh = SubResource("CapsuleMesh_g6lp7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=924390317]
+shape = SubResource("CapsuleShape3D_g6lp7")
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=29568228]
 environment = SubResource("Environment_feb5d")
 
@@ -23,9 +40,8 @@ environment = SubResource("Environment_feb5d")
 transform = Transform3D(-0.71458316, -0.5662117, -0.41082284, -0.59344804, 0.17971377, 0.7845522, -0.3703921, 0.8044298, -0.46443763, 0, 13.300048, 0)
 shadow_enabled = true
 
-[node name="Room" type="Node" parent="." unique_id=1064110755]
-
-[node name="room" parent="Room" unique_id=1973701582 instance=ExtResource("1_80nbo")]
-
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1581467280]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 11.0135975, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -1.3194861, 11.272449, 1.3450205)
+
+[node name="room" parent="." unique_id=1973701582 instance=ExtResource("1_80nbo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
