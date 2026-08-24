@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="brackeysjam-2026.2"
-run/main_scene="uid://wl13gsmo0kuv"
+run/main_scene="uid://dnatybnmk46mr"
 config/features=PackedStringArray("4.7", "Forward Plus")
 
 [display]
@@ -50,5 +50,4 @@ move_back={
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=3
 rendering_device/driver.windows="d3d12"
