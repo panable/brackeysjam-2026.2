@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://g8r2bxectnms" path="res://room.tscn" id="1_80nbo"]
 [ext_resource type="Script" uid="uid://byjbvwekxrks6" path="res://Player.gd" id="1_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://cqwwipxbfupi7" path="res://Scenes/InventoryUI.tscn" id="3_feb5d"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_g6lp7"]
 
@@ -45,3 +46,5 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -1.3
 
 [node name="room" parent="." unique_id=1973701582 instance=ExtResource("1_80nbo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
+
+[node name="InventoryUI" parent="." unique_id=1610134888 instance=ExtResource("3_feb5d")]

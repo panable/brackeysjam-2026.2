@@ -1,7 +1,11 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://d0myhr25pj6rj"]
 
 [ext_resource type="Script" uid="uid://d4gdhhvd4t6e1" path="res://Scripts/ItemData.gd" id="1_xrbp3"]
+[ext_resource type="Texture2D" uid="uid://bqec1cw78jlxo" path="res://Sprites/Map.png" id="2_t3mjs"]
 
 [resource]
 script = ExtResource("1_xrbp3")
+name = "Map"
+description = "Test"
+texture = ExtResource("2_t3mjs")
 metadata/_custom_type_script = "uid://d4gdhhvd4t6e1"

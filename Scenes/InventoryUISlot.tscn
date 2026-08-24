@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://djyke06e6yf44"]
+
+[ext_resource type="Script" uid="uid://bqmkphff1q45p" path="res://Scripts/InventoryUISlot.gd" id="1_snid6"]
+
+[node name="InventoryUISlot" type="PanelContainer" unique_id=54015080]
+custom_minimum_size = Vector2(120, 120)
+script = ExtResource("1_snid6")
+
+[node name="Icon" type="TextureRect" parent="." unique_id=442113715]
+layout_mode = 2
+
+[node name="QuantityLabel" type="Label" parent="." unique_id=337672221]
+layout_mode = 2

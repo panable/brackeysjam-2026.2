@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cqwwipxbfupi7"]
+
+[ext_resource type="Script" uid="uid://cwv56ne6tfuws" path="res://Scripts/InventoryUI.gd" id="1_o6um4"]
+[ext_resource type="Script" uid="uid://ce7js6yetx27l" path="res://Scripts/InventoryData.gd" id="2_m5yu5"]
+[ext_resource type="Script" uid="uid://dytadeq0uwimp" path="res://Scripts/SlotData.gd" id="3_bbtsg"]
+[ext_resource type="Resource" uid="uid://d0myhr25pj6rj" path="res://Resources/Map.tres" id="4_f4u5k"]
+[ext_resource type="Resource" uid="uid://dll2rs7mdim4l" path="res://Resources/Medicine.tres" id="5_yjakb"]
+[ext_resource type="Resource" uid="uid://musyrl8otvxf" path="res://Resources/RunningShoes.tres" id="6_ohhls"]
+[ext_resource type="PackedScene" uid="uid://djyke06e6yf44" path="res://Scenes/InventoryUISlot.tscn" id="7_67xb0"]
+
+[sub_resource type="Resource" id="Resource_eow3j"]
+script = ExtResource("3_bbtsg")
+item_data = ExtResource("4_f4u5k")
+quantity = 1
+metadata/_custom_type_script = "uid://dytadeq0uwimp"
+
+[sub_resource type="Resource" id="Resource_hve3p"]
+script = ExtResource("3_bbtsg")
+item_data = ExtResource("5_yjakb")
+quantity = 2
+metadata/_custom_type_script = "uid://dytadeq0uwimp"
+
+[sub_resource type="Resource" id="Resource_mfdv2"]
+script = ExtResource("3_bbtsg")
+item_data = ExtResource("6_ohhls")
+quantity = 1
+metadata/_custom_type_script = "uid://dytadeq0uwimp"
+
+[sub_resource type="Resource" id="Resource_fc0e3"]
+script = ExtResource("2_m5yu5")
+slots = Array[ExtResource("3_bbtsg")]([SubResource("Resource_eow3j"), SubResource("Resource_hve3p"), SubResource("Resource_mfdv2")])
+metadata/_custom_type_script = "uid://ce7js6yetx27l"
+
+[node name="InventoryUI" type="Control" unique_id=1610134888]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o6um4")
+inventory = SubResource("Resource_fc0e3")
+slot_scene = ExtResource("7_67xb0")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=760730851]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+offset_transform_enabled = true
+
+[node name="GridContainer" type="HBoxContainer" parent="CenterContainer" unique_id=1313849565]
+layout_mode = 2
