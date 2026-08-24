@@ -15,7 +15,15 @@ albedo_texture = ExtResource("2_k8ry5")
 albedo_texture = ExtResource("3_bhnw4")
 
 [sub_resource type="BoxMesh" id="BoxMesh_73ttu"]
-size = Vector3(0.6, 0.2, 1.1)
+size = Vector3(0.6, 0.2, 0.8)
+
+[sub_resource type="SphereMesh" id="SphereMesh_g6lp7"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_g6lp7"]
+size = Vector3(1, 1, 1.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1wjec"]
+size = Vector3(1, 1, 0.4)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_x2x30"]
 
@@ -23,12 +31,12 @@ size = Vector3(0.6, 0.2, 1.1)
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 
-[sub_resource type="Sky" id="Sky_e2o6t"]
+[sub_resource type="Sky" id="Sky_1wjec"]
 sky_material = SubResource("ProceduralSkyMaterial_e0w1h")
 
 [sub_resource type="Environment" id="Environment_s6u4a"]
 background_mode = 2
-sky = SubResource("Sky_e2o6t")
+sky = SubResource("Sky_1wjec")
 glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tqi7o"]
@@ -47,9 +55,25 @@ material_override = SubResource("StandardMaterial3D_c55la")
 mesh = SubResource("CapsuleMesh_f2m6v")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="playa/Pivot" unique_id=1887229202]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4901161e-08, 0.4000001, -0.25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4901161e-08, 0.4000001, -0.15)
 material_override = SubResource("StandardMaterial3D_rq4hd")
 mesh = SubResource("BoxMesh_73ttu")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="playa/Pivot" unique_id=1353081463]
+transform = Transform3D(0.375, 0, 0, 0, 0.375, 0, 0, 0, 0.375, 0.3, 0, -1.5999999)
+mesh = SubResource("SphereMesh_g6lp7")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="playa/Pivot" unique_id=1157218865]
+transform = Transform3D(0.375, 0, 0, 0, 0.375, 0, 0, 0, 0.375, -0.29999998, 0, -0.79999995)
+mesh = SubResource("SphereMesh_g6lp7")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="playa/Pivot" unique_id=1655288881]
+transform = Transform3D(0.12, 0, 0, 0, 0.13999999, 0, 0, 0, 1, 0.3, 0, -0.9)
+mesh = SubResource("BoxMesh_g6lp7")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="playa/Pivot" unique_id=748294509]
+transform = Transform3D(0.12, 0, 0, 0, 0.13999999, 0, 0, 0, 1, -0.3, 0, -0.49999994)
+mesh = SubResource("BoxMesh_1wjec")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="playa" unique_id=60413228]
 shape = SubResource("CapsuleShape3D_x2x30")
