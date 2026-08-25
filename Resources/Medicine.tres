@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_5uibs")
 name = "Potion"
-description = "Test"
+description = "Testing Desc"
 texture = ExtResource("2_u5rqn")
+max_stack = 10
 metadata/_custom_type_script = "uid://d4gdhhvd4t6e1"

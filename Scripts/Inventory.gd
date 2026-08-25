@@ -1,5 +1,5 @@
 extends Resource
-class_name InventoryData
+class_name Inventory
 
 signal inventory_changed
 
@@ -32,7 +32,7 @@ func add_item(new_item: ItemData, amount: int = 1) -> int:
 		if remaining <= 0:
 			break
 		if slot.is_empty():
-			slot.item_data = new_item
+			slot.item = new_item
 			var to_add := mini(remaining, new_item.max_stack)
 			slot.quantity = to_add
 			remaining -= to_add
@@ -46,12 +46,12 @@ func remove_item(target_item: ItemData, amount: int = 1) -> bool:
 	for slot in slots:
 		if remaining <= 0:
 			break
-		if slot.item_data == target_item:
+		if slot.item == target_item:
 			var to_remove := mini(remaining, slot.quantity)
 			slot.quantity -= to_remove
 			remaining -= to_remove
 			if slot.quantity <= 0:
-				slot.item_data = null
+				slot.item = null
 				slot.quantity = 0
 	inventory_changed.emit()
 	return remaining <= 0
