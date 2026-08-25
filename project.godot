@@ -11,8 +11,9 @@ config_version=5
 [application]
 
 config/name="brackeysjam-2026.2"
-run/main_scene="uid://dnatybnmk46mr"
+run/main_scene="uid://wl13gsmo0kuv"
 config/features=PackedStringArray("4.7", "Forward Plus")
+config/icon="res://icon.svg"
 
 [display]
 

@@ -6,6 +6,6 @@
 [resource]
 script = ExtResource("1_xrbp3")
 name = "Map"
-description = "Test"
+description = "Testing Desc"
 texture = ExtResource("2_t3mjs")
 metadata/_custom_type_script = "uid://d4gdhhvd4t6e1"

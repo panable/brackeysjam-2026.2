@@ -45,8 +45,6 @@ albedo_texture = ExtResource("6_vef74")
 
 [node name="Game" type="Node3D" unique_id=264250445]
 
-[node name="InventoryUI" parent="." unique_id=1610134888 instance=ExtResource("3_feb5d")]
-
 [node name="playa" type="CharacterBody3D" parent="." unique_id=1694339531]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.273, 0)
 script = ExtResource("1_e2o6t")
@@ -320,7 +318,8 @@ size = Vector3(1.9, 2.9, 3.2)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1788865064]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.1, 0)
-visible = false
 light_color = Color(1, 0.6156863, 0.25882354, 1)
 light_energy = 2.912
 omni_range = 23.0
+
+[node name="InventoryUI" parent="." unique_id=1610134888 instance=ExtResource("3_feb5d")]

@@ -1,34 +1,39 @@
 [gd_scene format=3 uid="uid://cqwwipxbfupi7"]
 
 [ext_resource type="Script" uid="uid://cwv56ne6tfuws" path="res://Scripts/InventoryUI.gd" id="1_o6um4"]
-[ext_resource type="Script" uid="uid://ce7js6yetx27l" path="res://Scripts/InventoryData.gd" id="2_m5yu5"]
+[ext_resource type="Script" uid="uid://ce7js6yetx27l" path="res://Scripts/Inventory.gd" id="2_m5yu5"]
 [ext_resource type="Script" uid="uid://dytadeq0uwimp" path="res://Scripts/SlotData.gd" id="3_bbtsg"]
-[ext_resource type="Resource" uid="uid://d0myhr25pj6rj" path="res://Resources/Map.tres" id="4_f4u5k"]
-[ext_resource type="Resource" uid="uid://dll2rs7mdim4l" path="res://Resources/Medicine.tres" id="5_yjakb"]
+[ext_resource type="Resource" uid="uid://b65pn271eujar" path="res://Resources/BrokenSword.tres" id="4_hscot"]
 [ext_resource type="Resource" uid="uid://musyrl8otvxf" path="res://Resources/RunningShoes.tres" id="6_ohhls"]
 [ext_resource type="PackedScene" uid="uid://djyke06e6yf44" path="res://Scenes/InventoryUISlot.tscn" id="7_67xb0"]
 
-[sub_resource type="Resource" id="Resource_eow3j"]
+[sub_resource type="Resource" id="Resource_3bnsd"]
 script = ExtResource("3_bbtsg")
-item_data = ExtResource("4_f4u5k")
+item = ExtResource("4_hscot")
 quantity = 1
 metadata/_custom_type_script = "uid://dytadeq0uwimp"
 
-[sub_resource type="Resource" id="Resource_hve3p"]
+[sub_resource type="Resource" id="Resource_7qmbe"]
 script = ExtResource("3_bbtsg")
-item_data = ExtResource("5_yjakb")
-quantity = 2
-metadata/_custom_type_script = "uid://dytadeq0uwimp"
-
-[sub_resource type="Resource" id="Resource_mfdv2"]
-script = ExtResource("3_bbtsg")
-item_data = ExtResource("6_ohhls")
+item = ExtResource("6_ohhls")
 quantity = 1
 metadata/_custom_type_script = "uid://dytadeq0uwimp"
 
-[sub_resource type="Resource" id="Resource_fc0e3"]
+[sub_resource type="Resource" id="Resource_hscot"]
+script = ExtResource("3_bbtsg")
+metadata/_custom_type_script = "uid://dytadeq0uwimp"
+
+[sub_resource type="Resource" id="Resource_0rwgv"]
+script = ExtResource("3_bbtsg")
+metadata/_custom_type_script = "uid://dytadeq0uwimp"
+
+[sub_resource type="Resource" id="Resource_adfqm"]
+script = ExtResource("3_bbtsg")
+metadata/_custom_type_script = "uid://dytadeq0uwimp"
+
+[sub_resource type="Resource" id="Resource_2xnty"]
 script = ExtResource("2_m5yu5")
-slots = Array[ExtResource("3_bbtsg")]([SubResource("Resource_eow3j"), SubResource("Resource_hve3p"), SubResource("Resource_mfdv2")])
+slots = Array[ExtResource("3_bbtsg")]([SubResource("Resource_3bnsd"), SubResource("Resource_7qmbe"), SubResource("Resource_hscot"), SubResource("Resource_0rwgv"), SubResource("Resource_adfqm")])
 metadata/_custom_type_script = "uid://ce7js6yetx27l"
 
 [node name="InventoryUI" type="Control" unique_id=1610134888]
@@ -39,7 +44,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_o6um4")
-inventory = SubResource("Resource_fc0e3")
+inventory = SubResource("Resource_2xnty")
 slot_scene = ExtResource("7_67xb0")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=760730851]

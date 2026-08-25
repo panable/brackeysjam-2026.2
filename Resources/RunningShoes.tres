@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_fmt4f")
-name = "Shoes"
-description = "Test"
+name = "Running Shoes"
+description = "Do not be tricked by their old appearance; these shoes grant the gift of enhanced speed and comfort."
 texture = ExtResource("2_u0wso")
 metadata/_custom_type_script = "uid://d4gdhhvd4t6e1"

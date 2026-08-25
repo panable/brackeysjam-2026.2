@@ -1,11 +1,13 @@
 extends Resource
 class_name SlotData
 
-@export var item_data: ItemData = null
+@export var item: ItemData = null
 @export var quantity: int = 0
 
 func is_empty() -> bool:
-	return item_data == null
+	return item == null
 
 func can_stack(new_item: ItemData) -> bool:
-	return item_data == new_item and quantity < item_data.max_stack
+	return item == new_item and quantity < item.max_stack
+
+# SlotData - checks if empty & if stackable
