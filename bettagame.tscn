@@ -1,10 +1,17 @@
 [gd_scene format=3 uid="uid://dnatybnmk46mr"]
 
 [ext_resource type="Script" uid="uid://byjbvwekxrks6" path="res://Player.gd" id="1_1wjec"]
+[ext_resource type="Script" uid="uid://ds6tbf4c3rxmr" path="res://beanfollowa.gd" id="1_45v56"]
 [ext_resource type="Texture2D" uid="uid://6c1q3olwtepk" path="res://kenney_prototype-textures/PNG/Green/texture_01.png" id="2_k8ry5"]
 [ext_resource type="Texture2D" uid="uid://bu3wrpcont1mx" path="res://kenney_prototype-textures/PNG/Purple/texture_01.png" id="3_bhnw4"]
 [ext_resource type="Script" uid="uid://bxpodlqif1ghn" path="res://camera_3d.gd" id="4_45v56"]
+[ext_resource type="Texture2D" uid="uid://brq087miusp3j" path="res://kenney_prototype-textures/PNG/Orange/texture_01.png" id="4_bhnw4"]
+[ext_resource type="Script" uid="uid://dc2s1b3f151a8" path="res://stick.gd" id="4_k8ry5"]
 [ext_resource type="Texture2D" uid="uid://c7oyhejvt7mk8" path="res://kenney_prototype-textures/PNG/Dark/texture_04.png" id="5_xufpc"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_g6lp7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dkhea"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c55la"]
 albedo_texture = ExtResource("2_k8ry5")
@@ -17,13 +24,14 @@ albedo_texture = ExtResource("3_bhnw4")
 [sub_resource type="BoxMesh" id="BoxMesh_73ttu"]
 size = Vector3(0.6, 0.2, 0.8)
 
-[sub_resource type="SphereMesh" id="SphereMesh_g6lp7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_45v56"]
+albedo_texture = ExtResource("4_bhnw4")
 
 [sub_resource type="BoxMesh" id="BoxMesh_g6lp7"]
 size = Vector3(1, 1, 1.2)
 
-[sub_resource type="BoxMesh" id="BoxMesh_1wjec"]
-size = Vector3(1, 1, 0.4)
+[sub_resource type="BoxShape3D" id="BoxShape3D_g6lp7"]
+size = Vector3(3.2, 2.1000001, 1.3000001)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_x2x30"]
 
@@ -39,10 +47,47 @@ background_mode = 2
 sky = SubResource("Sky_1wjec")
 glow_enabled = true
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_g6lp7"]
+vertices = PackedVector3Array(-0.85000134, 1, 8, -0.60000134, 1, 8.5, 0.14999866, 1, 8.5, 0.39999866, 1, -8, 0.14999866, 1, -8.5, -0.60000134, 1, -8.5, -0.85000134, 1, -8, 0.39999866, 1, 8, 2.3999987, 1, -8, 2.3999987, 1, 8, -2.8500013, 1, -8, -2.8500013, 1, 8, -14.600001, 1, -0.5, -15.100001, 1, -0.25, -14.600001, 1, 0.5, -14.600001, 1, -8, -14.600001, 1, 8, 14.649999, 1, 0.5, 15.149999, 1, -0.25, 14.649999, 1, -0.5, 14.649999, 1, 8, 14.649999, 1, -8)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Array(5, 3, 6), PackedInt32Array(6, 3, 7), PackedInt32Array(6, 7, 2), PackedInt32Array(6, 2, 0), PackedInt32Array(9, 7, 8), PackedInt32Array(8, 7, 3), PackedInt32Array(6, 0, 10), PackedInt32Array(10, 0, 11), PackedInt32Array(14, 13, 12), PackedInt32Array(12, 15, 10), PackedInt32Array(11, 16, 14), PackedInt32Array(14, 12, 11), PackedInt32Array(11, 12, 10), PackedInt32Array(19, 18, 17), PackedInt32Array(17, 20, 9), PackedInt32Array(8, 21, 19), PackedInt32Array(17, 9, 19), PackedInt32Array(19, 9, 8)]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tqi7o"]
 albedo_texture = ExtResource("5_xufpc")
 
 [node name="bettagame" type="Node3D" unique_id=1650272374]
+
+[node name="BEANFOLLOWA" type="CharacterBody3D" parent="." unique_id=217648593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7, 1.7, 5.4)
+collision_layer = 3
+script = ExtResource("1_45v56")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BEANFOLLOWA" unique_id=586356796]
+mesh = SubResource("CapsuleMesh_g6lp7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BEANFOLLOWA" unique_id=241631585]
+shape = SubResource("CapsuleShape3D_dkhea")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="BEANFOLLOWA" unique_id=1820276765]
+
+[node name="BEAN2" type="CharacterBody3D" parent="." unique_id=771725601]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7999997, 1.7, 5.4)
+collision_layer = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BEAN2" unique_id=879564831]
+mesh = SubResource("CapsuleMesh_g6lp7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BEAN2" unique_id=419407938]
+shape = SubResource("CapsuleShape3D_dkhea")
+
+[node name="BEAN3" type="CharacterBody3D" parent="." unique_id=268409288]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6000004, 1.7, 5.4)
+collision_layer = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BEAN3" unique_id=492806792]
+mesh = SubResource("CapsuleMesh_g6lp7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BEAN3" unique_id=1178401866]
+shape = SubResource("CapsuleShape3D_dkhea")
 
 [node name="playa" type="CharacterBody3D" parent="." unique_id=1872508746]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.273, 0)
@@ -59,25 +104,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4901161e-08, 0.4000001, -0.
 material_override = SubResource("StandardMaterial3D_rq4hd")
 mesh = SubResource("BoxMesh_73ttu")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="playa/Pivot" unique_id=1353081463]
-transform = Transform3D(0.375, 0, 0, 0, 0.375, 0, 0, 0, 0.375, 0.3, 0, -1.5999999)
-mesh = SubResource("SphereMesh_g6lp7")
-
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="playa/Pivot" unique_id=1157218865]
-transform = Transform3D(0.375, 0, 0, 0, 0.375, 0, 0, 0, 0.375, -0.29999998, 0, -0.79999995)
-mesh = SubResource("SphereMesh_g6lp7")
-
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="playa/Pivot" unique_id=1655288881]
-transform = Transform3D(0.12, 0, 0, 0, 0.13999999, 0, 0, 0, 1, 0.3, 0, -0.9)
+[node name="stick" type="MeshInstance3D" parent="playa/Pivot" unique_id=1655288881]
+transform = Transform3D(0.12, 0, 0, 0, 0.08999026, -0.76604444, 0, 0.10724621, 0.64278764, 0.3, 0.3000002, -0.7)
+material_override = SubResource("StandardMaterial3D_45v56")
 mesh = SubResource("BoxMesh_g6lp7")
+script = ExtResource("4_k8ry5")
 
-[node name="MeshInstance3D6" type="MeshInstance3D" parent="playa/Pivot" unique_id=748294509]
-transform = Transform3D(0.12, 0, 0, 0, 0.13999999, 0, 0, 0, 1, -0.3, 0, -0.49999994)
-mesh = SubResource("BoxMesh_1wjec")
+[node name="Timer" type="Timer" parent="playa/Pivot/stick" unique_id=536401251]
+wait_time = 0.6
+
+[node name="Area3D" type="Area3D" parent="playa/Pivot/stick" unique_id=1970825982]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="playa/Pivot/stick/Area3D" unique_id=1676185458]
+transform = Transform3D(1, 0, 0, 0, 1, 1.1920929e-05, 0, 0, 1.0000013, -0.299999, -0.55000114, -0.1500001)
+shape = SubResource("BoxShape3D_g6lp7")
+disabled = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="playa" unique_id=60413228]
 shape = SubResource("CapsuleShape3D_x2x30")
-debug_color = Color(0.06974009, 0.39291477, 0.70783836, 1)
+debug_color = Color(0.99999994, 0.2506524, 0.8676591, 1)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=665263428]
 environment = SubResource("Environment_s6u4a")
@@ -93,43 +139,46 @@ fov = 60.0
 script = ExtResource("4_45v56")
 playa = NodePath("../playa")
 
-[node name="room" type="CSGBox3D" parent="." unique_id=674593803]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=120320470]
+navigation_mesh = SubResource("NavigationMesh_g6lp7")
+
+[node name="room" type="CSGBox3D" parent="NavigationRegion3D" unique_id=674593803]
 material_override = SubResource("StandardMaterial3D_tqi7o")
 use_collision = true
 size = Vector3(31.2, 1, 18)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="room" unique_id=388022585]
+[node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D/room" unique_id=388022585]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.4, 2.3999999, 0)
 size = Vector3(0.4, 4, 18)
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="room" unique_id=875134737]
+[node name="CSGBox3D3" type="CSGBox3D" parent="NavigationRegion3D/room" unique_id=875134737]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.400002, 2.3999999, 0)
 size = Vector3(0.4, 4, 18)
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="room" unique_id=1655711137]
+[node name="CSGBox3D4" type="CSGBox3D" parent="NavigationRegion3D/room" unique_id=1655711137]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20000076, 2.45, -8.8)
 size = Vector3(30.800001, 3.9, 0.4)
 
-[node name="CSGBox3D5" type="CSGBox3D" parent="room" unique_id=674793774]
+[node name="CSGBox3D5" type="CSGBox3D" parent="NavigationRegion3D/room" unique_id=674793774]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10000038, 2.45, 8.8)
 size = Vector3(30.6, 3.9, 0.4)
 
-[node name="CSGBox3D6" type="CSGBox3D" parent="room" unique_id=649738071]
+[node name="CSGBox3D6" type="CSGBox3D" parent="NavigationRegion3D/room" unique_id=649738071]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20000076, 1.9499999, -8.8)
 operation = 2
 size = Vector3(1.9, 2.9, 1)
 
-[node name="CSGBox3D7" type="CSGBox3D" parent="room" unique_id=1134923633]
+[node name="CSGBox3D7" type="CSGBox3D" parent="NavigationRegion3D/room" unique_id=1134923633]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20000076, 1.9499999, 9.1)
 operation = 2
 size = Vector3(1.9, 2.9, 1)
 
-[node name="CSGBox3D8" type="CSGBox3D" parent="room" unique_id=1234446854]
+[node name="CSGBox3D8" type="CSGBox3D" parent="NavigationRegion3D/room" unique_id=1234446854]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15.7, 1.95, 0)
 operation = 2
 size = Vector3(1.9, 2.9, 1)
 
-[node name="CSGBox3D9" type="CSGBox3D" parent="room" unique_id=1161364118]
+[node name="CSGBox3D9" type="CSGBox3D" parent="NavigationRegion3D/room" unique_id=1161364118]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15.7, 1.95, 0)
 operation = 2
 size = Vector3(1.9, 2.9, 1)
@@ -321,3 +370,6 @@ visible = false
 light_color = Color(1, 0.6156863, 0.25882354, 1)
 light_energy = 2.912
 omni_range = 23.0
+
+[connection signal="timeout" from="playa/Pivot/stick/Timer" to="playa/Pivot/stick" method="_on_timer_timeout"]
+[connection signal="body_entered" from="playa/Pivot/stick/Area3D" to="playa/Pivot/stick" method="_on_area_3d_body_entered"]

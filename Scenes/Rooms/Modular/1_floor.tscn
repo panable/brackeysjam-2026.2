@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ifdygy2cgq0"]
+
+[ext_resource type="PackedScene" uid="uid://dbtb7r4ghm0b3" path="res://Models/Rooms/1_Floor.glb" id="1_nyuqm"]
+[ext_resource type="Material" uid="uid://dt64qgy52mk05" path="res://Materials/1_Floor.tres" id="2_6fyrc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jw7ag"]
+
+[node name="1_Floor" unique_id=135108095 instance=ExtResource("1_nyuqm")]
+
+[node name="Floor1" parent="." index="0" unique_id=66658088]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.0056197643, 0)
+material_override = ExtResource("2_6fyrc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1648561623]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=389219677]
+transform = Transform3D(4, 0, 0, 0, 0.1, 0, 0, 0, 4, 0, 0, 0)
+shape = SubResource("BoxShape3D_jw7ag")
