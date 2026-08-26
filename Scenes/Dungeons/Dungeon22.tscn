@@ -18,7 +18,7 @@ fov = 50.0
 [node name="West" parent="Doorways/Entrances" unique_id=891237568 instance=ExtResource("1_33te1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1, 1, 4)
 collision_layer = 8
-destination_room = "uid://dc40gjelbg6p8"
+destination_room = "uid://cxbuyyoi00b7w"
 destination_entrace = "East"
 
 [node name="East" parent="Doorways/Entrances" unique_id=788777044 instance=ExtResource("1_33te1")]
