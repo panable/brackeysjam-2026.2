@@ -3,8 +3,9 @@ extends Node3D
 @export var npc_name: String = "NPC"
 @export_file("*.json") var dialogue_path: String
 @export var entry_name: String 
-@onready var interaction_area: Area3D = $MeshInstance3D/InteractionArea
+@onready var interaction_area: Area3D = $InteractionArea
 @onready var dialogue: Control = $"../DialogueUI"
+@export var rotation_speed: float = 5.0
 
 var in_range := false
 var _data: Dictionary = {}
@@ -17,7 +18,10 @@ func _ready() -> void:
 	interaction_area.body_exited.connect(_exit_range)
 	dialogue.dialogue_finished.connect(_on_finished)
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
+	if in_range and player:
+		_track_player(delta)
+
 	if in_range and Input.is_action_just_pressed("interact"):
 			interact()
 
@@ -61,3 +65,12 @@ func _on_finished() -> void:
 	if player:
 		player.set_process_unhandled_input(true)
 		player.can_move = true
+
+func _track_player(delta: float) -> void:
+	var target_position := player.global_position
+	target_position.y = global_position.y
+	var direction := target_position - global_position
+	if direction.length_squared() == 0:
+		return
+	var target_rotation := atan2(direction.x, direction.z)
+	rotation.y = lerp_angle(rotation.y,target_rotation,rotation_speed * delta)

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ct61mvif61dj6"]
+
+[ext_resource type="PackedScene" uid="uid://clxdl8sdql4ld" path="res://Scenes/Characters/BaseNPC.tscn" id="1_nw865"]
+[ext_resource type="PackedScene" uid="uid://31j33hclun3o" path="res://Models/Characters/Roger.glb" id="2_o0s4g"]
+
+[node name="NPC" unique_id=1288896559 instance=ExtResource("1_nw865")]
+npc_name = "Roger"
+
+[node name="Roger2" parent="ModelRoot" parent_id_path=PackedInt32Array(2030884967) index="0" unique_id=1002726421 instance=ExtResource("2_o0s4g")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="InteractionArea" parent="." index="1" unique_id=946692661]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85178506, 0)
