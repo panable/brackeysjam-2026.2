@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b8oijfuvgn66a"]
+
+[ext_resource type="PackedScene" uid="uid://rlb1wi0qv8ox" path="res://Models/Rooms/1_StepUp.glb" id="1_i8l4g"]
+[ext_resource type="Material" uid="uid://86t4y7oywc3y" path="res://Materials/2_Floor.tres" id="2_saaqx"]
+[ext_resource type="Material" uid="uid://dt64qgy52mk05" path="res://Materials/1_Floor.tres" id="2_v5f1t"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jw7ag"]
+
+[node name="1_StepUp2" unique_id=1258062770 instance=ExtResource("1_i8l4g")]
+
+[node name="1_StepUp" parent="." index="0" unique_id=643372101]
+material_override = ExtResource("2_saaqx")
+surface_material_override/0 = ExtResource("2_v5f1t")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="1_StepUp" index="0" unique_id=915438732]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="1_StepUp/StaticBody3D" index="0" unique_id=2128114681]
+transform = Transform3D(4, 0, 0, 0, 0.1, 0, 0, 0, 4, 0, 0, 0)
+shape = SubResource("BoxShape3D_jw7ag")

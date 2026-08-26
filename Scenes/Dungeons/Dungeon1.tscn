@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c46iv1yhdp6o8"]
+
+[ext_resource type="Script" uid="uid://dlwfb4ud68h73" path="res://Scripts/dungeon.gd" id="1_i5sya"]
+[ext_resource type="PackedScene" uid="uid://ckvygqcui68ps" path="res://Scenes/Rooms/Room1.tscn" id="1_w2ft5"]
+[ext_resource type="PackedScene" uid="uid://c1aylrnw1jm4c" path="res://Scenes/Dungeons/door_portal.tscn" id="2_i5sya"]
+
+[node name="Dungeon1" type="Node3D" unique_id=535005868]
+script = ExtResource("1_i5sya")
+
+[node name="Doorways" type="Node" parent="." unique_id=1057684512]
+
+[node name="Entrances" type="Node" parent="Doorways" unique_id=436110501]
+
+[node name="DoorPortal" parent="Doorways/Entrances" unique_id=891237568 instance=ExtResource("2_i5sya")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9993615, 0.86461973, 1.9709718)
+
+[node name="Exits" type="Node" parent="Doorways" unique_id=223901304]
+
+[node name="East" type="Marker3D" parent="Doorways/Exits" unique_id=135328371]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4754496, 0.7795872, 1.8507051)
+gizmo_extents = 0.26
+
+[node name="Room1" parent="." unique_id=20324241 instance=ExtResource("1_w2ft5")]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2009371838]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 17.345459, 1.9915547)
+fov = 50.0

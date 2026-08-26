@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://suq7lh4cw26p"]
+
+[ext_resource type="PackedScene" uid="uid://8xk13ixcpq8p" path="res://Models/Rooms/1_StepDown.glb" id="1_g8idr"]
+[ext_resource type="Material" uid="uid://dsgo8wqrxc7nu" path="res://Materials/3_Floor.tres" id="2_ff4qu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oeq3x"]
+
+[node name="1_StepDown2" unique_id=627106933 instance=ExtResource("1_g8idr")]
+
+[node name="1_StepDown" parent="." index="0" unique_id=40126157]
+surface_material_override/0 = ExtResource("2_ff4qu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1609954100]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=814414310]
+transform = Transform3D(4, 0, 0, 0, 0.1, 0, 0, 0, 4, 0, 0, 0)
+shape = SubResource("BoxShape3D_oeq3x")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="StaticBody3D/CollisionShape3D" index="0" unique_id=1662921979]
+transform = Transform3D(0.25, 0, 0, 0, 10, 0, 0, 0, 0.25, 0, 12.778283, -0.402579)
+light_color = Color(0.8039216, 0.7411765, 0.67058825, 1)
+light_energy = 0.328

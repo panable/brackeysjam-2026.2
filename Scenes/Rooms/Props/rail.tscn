@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://byohrhhl6x0qp"]
+
+[ext_resource type="PackedScene" uid="uid://q1tkrt8xiyyc" path="res://Models/Rooms/Rail.glb" id="1_so4re"]
+
+[node name="Rail2" unique_id=385074005 instance=ExtResource("1_so4re")]

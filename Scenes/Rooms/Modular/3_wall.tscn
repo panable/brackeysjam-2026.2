@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bdas047dt6wem"]
+
+[ext_resource type="PackedScene" uid="uid://1bfbkqvh5gub" path="res://Models/Rooms/3_Wall.glb" id="1_08veh"]
+[ext_resource type="Material" uid="uid://f5uck7fupvt6" path="res://Materials/3_Wall.tres" id="2_lbok3"]
+[ext_resource type="Material" uid="uid://d1r8f22ur4iuv" path="res://Materials/3_Brick.tres" id="3_8mpsx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f62ec"]
+size = Vector3(1, 5, 1)
+
+[node name="3_Wall2" unique_id=888857100 instance=ExtResource("1_08veh")]
+
+[node name="3_Wall" parent="." index="0" unique_id=757189687]
+surface_material_override/0 = ExtResource("2_lbok3")
+surface_material_override/1 = ExtResource("3_8mpsx")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=307654580]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1764932842]
+transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -1.5015206)
+shape = SubResource("BoxShape3D_f62ec")

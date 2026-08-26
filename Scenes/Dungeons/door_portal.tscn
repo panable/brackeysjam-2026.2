@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c1aylrnw1jm4c"]
+
+[ext_resource type="Script" uid="uid://blals0ft7ma5l" path="res://Scripts/door_portal.gd" id="1_aahxf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g6lp7"]
+
+[node name="DoorPortal" type="Area3D" unique_id=891237568]
+collision_mask = 4
+script = ExtResource("1_aahxf")
+destination_room = "uid://b2x3f1qbsi5pw"
+destination_entrace = "West"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=861375110]
+shape = SubResource("BoxShape3D_g6lp7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

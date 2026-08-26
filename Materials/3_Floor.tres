@@ -1,0 +1,5 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dsgo8wqrxc7nu"]
+
+[resource]
+specular_mode = 2
+albedo_color = Color(0.41159827, 0.582152, 0.5833078, 1)
