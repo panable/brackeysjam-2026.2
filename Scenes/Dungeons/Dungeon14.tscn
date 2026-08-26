@@ -28,8 +28,8 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 10.1
 destination_room = "uid://dc40gjelbg6p8"
 
 [node name="North" parent="Doorways/Entrances" unique_id=841730985 instance=ExtResource("2_dk73d")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0.8, -2.05)
-destination_room = "uid://d2grl2bxa2jud"
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4, 0.8, -2.1499999)
+destination_room = "uid://burhl3t4cy7rv"
 destination_entrace = "South"
 
 [node name="South" parent="Doorways/Entrances" unique_id=1164215737 instance=ExtResource("2_dk73d")]
@@ -48,7 +48,7 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 0
 gizmo_extents = 0.26
 
 [node name="North" type="Marker3D" parent="Doorways/Exits" unique_id=2117699935]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0.8, -0.55)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4, 0.8, -0.65000004)
 gizmo_extents = 0.26
 
 [node name="South" type="Marker3D" parent="Doorways/Exits" unique_id=1323993062]
