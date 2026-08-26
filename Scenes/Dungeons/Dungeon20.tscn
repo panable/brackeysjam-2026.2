@@ -17,7 +17,7 @@ fov = 50.0
 
 [node name="North" parent="Doorways/Entrances" unique_id=891237568 instance=ExtResource("1_gr2ui")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -6.1)
-destination_room = "uid://dhkpmhhvb4tpk"
+destination_room = "uid://ca5i3e21sgvny"
 destination_entrace = "South"
 
 [node name="West" parent="Doorways/Entrances" unique_id=506978890 instance=ExtResource("1_gr2ui")]
