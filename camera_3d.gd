@@ -28,7 +28,6 @@ func set_screen_position(delta: float):
 			t = 0.0
 		return
 
-	
 	var plane = (playa.global_position - Vector3(global_position.x, playa.global_position.y, global_position.z))
 
 	if abs(plane.x) >= 16:
