@@ -2,18 +2,22 @@
 
 [ext_resource type="Script" uid="uid://immteh5qxycv" path="res://Scripts/NPC.gd" id="1_acqhf"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_acqhf"]
+[sub_resource type="CylinderMesh" id="CylinderMesh_vef74"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_xxsvc"]
 radius = 2.0
 
 [node name="NPC" type="Node3D" unique_id=1288896559]
 script = ExtResource("1_acqhf")
+npc_name = "Steve"
+dialogue_path = "res://dialogue.json"
+entry_name = "start"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1672448911]
-mesh = SubResource("CapsuleMesh_acqhf")
+mesh = SubResource("CylinderMesh_vef74")
 
 [node name="InteractionArea" type="Area3D" parent="MeshInstance3D" unique_id=946692661]
+collision_mask = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/InteractionArea" unique_id=1626623264]
 shape = SubResource("SphereShape3D_xxsvc")
