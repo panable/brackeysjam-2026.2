@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c6rlwo0ec1bf1" path="res://Scenes/world_manager.gd" id="1_mub7f"]
 [ext_resource type="PackedScene" uid="uid://6vac72p2c7e1" path="res://playa.tscn" id="2_i0vv1"]
-[ext_resource type="PackedScene" uid="uid://jy0at7m07voj" path="res://Scenes/Dungeons/Dungeon28.tscn" id="3_mub7f"]
+[ext_resource type="PackedScene" uid="uid://dntnuysc3wn50" path="res://Scenes/Dungeons/Dungeon56.tscn" id="3_mub7f"]
 
 [sub_resource type="Environment" id="Environment_t1osg"]
 background_mode = 1
@@ -19,12 +19,12 @@ volumetric_fog_sky_affect = 0.266
 
 [node name="WorldManager" type="Node" parent="." unique_id=311855638 node_paths=PackedStringArray("current_dungeon")]
 script = ExtResource("1_mub7f")
-current_dungeon = NodePath("../Dungeon28")
+current_dungeon = NodePath("../Dungeon56")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=444365118]
 environment = SubResource("Environment_t1osg")
 
 [node name="playa" parent="." unique_id=990109964 instance=ExtResource("2_i0vv1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3, 1.3000001, -6.3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20000005, 1.3000001, -0.5999999)
 
-[node name="Dungeon28" parent="." unique_id=687336617 instance=ExtResource("3_mub7f")]
+[node name="Dungeon56" parent="." unique_id=806563156 instance=ExtResource("3_mub7f")]
