@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody3D
 
 # How fast the player moves in meters per second.
@@ -7,6 +8,12 @@ extends CharacterBody3D
 var can_move = true
 
 var target_velocity = Vector3.ZERO
+@onready var collider: CollisionShape3D = $CollisionShape3D
+
+func DisableCollider():
+	collider.set_deferred("disabled", false)
+func EnableCollider():
+	collider.set_deferred("collider", false)
 
 func _physics_process(delta):
 	var direction = Vector3.ZERO
