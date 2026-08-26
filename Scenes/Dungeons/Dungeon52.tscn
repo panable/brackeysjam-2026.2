@@ -17,7 +17,7 @@ fov = 50.0
 
 [node name="East" parent="Doorways/Entrances" unique_id=891237568 instance=ExtResource("1_rodr7")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.800001, 0.8, -1.1920929e-07)
-destination_room = "res://Scenes/Dungeons/Dungeon53.tscn"
+destination_room = "res://Scenes/Dungeons/Dungeon55.tscn"
 
 [node name="West" parent="Doorways/Entrances" unique_id=373258291 instance=ExtResource("1_rodr7")]
 transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -9.799999, 0.8, -1.8477637e-07)
