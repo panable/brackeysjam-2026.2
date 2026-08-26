@@ -23,8 +23,8 @@ destination_room = "uid://c04xefj3gud6g"
 destination_entrace = "North"
 
 [node name="North" parent="Doorways/Entrances" unique_id=1246725722 instance=ExtResource("2_424ag")]
-transform = Transform3D(-2.3841858e-07, 0, -1, 0, 1, 0, 1, 0, -2.3841858e-07, 0.010001279, 1.2, -14.150001)
-destination_room = "res://Scenes/Dungeons/Dungeon46.tscn"
+transform = Transform3D(-2.3841858e-07, 0, -1, 0, 1, 0, 1, 0, -2.3841858e-07, 0.010001279, 1.2, -14.05)
+destination_room = "uid://u2p3xmd6jrcr"
 destination_entrace = "South"
 
 [node name="Exits" type="Node" parent="Doorways" unique_id=1574730473]
