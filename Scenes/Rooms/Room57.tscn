@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://suq7lh4cw26p" path="res://Scenes/Rooms/Modular/3_step_down.tscn" id="5_i3bkr"]
 [ext_resource type="PackedScene" uid="uid://dn34fdfm84ro6" path="res://Scenes/Rooms/Modular/3_step_up.tscn" id="6_pt71x"]
 [ext_resource type="PackedScene" uid="uid://m4vuxg8tj32h" path="res://Scenes/Rooms/Props/door.tscn" id="7_pt71x"]
+[ext_resource type="PackedScene" uid="uid://12nqyceo1hri" path="res://Scenes/Rooms/Modular/one_way_door_collider.tscn" id="8_hi63g"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -115,3 +116,6 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.00
 
 [node name="Door2" parent="." unique_id=1751437828 instance=ExtResource("7_pt71x")]
 transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 4.0000014, 0, 17.03966)
+
+[node name="one_way_door_collider" parent="Door2" unique_id=2010904796 instance=ExtResource("8_hi63g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40000153, 0.7, 0.3000002)
