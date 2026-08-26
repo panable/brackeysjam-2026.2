@@ -12,5 +12,6 @@ destination_entrace = "West"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=861375110]
 shape = SubResource("BoxShape3D_g6lp7")
+debug_color = Color(0, 0.6, 0.69803923, 1)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
