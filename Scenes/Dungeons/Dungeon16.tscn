@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bvqmeh7p32fgh"]
+
+[ext_resource type="PackedScene" uid="uid://c1aylrnw1jm4c" path="res://Scenes/Dungeons/door_portal.tscn" id="1_fejoc"]
+[ext_resource type="Script" uid="uid://dlwfb4ud68h73" path="res://Scripts/dungeon.gd" id="1_qah0p"]
+[ext_resource type="PackedScene" uid="uid://5ad0rxcrybe4" path="res://Scenes/Rooms/Room16.tscn" id="2_xbwhq"]
+
+[node name="Dungeon16" type="Node3D" unique_id=297519056]
+script = ExtResource("1_qah0p")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1156754178]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -8.000001, 26.245, 3.5083928)
+fov = 50.0
+
+[node name="Doorways" type="Node" parent="." unique_id=506667487]
+
+[node name="Entrances" type="Node" parent="Doorways" unique_id=876975940]
+
+[node name="West" parent="Doorways/Entrances" unique_id=891237568 instance=ExtResource("1_fejoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.2, 0.8, 4)
+collision_layer = 8
+destination_room = "uid://801j1owbwixr"
+destination_entrace = "East"
+
+[node name="East" parent="Doorways/Entrances" unique_id=738242808 instance=ExtResource("1_fejoc")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 9.999999, 0.8, 4)
+destination_room = "uid://cv1poafo2on85"
+
+[node name="South" parent="Doorways/Entrances" unique_id=656686560 instance=ExtResource("1_fejoc")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 4, 0.8, 10.049999)
+destination_room = "uid://v5w280v5mdyr"
+destination_entrace = "North"
+
+[node name="Exits" type="Node" parent="Doorways" unique_id=808612759]
+
+[node name="West" type="Marker3D" parent="Doorways/Exits" unique_id=1190806966]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.600002, 0.8, 4)
+gizmo_extents = 0.26
+
+[node name="East" type="Marker3D" parent="Doorways/Exits" unique_id=120044165]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.7, 0.8, 4)
+gizmo_extents = 0.26
+
+[node name="South" type="Marker3D" parent="Doorways/Exits" unique_id=792992393]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 4, 0.8, 7.7500005)
+gizmo_extents = 0.26
+
+[node name="Room1" parent="." unique_id=20324241 instance=ExtResource("2_xbwhq")]

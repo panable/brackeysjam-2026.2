@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://ywugr7ge6dnv"]
 
 [ext_resource type="PackedScene" uid="uid://blp05kcf33hdg" path="res://Models/Rooms/3_Wall_C.glb" id="1_1iq8j"]
-[ext_resource type="Material" uid="uid://f5uck7fupvt6" path="res://Materials/3_Wall.tres" id="2_b8i3g"]
-[ext_resource type="Material" uid="uid://d1r8f22ur4iuv" path="res://Materials/3_Brick.tres" id="3_7uhll"]
+[ext_resource type="Material" uid="uid://f5uck7fupvt6" path="res://Materials/World/3_Wall.tres" id="2_b8i3g"]
+[ext_resource type="Material" uid="uid://d1r8f22ur4iuv" path="res://Materials/World/3_Brick.tres" id="3_7uhll"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8emqp"]
 size = Vector3(1, 5, 1)

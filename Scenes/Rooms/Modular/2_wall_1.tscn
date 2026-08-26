@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://b5i57i5272y5q"]
 
 [ext_resource type="PackedScene" uid="uid://bsydfb6twmh7n" path="res://Models/Rooms/2_Wall_1.glb" id="1_ja43g"]
-[ext_resource type="Material" uid="uid://86t4y7oywc3y" path="res://Materials/2_Floor.tres" id="2_kxil3"]
-[ext_resource type="Material" uid="uid://ct7xbmm16g2ib" path="res://Materials/2_Wall.tres" id="3_qgkl3"]
-[ext_resource type="Material" uid="uid://uu2oc0e7orqo" path="res://Materials/2_Barrier.tres" id="4_tn8dq"]
-[ext_resource type="Material" uid="uid://eksbmut6atwo" path="res://Materials/2_Pillar.tres" id="5_61rqa"]
+[ext_resource type="Material" uid="uid://86t4y7oywc3y" path="res://Materials/World/2_Floor.tres" id="2_kxil3"]
+[ext_resource type="Material" uid="uid://ct7xbmm16g2ib" path="res://Materials/World/2_Wall.tres" id="3_qgkl3"]
+[ext_resource type="Material" uid="uid://uu2oc0e7orqo" path="res://Materials/World/2_Barrier.tres" id="4_tn8dq"]
+[ext_resource type="Material" uid="uid://eksbmut6atwo" path="res://Materials/World/2_Pillar.tres" id="5_61rqa"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kxil3"]
 size = Vector3(1, 5, 1)

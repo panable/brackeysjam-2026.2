@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://m4vuxg8tj32h"]
 
 [ext_resource type="PackedScene" uid="uid://rf8i34ufnobs" path="res://Models/Rooms/Door.glb" id="1_88sax"]
-[ext_resource type="Material" uid="uid://dh56brq40x2hm" path="res://Materials/Wood.tres" id="2_16wvt"]
+[ext_resource type="Material" uid="uid://dh56brq40x2hm" path="res://Materials/World/Wood.tres" id="2_16wvt"]
 
 [node name="Door2" unique_id=1751437828 instance=ExtResource("1_88sax")]
 

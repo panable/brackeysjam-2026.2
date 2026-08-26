@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://b8oijfuvgn66a"]
 
 [ext_resource type="PackedScene" uid="uid://rlb1wi0qv8ox" path="res://Models/Rooms/1_StepUp.glb" id="1_i8l4g"]
-[ext_resource type="Material" uid="uid://86t4y7oywc3y" path="res://Materials/2_Floor.tres" id="2_saaqx"]
-[ext_resource type="Material" uid="uid://dt64qgy52mk05" path="res://Materials/1_Floor.tres" id="2_v5f1t"]
+[ext_resource type="Material" uid="uid://86t4y7oywc3y" path="res://Materials/World/2_Floor.tres" id="2_saaqx"]
+[ext_resource type="Material" uid="uid://dt64qgy52mk05" path="res://Materials/World/1_Floor.tres" id="2_v5f1t"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jw7ag"]
 
