@@ -13,8 +13,8 @@ script = ExtResource("1_rv8yl")
 
 [node name="West" parent="Doorways/Entrances" unique_id=891237568 instance=ExtResource("1_dik01")]
 transform = Transform3D(-1, 0, -7.54979e-08, 0, 1, 0, 7.54979e-08, 0, -1, -10.000001, 0.8, 4.374969e-07)
-destination_room = "uid://booxnusqks25b"
-destination_entrace = "North"
+destination_room = "res://Scenes/Dungeons/Dungeon63.tscn"
+destination_entrace = "East"
 
 [node name="North" parent="Doorways/Entrances" unique_id=1947782705 instance=ExtResource("1_dik01")]
 transform = Transform3D(1.1920929e-07, 0, -1, 0, 1, 0, 1, 0, 1.1920929e-07, -4.0000005, 0.8, -6)
