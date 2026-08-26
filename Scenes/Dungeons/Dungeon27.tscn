@@ -14,7 +14,7 @@ script = ExtResource("1_llclm")
 [node name="North" parent="Doorways/Entrances" unique_id=891237568 instance=ExtResource("1_5gy78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9999998, 0.8, -14.1)
 destination_room = "res://Scenes/Dungeons/Dungeon28.tscn"
-destination_entrace = "South"
+destination_entrace = "SouthL"
 
 [node name="South" parent="Doorways/Entrances" unique_id=737986467 instance=ExtResource("1_5gy78")]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -4, 0.8, 6.1000004)
