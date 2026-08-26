@@ -18,8 +18,8 @@ destination_entrace = "North"
 
 [node name="North" parent="Doorways/Entrances" unique_id=1552869161 instance=ExtResource("1_1q3y7")]
 transform = Transform3D(1.1920929e-07, 0, -1, 0, 1, 0, 1, 0, 1.1920929e-07, -4.0000005, 0.8, -6)
-destination_room = "uid://b7v1myqusyfs5"
-destination_entrace = "North"
+destination_room = "uid://cmgqx13k5vp3m"
+destination_entrace = "SouthR"
 
 [node name="Exits" type="Node" parent="Doorways" unique_id=1366733903]
 
@@ -27,7 +27,7 @@ destination_entrace = "North"
 transform = Transform3D(1.1920929e-07, 0, -1, 0, 1, 0, 1, 0, 1.1920929e-07, -4.0000005, 0.8, 4.2000003)
 
 [node name="North" type="Marker3D" parent="Doorways/Exits" unique_id=1323730821]
-transform = Transform3D(1.1920929e-07, 0, -1, 0, 1, 0, 1, 0, 1.1920929e-07, -4.0000005, 0.8, -7.8)
+transform = Transform3D(1.1920929e-07, 0, -1, 0, 1, 0, 1, 0, 1.1920929e-07, -4.0000005, 0.8, -4.6000004)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1293353725]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -4, 19.645462, -0.008445263)
