@@ -27,7 +27,8 @@ destination_room = "uid://cv1poafo2on85"
 
 [node name="South" parent="Doorways/Entrances" unique_id=656686560 instance=ExtResource("1_fejoc")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 4, 0.8, 10.049999)
-destination_room = "uid://behjoof0b8lpi"
+destination_room = "uid://v5w280v5mdyr"
+destination_entrace = "North"
 
 [node name="Exits" type="Node" parent="Doorways" unique_id=808612759]
 
