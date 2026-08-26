@@ -10,8 +10,6 @@ func transition_dungeon(destination_room: String, destination_entrace: String):
 	playa.set_collision_layer_value(1, false)
 	playa.set_physics_process(false)
 	
-
-	
 	current_dungeon.queue_free()
 	await get_tree().physics_frame
 	var dungeon_scene := load(destination_room) as PackedScene
