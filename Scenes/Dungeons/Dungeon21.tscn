@@ -13,7 +13,7 @@ script = ExtResource("1_csqgv")
 
 [node name="North" parent="Doorways/Entrances" unique_id=891237568 instance=ExtResource("1_ypjcd")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.0000005, 0.8, -6.1)
-destination_room = "uid://bvqmeh7p32fgh"
+destination_room = "uid://qj1d8jgpkxyn"
 destination_entrace = "South"
 
 [node name="South" parent="Doorways/Entrances" unique_id=1133818757 instance=ExtResource("1_ypjcd")]
@@ -30,7 +30,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.0
 transform = Transform3D(1.1920929e-07, 0, -1, 0, 1, 0, 1, 0, 1.1920929e-07, -4.0000005, 0.8, 3.4)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=2062275407]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -4, 17.34546, -0.008445263)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -4, 17.34546, -0.6084453)
 fov = 50.0
 
 [node name="Room1" parent="." unique_id=20324241 instance=ExtResource("2_csqgv")]
