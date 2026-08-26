@@ -22,8 +22,8 @@ destination_entrace = "South"
 
 [node name="South" parent="Doorways/Entrances" unique_id=2046655451 instance=ExtResource("1_11nme")]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 1.4901161e-08, 0.8, 14)
-destination_room = "res://Scenes/Dungeons/Dungeon33.tscn"
-destination_entrace = "South"
+destination_room = "uid://brkky8y0nkky"
+destination_entrace = "NorthR"
 
 [node name="Exits" type="Node" parent="Doorways" unique_id=1607183562]
 
