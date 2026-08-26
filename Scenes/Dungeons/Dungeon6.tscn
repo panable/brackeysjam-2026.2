@@ -16,7 +16,8 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.1,
 
 [node name="North" parent="Doorways/Entrances" unique_id=891237568 instance=ExtResource("1_5wqkb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.8, -2)
-destination_room = "uid://d2grl2bxa2jud"
+destination_room = "uid://blw6scicmp6a7"
+destination_entrace = "South"
 
 [node name="West" parent="Doorways/Entrances" unique_id=1354513656 instance=ExtResource("1_5wqkb")]
 transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -10.084807, 0.8, 4.073648)
