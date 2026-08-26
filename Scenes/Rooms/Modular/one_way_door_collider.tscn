@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://12nqyceo1hri"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g6lp7"]
+
+[node name="one_way_door_collider" type="StaticBody3D" unique_id=2010904796]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1933253325]
+transform = Transform3D(1.4399999, 0, 0, 0, 2, 0, 1.4210855e-14, 0, 0.99999994, 0, 0.7, -0.3000002)
+shape = SubResource("BoxShape3D_g6lp7")
