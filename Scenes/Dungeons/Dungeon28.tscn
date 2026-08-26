@@ -13,7 +13,7 @@ script = ExtResource("1_k55tw")
 
 [node name="West" parent="Doorways/Entrances" unique_id=891237568 instance=ExtResource("2_4mbur")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.8, -8)
-destination_room = "uid://d181t2etvalrv"
+destination_room = "uid://igrmkca1u8uj"
 destination_entrace = "East"
 
 [node name="East" parent="Doorways/Entrances" unique_id=722328484 instance=ExtResource("2_4mbur")]
