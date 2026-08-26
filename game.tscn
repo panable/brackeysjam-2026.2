@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bu3wrpcont1mx" path="res://kenney_prototype-textures/PNG/Purple/texture_01.png" id="4_eow3j"]
 [ext_resource type="Script" uid="uid://bxpodlqif1ghn" path="res://camera_3d.gd" id="5_j5wjh"]
 [ext_resource type="Texture2D" uid="uid://c7oyhejvt7mk8" path="res://kenney_prototype-textures/PNG/Dark/texture_04.png" id="6_vef74"]
+[ext_resource type="PackedScene" uid="uid://clxdl8sdql4ld" path="res://Scenes/npc.tscn" id="7_eow3j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hve3p"]
 albedo_texture = ExtResource("3_ryrav")
@@ -45,7 +46,7 @@ albedo_texture = ExtResource("6_vef74")
 
 [node name="Game" type="Node3D" unique_id=264250445]
 
-[node name="playa" type="CharacterBody3D" parent="." unique_id=1694339531]
+[node name="playa" type="CharacterBody3D" parent="." unique_id=1694339531 groups=["player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.273, 0)
 script = ExtResource("1_e2o6t")
 
@@ -323,3 +324,6 @@ light_energy = 2.912
 omni_range = 23.0
 
 [node name="InventoryUI" parent="." unique_id=1610134888 instance=ExtResource("3_feb5d")]
+
+[node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("7_eow3j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.710603, 1.5, -12.757203)

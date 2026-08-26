@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dgvew44vrd1d1"]
+
+[ext_resource type="Script" uid="uid://cq7pnjs1sesp1" path="res://Scripts/DialogueUIi.gd" id="1_vbmao"]
+
+[node name="DialogueUI" type="Control" unique_id=1035567338]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vbmao")
+
+[node name="BackgroundPanel" type="PanelContainer" parent="." unique_id=1214466746]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BackgroundPanel" unique_id=718182479]
+layout_mode = 2
+
+[node name="SpeakerLabel" type="Label" parent="BackgroundPanel/VBoxContainer" unique_id=1751166119]
+layout_mode = 2
+
+[node name="TextLabel" type="Label" parent="BackgroundPanel/VBoxContainer" unique_id=234896968]
+layout_mode = 2
+
+[node name="ChoicesBox" type="VBoxContainer" parent="BackgroundPanel" unique_id=186158033]
+layout_mode = 2
