@@ -19,10 +19,19 @@ fov = 50.0
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 14.000001, 0.8, -1.1920929e-07)
 destination_room = "uid://c67lonoc1belo"
 
+[node name="West" parent="Doorways/Entrances" unique_id=1840962051 instance=ExtResource("1_j2pbr")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -10.2, 0.8, -1.8477637e-07)
+destination_room = "uid://dwf1tsccwrk1x"
+destination_entrace = "East"
+
 [node name="Exits" type="Node" parent="Doorways" unique_id=1726934696]
 
 [node name="East" type="Marker3D" parent="Doorways/Exits" unique_id=539788838]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 12.500001, 0.8, -1.1920929e-07)
+gizmo_extents = 0.26
+
+[node name="West" type="Marker3D" parent="Doorways/Exits" unique_id=1072121610]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -8.7, 0.8, -5.364221e-08)
 gizmo_extents = 0.26
 
 [node name="Room1" parent="." unique_id=20324241 instance=ExtResource("2_8rkhv")]

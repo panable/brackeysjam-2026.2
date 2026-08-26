@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://dwf1tsccwrk1x"]
 
 [ext_resource type="PackedScene" uid="uid://c1aylrnw1jm4c" path="res://Scenes/Dungeons/door_portal.tscn" id="1_cvn16"]
+[ext_resource type="Script" uid="uid://dlwfb4ud68h73" path="res://Scripts/dungeon.gd" id="1_mvxch"]
 [ext_resource type="PackedScene" uid="uid://c3s2xi2dyfg26" path="res://Scenes/Rooms/Room50.tscn" id="2_mvxch"]
 
 [node name="Dungeon50" type="Node3D" unique_id=1001877832]
+script = ExtResource("1_mvxch")
 
 [node name="Doorways" type="Node" parent="." unique_id=554858834]
 
@@ -11,7 +13,7 @@
 
 [node name="East" parent="Doorways/Entrances" unique_id=891237568 instance=ExtResource("1_cvn16")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.000001, 0.8, -9.685755e-08)
-destination_room = "uid://bq5vmspgphxr6"
+destination_room = "uid://d1tga38xllyoj"
 
 [node name="Exits" type="Node" parent="Doorways" unique_id=175491388]
 
