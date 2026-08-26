@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://duugs72sxjdnp"
-path="res://.godot/imported/Roger.glb-2339e08c3af1dc16c44422721dc7fd5e.scn"
+uid="uid://d3u8hamuasbh5"
+path="res://.godot/imported/Tim.glb-930cc11ad2349a7df860748c8b54b4f9.scn"
 
 [deps]
 
-source_file="res://Models/Characters/Roger.glb"
-dest_files=["res://.godot/imported/Roger.glb-2339e08c3af1dc16c44422721dc7fd5e.scn"]
+source_file="res://Models/Characters/Tim.glb"
+dest_files=["res://.godot/imported/Tim.glb-930cc11ad2349a7df860748c8b54b4f9.scn"]
 
 [params]
 
@@ -41,7 +41,7 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "animations": {
-"Idle_Nod": {
+"Idle_Nod_001": {
 "save_to_file/enabled": false,
 "save_to_file/fallback_path": "",
 "save_to_file/keep_custom_tracks": "",
