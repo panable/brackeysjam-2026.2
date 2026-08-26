@@ -13,5 +13,4 @@ func _ready() -> void:
 	player_entered.connect(dungeon._on_door_portal_player_entered)
 
 func _on_body_entered(body: Node3D) -> void:
-	print("Player entered portal...")
 	player_entered.emit(destination_room, destination_entrace)

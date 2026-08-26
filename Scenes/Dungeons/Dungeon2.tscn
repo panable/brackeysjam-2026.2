@@ -13,13 +13,13 @@ script = ExtResource("1_qvmbe")
 
 [node name="West" parent="Doorways/Entrances" unique_id=891237568 instance=ExtResource("2_qvmbe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.8, 4)
+collision_layer = 8
 destination_room = "uid://c46iv1yhdp6o8"
 destination_entrace = "East"
 
 [node name="East" parent="Doorways/Entrances" unique_id=1577175293 instance=ExtResource("2_qvmbe")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 10.1, 0.8, 4)
-destination_room = "uid://c46iv1yhdp6o8"
-destination_entrace = "East"
+destination_room = "uid://b84wsgd42d8wy"
 
 [node name="North" parent="Doorways/Entrances" unique_id=1123465142 instance=ExtResource("2_qvmbe")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0.8, -2.05)
@@ -38,7 +38,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 0.8, 4)
 gizmo_extents = 0.26
 
 [node name="East" type="Marker3D" parent="Doorways/Exits" unique_id=1292777004]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8.6, 0.8, 4)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 0.8, 4)
 gizmo_extents = 0.26
 
 [node name="North" type="Marker3D" parent="Doorways/Exits" unique_id=2092327952]
@@ -50,7 +50,7 @@ transform = Transform3D(8.940697e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 8.
 gizmo_extents = 0.26
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1255471594]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 17.345459, 4.0915546)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 17.345, 4)
 fov = 50.0
 
 [node name="Room1" parent="." unique_id=20324241 instance=ExtResource("1_hpoia")]
