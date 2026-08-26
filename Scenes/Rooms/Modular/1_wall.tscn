@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://csqtpj4x6iot"]
 
 [ext_resource type="PackedScene" uid="uid://ni1opyiicug5" path="res://Models/Rooms/1_Wall_1.glb" id="1_5ln2b"]
-[ext_resource type="Material" uid="uid://b8h84bmimt403" path="res://Materials/1_Wall.tres" id="2_3lfhl"]
-[ext_resource type="Material" uid="uid://dt64qgy52mk05" path="res://Materials/1_Floor.tres" id="3_1u4ha"]
-[ext_resource type="Material" uid="uid://dmc448o3h632w" path="res://Materials/1_Rock.tres" id="4_r7wkk"]
+[ext_resource type="Material" uid="uid://b8h84bmimt403" path="res://Materials/World/1_Wall.tres" id="2_3lfhl"]
+[ext_resource type="Material" uid="uid://dt64qgy52mk05" path="res://Materials/World/1_Floor.tres" id="3_1u4ha"]
+[ext_resource type="Material" uid="uid://dmc448o3h632w" path="res://Materials/World/1_Rock.tres" id="4_r7wkk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jw7ag"]
 size = Vector3(1, 5, 1)

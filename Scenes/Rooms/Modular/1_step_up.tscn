@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bk4gerbaww8uc"]
 
 [ext_resource type="PackedScene" uid="uid://rlb1wi0qv8ox" path="res://Models/Rooms/1_StepUp.glb" id="1_84akh"]
-[ext_resource type="Material" uid="uid://dt64qgy52mk05" path="res://Materials/1_Floor.tres" id="2_kd78p"]
+[ext_resource type="Material" uid="uid://dt64qgy52mk05" path="res://Materials/World/1_Floor.tres" id="2_kd78p"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jw7ag"]
 

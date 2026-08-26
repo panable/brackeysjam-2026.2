@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://glfncrv37l2"]
 
 [ext_resource type="PackedScene" uid="uid://bk3v0t8ucokpr" path="res://Models/Rooms/2_Wall_2.glb" id="1_odjrl"]
-[ext_resource type="Material" uid="uid://86t4y7oywc3y" path="res://Materials/2_Floor.tres" id="2_aqyaw"]
-[ext_resource type="Material" uid="uid://ct7xbmm16g2ib" path="res://Materials/2_Wall.tres" id="3_r00dg"]
-[ext_resource type="Material" uid="uid://uu2oc0e7orqo" path="res://Materials/2_Barrier.tres" id="4_tv27t"]
+[ext_resource type="Material" uid="uid://86t4y7oywc3y" path="res://Materials/World/2_Floor.tres" id="2_aqyaw"]
+[ext_resource type="Material" uid="uid://ct7xbmm16g2ib" path="res://Materials/World/2_Wall.tres" id="3_r00dg"]
+[ext_resource type="Material" uid="uid://uu2oc0e7orqo" path="res://Materials/World/2_Barrier.tres" id="4_tv27t"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_odjrl"]
 size = Vector3(1, 5, 1)
