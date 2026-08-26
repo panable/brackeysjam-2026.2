@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cspd4p1a25i0j"]
+
+[ext_resource type="PackedScene" uid="uid://c46iv1yhdp6o8" path="res://Scenes/Dungeons/Dungeon1.tscn" id="1_mmlet"]
+[ext_resource type="Script" uid="uid://c6rlwo0ec1bf1" path="res://Scenes/world_manager.gd" id="1_mub7f"]
+[ext_resource type="PackedScene" uid="uid://6vac72p2c7e1" path="res://playa.tscn" id="2_i0vv1"]
+
+[sub_resource type="Environment" id="Environment_t1osg"]
+background_mode = 1
+background_color = Color(0.067437746, 0.06743774, 0.06743772, 1)
+background_energy_multiplier = 0.71
+ambient_light_energy = 0.13
+volumetric_fog_density = 0.0232
+volumetric_fog_albedo = Color(0.94574016, 0.94574004, 0.94574004, 1)
+volumetric_fog_emission_energy = 13.05
+volumetric_fog_length = 0.4
+volumetric_fog_detail_spread = 0.5
+volumetric_fog_sky_affect = 0.266
+
+[node name="RealGame" type="Node3D" unique_id=1388491691]
+
+[node name="WorldManager" type="Node" parent="." unique_id=311855638 node_paths=PackedStringArray("current_dungeon")]
+script = ExtResource("1_mub7f")
+current_dungeon = NodePath("../Dungeon1")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=444365118]
+environment = SubResource("Environment_t1osg")
+
+[node name="Dungeon1" parent="." unique_id=535005868 instance=ExtResource("1_mmlet")]
+
+[node name="playa" parent="." unique_id=990109964 instance=ExtResource("2_i0vv1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3000001, 0)

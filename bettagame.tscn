@@ -1,39 +1,13 @@
 [gd_scene format=3 uid="uid://dnatybnmk46mr"]
 
-[ext_resource type="Script" uid="uid://byjbvwekxrks6" path="res://Player.gd" id="1_1wjec"]
 [ext_resource type="Script" uid="uid://ds6tbf4c3rxmr" path="res://beanfollowa.gd" id="1_45v56"]
-[ext_resource type="Texture2D" uid="uid://6c1q3olwtepk" path="res://kenney_prototype-textures/PNG/Green/texture_01.png" id="2_k8ry5"]
-[ext_resource type="Texture2D" uid="uid://bu3wrpcont1mx" path="res://kenney_prototype-textures/PNG/Purple/texture_01.png" id="3_bhnw4"]
+[ext_resource type="PackedScene" uid="uid://6vac72p2c7e1" path="res://playa.tscn" id="2_v5q3e"]
 [ext_resource type="Script" uid="uid://bxpodlqif1ghn" path="res://camera_3d.gd" id="4_45v56"]
-[ext_resource type="Texture2D" uid="uid://brq087miusp3j" path="res://kenney_prototype-textures/PNG/Orange/texture_01.png" id="4_bhnw4"]
-[ext_resource type="Script" uid="uid://dc2s1b3f151a8" path="res://stick.gd" id="4_k8ry5"]
 [ext_resource type="Texture2D" uid="uid://c7oyhejvt7mk8" path="res://kenney_prototype-textures/PNG/Dark/texture_04.png" id="5_xufpc"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_g6lp7"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dkhea"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c55la"]
-albedo_texture = ExtResource("2_k8ry5")
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_f2m6v"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rq4hd"]
-albedo_texture = ExtResource("3_bhnw4")
-
-[sub_resource type="BoxMesh" id="BoxMesh_73ttu"]
-size = Vector3(0.6, 0.2, 0.8)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_45v56"]
-albedo_texture = ExtResource("4_bhnw4")
-
-[sub_resource type="BoxMesh" id="BoxMesh_g6lp7"]
-size = Vector3(1, 1, 1.2)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_g6lp7"]
-size = Vector3(3.2, 2.1000001, 1.3000001)
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_x2x30"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e0w1h"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -89,41 +63,8 @@ mesh = SubResource("CapsuleMesh_g6lp7")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BEAN3" unique_id=1178401866]
 shape = SubResource("CapsuleShape3D_dkhea")
 
-[node name="playa" type="CharacterBody3D" parent="." unique_id=1872508746]
+[node name="playa" parent="." unique_id=990109964 instance=ExtResource("2_v5q3e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.273, 0)
-script = ExtResource("1_1wjec")
-
-[node name="Pivot" type="Node3D" parent="playa" unique_id=2114852644]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="playa/Pivot" unique_id=1266404997]
-material_override = SubResource("StandardMaterial3D_c55la")
-mesh = SubResource("CapsuleMesh_f2m6v")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="playa/Pivot" unique_id=1887229202]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4901161e-08, 0.4000001, -0.15)
-material_override = SubResource("StandardMaterial3D_rq4hd")
-mesh = SubResource("BoxMesh_73ttu")
-
-[node name="stick" type="MeshInstance3D" parent="playa/Pivot" unique_id=1655288881]
-transform = Transform3D(0.12, 0, 0, 0, 0.08999026, -0.76604444, 0, 0.10724621, 0.64278764, 0.3, 0.3000002, -0.7)
-material_override = SubResource("StandardMaterial3D_45v56")
-mesh = SubResource("BoxMesh_g6lp7")
-script = ExtResource("4_k8ry5")
-
-[node name="Timer" type="Timer" parent="playa/Pivot/stick" unique_id=536401251]
-wait_time = 0.6
-
-[node name="Area3D" type="Area3D" parent="playa/Pivot/stick" unique_id=1970825982]
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="playa/Pivot/stick/Area3D" unique_id=1676185458]
-transform = Transform3D(1, 0, 0, 0, 1, 1.1920929e-05, 0, 0, 1.0000013, -0.299999, -0.55000114, -0.1500001)
-shape = SubResource("BoxShape3D_g6lp7")
-disabled = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="playa" unique_id=60413228]
-shape = SubResource("CapsuleShape3D_x2x30")
-debug_color = Color(0.99999994, 0.2506524, 0.8676591, 1)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=665263428]
 environment = SubResource("Environment_s6u4a")
@@ -137,7 +78,7 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 19.2, 0)
 fov = 60.0
 script = ExtResource("4_45v56")
-playa = NodePath("../playa")
+playa = NodePath("")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=120320470]
 navigation_mesh = SubResource("NavigationMesh_g6lp7")
@@ -370,6 +311,3 @@ visible = false
 light_color = Color(1, 0.6156863, 0.25882354, 1)
 light_energy = 2.912
 omni_range = 23.0
-
-[connection signal="timeout" from="playa/Pivot/stick/Timer" to="playa/Pivot/stick" method="_on_timer_timeout"]
-[connection signal="body_entered" from="playa/Pivot/stick/Area3D" to="playa/Pivot/stick" method="_on_area_3d_body_entered"]
