@@ -6,7 +6,7 @@ extends Node3D
 @export var head_return_speed: float = 3.0
 
 @onready var interaction_area: Area3D = $Area3D
-@onready var dialogue: Control = $"../DialogueUI"
+@onready var dialogue: Control = get_node("/root/RealGame/DialogueUI")
 
 
 var skeleton: Skeleton3D

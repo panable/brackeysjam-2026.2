@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dnip0iuv8xgaa" path="res://Scenes/Rooms/Modular/1_door.tscn" id="4_p31ru"]
 [ext_resource type="PackedScene" uid="uid://ifdygy2cgq0" path="res://Scenes/Rooms/Modular/1_floor.tscn" id="5_5vy2w"]
 [ext_resource type="PackedScene" uid="uid://d4b2nguo0nd6l" path="res://Scenes/Rooms/Modular/1_wall_3.tscn" id="6_of0xb"]
-[ext_resource type="PackedScene" uid="uid://bycya3oqcgtu7" path="res://Scenes/Characters/yasmine.tscn" id="7_xg3cn"]
+[ext_resource type="PackedScene" uid="uid://yqk737l3iaf6" path="res://Scenes/Characters/Yasmin_c.tscn" id="7_xg3cn"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -72,5 +72,6 @@ transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 4.00
 [node name="1_Wall22" parent="." unique_id=1664716523 instance=ExtResource("2_xg3cn")]
 transform = Transform3D(-1, 0, -8.7422784e-08, 0, 1, 0, 8.7422784e-08, 0, -1, 4.004142, 0, 4.004141)
 
-[node name="yasmine" parent="." unique_id=651857203 instance=ExtResource("7_xg3cn")]
-transform = Transform3D(1.1682431e-07, 0, -0.59999996, 0, 0.59999996, 0, 0.59999996, 0, 1.1682431e-07, 5.4271, 0.0501709, 0.0019692802)
+[node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("7_xg3cn")]
+transform = Transform3D(0.009703282, 0, -0.5999216, 0, 0.6, 0, 0.5999216, 0, 0.009703282, 5.4451504, 0.04509461, 0.0018117436)
+entry_name = "start"
