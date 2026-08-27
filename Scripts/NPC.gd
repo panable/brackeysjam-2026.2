@@ -3,17 +3,28 @@ extends Node3D
 @export var npc_name: String = "NPC"
 @export_file("*.json") var dialogue_path: String
 @export var entry_name: String 
-@onready var interaction_area: Area3D = $InteractionArea
-@onready var dialogue: Control = $"../DialogueUI"
 @export var rotation_speed: float = 5.0
 
+
+@onready var interaction_area: Area3D = $Area3D
+@onready var dialogue: Control = $"../DialogueUI"
+
+
+var skeleton: Skeleton3D
 var in_range := false
 var _data: Dictionary = {}
 var player: Node3D = null
 var is_talking := false
+var head_bone: int = -1
 
 func _ready() -> void:
 	_load_dialogue()
+	skeleton = _find_skeleton($ModelRoot)
+
+	if skeleton:
+		head_bone = skeleton.find_bone("Head")
+	else:
+		print("No Skeleton3D found")
 	
 	interaction_area.body_entered.connect(_enter_range)
 	interaction_area.body_exited.connect(_exit_range)
@@ -50,9 +61,7 @@ func interact() -> void:
 	is_talking = true
 	player.set_process_unhandled_input(false)
 	dialogue.start(_data, entry_name)
-
-
-# NPC Range (CollisionShape3D [Range: 2.0m])
+	
 
 # Check if player has entered range
 func _enter_range(body: Node3D) -> void:
@@ -73,11 +82,38 @@ func _on_finished() -> void:
 		player.can_move = true
 		is_talking = false
 
-func _track_player(delta: float) -> void:
-	var target_position := player.global_position
-	target_position.y = global_position.y
-	var direction := target_position - global_position
+func _track_player(_delta: float) -> void:
+	if player == null:
+		return
+
+	if skeleton == null:
+		return
+
+	if head_bone == -1:
+		return
+
+	var head_pose: Transform3D = skeleton.get_bone_global_pose(head_bone)
+	var player_local_position: Vector3 = skeleton.to_local(player.global_position)
+	var direction: Vector3 = player_local_position - head_pose.origin
+
 	if direction.length_squared() == 0:
 		return
-	var target_rotation := atan2(direction.x, direction.z)
-	rotation.y = lerp_angle(rotation.y,target_rotation,rotation_speed * delta)
+	var target_basis: Basis = Basis.looking_at(direction.normalized(),Vector3.UP)
+
+	# Correction on X Axis (Tilt Down slightly)
+	target_basis = target_basis.rotated(Vector3.LEFT,deg_to_rad(30.0))
+	# Correction on Y Axis (Head is Inverted XD)
+	target_basis = target_basis.rotated(Vector3.UP,deg_to_rad(180.0))
+	
+	head_pose.basis = target_basis
+	skeleton.set_bone_global_pose_override(head_bone,head_pose,1.0,true)
+	
+	## TEMP SLOP TO FIND SKELETON
+func _find_skeleton(node: Node) -> Skeleton3D:
+	if node is Skeleton3D:
+		return node
+	for child in node.get_children():
+		var result := _find_skeleton(child)
+		if result:
+			return result
+	return null
