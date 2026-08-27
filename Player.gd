@@ -11,6 +11,13 @@ var target_velocity = Vector3.ZERO
 @onready var collider: CollisionShape3D = $CollisionShape3D
 @onready var pivot: Node3D = $Pivot
 
+func _process(_delta):
+	var mouse := get_viewport().get_mouse_position()
+	var center := get_viewport().get_visible_rect().size / 2.0
+
+	var direction := center - mouse
+	pivot.rotation.y = (atan2(direction.x, direction.y))
+
 func DisableCollider():
 	collider.set_deferred("disabled", false)
 func EnableCollider():
