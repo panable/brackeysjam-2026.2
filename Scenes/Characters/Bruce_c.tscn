@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cn14wsq76s8uk"]
+
+[ext_resource type="PackedScene" uid="uid://clxdl8sdql4ld" path="res://Scenes/Characters/BaseNPC.tscn" id="1_dvg66"]
+[ext_resource type="PackedScene" uid="uid://cwqkygutr54kw" path="res://Scenes/Characters/bruce.tscn" id="2_f1lx8"]
+
+[node name="NPC" unique_id=1288896559 instance=ExtResource("1_dvg66")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+npc_name = "Bruce"
+
+[node name="Bruce2" parent="ModelRoot" parent_id_path=PackedInt32Array(2030884967) index="0" unique_id=2127883184 instance=ExtResource("2_f1lx8")]

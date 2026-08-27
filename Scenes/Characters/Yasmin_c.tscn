@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bycya3oqcgtu7" path="res://Scenes/Characters/yasmine.tscn" id="2_iov1h"]
 
 [node name="NPC" unique_id=1288896559 instance=ExtResource("1_13rp4")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
 npc_name = "Yasmin"
-entry_name = "startd"
 
 [node name="yasmine" parent="ModelRoot" parent_id_path=PackedInt32Array(2030884967) index="0" unique_id=651857203 instance=ExtResource("2_iov1h")]

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cal46bsrfosxf"]
+
+[ext_resource type="PackedScene" uid="uid://clxdl8sdql4ld" path="res://Scenes/Characters/BaseNPC.tscn" id="1_yb4ge"]
+[ext_resource type="PackedScene" uid="uid://bma6to6tvid8y" path="res://Scenes/Characters/ham.tscn" id="2_1f4l3"]
+
+[node name="NPC" unique_id=1288896559 instance=ExtResource("1_yb4ge")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+npc_name = "Ham"
+
+[node name="Ham2" parent="ModelRoot" parent_id_path=PackedInt32Array(2030884967) index="0" unique_id=2041356177 instance=ExtResource("2_1f4l3")]

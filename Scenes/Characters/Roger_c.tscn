@@ -4,5 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dc2ue6krrf5bh" path="res://Scenes/Characters/roger.tscn" id="2_rnxu4"]
 
 [node name="NPC" unique_id=1288896559 instance=ExtResource("1_cf7du")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+npc_name = "Roger"
 
 [node name="Roger2" parent="ModelRoot" parent_id_path=PackedInt32Array(2030884967) index="0" unique_id=746644632 instance=ExtResource("2_rnxu4")]

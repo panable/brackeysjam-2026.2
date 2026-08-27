@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://10lmihvnxhoc"]
+
+[ext_resource type="PackedScene" uid="uid://clxdl8sdql4ld" path="res://Scenes/Characters/BaseNPC.tscn" id="1_4fowg"]
+[ext_resource type="PackedScene" uid="uid://fxu4op5upltg" path="res://Scenes/Characters/pablo.tscn" id="2_1qclx"]
+
+[node name="NPC" unique_id=1288896559 instance=ExtResource("1_4fowg")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+npc_name = "Pablo"
+
+[node name="Pablo2" parent="ModelRoot" parent_id_path=PackedInt32Array(2030884967) index="0" unique_id=1674478156 instance=ExtResource("2_1qclx")]

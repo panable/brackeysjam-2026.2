@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dnskw73hvdhdq"]
+
+[ext_resource type="PackedScene" uid="uid://clxdl8sdql4ld" path="res://Scenes/Characters/BaseNPC.tscn" id="1_6kmps"]
+[ext_resource type="PackedScene" uid="uid://bq6uivhhbd8ia" path="res://Scenes/Characters/morris.tscn" id="2_snitp"]
+
+[node name="NPC" unique_id=1288896559 instance=ExtResource("1_6kmps")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+npc_name = "Moris"
+
+[node name="Morris2" parent="ModelRoot" parent_id_path=PackedInt32Array(2030884967) index="0" unique_id=1062289283 instance=ExtResource("2_snitp")]
