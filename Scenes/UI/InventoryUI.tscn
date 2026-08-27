@@ -49,13 +49,12 @@ slot_scene = ExtResource("7_67xb0")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=760730851]
 layout_mode = 1
-anchors_preset = 12
+anchors_preset = 2
 anchor_top = 1.0
-anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
 grow_vertical = 0
 offset_transform_enabled = true
 
 [node name="GridContainer" type="HBoxContainer" parent="CenterContainer" unique_id=1313849565]
 layout_mode = 2
+theme_override_constants/separation = 8
