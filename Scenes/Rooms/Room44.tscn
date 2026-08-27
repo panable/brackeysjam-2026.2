@@ -15,6 +15,10 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0
 transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, 0.0041416744, 3.8164845, 3.9295945)
 light_color = Color(0.81263554, 0.7314163, 0.7153787, 1)
 light_energy = 33.5
+shadow_enabled = true
+shadow_bias = 0.674
+shadow_normal_bias = 0.0
+shadow_opacity = 0.57
 area_size = Vector2(15.933708, 15.979714)
 
 [node name="2_Floor2" parent="." unique_id=1411981116 instance=ExtResource("1_l55vn")]

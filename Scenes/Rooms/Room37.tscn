@@ -12,7 +12,11 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0
 [node name="AreaLight3D" type="AreaLight3D" parent="." unique_id=1401246055]
 transform = Transform3D(1, -7.1054274e-15, 4.3711392e-08, -4.371139e-08, -1.642028e-15, 1, -7.1054274e-15, -1, -3.8213718e-15, 0.06922276, 3.8164845, 8.0028105)
 light_color = Color(0.81263554, 0.7314163, 0.7153787, 1)
-light_energy = 49.49
+light_energy = 57.58
+shadow_enabled = true
+shadow_bias = 0.674
+shadow_normal_bias = 0.0
+shadow_opacity = 0.57
 area_size = Vector2(24.133762, 15.525649)
 
 [node name="2_Floor2" parent="." unique_id=1411981116 instance=ExtResource("1_m40xd")]

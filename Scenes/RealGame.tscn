@@ -32,6 +32,6 @@ current_dungeon = NodePath("../Dungeon1")
 environment = SubResource("Environment_t1osg")
 
 [node name="playa" parent="." unique_id=990109964 instance=ExtResource("2_i0vv1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20000005, 1.3000001, -0.5999999)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4891863, 1.3000001, 1.950155)
 
 [node name="Dungeon1" parent="." unique_id=535005868 instance=ExtResource("1_mmlet")]

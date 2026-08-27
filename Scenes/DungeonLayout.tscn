@@ -70,6 +70,7 @@
 [ext_resource type="PackedScene" uid="uid://d37yvmn2kjrge" path="res://Scenes/Rooms/Room69.tscn" id="68_s0nae"]
 [ext_resource type="PackedScene" uid="uid://cev6n8hqe0mfm" path="res://Scenes/Rooms/Room70.tscn" id="69_8pipd"]
 [ext_resource type="PackedScene" uid="uid://dvlle7h05yqsd" path="res://Scenes/Rooms/Room71.tscn" id="70_8pipd"]
+[ext_resource type="PackedScene" uid="uid://buyxunuiu1xtv" path="res://Scenes/Rooms/Room61.tscn" id="71_k22so"]
 
 [node name="DungeonLayout" type="Node3D" unique_id=501870548]
 
@@ -229,7 +230,7 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 30, 
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 50, 0, -118)
 
 [node name="Room53" parent="." unique_id=26629016 instance=ExtResource("54_v1bmn")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 66, 0, -134)
+transform = Transform3D(-0.99999946, 4.5246053e-11, -0.0010350216, 4.5246053e-11, 1, 2.344466e-14, 0.0010350216, -2.3448616e-14, -0.99999946, 66, 0, -134)
 
 [node name="Room54" parent="." unique_id=1442963213 instance=ExtResource("55_0t68a")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 54, 0, -146)
@@ -251,9 +252,6 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 138,
 
 [node name="Room60" parent="." unique_id=1079892445 instance=ExtResource("60_vk4j8")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 146, 10, -158)
-
-[node name="Room61" parent="." unique_id=1219573725 instance=ExtResource("59_vnpgj")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 138, 10, -171)
 
 [node name="Room62" parent="." unique_id=1737130327 instance=ExtResource("61_krpqm")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 126, 10, -159)
@@ -284,3 +282,6 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 138,
 
 [node name="Room71" parent="." unique_id=584163124 instance=ExtResource("70_8pipd")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 118, -29, 0)
+
+[node name="Room61" parent="." unique_id=1545976548 instance=ExtResource("71_k22so")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 138, 10, -172)

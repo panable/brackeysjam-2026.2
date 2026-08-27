@@ -12,6 +12,7 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0
 transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, 6.0041413, 4.274249, -0.070406005)
 light_color = Color(0.81263554, 0.7314163, 0.7153787, 1)
 light_energy = 45.1
+shadow_enabled = true
 area_size = Vector2(8.96646, 28.697903)
 
 [node name="3_Floor2" parent="." unique_id=1115029559 instance=ExtResource("1_1s1a2")]
@@ -89,9 +90,6 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8, 
 [node name="3_Wall2" parent="." unique_id=888857100 instance=ExtResource("2_uhab3")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.496911e-07, 0, 4)
 
-[node name="3_Wall14" parent="." unique_id=203322882 instance=ExtResource("2_uhab3")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.9999998, 0, 4.0000005)
-
 [node name="3_Wall5" parent="." unique_id=1221875220 instance=ExtResource("2_uhab3")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16, 0, 3.9999986)
 
@@ -139,3 +137,6 @@ transform = Transform3D(1, 0, 1.4210855e-14, 0, 1, 0, -1.4210855e-14, 0, 1, -8, 
 
 [node name="3_Door2" parent="." unique_id=659803188 instance=ExtResource("4_g0ixx")]
 transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 16, 0, -4.0000014)
+
+[node name="3_Door3" parent="." unique_id=1822740091 instance=ExtResource("4_g0ixx")]
+transform = Transform3D(-1, 0, -2.6226832e-07, 0, 1, 0, 2.6226832e-07, 0, -1, -3.9999998, 0, 4.0000005)
