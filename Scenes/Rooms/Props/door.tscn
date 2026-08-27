@@ -5,9 +5,9 @@
 
 [node name="Door2" unique_id=1751437828 instance=ExtResource("1_88sax")]
 
-[node name="DoorL" parent="Door" parent_id_path=PackedInt32Array(1563095842) index="0" unique_id=868046462]
+[node name="DoorL" parent="Door" parent_id_path=PackedInt32Array(1109212170) index="0" unique_id=1766366562]
 transform = Transform3D(0, 0.5712217, -0.8207958, -1, 0, 0, 0, 0.8207958, 0.5712217, 0, 0, 1)
 surface_material_override/0 = ExtResource("2_16wvt")
 
-[node name="DoorR" parent="Door" parent_id_path=PackedInt32Array(1563095842) index="1" unique_id=456884098]
+[node name="DoorR" parent="Door" parent_id_path=PackedInt32Array(1109212170) index="1" unique_id=1478529586]
 surface_material_override/0 = ExtResource("2_16wvt")

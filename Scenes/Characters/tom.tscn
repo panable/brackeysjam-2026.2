@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cba5r6losnwsh"]
+
+[ext_resource type="PackedScene" uid="uid://clnwbqtyvls38" path="res://Models/Characters/Tom.glb" id="1_sfr0v"]
+[ext_resource type="Material" uid="uid://rr1awatfubbx" path="res://Materials/Characters/Orange.tres" id="2_8mm26"]
+[ext_resource type="Material" uid="uid://co0onowbjk0h3" path="res://Materials/Characters/DarkBlue.tres" id="2_bqj4y"]
+[ext_resource type="Material" uid="uid://cse0uc1mpqlns" path="res://Materials/Characters/OliveSkin.tres" id="4_poocx"]
+[ext_resource type="Material" uid="uid://cbqxho4rpr42x" path="res://Materials/Characters/White.tres" id="5_0pmf2"]
+[ext_resource type="Material" uid="uid://d20ekafmb5vdv" path="res://Materials/Characters/Black.tres" id="6_clmco"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bqj4y"]
+size = Vector3(1, 0.866333, 0.6760254)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_14q1x"]
+
+[node name="Tom2" unique_id=1892381738 instance=ExtResource("1_sfr0v")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+
+[node name="Circle_004" parent="Tom/Armature_004/Skeleton3D" parent_id_path=PackedInt32Array(577237692) index="0" unique_id=354577873]
+surface_material_override/0 = ExtResource("2_bqj4y")
+surface_material_override/1 = ExtResource("2_8mm26")
+
+[node name="Sphere_013" parent="Tom/Armature_004/Skeleton3D" parent_id_path=PackedInt32Array(577237692) index="1" unique_id=1593624450]
+surface_material_override/0 = ExtResource("4_poocx")
+surface_material_override/1 = ExtResource("5_0pmf2")
+surface_material_override/2 = ExtResource("6_clmco")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=2112171426]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=708392024]
+transform = Transform3D(2.34, 0, 0, 0, 4.1184, 0, 0, 0, 2.772, 0, 1.7757876, 0.09855604)
+shape = SubResource("BoxShape3D_bqj4y")
+
+[node name="Area3D" type="Area3D" parent="." index="3" unique_id=1166776339]
+transform = Transform3D(16.38, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=1036901548]
+transform = Transform3D(0.5131465, 0, 0, 0, 1, 0, 0, 0, 8.19983, 0, 1, 3)
+shape = SubResource("CylinderShape3D_14q1x")

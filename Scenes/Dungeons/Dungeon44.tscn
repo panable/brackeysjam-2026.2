@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://c04xefj3gud6g"]
+
+[ext_resource type="Script" uid="uid://dlwfb4ud68h73" path="res://Scripts/dungeon.gd" id="1_3svcb"]
+[ext_resource type="PackedScene" uid="uid://c1aylrnw1jm4c" path="res://Scenes/Dungeons/door_portal.tscn" id="1_ho4v0"]
+[ext_resource type="PackedScene" uid="uid://djis5nh6xi7xn" path="res://Scenes/Rooms/Room44.tscn" id="2_3svcb"]
+
+[node name="Dungeon44" type="Node3D" unique_id=1983366793]
+script = ExtResource("1_3svcb")
+
+[node name="Doorways" type="Node" parent="." unique_id=164694250]
+
+[node name="Entrances" type="Node" parent="Doorways" unique_id=1577999418]
+
+[node name="West" parent="Doorways/Entrances" unique_id=891237568 instance=ExtResource("1_ho4v0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1.4000001, -4.02)
+collision_layer = 8
+destination_room = "res://Scenes/Dungeons/Dungeon48.tscn"
+destination_entrace = "East"
+
+[node name="South" parent="Doorways/Entrances" unique_id=1256022880 instance=ExtResource("1_ho4v0")]
+transform = Transform3D(1.1920929e-07, 0, 1, 0, 1, 0, -1, 0, 1.1920929e-07, 0.009999752, 0.8, 5.9500003)
+destination_room = "uid://b0hsxhynssy83"
+destination_entrace = "North"
+
+[node name="North" parent="Doorways/Entrances" unique_id=1938131276 instance=ExtResource("1_ho4v0")]
+transform = Transform3D(-2.3841858e-07, 0, -1, 0, 1, 0, 1, 0, -2.3841858e-07, 0.010001279, 1.2, -14.150001)
+destination_room = "res://Scenes/Dungeons/Dungeon45.tscn"
+destination_entrace = "South"
+
+[node name="Exits" type="Node" parent="Doorways" unique_id=1359267038]
+
+[node name="West" type="Marker3D" parent="Doorways/Exits" unique_id=428619299]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 0.8, -4.02)
+gizmo_extents = 0.26
+
+[node name="South" type="Marker3D" parent="Doorways/Exits" unique_id=898244135]
+transform = Transform3D(1.1920929e-07, 0, 1, 0, 1, 0, -1, 0, 1.1920929e-07, 0.010000706, 0.8, 3.8499997)
+gizmo_extents = 0.26
+
+[node name="North" type="Marker3D" parent="Doorways/Exits" unique_id=138301238]
+transform = Transform3D(-2.3841858e-07, 0, -1, 0, 1, 0, 1, 0, -2.3841858e-07, 0.009999849, 0.8000001, -12.150001)
+gizmo_extents = 0.26
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=570344580]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 26.045, -4.021608)
+fov = 50.0
+
+[node name="Room1" parent="." unique_id=20324241 instance=ExtResource("2_3svcb")]

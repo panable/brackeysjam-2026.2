@@ -9,6 +9,7 @@ var can_move = true
 
 var target_velocity = Vector3.ZERO
 @onready var collider: CollisionShape3D = $CollisionShape3D
+@onready var pivot: Node3D = $Pivot
 
 func DisableCollider():
 	collider.set_deferred("disabled", false)

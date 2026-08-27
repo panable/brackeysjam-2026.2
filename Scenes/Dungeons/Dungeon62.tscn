@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dyieqtdylgdd0"]
+
+[ext_resource type="PackedScene" uid="uid://c1aylrnw1jm4c" path="res://Scenes/Dungeons/door_portal.tscn" id="1_dik01"]
+[ext_resource type="Script" uid="uid://dlwfb4ud68h73" path="res://Scripts/dungeon.gd" id="1_rv8yl"]
+[ext_resource type="PackedScene" uid="uid://ctdjfl3syg4ct" path="res://Scenes/Rooms/Room62.tscn" id="2_rv8yl"]
+
+[node name="Dungeon62" type="Node3D" unique_id=735276332]
+script = ExtResource("1_rv8yl")
+
+[node name="Doorways" type="Node" parent="." unique_id=1380930577]
+
+[node name="Entrances" type="Node" parent="Doorways" unique_id=735391413]
+
+[node name="West" parent="Doorways/Entrances" unique_id=891237568 instance=ExtResource("1_dik01")]
+transform = Transform3D(-1, 0, -7.54979e-08, 0, 1, 0, 7.54979e-08, 0, -1, -10.000001, 0.8, 4.374969e-07)
+destination_room = "res://Scenes/Dungeons/Dungeon63.tscn"
+destination_entrace = "East"
+
+[node name="North" parent="Doorways/Entrances" unique_id=1947782705 instance=ExtResource("1_dik01")]
+transform = Transform3D(1.1920929e-07, 0, -1, 0, 1, 0, 1, 0, 1.1920929e-07, -4.0000005, 0.8, -6)
+destination_room = "uid://cmgqx13k5vp3m"
+destination_entrace = "SouthL"
+
+[node name="Exits" type="Node" parent="Doorways" unique_id=2125327208]
+
+[node name="West" type="Marker3D" parent="Doorways/Exits" unique_id=1804059998]
+transform = Transform3D(-1, 0, -7.54979e-08, 0, 1, 0, 7.54979e-08, 0, -1, -8.200001, 0.8, 5.161774e-07)
+
+[node name="North" type="Marker3D" parent="Doorways/Exits" unique_id=274083205]
+transform = Transform3D(1.1920929e-07, 0, -1, 0, 1, 0, 1, 0, 1.1920929e-07, -4.0000005, 0.8, -4.6000004)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1217390174]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -4, 19.645462, -0.008445263)
+fov = 50.0
+
+[node name="Room1" parent="." unique_id=20324241 instance=ExtResource("2_rv8yl")]
