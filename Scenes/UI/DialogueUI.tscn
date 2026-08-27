@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dgvew44vrd1d1"]
+
+[ext_resource type="Script" uid="uid://cq7pnjs1sesp1" path="res://Scripts/DialogueUIi.gd" id="1_vbmao"]
+
+[node name="DialogueUI" type="Control" unique_id=1035567338]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vbmao")
+
+[node name="BackgroundPanel" type="PanelContainer" parent="." unique_id=1214466746]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -360.0
+offset_top = -330.0
+offset_right = 340.0
+offset_bottom = -150.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BackgroundPanel" unique_id=718182479]
+layout_mode = 2
+
+[node name="SpeakerLabel" type="Label" parent="BackgroundPanel/VBoxContainer" unique_id=1751166119]
+layout_mode = 2
+text = "Roger"
+
+[node name="TextLabel" type="Label" parent="BackgroundPanel/VBoxContainer" unique_id=234896968]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Hey there. Where would you like to go?"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ChoicesPanel" type="PanelContainer" parent="." unique_id=1612344806]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -595.0
+offset_top = -330.0
+offset_right = -195.0
+offset_bottom = -150.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="ChoicesBox" type="VBoxContainer" parent="ChoicesPanel" unique_id=186158033]
+layout_mode = 2

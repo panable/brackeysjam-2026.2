@@ -4,6 +4,8 @@
 
 [node name="InventoryUISlot" type="PanelContainer" unique_id=54015080]
 custom_minimum_size = Vector2(120, 120)
+offset_right = 120.0
+offset_bottom = 120.0
 script = ExtResource("1_snid6")
 
 [node name="Icon" type="TextureRect" parent="." unique_id=442113715]
@@ -11,3 +13,4 @@ layout_mode = 2
 
 [node name="QuantityLabel" type="Label" parent="." unique_id=337672221]
 layout_mode = 2
+size_flags_vertical = 0

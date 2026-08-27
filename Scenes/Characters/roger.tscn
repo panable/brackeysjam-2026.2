@@ -12,15 +12,18 @@
 [node name="Roger2" unique_id=746644632 instance=ExtResource("1_p0gp4")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
-[node name="Skeleton3D" parent="Roger/Armature" parent_id_path=PackedInt32Array(1063130909) index="0" unique_id=2073231056]
+[node name="Skeleton3D" parent="Roger/Armature" parent_id_path=PackedInt32Array(1785514209) index="0" unique_id=1119759989]
 bones/1/rotation = Quaternion(0.24053796, -1.2959586e-16, -1.4204885e-16, 0.97063977)
 
-[node name="Sphere_002" parent="Roger/Armature/Skeleton3D" index="1" unique_id=270993668]
+[node name="Sphere_002" parent="Roger/Armature/Skeleton3D" index="1" unique_id=731633544]
 surface_material_override/0 = ExtResource("2_1c06c")
 surface_material_override/1 = ExtResource("3_5l56h")
 surface_material_override/2 = ExtResource("3_cvwl2")
 surface_material_override/3 = ExtResource("5_8uqb3")
 surface_material_override/4 = ExtResource("6_rjsj1")
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=1567095163]
+autoplay = &"Idle_Nod"
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=956261479]
 

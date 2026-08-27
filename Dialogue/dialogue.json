@@ -1,0 +1,41 @@
+{
+	"start": {
+		"speaker": "NPC",
+		"content": "Hello! It's nice to meet you.",
+		"next_id": "question"
+	},
+
+	"question": {
+		"speaker": "NPC",
+		"content": "What do you think of this place?",
+		"choices": [
+			{
+				"content": "I like it here.",
+				"next_id": "positive"
+			},
+			{
+				"content": "It's a bit strange.",
+				"next_id": "strange"
+			},
+			{
+				"content": "I don't know yet.",
+				"next_id": "unsure"
+			}
+		]
+	},
+
+	"positive": {
+		"speaker": "NPC",
+		"content": "Glad to hear it. Maybe you'll stick around for a while."
+	},
+
+	"strange": {
+		"speaker": "NPC",
+		"content": "Yeah... you'll get used to it eventually."
+	},
+
+	"unsure": {
+		"speaker": "NPC",
+		"content": "Fair enough. You've only just arrived."
+	}
+}
