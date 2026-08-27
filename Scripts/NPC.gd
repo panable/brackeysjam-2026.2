@@ -10,6 +10,7 @@ extends Node3D
 var in_range := false
 var _data: Dictionary = {}
 var player: Node3D = null
+var is_talking := false
 
 func _ready() -> void:
 	_load_dialogue()
@@ -22,8 +23,8 @@ func _process(delta: float) -> void:
 	if in_range and player:
 		_track_player(delta)
 
-	if in_range and Input.is_action_just_pressed("interact"):
-			interact()
+	if in_range and not is_talking and Input.is_action_just_pressed("interact"):
+		interact()
 
 func _load_dialogue() -> void:
 	if dialogue_path.is_empty():
@@ -41,7 +42,12 @@ func interact() -> void:
 	
 	if _data.is_empty():
 		return
+	
+	if is_talking:
+		return
+	
 	player.can_move = false
+	is_talking = true
 	player.set_process_unhandled_input(false)
 	dialogue.start(_data, entry_name)
 
@@ -65,6 +71,7 @@ func _on_finished() -> void:
 	if player:
 		player.set_process_unhandled_input(true)
 		player.can_move = true
+		is_talking = false
 
 func _track_player(delta: float) -> void:
 	var target_position := player.global_position

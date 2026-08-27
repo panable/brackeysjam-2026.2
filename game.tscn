@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://bxpodlqif1ghn" path="res://camera_3d.gd" id="5_j5wjh"]
 [ext_resource type="Texture2D" uid="uid://c7oyhejvt7mk8" path="res://kenney_prototype-textures/PNG/Dark/texture_04.png" id="6_vef74"]
 [ext_resource type="PackedScene" uid="uid://dgvew44vrd1d1" path="res://Scenes/UI/DialogueUI.tscn" id="8_j5wjh"]
-[ext_resource type="PackedScene" uid="uid://ct61mvif61dj6" path="res://Scenes/Characters/Shopkeeper.tscn" id="8_vef74"]
+[ext_resource type="PackedScene" uid="uid://clxdl8sdql4ld" path="res://Scenes/Characters/BaseNPC.tscn" id="8_vef74"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hve3p"]
 albedo_texture = ExtResource("3_ryrav")
@@ -330,4 +330,3 @@ omni_range = 23.0
 [node name="DialogueUI" parent="." unique_id=1035567338 instance=ExtResource("8_j5wjh")]
 
 [node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("8_vef74")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2216935, 0.60326004, -6.776659)

@@ -5,7 +5,8 @@ signal dialogue_finished
 
 @onready var speaker: Label = $BackgroundPanel/VBoxContainer/SpeakerLabel
 @onready var content: Label = $BackgroundPanel/VBoxContainer/TextLabel
-@onready var response: VBoxContainer = $BackgroundPanel/ChoicesBox
+@onready var response: VBoxContainer = $ChoicesPanel/ChoicesBox
+@onready var choices_panel: PanelContainer = $ChoicesPanel
 
 var _data: Dictionary = {}
 var _current_id: String = ""
@@ -30,6 +31,7 @@ func _show(id: String) -> void:
 		return
 	_current_id = id
 	var entry: Dictionary = _data[id]
+	choices_panel.hide()
 	speaker.text = entry.get("speaker", "")
 	content.text = entry.get("content", "...")
 	content.visible_characters = 0
@@ -52,6 +54,7 @@ func _on_typing_tick() -> void:
 		#_end()
 
 func _show_choices(choices: Array) -> void:
+	choices_panel.show()
 	for choice in choices:
 		var button := Button.new()
 		button.text = choice["content"]
@@ -63,18 +66,23 @@ func _input(event: InputEvent) -> void:
 	if not visible:
 		return
 	
-	# Ignore released keys
-	if not event.is_pressed():
+	# Check if the player pressed an allowed interaction key
+	var interact_pressed := false
+	
+	# Keyboard controls
+	if event is InputEventKey and event.pressed and not event.echo:
+		if event.keycode == KEY_SPACE or event.keycode == KEY_E:
+			interact_pressed = true
+	
+	# Mouse controls
+	elif event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			interact_pressed = true
+	
+	# Ignore everything else
+	if not interact_pressed:
 		return
 	
-	# Ignore mouse movement
-	if event is InputEventMouseMotion:
-		return
-		
-	# Ignore mouse buttons other than left click
-	if event is InputEventMouseButton and event.button_index != MOUSE_BUTTON_LEFT:
-		return
-		
 	# Finish displaying text if it is still typing
 	if not _typing.is_stopped():
 		content.visible_characters = content.get_total_character_count()
