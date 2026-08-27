@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dn34fdfm84ro6" path="res://Scenes/Rooms/Modular/3_step_up.tscn" id="6_pt71x"]
 [ext_resource type="PackedScene" uid="uid://m4vuxg8tj32h" path="res://Scenes/Rooms/Props/door.tscn" id="7_pt71x"]
 [ext_resource type="PackedScene" uid="uid://12nqyceo1hri" path="res://Scenes/Rooms/Modular/one_way_door_collider.tscn" id="8_hi63g"]
-[ext_resource type="PackedScene" uid="uid://ccurrujo7hjme" path="res://Models/Characters/Marco.glb" id="9_k07mq"]
+[ext_resource type="PackedScene" uid="uid://dlnpix86qgikt" path="res://Scenes/Characters/Marco_c.tscn" id="9_k07mq"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -125,5 +125,5 @@ transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 4.
 [node name="one_way_door_collider" parent="Door2" unique_id=2010904796 instance=ExtResource("8_hi63g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40000153, 0.7, 0.3000002)
 
-[node name="Marco2" parent="." unique_id=451536295 instance=ExtResource("9_k07mq")]
-transform = Transform3D(-0.6, 0, -9.059749e-08, 0, 0.6, 0, 9.059749e-08, 0, -0.6, 3.8000007, 0.1, 8.5)
+[node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("9_k07mq")]
+transform = Transform3D(-0.6, 0, -5.2453668e-08, 0, 0.6, 0, 5.2453668e-08, 0, -0.6, 3.8043048, 0.10113275, 8.490345)

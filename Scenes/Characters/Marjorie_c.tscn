@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://crhi7i7e67vxe" path="res://Scenes/Characters/marjorie.tscn" id="2_ki3nk"]
 
 [node name="NPC" unique_id=1288896559 instance=ExtResource("1_8sojh")]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
 npc_name = "Marjorie"
 
 [node name="Marjorie2" parent="ModelRoot" parent_id_path=PackedInt32Array(2030884967) index="0" unique_id=250863265 instance=ExtResource("2_ki3nk")]

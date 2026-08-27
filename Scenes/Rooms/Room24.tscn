@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ifdygy2cgq0" path="res://Scenes/Rooms/Modular/1_floor.tscn" id="4_jhw1s"]
 [ext_resource type="PackedScene" uid="uid://d4b2nguo0nd6l" path="res://Scenes/Rooms/Modular/1_wall_3.tscn" id="5_ow5v1"]
 [ext_resource type="PackedScene" uid="uid://dnip0iuv8xgaa" path="res://Scenes/Rooms/Modular/1_door.tscn" id="6_lxkp0"]
-[ext_resource type="PackedScene" uid="uid://bjo7gcyhal18d" path="res://Scenes/Characters/time_knight.tscn" id="7_3d4pl"]
+[ext_resource type="PackedScene" uid="uid://c0h5fxqx3aeq7" path="res://Scenes/Characters/Time_Knight_c.tscn" id="7_3d4pl"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
@@ -207,5 +207,5 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.0
 [node name="1_Door3" parent="." unique_id=1831361257 instance=ExtResource("6_lxkp0")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.000001, 0, 11.999999)
 
-[node name="TimeKnight" parent="." unique_id=988928675 instance=ExtResource("7_3d4pl")]
-transform = Transform3D(-0.30000004, 0, 0.51961523, 0, 0.59999996, 0, -0.51961523, 0, -0.30000004, -2.9599383, 0, 14.846767)
+[node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("7_3d4pl")]
+transform = Transform3D(-0.27522838, 0, 0.5331503, 0, 0.59999985, 0, -0.5331503, 0, -0.27522838, -2.9943738, -0.0006208904, 14.8537855)

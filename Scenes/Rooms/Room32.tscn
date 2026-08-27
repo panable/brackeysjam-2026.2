@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://glfncrv37l2" path="res://Scenes/Rooms/Modular/2_wall_2.tscn" id="3_60yiw"]
 [ext_resource type="PackedScene" uid="uid://duiwymejna7kb" path="res://Scenes/Rooms/Modular/2_door.tscn" id="4_fpgio"]
 [ext_resource type="PackedScene" uid="uid://b5i57i5272y5q" path="res://Scenes/Rooms/Modular/2_wall_1.tscn" id="5_gi5cw"]
-[ext_resource type="PackedScene" uid="uid://ck3tj2eklbh5h" path="res://Models/Characters/Hershey.glb" id="6_835qd"]
+[ext_resource type="PackedScene" uid="uid://dp8nrjd5lmcng" path="res://Scenes/Characters/Hershey_c.tscn" id="6_835qd"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -239,5 +239,5 @@ transform = Transform3D(1.3113417e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113417e-07, 11.9
 [node name="2_Wall_19" parent="." unique_id=552931601 instance=ExtResource("5_gi5cw")]
 transform = Transform3D(1.3113417e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113417e-07, 12, 0, -1.0490733e-06)
 
-[node name="Hershey2" parent="." unique_id=1082683004 instance=ExtResource("6_835qd")]
-transform = Transform3D(-0.42426398, 0, -0.4242641, 0, 0.59999996, 0, 0.4242641, 0, -0.42426398, -8.742278e-08, 0, -1)
+[node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("6_835qd")]
+transform = Transform3D(-0.43425408, 0, -0.41403306, 0, 0.59999996, 0, 0.41403306, 0, -0.43425408, -0.01868257, 0.010388494, -1.0240982)
