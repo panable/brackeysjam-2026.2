@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bycya3oqcgtu7"]
+
+[ext_resource type="PackedScene" uid="uid://ccjye4b610by6" path="res://Models/Characters/yasmine.glb" id="1_tko1w"]
+[ext_resource type="Material" uid="uid://ywsmda3qoytu" path="res://Materials/Characters/DarkGreen.tres" id="2_pn0wi"]
+[ext_resource type="Material" uid="uid://b6q7v82himcm3" path="res://Materials/Characters/DarkBrown.tres" id="3_d6rst"]
+[ext_resource type="Material" uid="uid://cdhlf1dc0vluc" path="res://Materials/Characters/Cream.tres" id="4_4j70c"]
+[ext_resource type="Material" uid="uid://cse0uc1mpqlns" path="res://Materials/Characters/OliveSkin.tres" id="5_d6rst"]
+[ext_resource type="Material" uid="uid://d20ekafmb5vdv" path="res://Materials/Characters/Black.tres" id="6_4j70c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cmh6s"]
+size = Vector3(0.8173828, 0.84277344, 0.53808594)
+
+[node name="yasmine" unique_id=651857203 instance=ExtResource("1_tko1w")]
+
+[node name="Cube_031" parent="Yasmin/Armature_009/Skeleton3D" parent_id_path=PackedInt32Array(980160815) index="0" unique_id=2025174604]
+surface_material_override/0 = ExtResource("2_pn0wi")
+surface_material_override/1 = ExtResource("3_d6rst")
+surface_material_override/2 = ExtResource("3_d6rst")
+surface_material_override/3 = ExtResource("4_4j70c")
+
+[node name="Sphere_027" parent="Yasmin/Armature_009/Skeleton3D" parent_id_path=PackedInt32Array(980160815) index="1" unique_id=2075318109]
+surface_material_override/0 = ExtResource("5_d6rst")
+surface_material_override/1 = ExtResource("6_4j70c")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=289456287]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1458326778]
+transform = Transform3D(2.6, 0, 0, 0, 4.6800003, 0, 0, 0, 4.62, 0.0038085878, 1.9674648, -0.118303075)
+shape = SubResource("BoxShape3D_cmh6s")

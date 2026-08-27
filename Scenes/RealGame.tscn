@@ -7,7 +7,14 @@
 [sub_resource type="Environment" id="Environment_t1osg"]
 background_mode = 1
 background_energy_multiplier = 0.71
-ambient_light_energy = 0.13
+ambient_light_source = 2
+ambient_light_color = Color(0.47466052, 0.4051787, 0.46016657, 1)
+ambient_light_energy = 0.49
+ssao_enabled = true
+ssao_radius = 3.59
+ssao_intensity = 2.3
+ssao_sharpness = 1.0
+fog_light_energy = 1.6
 volumetric_fog_density = 0.0232
 volumetric_fog_albedo = Color(0.94574016, 0.94574004, 0.94574004, 1)
 volumetric_fog_emission_energy = 13.05

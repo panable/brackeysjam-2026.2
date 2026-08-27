@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://duiwymejna7kb" path="res://Scenes/Rooms/Modular/2_door.tscn" id="4_xll0i"]
 [ext_resource type="PackedScene" uid="uid://c2u5irowtr2df" path="res://Scenes/Rooms/Modular/2_step_down.tscn" id="5_o8mbm"]
 [ext_resource type="PackedScene" uid="uid://b8oijfuvgn66a" path="res://Scenes/Rooms/Modular/2_step_up.tscn" id="6_wmrxv"]
+[ext_resource type="PackedScene" uid="uid://bma6to6tvid8y" path="res://Scenes/Characters/ham.tscn" id="7_nctl0"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -138,3 +139,6 @@ transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -3.4
 
 [node name="1_StepUp2" parent="." unique_id=1258062770 instance=ExtResource("6_wmrxv")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.0490733e-06, 0, 12)
+
+[node name="Ham2" parent="." unique_id=2041356177 instance=ExtResource("7_nctl0")]
+transform = Transform3D(-0.6, 0, -9.059749e-08, 0, 0.6, 0, 9.059749e-08, 0, -0.6, 1.0765824e-06, 0, 12.314667)

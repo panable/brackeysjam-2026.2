@@ -70,7 +70,6 @@
 [ext_resource type="PackedScene" uid="uid://d37yvmn2kjrge" path="res://Scenes/Rooms/Room69.tscn" id="68_s0nae"]
 [ext_resource type="PackedScene" uid="uid://cev6n8hqe0mfm" path="res://Scenes/Rooms/Room70.tscn" id="69_8pipd"]
 [ext_resource type="PackedScene" uid="uid://dvlle7h05yqsd" path="res://Scenes/Rooms/Room71.tscn" id="70_8pipd"]
-[ext_resource type="PackedScene" uid="uid://bq6uivhhbd8ia" path="res://Scenes/Characters/morris.tscn" id="71_k22so"]
 
 [node name="DungeonLayout" type="Node3D" unique_id=501870548]
 
@@ -285,6 +284,3 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 138,
 
 [node name="Room71" parent="." unique_id=584163124 instance=ExtResource("70_8pipd")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 118, -29, 0)
-
-[node name="Morris2" parent="." unique_id=1062289283 instance=ExtResource("71_k22so")]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -18, 35, -235)

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b8cvbci6e6w4v"]
+
+[ext_resource type="PackedScene" uid="uid://cixmge13qnop" path="res://Models/Characters/Walter.glb" id="1_e56fj"]
+[ext_resource type="Material" uid="uid://cse0uc1mpqlns" path="res://Materials/Characters/OliveSkin.tres" id="2_q5u2j"]
+[ext_resource type="Material" uid="uid://d20ekafmb5vdv" path="res://Materials/Characters/Black.tres" id="3_rk4qx"]
+[ext_resource type="Material" uid="uid://pau0grp3x2l0" path="res://Materials/Characters/Red.tres" id="4_4v6vu"]
+[ext_resource type="Material" uid="uid://dkmwns4hpp04k" path="res://Materials/Characters/LightBrown.tres" id="4_m6x0p"]
+[ext_resource type="Material" uid="uid://b6q7v82himcm3" path="res://Materials/Characters/DarkBrown.tres" id="4_q5u2j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m6x0p"]
+size = Vector3(0.6880493, 0.9071045, 1.0233154)
+
+[node name="Walter2" unique_id=591781183 instance=ExtResource("1_e56fj")]
+
+[node name="Cube_028" parent="Walter/Armature_008/Skeleton3D" parent_id_path=PackedInt32Array(1965304176) index="0" unique_id=778221873]
+surface_material_override/0 = ExtResource("4_m6x0p")
+surface_material_override/1 = ExtResource("4_q5u2j")
+surface_material_override/2 = ExtResource("4_4v6vu")
+
+[node name="Sphere_020" parent="Walter/Armature_008/Skeleton3D" parent_id_path=PackedInt32Array(1965304176) index="1" unique_id=2097975975]
+surface_material_override/0 = ExtResource("2_q5u2j")
+surface_material_override/1 = ExtResource("3_rk4qx")
+surface_material_override/2 = ExtResource("4_q5u2j")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=386413943]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.6, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1453346503]
+transform = Transform3D(3.8999999, 0, 0, 0, 4.6800003, 0, 0, 0, 4.62, -0.013807271, 2.1179996, -0.088131)
+shape = SubResource("BoxShape3D_m6x0p")

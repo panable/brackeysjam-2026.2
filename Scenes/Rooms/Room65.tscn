@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bdas047dt6wem" path="res://Scenes/Rooms/Modular/3_wall.tscn" id="2_epajk"]
 [ext_resource type="PackedScene" uid="uid://ywugr7ge6dnv" path="res://Scenes/Rooms/Modular/3_wall_c.tscn" id="3_qja3j"]
 [ext_resource type="PackedScene" uid="uid://bs46jlrf2dn4l" path="res://Scenes/Rooms/Modular/3_door.tscn" id="4_mgyir"]
+[ext_resource type="PackedScene" uid="uid://dfs68ec3jj4vq" path="res://Models/Characters/Pablo.glb" id="5_epajk"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -12,6 +13,10 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0
 transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, 0.0041413247, 4.274249, -0.07040548)
 light_color = Color(0.81263554, 0.7314163, 0.7153787, 1)
 light_energy = 34.27
+shadow_enabled = true
+shadow_bias = 0.674
+shadow_normal_bias = 0.0
+shadow_opacity = 0.57
 area_size = Vector2(8.96646, 16.501814)
 
 [node name="3_Floor2" parent="." unique_id=1115029559 instance=ExtResource("1_38equ")]
@@ -94,3 +99,6 @@ transform = Transform3D(1, 0, 1.4210855e-14, 0, 1, 0, -1.4210855e-14, 0, 1, -8, 
 
 [node name="3_Door2" parent="." unique_id=659803188 instance=ExtResource("4_mgyir")]
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 8, 0, -6.3977757e-07)
+
+[node name="Pablo2" parent="." unique_id=545619482 instance=ExtResource("5_epajk")]
+transform = Transform3D(-0.1552915, 0, 0.5795555, 0, 0.6, 0, -0.5795555, 0, -0.1552915, -5, 0, 4.371139e-07)

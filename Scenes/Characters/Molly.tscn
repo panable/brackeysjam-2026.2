@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://ckmm64tmwv32i"]
+
+[ext_resource type="PackedScene" uid="uid://qy1nq3e41a77" path="res://Models/Characters/Molly.glb" id="1_qbmnb"]
+[ext_resource type="Material" uid="uid://cimro0w5hgnh2" path="res://Materials/Characters/Purple.tres" id="2_ca1jd"]
+[ext_resource type="Material" uid="uid://rr1awatfubbx" path="res://Materials/Characters/Orange.tres" id="3_a8btw"]
+[ext_resource type="Material" uid="uid://cse0uc1mpqlns" path="res://Materials/Characters/OliveSkin.tres" id="4_tus8b"]
+[ext_resource type="Material" uid="uid://d20ekafmb5vdv" path="res://Materials/Characters/Black.tres" id="5_on12q"]
+[ext_resource type="Material" uid="uid://ywsmda3qoytu" path="res://Materials/Characters/DarkGreen.tres" id="6_f1o4t"]
+[ext_resource type="Material" uid="uid://b6q7v82himcm3" path="res://Materials/Characters/DarkBrown.tres" id="7_dhrdh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_upi2r"]
+size = Vector3(1, 0.7548828, 0.6430664)
+
+[node name="Molly2" unique_id=628920367 instance=ExtResource("1_qbmnb")]
+
+[node name="Cube_014" parent="Molly/Armature_006/Skeleton3D" parent_id_path=PackedInt32Array(7564930) index="0" unique_id=577556046]
+surface_material_override/0 = ExtResource("2_ca1jd")
+surface_material_override/1 = ExtResource("3_a8btw")
+
+[node name="Sphere_019" parent="Molly/Armature_006/Skeleton3D" parent_id_path=PackedInt32Array(7564930) index="1" unique_id=1170479885]
+surface_material_override/0 = ExtResource("4_tus8b")
+surface_material_override/1 = ExtResource("2_ca1jd")
+surface_material_override/2 = ExtResource("5_on12q")
+surface_material_override/3 = ExtResource("6_f1o4t")
+surface_material_override/4 = ExtResource("7_dhrdh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=329466336]
+transform = Transform3D(0.8464775, 0, 0, 0, 1, 0, 0, 0, 0.71196747, -0.0059003904, 0, -0.31856656)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1222226789]
+transform = Transform3D(2.6, 0, 0, 0, 4.6800003, 0, 0, 0, 4.62, 0, 1.7618008, 0.36670667)
+shape = SubResource("BoxShape3D_upi2r")

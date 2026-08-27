@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dn34fdfm84ro6" path="res://Scenes/Rooms/Modular/3_step_up.tscn" id="6_pt71x"]
 [ext_resource type="PackedScene" uid="uid://m4vuxg8tj32h" path="res://Scenes/Rooms/Props/door.tscn" id="7_pt71x"]
 [ext_resource type="PackedScene" uid="uid://12nqyceo1hri" path="res://Scenes/Rooms/Modular/one_way_door_collider.tscn" id="8_hi63g"]
+[ext_resource type="PackedScene" uid="uid://ccurrujo7hjme" path="res://Models/Characters/Marco.glb" id="9_k07mq"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -16,6 +17,10 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0
 transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, 4.004142, 4.274249, 5.929594)
 light_color = Color(0.81263554, 0.7314163, 0.7153787, 1)
 light_energy = 34.27
+shadow_enabled = true
+shadow_bias = 0.674
+shadow_normal_bias = 0.0
+shadow_opacity = 0.57
 area_size = Vector2(20.100029, 8.247315)
 
 [node name="3_Floor2" parent="." unique_id=1115029559 instance=ExtResource("1_v1gfi")]
@@ -119,3 +124,6 @@ transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 4.
 
 [node name="one_way_door_collider" parent="Door2" unique_id=2010904796 instance=ExtResource("8_hi63g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40000153, 0.7, 0.3000002)
+
+[node name="Marco2" parent="." unique_id=451536295 instance=ExtResource("9_k07mq")]
+transform = Transform3D(-0.6, 0, -9.059749e-08, 0, 0.6, 0, 9.059749e-08, 0, -0.6, 3.8000007, 0.1, 8.5)

@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://duiwymejna7kb" path="res://Scenes/Rooms/Modular/2_door.tscn" id="4_7ki7u"]
 [ext_resource type="PackedScene" uid="uid://b5i57i5272y5q" path="res://Scenes/Rooms/Modular/2_wall_1.tscn" id="5_ditqv"]
 [ext_resource type="PackedScene" uid="uid://c2u5irowtr2df" path="res://Scenes/Rooms/Modular/2_step_down.tscn" id="6_uv3tx"]
+[ext_resource type="PackedScene" uid="uid://bjo7gcyhal18d" path="res://Scenes/Characters/time_knight.tscn" id="7_3gv0p"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -234,3 +235,6 @@ transform = Transform3D(1.3113417e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113417e-07, 12, 
 
 [node name="1_StepDown2" parent="." unique_id=627106933 instance=ExtResource("6_uv3tx")]
 transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -1.0490733e-06, 0, -12)
+
+[node name="TimeKnight" parent="." unique_id=988928675 instance=ExtResource("7_3gv0p")]
+transform = Transform3D(-0.51961523, 0, 0.29999983, 0, 0.59999996, 0, -0.29999983, 0, -0.51961523, -10.031705, 0, 10.43005)

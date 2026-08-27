@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dskmdfwmujoii"]
+
+[ext_resource type="PackedScene" uid="uid://ccurrujo7hjme" path="res://Models/Characters/Marco.glb" id="1_hghff"]
+[ext_resource type="Material" uid="uid://cdhlf1dc0vluc" path="res://Materials/Characters/Cream.tres" id="2_dbhqu"]
+[ext_resource type="Material" uid="uid://b6q7v82himcm3" path="res://Materials/Characters/DarkBrown.tres" id="3_km5c0"]
+[ext_resource type="Material" uid="uid://dkmwns4hpp04k" path="res://Materials/Characters/LightBrown.tres" id="4_rewuh"]
+[ext_resource type="Material" uid="uid://d20ekafmb5vdv" path="res://Materials/Characters/Black.tres" id="5_rewuh"]
+[ext_resource type="Material" uid="uid://br51a6u1qm0sx" path="res://Materials/Characters/DarkGrey.tres" id="6_quqnu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vpr3a"]
+size = Vector3(0.75, 0.84277344, 0.43762207)
+
+[node name="Marco2" unique_id=451536295 instance=ExtResource("1_hghff")]
+
+[node name="Cube_069" parent="Armature_017/Skeleton3D" parent_id_path=PackedInt32Array(301106984) index="0" unique_id=1943901407]
+surface_material_override/0 = ExtResource("2_dbhqu")
+surface_material_override/1 = ExtResource("3_km5c0")
+surface_material_override/2 = ExtResource("4_rewuh")
+
+[node name="Sphere_045" parent="Armature_017/Skeleton3D" parent_id_path=PackedInt32Array(301106984) index="1" unique_id=1093123235]
+surface_material_override/0 = ExtResource("4_rewuh")
+surface_material_override/1 = ExtResource("5_rewuh")
+surface_material_override/2 = ExtResource("2_dbhqu")
+surface_material_override/3 = ExtResource("3_km5c0")
+surface_material_override/4 = ExtResource("6_quqnu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="3" unique_id=1577280134]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.91407615, -0.023683071, 0, 0.11080572)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=379140802]
+transform = Transform3D(2.6, 0, 0, 0, 4.6800003, 0, 0, 0, 4.62, 0.0038085878, 1.7618008, 0.07570082)
+shape = SubResource("BoxShape3D_vpr3a")

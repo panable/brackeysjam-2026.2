@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bpkdbkkqjfrr3"]
+
+[ext_resource type="PackedScene" uid="uid://bgtb4n4skv8l4" path="res://Models/Characters/Feren.glb" id="1_tf1nt"]
+[ext_resource type="Material" uid="uid://y3vgucjng5k3" path="res://Materials/Characters/Navy.tres" id="2_tw7pi"]
+[ext_resource type="Material" uid="uid://b6q7v82himcm3" path="res://Materials/Characters/DarkBrown.tres" id="3_xeyqy"]
+[ext_resource type="Material" uid="uid://cdhlf1dc0vluc" path="res://Materials/Characters/Cream.tres" id="4_0yrec"]
+[ext_resource type="Material" uid="uid://b4el5ynoxf7e6" path="res://Materials/Characters/WhiteSkin.tres" id="4_tw7pi"]
+[ext_resource type="Material" uid="uid://d20ekafmb5vdv" path="res://Materials/Characters/Black.tres" id="5_xeyqy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0yrec"]
+size = Vector3(0.8173828, 0.7548828, 0.45410156)
+
+[node name="Feren2" unique_id=239585866 instance=ExtResource("1_tf1nt")]
+
+[node name="Cube_025" parent="Feren/Armature_009/Skeleton3D" parent_id_path=PackedInt32Array(334028033) index="0" unique_id=1245133062]
+surface_material_override/0 = ExtResource("2_tw7pi")
+surface_material_override/1 = ExtResource("3_xeyqy")
+surface_material_override/2 = ExtResource("3_xeyqy")
+surface_material_override/3 = ExtResource("4_0yrec")
+
+[node name="Sphere_023" parent="Feren/Armature_009/Skeleton3D" parent_id_path=PackedInt32Array(334028033) index="1" unique_id=662482377]
+surface_material_override/0 = ExtResource("4_tw7pi")
+surface_material_override/1 = ExtResource("5_xeyqy")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=1189124019]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1774357091]
+transform = Transform3D(2.6, 0, 0, 0, 4.6800003, 0, 0, 0, 4.62, 0.0038085878, 1.7618008, 0.07570082)
+shape = SubResource("BoxShape3D_0yrec")

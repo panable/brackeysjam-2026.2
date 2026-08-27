@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://ce8xvco4wist0"]
+
+[ext_resource type="PackedScene" uid="uid://do2vv4mbn3x0x" path="res://Models/Characters/Skittles.glb" id="1_5aidx"]
+[ext_resource type="Material" uid="uid://d20ekafmb5vdv" path="res://Materials/Characters/Black.tres" id="2_g7far"]
+[ext_resource type="Material" uid="uid://cbqxho4rpr42x" path="res://Materials/Characters/White.tres" id="3_i7bcb"]
+[ext_resource type="Material" uid="uid://y3vgucjng5k3" path="res://Materials/Characters/Navy.tres" id="4_yad3x"]
+[ext_resource type="Material" uid="uid://b4el5ynoxf7e6" path="res://Materials/Characters/WhiteSkin.tres" id="5_yad3x"]
+[ext_resource type="Material" uid="uid://pau0grp3x2l0" path="res://Materials/Characters/Red.tres" id="6_raqv5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vpr3a"]
+size = Vector3(0.75, 0.84277344, 0.43762207)
+
+[node name="Skittles2" unique_id=1829180060 instance=ExtResource("1_5aidx")]
+
+[node name="Cube_064" parent="Skittles/Armature_016/Skeleton3D" parent_id_path=PackedInt32Array(707687497) index="0" unique_id=1955273574]
+surface_material_override/0 = ExtResource("2_g7far")
+surface_material_override/1 = ExtResource("3_i7bcb")
+surface_material_override/2 = ExtResource("4_yad3x")
+surface_material_override/3 = ExtResource("4_yad3x")
+
+[node name="Sphere_043" parent="Skittles/Armature_016/Skeleton3D" parent_id_path=PackedInt32Array(707687497) index="1" unique_id=1999814899]
+surface_material_override/0 = ExtResource("5_yad3x")
+surface_material_override/1 = ExtResource("2_g7far")
+surface_material_override/2 = ExtResource("6_raqv5")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=1166495661]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.8, 0.049614906, 0, 0.30914107)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1301058280]
+transform = Transform3D(2.6, 0, 0, 0, 4.6800003, 0, 0, 0, 4.62, -0.048184976, 1.7618008, -0.5601695)
+shape = SubResource("BoxShape3D_vpr3a")

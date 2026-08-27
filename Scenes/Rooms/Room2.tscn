@@ -47,7 +47,11 @@ transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, 8.00
 transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, 4.002662, 3.8164845, -0.071884744)
 light_color = Color(0.80575645, 0.7408731, 0.66881275, 1)
 light_energy = 16.0
-area_size = Vector2(15.610983, 7.498847)
+shadow_enabled = true
+shadow_bias = 0.674
+shadow_normal_bias = 0.0
+shadow_opacity = 0.57
+area_size = Vector2(16.520153, 8.142314)
 
 [node name="1_Door5" parent="." unique_id=257642427 instance=ExtResource("5_cxadd")]
 transform = Transform3D(-0.9999998, 0.0003783864, -0.00045841784, 0.0003788938, 0.99999946, -0.0010691701, 0.00045799866, -0.0010693497, -0.9999993, 4.002661, 0, 8.002663)

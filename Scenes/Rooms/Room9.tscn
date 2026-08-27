@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://dnip0iuv8xgaa" path="res://Scenes/Rooms/Modular/1_door.tscn" id="4_qwr6g"]
 [ext_resource type="PackedScene" uid="uid://ifdygy2cgq0" path="res://Scenes/Rooms/Modular/1_floor.tscn" id="5_s6wtv"]
 [ext_resource type="PackedScene" uid="uid://dmhaxm5byhxb2" path="res://Scenes/Rooms/Props/plant_pot.tscn" id="6_lmjo0"]
+[ext_resource type="PackedScene" uid="uid://bjo7gcyhal18d" path="res://Scenes/Characters/time_knight.tscn" id="7_qwr6g"]
+[ext_resource type="PackedScene" uid="uid://b8cvbci6e6w4v" path="res://Scenes/Characters/Walter.tscn" id="8_s6wtv"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
@@ -40,7 +42,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0029235, 0, -7.9975996)
 [node name="AreaLight3D" type="AreaLight3D" parent="." unique_id=1401246055]
 transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, 4.002924, 3.8164845, -0.07214655)
 light_color = Color(0.80575645, 0.7408731, 0.66881275, 1)
-light_energy = 16.0
+light_energy = 24.54
+shadow_enabled = true
+shadow_bias = 0.674
+shadow_normal_bias = 0.0
+shadow_opacity = 0.57
 area_size = Vector2(15.610983, 7.498847)
 
 [node name="1_Door5" parent="." unique_id=257642427 instance=ExtResource("4_qwr6g")]
@@ -98,4 +104,10 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.00
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0029245536, 0, 8.0024)
 
 [node name="PlantPot2" parent="." unique_id=623416607 instance=ExtResource("6_lmjo0")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4, 0, -1.7484555e-07)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.9999998, 0, -3.0000002)
+
+[node name="TimeKnight" parent="." unique_id=988928675 instance=ExtResource("7_qwr6g")]
+transform = Transform3D(-0.57955545, 0, 0.1552914, 0, 0.59999996, 0, -0.1552914, 0, -0.57955545, 2.0000002, 0, 7.325489)
+
+[node name="Walter2" parent="." unique_id=591781183 instance=ExtResource("8_s6wtv")]
+transform = Transform3D(0.29999995, 0, 0.51961523, 0, 0.59999996, 0, -0.51961523, 0, 0.29999995, 2.7896726, 0, -4.2382965)

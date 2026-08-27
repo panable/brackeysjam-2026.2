@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bjo7gcyhal18d"]
+
+[ext_resource type="PackedScene" uid="uid://bkh2ko1gm401o" path="res://Models/Characters/TimeKnight.glb" id="1_5x1m2"]
+[ext_resource type="Material" uid="uid://kofe5f0t6ju4" path="res://Materials/Characters/LightBlue.tres" id="2_bsygo"]
+[ext_resource type="Material" uid="uid://co0onowbjk0h3" path="res://Materials/Characters/DarkBlue.tres" id="3_klxic"]
+[ext_resource type="Material" uid="uid://d20ekafmb5vdv" path="res://Materials/Characters/Black.tres" id="4_l6n18"]
+[ext_resource type="Material" uid="uid://br51a6u1qm0sx" path="res://Materials/Characters/DarkGrey.tres" id="5_ruq3p"]
+[ext_resource type="Material" uid="uid://cbqxho4rpr42x" path="res://Materials/Characters/White.tres" id="6_ruq3p"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ivbcr"]
+
+[node name="TimeKnight" unique_id=988928675 instance=ExtResource("1_5x1m2")]
+
+[node name="Cube_017" parent="Time Knight/Armature_007/Skeleton3D" parent_id_path=PackedInt32Array(18169772) index="0" unique_id=698875353]
+surface_material_override/0 = ExtResource("2_bsygo")
+surface_material_override/1 = ExtResource("3_klxic")
+surface_material_override/2 = ExtResource("4_l6n18")
+surface_material_override/3 = ExtResource("5_ruq3p")
+
+[node name="Cube_018" parent="Time Knight/Armature_007/Skeleton3D" parent_id_path=PackedInt32Array(18169772) index="1" unique_id=49049546]
+surface_material_override/0 = ExtResource("2_bsygo")
+surface_material_override/1 = ExtResource("4_l6n18")
+surface_material_override/2 = ExtResource("6_ruq3p")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=1039826966]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.6, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1598238583]
+transform = Transform3D(3.8999999, 0, 0, 0, 4.6800003, 0, 0, 0, 4.62, 0.69137764, 2.335375, -0.45780995)
+shape = SubResource("BoxShape3D_ivbcr")

@@ -41,7 +41,11 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.00
 [node name="AreaLight3D" type="AreaLight3D" parent="." unique_id=1401246055]
 transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, 4.002728, 3.8164845, -0.07208106)
 light_color = Color(0.80575645, 0.7408731, 0.66881275, 1)
-light_energy = 16.0
+light_energy = 20.3
+shadow_enabled = true
+shadow_bias = 0.674
+shadow_normal_bias = 0.0
+shadow_opacity = 0.57
 area_size = Vector2(15.610983, 7.498847)
 
 [node name="1_Door5" parent="." unique_id=257642427 instance=ExtResource("4_4sk0b")]

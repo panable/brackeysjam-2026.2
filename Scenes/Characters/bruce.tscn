@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cwqkygutr54kw"]
+
+[ext_resource type="PackedScene" uid="uid://dnybb17bv5on8" path="res://Models/Characters/Bruce.glb" id="1_qxeks"]
+[ext_resource type="Material" uid="uid://d20ekafmb5vdv" path="res://Materials/Characters/Black.tres" id="2_mywmi"]
+[ext_resource type="Material" uid="uid://dkmwns4hpp04k" path="res://Materials/Characters/LightBrown.tres" id="3_djpmp"]
+[ext_resource type="Material" uid="uid://b6q7v82himcm3" path="res://Materials/Characters/DarkBrown.tres" id="4_xjd2i"]
+[ext_resource type="Material" uid="uid://br51a6u1qm0sx" path="res://Materials/Characters/DarkGrey.tres" id="5_5wwrv"]
+[ext_resource type="Material" uid="uid://cse0uc1mpqlns" path="res://Materials/Characters/OliveSkin.tres" id="6_djpmp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cmh6s"]
+size = Vector3(0.8173828, 0.84277344, 0.53808594)
+
+[node name="Bruce2" unique_id=2127883184 instance=ExtResource("1_qxeks")]
+
+[node name="Cube_056" parent="Bruce/Armature_015/Skeleton3D" parent_id_path=PackedInt32Array(388872218) index="0" unique_id=1978698823]
+surface_material_override/0 = ExtResource("2_mywmi")
+surface_material_override/1 = ExtResource("3_djpmp")
+surface_material_override/2 = ExtResource("4_xjd2i")
+surface_material_override/3 = ExtResource("5_5wwrv")
+
+[node name="Cube_060" parent="Bruce/Armature_015/Skeleton3D" parent_id_path=PackedInt32Array(388872218) index="1" unique_id=477029250]
+surface_material_override/0 = ExtResource("6_djpmp")
+surface_material_override/1 = ExtResource("2_mywmi")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=169734718]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1670300649]
+transform = Transform3D(4.7490563, 0, 0, 0, 5.5288167, 0, 0, 0, 4.1477695, -0.15153971, 2.3296232, -0.11496037)
+shape = SubResource("BoxShape3D_cmh6s")

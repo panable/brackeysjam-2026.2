@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://fxu4op5upltg"]
+
+[ext_resource type="PackedScene" uid="uid://dfs68ec3jj4vq" path="res://Models/Characters/Pablo.glb" id="1_j54go"]
+[ext_resource type="Material" uid="uid://cbqxho4rpr42x" path="res://Materials/Characters/White.tres" id="2_seopv"]
+[ext_resource type="Material" uid="uid://d20ekafmb5vdv" path="res://Materials/Characters/Black.tres" id="3_ed6s3"]
+[ext_resource type="Material" uid="uid://b4el5ynoxf7e6" path="res://Materials/Characters/WhiteSkin.tres" id="4_7ffj4"]
+[ext_resource type="Material" uid="uid://br51a6u1qm0sx" path="res://Materials/Characters/DarkGrey.tres" id="5_qbbyt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1m637"]
+size = Vector3(1.1644287, 0.84277344, 0.34106445)
+
+[node name="Pablo2" unique_id=1674478156 instance=ExtResource("1_j54go")]
+
+[node name="Cube_075" parent="Pablo/Armature_019/Skeleton3D" parent_id_path=PackedInt32Array(725656179) index="0" unique_id=220316092]
+surface_material_override/0 = ExtResource("2_seopv")
+surface_material_override/1 = ExtResource("3_ed6s3")
+surface_material_override/2 = ExtResource("4_7ffj4")
+surface_material_override/3 = ExtResource("5_qbbyt")
+
+[node name="Sphere_051" parent="Pablo/Armature_019/Skeleton3D" parent_id_path=PackedInt32Array(725656179) index="1" unique_id=998688710]
+surface_material_override/0 = ExtResource("4_7ffj4")
+surface_material_override/1 = ExtResource("3_ed6s3")
+surface_material_override/2 = ExtResource("2_seopv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=1162358934]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1831673186]
+transform = Transform3D(2.6, 0, 0, 0, 4.9569554, 0, 0, 0, 5.895116, 0.45496824, 2.1114612, -0.08983941)
+shape = SubResource("BoxShape3D_1m637")
