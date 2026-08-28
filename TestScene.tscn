@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://c587s8a605qip"]
+
+[ext_resource type="PackedScene" uid="uid://b0ihh3lth1o0l" path="res://Scenes/Rooms/TestRoom.tscn" id="1_mncer"]
+[ext_resource type="PackedScene" uid="uid://6vac72p2c7e1" path="res://playa.tscn" id="2_wicfy"]
+[ext_resource type="Script" uid="uid://bxpodlqif1ghn" path="res://camera_3d.gd" id="3_go42g"]
+[ext_resource type="Script" uid="uid://c2shnwjltc6x5" path="res://Scripts/MenuUI.gd" id="4_go42g"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_r84c8"]
+viewport_path = NodePath("WorldMenu/SubViewport")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_go42g"]
+size = Vector3(5.5, 3.5, 0.1)
+
+[node name="MainMenu3D" type="Node3D" unique_id=1402848343]
+
+[node name="Room1" parent="." unique_id=20324241 instance=ExtResource("1_mncer")]
+
+[node name="playa" parent="." unique_id=990109964 instance=ExtResource("2_wicfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1545191, 1.9234217)
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=865801846]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5530963)
+
+[node name="Camera3D2" type="Camera3D" parent="." unique_id=1208727078 node_paths=PackedStringArray("playa")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 20.354519, 1.9234217)
+fov = 60.0
+script = ExtResource("3_go42g")
+playa = NodePath("../playa")
+
+[node name="WorldMenu" type="Node3D" parent="." unique_id=1121699345]
+script = ExtResource("4_go42g")
+
+[node name="Sprite3D" type="Sprite3D" parent="WorldMenu" unique_id=572322840]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 4.5114503, 1.9863753)
+pixel_size = 0.015
+texture = SubResource("ViewportTexture_r84c8")
+
+[node name="Area3D" type="Area3D" parent="WorldMenu" unique_id=1674546814]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WorldMenu/Area3D" unique_id=1025482379]
+transform = Transform3D(1, 0, 0, 0, 0.04094596, 0.99916136, 0, -0.99916136, 0.04094596, 0.0045166016, 4.5298915, 2.517757)
+shape = SubResource("BoxShape3D_go42g")
+debug_color = Color(0.99646336, 0, 0.1769602, 1)
+
+[node name="SubViewport" type="SubViewport" parent="WorldMenu" unique_id=516719614]
+transparent_bg = true
+
+[node name="MenuContainer" type="Control" parent="WorldMenu/SubViewport" unique_id=1949550696]
+custom_minimum_size = Vector2(400, 220)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WorldMenu/SubViewport/MenuContainer" unique_id=921802831]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -107.5
+offset_right = 175.0
+offset_bottom = 107.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="Label" parent="WorldMenu/SubViewport/MenuContainer/VBoxContainer" unique_id=776939330]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "MISDUNGEON"
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="WorldMenu/SubViewport/MenuContainer/VBoxContainer" unique_id=446711125]
+custom_minimum_size = Vector2(350, 70)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "START"
+
+[node name="SettingsButton" type="Button" parent="WorldMenu/SubViewport/MenuContainer/VBoxContainer" unique_id=1044542390]
+custom_minimum_size = Vector2(350, 70)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "SETTINGS
+"
+
+[node name="ExitButton" type="Button" parent="WorldMenu/SubViewport/MenuContainer/VBoxContainer" unique_id=1155458744]
+custom_minimum_size = Vector2(350, 70)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "QUIT"

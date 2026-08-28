@@ -178,6 +178,12 @@
 "good_luck": {
 	"speaker": "Walter",
 	"content": "Good! Keep your eyes open. There must be something growing somewhere in this dungeon that we can use."
+},
+
+"doesnt_work": {
+	"speaker": "Walter",
+	"content": "Then I suppose you'll be helping me with the gardening."
 }
+
 
 }
