@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://ckbyln85tues7"]
+
+[ext_resource type="Texture2D" uid="uid://cgvutooonlhjf" path="res://Sprites/Eye_open.png" id="1_l1n7h"]
+[ext_resource type="Script" uid="uid://dhs0fqhv8sdhf" path="res://Scripts/eye.gd" id="1_x8diq"]
+[ext_resource type="Texture2D" uid="uid://d2ognou0gb1qn" path="res://Sprites/Eye_closing.png" id="2_x8diq"]
+[ext_resource type="Texture2D" uid="uid://bciscwrisunpx" path="res://Sprites/Eye_closed.png" id="3_kjel7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dh21y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_l1n7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_x8diq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kjel7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_x8diq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_l1n7h")
+}],
+"loop": 0,
+"name": &"blink",
+"speed": 10.0
+}]
+
+[node name="Eye" type="Node2D" unique_id=885581106]
+script = ExtResource("1_x8diq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=193188668]
+sprite_frames = SubResource("SpriteFrames_dh21y")
+animation = &"blink"
+frame = 4
+frame_progress = 1.0
