@@ -104,3 +104,4 @@ transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 4.00
 
 [node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("7_qf11s")]
 transform = Transform3D(0.18288521, 0, 0.57144815, 0, 0.6000001, 0, -0.57144815, 0, 0.18288521, 1.4784255, 0.05404401, -0.5960092)
+dialogue_path = "res://Dialogue/feren.json"

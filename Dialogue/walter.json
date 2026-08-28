@@ -1,0 +1,183 @@
+{
+"start": {
+"speaker": "Walter",
+"content": "See that pot there? Try planting something in it.",
+"next_id": "beanstalk"
+},
+
+"beanstalk": {
+	"speaker": "Walter",
+	"content": "With a bit of luck, a beanstalk will emerge to whisk you away, right out of this dungeon!",
+	"choices": [
+		{
+			"content": "A beanstalk?",
+			"next_id": "beanstalk_explain"
+		},
+		{
+			"content": "Why is there a flowerpot down here?",
+			"next_id": "pot_question"
+		}
+	]
+},
+
+"beanstalk_explain": {
+	"speaker": "Walter",
+	"content": "Aye! Sounds mad, I know, but hear me out. I wasn't always stuck down here. Before I got lost in this place, I was a gardener.",
+	"next_id": "gardener"
+},
+
+"pot_question": {
+	"speaker": "Walter",
+	"content": "Ah, that's a long story. I wasn't always stuck down here, you know. Before I got lost in this place, I was a gardener.",
+	"next_id": "gardener"
+},
+
+"gardener": {
+	"speaker": "Walter",
+	"content": "Had a lovely little patch of land. Vegetables, herbs, flowers... even grew a pumpkin so large once I needed a wheelbarrow just to move the bloody thing.",
+	"choices": [
+		{
+			"content": "How does a gardener get lost in a dungeon?",
+			"next_id": "lost"
+		},
+		{
+			"content": "So why are you still gardening down here?",
+			"next_id": "why_garden"
+		}
+	]
+},
+
+"lost": {
+	"speaker": "Walter",
+	"content": "I was looking for mushrooms.",
+	"next_id": "mushrooms"
+},
+
+"mushrooms": {
+	"speaker": "Walter",
+	"content": "They were supposed to be very good mushrooms.",
+	"next_id": "searched"
+},
+
+"why_garden": {
+	"speaker": "Walter",
+	"content": "Old habits, I suppose. Besides, this happens to be the only room in this miserable place where anything has a chance of growing.",
+	"next_id": "searched"
+},
+
+"searched": {
+	"speaker": "Walter",
+	"content": "Anyway, I've spent a long time wandering these halls since then. Long enough to learn something important.",
+	"next_id": "no_exit"
+},
+
+"no_exit": {
+	"speaker": "Walter",
+	"content": "There isn't a way out. Every passage leads deeper into the dungeon, ends in a wall, or somehow brings you right back where you started. Believe me, I've looked.",
+	"choices": [
+		{
+			"content": "So we're trapped?",
+			"next_id": "not_quite"
+		},
+		{
+			"content": "There has to be another exit.",
+			"next_id": "searched_everywhere"
+		}
+	]
+},
+
+"searched_everywhere": {
+	"speaker": "Walter",
+	"content": "I thought the same thing. I've searched for one longer than you've been down here. Doors, tunnels, stairways... nothing leads to the surface.",
+	"next_id": "not_quite"
+},
+
+"not_quite": {
+	"speaker": "Walter",
+	"content": "Not quite. See that little crack in the ceiling?",
+	"choices": [
+		{
+			"content": "There's sunlight coming through.",
+			"next_id": "sunlight"
+		},
+		{
+			"content": "What about it?",
+			"next_id": "sunlight"
+		}
+	]
+},
+
+"sunlight": {
+	"speaker": "Walter",
+	"content": "Exactly! The only bit of sunlight I've seen anywhere in this miserable place. And where there's sunlight, there's a surface.",
+	"next_id": "garden_reason"
+},
+
+"garden_reason": {
+	"speaker": "Walter",
+	"content": "That's why I set up my little garden here. If anything has a chance of growing underground, it's in this room.",
+	"next_id": "beanstalk_plan"
+},
+
+"beanstalk_plan": {
+	"speaker": "Walter",
+	"content": "There's something strange about this dungeon. Plants behave differently down here. Give the right seed good soil, water and that little bit of sunlight...",
+	"next_id": "beanstalk_growth"
+},
+
+"beanstalk_growth": {
+	"speaker": "Walter",
+	"content": "...and you might just grow a beanstalk big enough to reach all the way to the surface.",
+	"choices": [
+		{
+			"content": "And then I climb it?",
+			"next_id": "climb"
+		},
+		{
+			"content": "You're sure this will work?",
+			"next_id": "sure"
+		}
+	]
+},
+
+"climb": {
+	"speaker": "Walter",
+	"content": "Straight to the surface. No doors. No tunnels. No secret passageways. Just you, that pot... and a great bloody beanstalk.",
+	"next_id": "only_way"
+},
+
+"sure": {
+	"speaker": "Walter",
+	"content": "Sure? No. But I've searched every corner of this dungeon and I've never found another way to the surface.",
+	"next_id": "only_way"
+},
+
+"only_way": {
+	"speaker": "Walter",
+	"content": "As far as I can tell, that beanstalk is the only way out of this dungeon.",
+	"next_id": "objective"
+},
+
+"objective": {
+	"speaker": "Walter",
+	"content": "So find yourself a seed, plant it in that pot, and give it some water.",
+	"next_id": "escape"
+},
+
+"escape": {
+	"speaker": "Walter",
+	"content": "If everything goes according to plan, it'll grow straight through that crack and whisk you away... right back to the outside world.",
+	"choices": [
+		{
+			"content": "I'll find a seed.",
+			"next_id": "good_luck"
+		}
+	]
+},
+
+"good_luck": {
+	"speaker": "Walter",
+	"content": "Good! Keep your eyes open. There must be something growing somewhere in this dungeon that we can use."
+}
+
+}

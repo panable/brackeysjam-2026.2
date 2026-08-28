@@ -1,0 +1,39 @@
+{
+"start": {
+"speaker": "Feren",
+"content": "Hey there! Careful in the next room. I've been hearing some nasty sounds coming from in there.",
+"next_id": "warning"
+},
+
+"warning": {
+	"speaker": "Feren",
+	"content": "Don't worry though! If anything attacks you, just press the P key to fight back!",
+	"next_id": "unsure"
+},
+
+"unsure": {
+	"speaker": "Feren",
+	"content": "Or... was it L? Maybe Backspace?",
+	"choices": [
+		{
+			"content": "You don't actually know, do you?",
+			"next_id": "admit"
+		},
+		{
+			"content": "Which key is it?!",
+			"next_id": "guess"
+		}
+	]
+},
+
+"admit": {
+	"speaker": "Feren",
+	"content": "Of course I know! It's definitely somewhere on the keyboard... probably."
+},
+
+"guess": {
+	"speaker": "Feren",
+	"content": "Try the number pad! One of those ought to do something."
+}
+
+}

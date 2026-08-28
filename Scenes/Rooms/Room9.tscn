@@ -111,3 +111,4 @@ transform = Transform3D(-0.5752781, 0, 0.17045596, 0, 0.59999996, 0, -0.17045596
 
 [node name="NPC2" parent="." unique_id=1446091811 instance=ExtResource("8_s6wtv")]
 transform = Transform3D(0.31450596, 0, 0.51096565, 0, 0.59999985, 0, -0.51096565, 0, 0.31450596, 2.735291, -0.0117558725, -4.269693)
+dialogue_path = "res://Dialogue/walter.json"
