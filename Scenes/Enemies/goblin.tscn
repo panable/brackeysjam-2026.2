@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://deinedcwciun8"]
+
+[ext_resource type="PackedScene" uid="uid://dsmpvopba0dg8" path="res://Models/Characters/goblin.glb" id="1_ov3yr"]
+[ext_resource type="Material" uid="uid://b6q7v82himcm3" path="res://Materials/Characters/DarkBrown.tres" id="2_bn4bw"]
+[ext_resource type="Material" uid="uid://ywsmda3qoytu" path="res://Materials/Characters/DarkGreen.tres" id="3_7rgx6"]
+[ext_resource type="Material" uid="uid://cyxlbytgm8gl4" path="res://Materials/Characters/EnemyEyes.tres" id="4_mp6g7"]
+[ext_resource type="Material" uid="uid://br51a6u1qm0sx" path="res://Materials/Characters/DarkGrey.tres" id="5_y70yk"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ov3yr"]
+animation = &"Goblin_Died"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bn4bw"]
+animation = &"Goblin_Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7rgx6"]
+animation = &"Goblin_LungeS"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mp6g7"]
+animation = &"Goblin_Walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_y70yk"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5ke0d"]
+advance_mode = 2
+advance_condition = &"is_moving"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k80se"]
+advance_mode = 2
+advance_condition = &"is_idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_geher"]
+advance_mode = 2
+advance_condition = &"lunge_start"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_55rw5"]
+advance_mode = 2
+advance_condition = &"lunge_end"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pj8th"]
+advance_mode = 2
+advance_condition = &"lunge_start"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_limx5"]
+advance_mode = 2
+advance_condition = &"is_dead"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4thuc"]
+advance_mode = 2
+advance_condition = &"is_dead"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pmshn"]
+advance_mode = 2
+advance_condition = &"is_dead"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_jw7ag"]
+states/Goblin_Died/node = SubResource("AnimationNodeAnimation_ov3yr")
+states/Goblin_Died/position = Vector2(568.7, 197.61249)
+states/Goblin_Idle/node = SubResource("AnimationNodeAnimation_bn4bw")
+states/Goblin_Idle/position = Vector2(368, 97.71125)
+states/Goblin_LungeS/node = SubResource("AnimationNodeAnimation_7rgx6")
+states/Goblin_LungeS/position = Vector2(369, 197.4225)
+states/Goblin_Walk/node = SubResource("AnimationNodeAnimation_mp6g7")
+states/Goblin_Walk/position = Vector2(568.5, 98.85562)
+transitions = ["Start", "Goblin_Idle", SubResource("AnimationNodeStateMachineTransition_y70yk"), "Goblin_Idle", "Goblin_Walk", SubResource("AnimationNodeStateMachineTransition_5ke0d"), "Goblin_Walk", "Goblin_Idle", SubResource("AnimationNodeStateMachineTransition_k80se"), "Goblin_Idle", "Goblin_LungeS", SubResource("AnimationNodeStateMachineTransition_geher"), "Goblin_LungeS", "Goblin_Walk", SubResource("AnimationNodeStateMachineTransition_55rw5"), "Goblin_Walk", "Goblin_LungeS", SubResource("AnimationNodeStateMachineTransition_pj8th"), "Goblin_LungeS", "Goblin_Died", SubResource("AnimationNodeStateMachineTransition_limx5"), "Goblin_Idle", "Goblin_Died", SubResource("AnimationNodeStateMachineTransition_4thuc"), "Goblin_Walk", "Goblin_Died", SubResource("AnimationNodeStateMachineTransition_pmshn")]
+graph_offset = Vector2(-158.39998, 35.30249)
+
+[node name="goblin" unique_id=1934247732 instance=ExtResource("1_ov3yr")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(893744545) index="0" unique_id=1126613429]
+bones/1/position = Vector3(-1.360995e-08, 0.4321581, -0.0011528713)
+bones/1/rotation = Quaternion(0.03791017, -3.2560718e-07, -2.3411573e-08, 0.9992812)
+bones/2/rotation = Quaternion(0.25330195, -3.0749852e-08, -1.7992281e-07, 0.9673873)
+bones/3/position = Vector3(0.73466176, 1.3622271, 0.46998894)
+bones/3/rotation = Quaternion(0.98887014, 5.962467e-07, -3.6869524e-06, -0.14878114)
+bones/3/scale = Vector3(1, 1.0000001, 1.0003337)
+bones/4/position = Vector3(-0.6575992, 1.362227, 0.46998894)
+bones/4/rotation = Quaternion(0.98887014, 8.263992e-07, -5.527342e-06, -0.14878118)
+bones/5/rotation = Quaternion(1, 0, -6.5168285e-07, -1.4901334e-08)
+bones/6/rotation = Quaternion(1, 0, -6.5168274e-07, 3.511609e-13)
+
+[node name="Cube_085" parent="Armature/Skeleton3D" index="0" unique_id=1577207883]
+surface_material_override/0 = ExtResource("2_bn4bw")
+
+[node name="Sphere_056" parent="Armature/Skeleton3D" index="1" unique_id=890266747]
+surface_material_override/0 = ExtResource("3_7rgx6")
+surface_material_override/1 = ExtResource("4_mp6g7")
+
+[node name="Sphere_060" parent="Armature/Skeleton3D" index="2" unique_id=74543918]
+surface_material_override/0 = ExtResource("2_bn4bw")
+surface_material_override/1 = ExtResource("3_7rgx6")
+
+[node name="Sphere_061" parent="Armature/Skeleton3D" index="3" unique_id=1444437114]
+surface_material_override/0 = ExtResource("3_7rgx6")
+
+[node name="Sphere_062" parent="Armature/Skeleton3D" index="4" unique_id=1329614628]
+surface_material_override/0 = ExtResource("3_7rgx6")
+surface_material_override/1 = ExtResource("2_bn4bw")
+surface_material_override/2 = ExtResource("5_y70yk")
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2" unique_id=1196245230]
+tree_root = SubResource("AnimationNodeStateMachine_jw7ag")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/is_dead = false
+parameters/conditions/is_idle = false
+parameters/conditions/is_moving = false
+parameters/conditions/lunge_end = false
+parameters/conditions/lunge_start = false
