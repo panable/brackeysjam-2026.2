@@ -39,7 +39,7 @@ func damage_player() -> void:
 	if not is_instance_valid(player):
 		return
 
-	player.health.take_damage(damage)
+	player.health.take_damage(damage, global_position)
 	reset_damage_cooldown()
 
 

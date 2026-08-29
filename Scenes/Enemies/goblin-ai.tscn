@@ -3,12 +3,13 @@
 [ext_resource type="Script" uid="uid://ds6tbf4c3rxmr" path="res://goblin_ai.gd" id="1_vrwux"]
 [ext_resource type="PackedScene" uid="uid://deinedcwciun8" path="res://Scenes/Enemies/goblin.tscn" id="2_acdor"]
 [ext_resource type="Script" uid="uid://ct04ulfwrf23h" path="res://Scenes/Enemies/atk_zone.gd" id="3_acdor"]
+[ext_resource type="Script" uid="uid://c8drn2k102qjw" path="res://Scenes/Enemies/enemy_health.gd" id="4_wxu1l"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wxu1l"]
 size = Vector3(1, 3.055, 1.368)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_g6lp7"]
-radius = 1.135
+radius = 0.659
 
 [node name="gb_ai" type="Node3D" unique_id=1753076045]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
@@ -36,6 +37,9 @@ script = ExtResource("3_acdor")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D/AtkZone" unique_id=1141824649]
 transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 0.83333313, 0.16666666)
 shape = SubResource("SphereShape3D_g6lp7")
+
+[node name="EnemyHealth" type="Node" parent="CharacterBody3D" unique_id=88699488]
+script = ExtResource("4_wxu1l")
 
 [connection signal="area_entered" from="CharacterBody3D/AtkZone" to="CharacterBody3D/AtkZone" method="_on_area_entered"]
 [connection signal="area_exited" from="CharacterBody3D/AtkZone" to="CharacterBody3D/AtkZone" method="_on_area_exited"]

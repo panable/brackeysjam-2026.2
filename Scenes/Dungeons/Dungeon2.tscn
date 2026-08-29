@@ -3,6 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://du87baarcc1e7" path="res://Scenes/Rooms/Room2.tscn" id="1_hpoia"]
 [ext_resource type="Script" uid="uid://dlwfb4ud68h73" path="res://Scripts/dungeon.gd" id="1_qvmbe"]
 [ext_resource type="PackedScene" uid="uid://c1aylrnw1jm4c" path="res://Scenes/Dungeons/door_portal.tscn" id="2_qvmbe"]
+[ext_resource type="PackedScene" uid="uid://cjptpwhndlxt4" path="res://Scenes/Enemies/goblin-ai.tscn" id="4_p6yqy"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_g6lp7"]
+vertices = PackedVector3Array(-9.698309, 4.8500004, -1.6929841, -9.698309, 4.8500004, 2.807016, -9.198309, 4.8500004, -1.1929841, -1.198309, 4.8500004, -1.4429841, -9.698309, 0.35000014, 3.807016, -9.698309, 0.35000014, 4.307016, -8.448309, 0.35000014, 4.557016, -8.448309, 0.35000014, 3.557016, 0.55169106, 0.35000014, 8.307016, -0.44830894, 0.35000014, -0.4429841, -0.44830894, 0.35000014, 8.307016, -0.19830894, 0.35000014, 9.557016, 0.30169106, 0.35000014, 9.557016, -7.698309, 0.35000014, -0.4429841, -8.448309, 0.35000014, 0.3070159, 7.801691, 0.35000014, 8.307016, 8.301691, 0.35000014, 4.557016, 8.051691, 0.35000014, -0.1929841, 0.55169106, 0.35000014, -0.4429841, 9.551691, 0.35000014, 4.307016, 9.551691, 0.35000014, 3.807016, 8.301691, 0.35000014, 3.557016, -7.948309, 0.35000014, 8.307016, 0.30169106, 0.35000014, -1.6929841, -0.19830894, 0.35000014, -1.6929841, -8.448309, 0.35000014, 7.557016, 8.301691, 0.35000014, 7.807016, 9.051691, 4.8500004, -1.4429841, 9.551691, 4.8500004, 2.807016, 9.551691, 4.8500004, -1.6929841, 1.301691, 4.8500004, -1.6929841, -9.698309, 4.8500004, 9.557016, -1.198309, 4.8500004, 9.557016, -8.698309, 4.8500004, 9.307016, -9.448309, 4.8500004, 8.307016, -9.698309, 4.8500004, 5.307016, 9.551691, 4.8500004, 9.557016, 9.551691, 4.8500004, 5.307016, 9.051691, 4.8500004, 9.057016, 1.301691, 4.8500004, 9.307016)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(3, 2, 0), PackedInt32Array(4, 7, 5), PackedInt32Array(5, 7, 6), PackedInt32Array(12, 11, 8), PackedInt32Array(8, 11, 10), PackedInt32Array(8, 10, 9), PackedInt32Array(7, 14, 13), PackedInt32Array(18, 17, 9), PackedInt32Array(9, 17, 16), PackedInt32Array(9, 16, 15), PackedInt32Array(9, 15, 8), PackedInt32Array(19, 16, 20), PackedInt32Array(20, 16, 21), PackedInt32Array(6, 7, 22), PackedInt32Array(22, 7, 13), PackedInt32Array(22, 13, 9), PackedInt32Array(22, 9, 10), PackedInt32Array(23, 18, 24), PackedInt32Array(24, 18, 9), PackedInt32Array(17, 21, 16), PackedInt32Array(22, 25, 6), PackedInt32Array(16, 26, 15), PackedInt32Array(29, 28, 27), PackedInt32Array(29, 27, 30), PackedInt32Array(33, 32, 31), PackedInt32Array(31, 34, 33), PackedInt32Array(34, 31, 35), PackedInt32Array(37, 36, 38), PackedInt32Array(38, 36, 39)]
 
 [node name="Dungeon2" type="Node3D" unique_id=1556231601]
 script = ExtResource("1_qvmbe")
@@ -53,4 +58,10 @@ gizmo_extents = 0.26
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 19.042692, 4)
 fov = 50.0
 
-[node name="Room1" parent="." unique_id=20324241 instance=ExtResource("1_hpoia")]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1291556265]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6, -1.8000001)
+navigation_mesh = SubResource("NavigationMesh_g6lp7")
+
+[node name="Room1" parent="NavigationRegion3D" unique_id=20324241 instance=ExtResource("1_hpoia")]
+
+[node name="gb_ai" parent="." unique_id=1753076045 instance=ExtResource("4_p6yqy")]

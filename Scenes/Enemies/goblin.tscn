@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://deinedcwciun8"]
 
 [ext_resource type="PackedScene" uid="uid://dsmpvopba0dg8" path="res://Models/Characters/goblin.glb" id="1_ov3yr"]
+[ext_resource type="Script" uid="uid://dnkqgxaqcrgsd" path="res://Scenes/Enemies/goblin.gd" id="2_7rgx6"]
 [ext_resource type="Material" uid="uid://b6q7v82himcm3" path="res://Materials/Characters/DarkBrown.tres" id="2_bn4bw"]
 [ext_resource type="Material" uid="uid://ywsmda3qoytu" path="res://Materials/Characters/DarkGreen.tres" id="3_7rgx6"]
 [ext_resource type="Material" uid="uid://cyxlbytgm8gl4" path="res://Materials/Characters/EnemyEyes.tres" id="4_mp6g7"]
@@ -67,16 +68,17 @@ graph_offset = Vector2(-158.39998, 35.30249)
 
 [node name="goblin" unique_id=1934247732 instance=ExtResource("1_ov3yr")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+script = ExtResource("2_7rgx6")
 
 [node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(1022562755) index="0" unique_id=1860334485]
-bones/1/position = Vector3(-1.0696002e-08, 0.43498054, -0.006500259)
-bones/1/rotation = Quaternion(0.04225637, -3.2555033e-07, -2.2460219e-08, 0.9991069)
-bones/2/rotation = Quaternion(0.2558769, -3.0728273e-08, -1.8071988e-07, 0.9667094)
-bones/3/position = Vector3(0.73466176, 1.3608158, 0.47266263)
-bones/3/rotation = Quaternion(0.98821366, 6.007012e-07, -3.6731803e-06, -0.15308088)
+bones/1/position = Vector3(-2.039995e-09, 0.44199127, -0.019782808)
+bones/1/rotation = Quaternion(0.053048693, -3.253826e-07, -1.89431e-08, 0.99859196)
+bones/2/rotation = Quaternion(0.2621464, -3.0674872e-08, -1.7973832e-07, 0.96502817)
+bones/3/position = Vector3(0.7346617, 1.3573104, 0.47930396)
+bones/3/rotation = Quaternion(0.98650205, 6.062168e-07, -3.6333167e-06, -0.1637492)
 bones/3/scale = Vector3(1, 1.0000001, 1.0003337)
-bones/4/position = Vector3(-0.65759915, 1.3608156, 0.47266263)
-bones/4/rotation = Quaternion(0.98821366, 8.5035504e-07, -5.52333e-06, -0.153081)
+bones/4/position = Vector3(-0.6575993, 1.3573103, 0.47930393)
+bones/4/rotation = Quaternion(0.98650205, 9.097896e-07, -5.5130004e-06, -0.16374917)
 bones/5/rotation = Quaternion(1, 0, -6.5168285e-07, -1.4901334e-08)
 bones/6/rotation = Quaternion(1, 0, -6.5168274e-07, 3.511609e-13)
 

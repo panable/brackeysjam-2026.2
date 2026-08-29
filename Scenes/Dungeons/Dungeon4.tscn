@@ -4,8 +4,17 @@
 [ext_resource type="Script" uid="uid://dlwfb4ud68h73" path="res://Scripts/dungeon.gd" id="1_3o1ls"]
 [ext_resource type="PackedScene" uid="uid://c1aylrnw1jm4c" path="res://Scenes/Dungeons/door_portal.tscn" id="2_lqv4y"]
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_g6lp7"]
+vertices = PackedVector3Array(-9.698309, 5, -9.698309, -9.698309, 5, -1.198309, -9.198309, 5, -9.448309, 1.301691, 5, 9.051691, -2.698309, 5, 9.551691, 1.551691, 5, 9.551691, 1.551691, 5, -9.698309, 1.301691, 5, -9.198309, -7.698309, 0.5, -8.448309, -8.448309, 0.5, -7.698309, -8.448309, 0.5, -0.44830894, -7.698309, 0.5, 0.30169106, 0.30169106, 0.5, 0.30169106, 0.051691055, 0.5, -8.198309, -4.448309, 0.5, 8.301691, -4.198309, 0.5, 9.551691, -3.698309, 0.5, 9.551691, -3.448309, 0.5, 8.301691, -8.448309, 0.5, 1.301691, -8.448309, 0.5, 7.551691, 0.30169106, 0.5, 7.801691, -0.19830894, 0.5, 8.301691, -7.948309, 0.5, 8.301691, -9.698309, 5, 9.551691, -5.198309, 5, 9.551691, -9.448309, 5, 9.051691, -9.698309, 5, 1.301691)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Array(7, 2, 6), PackedInt32Array(6, 2, 0), PackedInt32Array(7, 6, 3), PackedInt32Array(3, 6, 5), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 8, 11), PackedInt32Array(11, 8, 13), PackedInt32Array(11, 13, 12), PackedInt32Array(15, 14, 16), PackedInt32Array(16, 14, 17), PackedInt32Array(18, 11, 19), PackedInt32Array(19, 11, 14), PackedInt32Array(14, 11, 20), PackedInt32Array(20, 11, 12), PackedInt32Array(20, 21, 17), PackedInt32Array(19, 14, 22), PackedInt32Array(20, 17, 14), PackedInt32Array(25, 24, 23), PackedInt32Array(25, 23, 26)]
+
 [node name="Dungeon4" type="Node3D" unique_id=2030992608]
 script = ExtResource("1_3o1ls")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=361189732]
+navigation_mesh = SubResource("NavigationMesh_g6lp7")
+
+[node name="Room1" parent="NavigationRegion3D" unique_id=20324241 instance=ExtResource("1_2kntl")]
 
 [node name="Doorways" type="Node" parent="." unique_id=37894730]
 
@@ -27,8 +36,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.3, 0.8, 0)
 
 [node name="South" type="Marker3D" parent="Doorways/Exits" unique_id=23337611]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.002941, 0.8, 8.05)
-
-[node name="Room1" parent="." unique_id=20324241 instance=ExtResource("1_2kntl")]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1324659043]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -4, 27.890226, -0.008445263)
