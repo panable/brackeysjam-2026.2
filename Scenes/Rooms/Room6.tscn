@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ifdygy2cgq0" path="res://Scenes/Rooms/Modular/1_floor.tscn" id="5_4yycb"]
 [ext_resource type="PackedScene" uid="uid://d4b2nguo0nd6l" path="res://Scenes/Rooms/Modular/1_wall_3.tscn" id="6_6xfi2"]
 [ext_resource type="PackedScene" uid="uid://70e70t4c2ses" path="res://Scenes/Characters/Feren_c.tscn" id="7_qf11s"]
+[ext_resource type="PackedScene" uid="uid://dxua8uourhn8q" path="res://Scenes/Props/rocks.tscn" id="8_i20go"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
@@ -105,3 +106,9 @@ transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 4.00
 [node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("7_qf11s")]
 transform = Transform3D(0.18288521, 0, 0.57144815, 0, 0.6000001, 0, -0.57144815, 0, 0.18288521, 1.4784255, 0.05404401, -0.5960092)
 dialogue_path = "res://Dialogue/feren.json"
+
+[node name="Rocks_" parent="." unique_id=1396706831 instance=ExtResource("8_i20go")]
+transform = Transform3D(0.17531468, 0, -0.98451245, 0, 1, 0, 0.98451245, 0, 0.17531468, 7.4714375, -0.5066882, -6.895669)
+
+[node name="Rocks_2" parent="." unique_id=130222052 instance=ExtResource("8_i20go")]
+transform = Transform3D(0.32465854, 0, 0.9458313, 0, 1, 0, -0.9458313, 0, 0.32465854, 0.328247, -0.5066882, 6.8542666)

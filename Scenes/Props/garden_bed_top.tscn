@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bupfud6p5qeo7"]
+
+[ext_resource type="PackedScene" uid="uid://domnh6uulrtnk" path="res://Models/Props/GardenBed_Top..glb" id="1_w1eju"]
+[ext_resource type="Material" uid="uid://ywsmda3qoytu" path="res://Materials/Characters/DarkGreen.tres" id="2_rq03t"]
+[ext_resource type="Material" uid="uid://cgm3tmf4o8kf8" path="res://Materials/Characters/DullGreen.tres" id="3_ldhhu"]
+
+[node name="GardenBed_Top_" unique_id=1409558810 instance=ExtResource("1_w1eju")]
+
+[node name="GardenBed_Top" parent="." index="0" unique_id=506173627]
+surface_material_override/0 = ExtResource("2_rq03t")
+surface_material_override/1 = ExtResource("3_ldhhu")

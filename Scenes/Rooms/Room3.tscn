@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bk4gerbaww8uc" path="res://Scenes/Rooms/Modular/1_step_up.tscn" id="8_uxlch"]
 [ext_resource type="PackedScene" uid="uid://byohrhhl6x0qp" path="res://Scenes/Rooms/Props/rail.tscn" id="9_mcrqp"]
 [ext_resource type="PackedScene" uid="uid://cnmboopidlwfr" path="res://Scenes/Rooms/Props/rail_end.tscn" id="10_ss56e"]
+[ext_resource type="PackedScene" uid="uid://dxua8uourhn8q" path="res://Scenes/Props/rocks.tscn" id="11_mcrqp"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -110,3 +111,15 @@ transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 3.
 
 [node name="Rail_End2" parent="." unique_id=1843687974 instance=ExtResource("10_ss56e")]
 transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 3.9999998, 0, -4.0000005)
+
+[node name="Rocks_" parent="." unique_id=1396706831 instance=ExtResource("11_mcrqp")]
+transform = Transform3D(0.08765581, 0, 0.99615085, 0, 1, 0, -0.99615085, 0, 0.08765581, 7.2660594, -0.5416451, -7.5603137)
+
+[node name="Rocks_3" parent="." unique_id=1140194787 instance=ExtResource("11_mcrqp")]
+transform = Transform3D(0.302584, 0, -1.7751107, 0, 2.0731425, 0, 1.3206688, 0, 0.406703, 8.345942, -1.2429562, 0.3075513)
+
+[node name="Rocks_4" parent="." unique_id=95656306 instance=ExtResource("11_mcrqp")]
+transform = Transform3D(0.302584, 0, -1.7751107, 0, 2.0731425, 0, 1.3206688, 0, 0.406703, 0.9856896, -1.2429562, 4.7125516)
+
+[node name="Rocks_2" parent="." unique_id=623968125 instance=ExtResource("11_mcrqp")]
+transform = Transform3D(0.99278384, 0, 0.11991809, 0, 1, 0, -0.11991809, 0, 0.99278384, 0.92973834, -0.5416451, -7.548959)

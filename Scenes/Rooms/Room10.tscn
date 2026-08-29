@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dnip0iuv8xgaa" path="res://Scenes/Rooms/Modular/1_door.tscn" id="4_5ycuv"]
 [ext_resource type="PackedScene" uid="uid://ifdygy2cgq0" path="res://Scenes/Rooms/Modular/1_floor.tscn" id="5_0r1oo"]
 [ext_resource type="PackedScene" uid="uid://d4b2nguo0nd6l" path="res://Scenes/Rooms/Modular/1_wall_3.tscn" id="6_pkxys"]
+[ext_resource type="PackedScene" uid="uid://dxua8uourhn8q" path="res://Scenes/Props/rocks.tscn" id="7_pbsva"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
@@ -130,3 +131,15 @@ transform = Transform3D(-4.569558e-08, 0, -1, 0, 1, 0, 1, 0, -4.569558e-08, 7.99
 
 [node name="1_Wall35" parent="." unique_id=406108508 instance=ExtResource("6_pkxys")]
 transform = Transform3D(-4.569558e-08, 0, -1, 0, 1, 0, 1, 0, -4.569558e-08, 8, 0, -3.496911e-07)
+
+[node name="Rocks_" parent="." unique_id=1396706831 instance=ExtResource("7_pbsva")]
+transform = Transform3D(1.3202556, 0, 0.6975708, 0, 1, 0, -0.6772972, 0, 1.3597753, 0.79733455, -0.3158074, 0.19649002)
+
+[node name="Rocks_" parent="Rocks_" unique_id=831885489 instance=ExtResource("7_pbsva")]
+transform = Transform3D(0.94212407, 0, -0.17661262, 0, 1.6530647, 0, 0.18419075, 0, 0.9033616, 4.653261, -0.3158074, -9.37278)
+
+[node name="Rocks_2" parent="Rocks_" unique_id=1528954132 instance=ExtResource("7_pbsva")]
+transform = Transform3D(0.60212374, 0, -0.44750613, 0, 1.0345764, 0, 0.44626838, 0, 0.6037936, 2.0143023, -0.22474295, 6.0959096)
+
+[node name="Rocks_2" parent="." unique_id=592214687 instance=ExtResource("7_pbsva")]
+transform = Transform3D(-1.3435732, 0, -0.648627, 0, 1, 0, 0.6297758, 0, -1.3837909, 7.521955, -0.3158074, -8.126605)

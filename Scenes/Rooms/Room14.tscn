@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://ifdygy2cgq0" path="res://Scenes/Rooms/Modular/1_floor.tscn" id="5_f7fvu"]
 [ext_resource type="PackedScene" uid="uid://d4b2nguo0nd6l" path="res://Scenes/Rooms/Modular/1_wall_3.tscn" id="6_wi6qj"]
 [ext_resource type="PackedScene" uid="uid://bk4gerbaww8uc" path="res://Scenes/Rooms/Modular/1_step_up.tscn" id="7_vcjb6"]
+[ext_resource type="PackedScene" uid="uid://butel2so6412m" path="res://Scenes/Props/sign.tscn" id="8_2lrje"]
+[ext_resource type="PackedScene" uid="uid://dxua8uourhn8q" path="res://Scenes/Props/rocks.tscn" id="9_f7fvu"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
@@ -101,3 +103,9 @@ transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 8.00
 
 [node name="1_StepUp2" parent="." unique_id=1258062770 instance=ExtResource("7_vcjb6")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.0000005, 0, 8)
+
+[node name="Sign_" parent="." unique_id=1918404254 instance=ExtResource("8_2lrje")]
+transform = Transform3D(-0.7531828, 0, 0.86389095, 0, 1.4194177, 0, -1.2918323, 0, -0.50367826, 1.1966213, 0.2892372, 7.064254)
+
+[node name="Rocks_" parent="." unique_id=1396706831 instance=ExtResource("9_f7fvu")]
+transform = Transform3D(0.31866857, 0, 0.9478662, 0, 1, 0, -0.9478662, 0, 0.31866857, 7.321526, -0.5762606, -6.9282126)

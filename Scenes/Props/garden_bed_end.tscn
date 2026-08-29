@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dfahhipsvky70"]
+
+[ext_resource type="PackedScene" uid="uid://cxjxfhrnsjbv7" path="res://Models/Props/GardenBed_End.glb" id="1_oldna"]
+[ext_resource type="Material" uid="uid://bx8kn4wof3k1n" path="res://Materials/World/Dirt.tres" id="2_4ipbp"]
+
+[node name="GardenBed_End2" unique_id=1917080842 instance=ExtResource("1_oldna")]
+
+[node name="GardenBed_End" parent="." index="0" unique_id=968297797]
+material_override = ExtResource("2_4ipbp")

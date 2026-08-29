@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://butel2so6412m"]
+
+[ext_resource type="PackedScene" uid="uid://dmd0a1sji4sbk" path="res://Models/Props/Sign..glb" id="1_ws736"]
+[ext_resource type="Material" uid="uid://dh56brq40x2hm" path="res://Materials/World/Wood.tres" id="2_wwe5i"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jw7ag"]
+
+[node name="Sign_" unique_id=1918404254 instance=ExtResource("1_ws736")]
+
+[node name="Cube_002" parent="." index="0" unique_id=1864799564]
+material_override = ExtResource("2_wwe5i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=893162703]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=67717853]
+transform = Transform3D(1.4089471, 0, 0, 0, 1.4426327, 0, 0, 0, 0.4081275, -0.11743642, 0.4960404, 0)
+shape = SubResource("BoxShape3D_jw7ag")
