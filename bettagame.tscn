@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dnatybnmk46mr"]
 
-[ext_resource type="Script" uid="uid://ds6tbf4c3rxmr" path="res://beanfollowa.gd" id="1_45v56"]
+[ext_resource type="Script" uid="uid://ds6tbf4c3rxmr" path="res://goblin_ai.gd" id="1_45v56"]
 [ext_resource type="Texture2D" uid="uid://ch0rj26dsr8bt" path="res://kenney_prototype-textures/PNG/Red/texture_01.png" id="2_1wjec"]
 [ext_resource type="PackedScene" uid="uid://6vac72p2c7e1" path="res://playa.tscn" id="2_v5q3e"]
 [ext_resource type="Script" uid="uid://bxpodlqif1ghn" path="res://camera_3d.gd" id="4_45v56"]
