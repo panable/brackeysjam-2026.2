@@ -1,21 +1,10 @@
 [gd_scene format=3 uid="uid://6vac72p2c7e1"]
 
 [ext_resource type="Script" uid="uid://byjbvwekxrks6" path="res://Player.gd" id="1_bcfd2"]
-[ext_resource type="Texture2D" uid="uid://6c1q3olwtepk" path="res://kenney_prototype-textures/PNG/Green/texture_01.png" id="2_6dpp0"]
-[ext_resource type="Texture2D" uid="uid://bu3wrpcont1mx" path="res://kenney_prototype-textures/PNG/Purple/texture_01.png" id="3_2get3"]
+[ext_resource type="PackedScene" uid="uid://s6qnhfpt1k13" path="res://Jack.tscn" id="4_851w8"]
 [ext_resource type="Texture2D" uid="uid://brq087miusp3j" path="res://kenney_prototype-textures/PNG/Orange/texture_01.png" id="4_jmce6"]
+[ext_resource type="Script" uid="uid://pc4iaeqix5ys" path="res://Health.gd" id="5_bcfd2"]
 [ext_resource type="Script" uid="uid://dc2s1b3f151a8" path="res://stick.gd" id="5_duytu"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c55la"]
-albedo_texture = ExtResource("2_6dpp0")
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_f2m6v"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rq4hd"]
-albedo_texture = ExtResource("3_2get3")
-
-[sub_resource type="BoxMesh" id="BoxMesh_73ttu"]
-size = Vector3(0.6, 0.2, 0.8)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_45v56"]
 albedo_texture = ExtResource("4_jmce6")
@@ -34,17 +23,8 @@ script = ExtResource("1_bcfd2")
 
 [node name="Pivot" type="Node3D" parent="." unique_id=49544663]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot" unique_id=147563920]
-material_override = SubResource("StandardMaterial3D_c55la")
-mesh = SubResource("CapsuleMesh_f2m6v")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Pivot" unique_id=1692208980]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4901161e-08, 0.4000001, -0.15)
-material_override = SubResource("StandardMaterial3D_rq4hd")
-mesh = SubResource("BoxMesh_73ttu")
-
 [node name="stick" type="MeshInstance3D" parent="Pivot" unique_id=1071700896]
-transform = Transform3D(0.12, 0, 0, 0, 0.08999026, -0.76604444, 0, 0.10724621, 0.64278764, 0.3, 0.3000002, -0.7)
+transform = Transform3D(0.09192533, -4.78914e-09, -0.6427875, 0, 0.13999999, -5.3218432e-08, 0.077134505, 5.7074763e-09, 0.76604444, 0.8, 0.3000002, -0.7)
 material_override = SubResource("StandardMaterial3D_45v56")
 mesh = SubResource("BoxMesh_g6lp7")
 script = ExtResource("5_duytu")
@@ -60,6 +40,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 1.1920929e-05, 0, 0, 1.0000013, -0.299999
 shape = SubResource("BoxShape3D_g6lp7")
 disabled = true
 
+[node name="Player" parent="Pivot" unique_id=1495614187 instance=ExtResource("4_851w8")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.40000004, 0)
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=751602987]
 shape = SubResource("CapsuleShape3D_x2x30")
 debug_color = Color(0.99999994, 0.2506524, 0.8676591, 1)
@@ -67,6 +50,9 @@ debug_color = Color(0.99999994, 0.2506524, 0.8676591, 1)
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1066016875]
 transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, 0, 18.09, 0)
 fov = 50.0
+
+[node name="Node" type="Node" parent="." unique_id=222334849]
+script = ExtResource("5_bcfd2")
 
 [connection signal="timeout" from="Pivot/stick/Timer" to="Pivot/stick" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Pivot/stick/Area3D" to="Pivot/stick" method="_on_area_3d_body_entered"]

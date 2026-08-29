@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c6rlwo0ec1bf1" path="res://Scenes/world_manager.gd" id="1_mub7f"]
 [ext_resource type="PackedScene" uid="uid://6vac72p2c7e1" path="res://playa.tscn" id="2_i0vv1"]
 [ext_resource type="PackedScene" uid="uid://dgvew44vrd1d1" path="res://Scenes/UI/DialogueUI.tscn" id="4_b8e2k"]
+[ext_resource type="PackedScene" uid="uid://cwg5k7c7weeuy" path="res://Models/Characters/stump.glb" id="5_b8e2k"]
 
 [sub_resource type="Environment" id="Environment_t1osg"]
 background_mode = 1
@@ -38,3 +39,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4891863, 1.3000001, 1.9501
 [node name="Dungeon1" parent="." unique_id=535005868 instance=ExtResource("1_mmlet")]
 
 [node name="DialogueUI" parent="." unique_id=1035567338 instance=ExtResource("4_b8e2k")]
+
+[node name="stump" parent="." unique_id=250468708 instance=ExtResource("5_b8e2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9650879, 0.050048828, 0.13574219)

@@ -1,13 +1,23 @@
 [gd_scene format=3 uid="uid://dnatybnmk46mr"]
 
 [ext_resource type="Script" uid="uid://ds6tbf4c3rxmr" path="res://beanfollowa.gd" id="1_45v56"]
+[ext_resource type="Texture2D" uid="uid://ch0rj26dsr8bt" path="res://kenney_prototype-textures/PNG/Red/texture_01.png" id="2_1wjec"]
 [ext_resource type="PackedScene" uid="uid://6vac72p2c7e1" path="res://playa.tscn" id="2_v5q3e"]
 [ext_resource type="Script" uid="uid://bxpodlqif1ghn" path="res://camera_3d.gd" id="4_45v56"]
 [ext_resource type="Texture2D" uid="uid://c7oyhejvt7mk8" path="res://kenney_prototype-textures/PNG/Dark/texture_04.png" id="5_xufpc"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k8ry5"]
+albedo_texture = ExtResource("2_1wjec")
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_g6lp7"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dkhea"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bhnw4"]
+albedo_texture = ExtResource("2_1wjec")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_45v56"]
+albedo_texture = ExtResource("2_1wjec")
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e0w1h"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -36,6 +46,7 @@ collision_layer = 3
 script = ExtResource("1_45v56")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="BEANFOLLOWA" unique_id=586356796]
+material_override = SubResource("StandardMaterial3D_k8ry5")
 mesh = SubResource("CapsuleMesh_g6lp7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BEANFOLLOWA" unique_id=241631585]
@@ -48,6 +59,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7999997, 1.7, 5.4)
 collision_layer = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="BEAN2" unique_id=879564831]
+material_override = SubResource("StandardMaterial3D_bhnw4")
 mesh = SubResource("CapsuleMesh_g6lp7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BEAN2" unique_id=419407938]
@@ -58,6 +70,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6000004, 1.7, 5.4)
 collision_layer = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="BEAN3" unique_id=492806792]
+material_override = SubResource("StandardMaterial3D_45v56")
 mesh = SubResource("CapsuleMesh_g6lp7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BEAN3" unique_id=1178401866]
