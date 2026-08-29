@@ -3,14 +3,12 @@
 [ext_resource type="Script" uid="uid://byjbvwekxrks6" path="res://Player.gd" id="1_bcfd2"]
 [ext_resource type="PackedScene" uid="uid://s6qnhfpt1k13" path="res://Jack.tscn" id="4_851w8"]
 [ext_resource type="Texture2D" uid="uid://brq087miusp3j" path="res://kenney_prototype-textures/PNG/Orange/texture_01.png" id="4_jmce6"]
+[ext_resource type="PackedScene" uid="uid://20f6i5x0i24k" path="res://Scenes/Characters/stick.tscn" id="5_6dpp0"]
 [ext_resource type="Script" uid="uid://pc4iaeqix5ys" path="res://Health.gd" id="5_bcfd2"]
 [ext_resource type="Script" uid="uid://dc2s1b3f151a8" path="res://stick.gd" id="5_duytu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_45v56"]
 albedo_texture = ExtResource("4_jmce6")
-
-[sub_resource type="BoxMesh" id="BoxMesh_g6lp7"]
-size = Vector3(1, 1, 1.2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g6lp7"]
 size = Vector3(3.2, 2.1000001, 1.3000001)
@@ -22,12 +20,15 @@ collision_layer = 5
 script = ExtResource("1_bcfd2")
 
 [node name="Pivot" type="Node3D" parent="." unique_id=49544663]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="stick" type="MeshInstance3D" parent="Pivot" unique_id=1071700896]
-transform = Transform3D(0.09192533, -4.78914e-09, -0.6427875, 0, 0.13999999, -5.3218432e-08, 0.077134505, 5.7074763e-09, 0.76604444, 0.8, 0.3000002, -0.7)
+transform = Transform3D(0.09192532, 0, -0.6427875, 0, 0.13999997, 0, 0.077134505, 0, 0.7660443, 0.8, 0.3, -0.7)
 material_override = SubResource("StandardMaterial3D_45v56")
-mesh = SubResource("BoxMesh_g6lp7")
 script = ExtResource("5_duytu")
+
+[node name="Stick2" parent="Pivot/stick" unique_id=38337604 instance=ExtResource("5_6dpp0")]
+transform = Transform3D(4.4976797, 0.20399547, 1.5377694e-08, 8.668998e-09, -4.0127333e-07, 7.142857, 0.022805244, -0.5793436, -9.689086e-08, -0.05748701, 0.05549693, -0.021359205)
 
 [node name="Timer" type="Timer" parent="Pivot/stick" unique_id=2128850759]
 wait_time = 0.6

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://20f6i5x0i24k"]
+
+[ext_resource type="PackedScene" uid="uid://dti454ake2byq" path="res://Models/Characters/Stick.glb" id="1_bkuio"]
+[ext_resource type="Material" uid="uid://dkmwns4hpp04k" path="res://Materials/Characters/LightBrown.tres" id="2_cmkqp"]
+
+[node name="Stick2" unique_id=38337604 instance=ExtResource("1_bkuio")]
+
+[node name="Stick" parent="." index="0" unique_id=2112020788]
+surface_material_override/0 = ExtResource("2_cmkqp")
