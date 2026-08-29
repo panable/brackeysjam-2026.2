@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://d2stvqam04qmw"]
+
+[ext_resource type="PackedScene" uid="uid://cwg5k7c7weeuy" path="res://Models/Characters/stump.glb" id="1_vyge5"]
+[ext_resource type="Material" uid="uid://cgm3tmf4o8kf8" path="res://Materials/Characters/DullGreen.tres" id="2_6iuxx"]
+[ext_resource type="Material" uid="uid://cyxlbytgm8gl4" path="res://Materials/Characters/EnemyEyes.tres" id="3_d04fb"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4o4e5"]
+animation = &"Stump_Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lyiyx"]
+animation = &"Stump_dead"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lpjj2"]
+animation = &"Stump_walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vt0mw"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ouo72"]
+advance_mode = 2
+advance_condition = &"is_moving"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rj61i"]
+advance_mode = 2
+advance_condition = &"is_idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ug2ro"]
+advance_mode = 2
+advance_condition = &"is_dead"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3wswg"]
+advance_mode = 2
+advance_condition = &"is_dead"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_lpjj2"]
+states/Stump_Idle/node = SubResource("AnimationNodeAnimation_4o4e5")
+states/Stump_Idle/position = Vector2(359.90024, 101.03752)
+states/Stump_dead/node = SubResource("AnimationNodeAnimation_lyiyx")
+states/Stump_dead/position = Vector2(462.90024, -14.924957)
+states/Stump_walk/node = SubResource("AnimationNodeAnimation_lpjj2")
+states/Stump_walk/position = Vector2(582.4002, 100.51876)
+transitions = ["Start", "Stump_Idle", SubResource("AnimationNodeStateMachineTransition_vt0mw"), "Stump_Idle", "Stump_walk", SubResource("AnimationNodeStateMachineTransition_ouo72"), "Stump_walk", "Stump_Idle", SubResource("AnimationNodeStateMachineTransition_rj61i"), "Stump_walk", "Stump_dead", SubResource("AnimationNodeStateMachineTransition_ug2ro"), "Stump_Idle", "Stump_dead", SubResource("AnimationNodeStateMachineTransition_3wswg")]
+graph_offset = Vector2(-39.59977, -92.92496)
+
+[node name="stump" unique_id=250468708 instance=ExtResource("1_vyge5")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Stump" parent_id_path=PackedInt32Array(1491194398) index="0" unique_id=2070757643]
+bones/0/position = Vector3(2.8385231e-14, 0.8595066, -0.048871994)
+bones/0/rotation = Quaternion(-0.11124121, -1.9349875e-07, 2.1659469e-08, 0.9937935)
+bones/1/position = Vector3(0.8880743, 1.4459239, -1.5148343)
+bones/1/rotation = Quaternion(0.60368526, -2.597681e-07, -1.9670566e-07, 0.79722273)
+bones/2/position = Vector3(0.8880743, 0.6611895, -1.3207321)
+bones/2/rotation = Quaternion(0.736308, -2.2047948e-07, -2.3991961e-07, 0.6766466)
+bones/3/position = Vector3(-0.9033859, 1.4459239, -1.5148343)
+bones/3/rotation = Quaternion(0.60368526, -2.597681e-07, -1.9670566e-07, 0.79722273)
+bones/4/position = Vector3(-0.9033859, 0.6611895, -1.3207321)
+bones/4/rotation = Quaternion(0.736308, -2.2047948e-07, -2.3991961e-07, 0.6766466)
+
+[node name="Cube_088" parent="Stump/Skeleton3D" index="0" unique_id=329681443]
+surface_material_override/0 = ExtResource("2_6iuxx")
+surface_material_override/1 = ExtResource("3_d04fb")
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2" unique_id=392594318]
+tree_root = SubResource("AnimationNodeStateMachine_lpjj2")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/is_dead = true
+parameters/conditions/is_idle = false
+parameters/conditions/is_moving = true
