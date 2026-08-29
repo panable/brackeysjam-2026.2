@@ -17,7 +17,7 @@ func _process(_delta):
 	var mouse := get_viewport().get_mouse_position()
 	var center := get_viewport().get_visible_rect().size / 2.0
 
-	var direction := center - mouse
+	var direction := mouse - center
 
 	pivot.rotation.y = atan2(direction.x, direction.y)
 
