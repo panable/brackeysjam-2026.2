@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://s6qnhfpt1k13"]
 
 [ext_resource type="PackedScene" uid="uid://4bq3q5e2vs68" path="res://Models/Characters/Player.glb" id="1_5hdb2"]
+[ext_resource type="Script" uid="uid://qgxnd6fo642d" path="res://player_animation.gd" id="2_a4ibf"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yrc8n"]
 animation = &"Player_Die"
@@ -78,13 +79,13 @@ transitions = ["Start", "Player_Idle", SubResource("AnimationNodeStateMachineTra
 graph_offset = Vector2(-46.200184, -121.45004)
 
 [node name="Player" unique_id=1495614187 instance=ExtResource("1_5hdb2")]
+script = ExtResource("2_a4ibf")
 
-[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(704922322) index="0" unique_id=1085311873]
-bones/1/position = Vector3(-1.02221995e-10, 0.9014702, -0.03859387)
-bones/1/rotation = Quaternion(-0.0027476698, -3.258402e-07, 8.9531227e-10, 0.99999624)
-bones/2/rotation = Quaternion(0.0421754, -3.175811e-08, -2.8825568e-08, 0.9991102)
-bones/3/rotation = Quaternion(0.9986868, -0.04990417, -0.00057280995, -0.011575325)
-bones/4/rotation = Quaternion(0.9973449, 0.053038973, -0.0026366601, 0.049831215)
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(550429077) index="0" unique_id=1669462192]
+bones/1/rotation = Quaternion(0.19239469, -3.197539e-07, -6.269015e-08, 0.98131764)
+bones/2/rotation = Quaternion(-0.14940706, -3.1429636e-08, 1.0211512e-07, 0.9887758)
+bones/3/rotation = Quaternion(0.98753864, -0.049346223, 0.0074637225, 0.14925407)
+bones/4/rotation = Quaternion(0.8944618, 0.047561094, 0.023622582, -0.44397977)
 
 [node name="AnimationTree" type="AnimationTree" parent="." index="3" unique_id=319114362]
 active = false

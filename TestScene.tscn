@@ -4,6 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://6vac72p2c7e1" path="res://playa.tscn" id="2_wicfy"]
 [ext_resource type="Script" uid="uid://bxpodlqif1ghn" path="res://camera_3d.gd" id="3_go42g"]
 [ext_resource type="Script" uid="uid://c2shnwjltc6x5" path="res://Scripts/MenuUI.gd" id="4_go42g"]
+[ext_resource type="PackedScene" uid="uid://bvf2wlslsxsla" path="res://Scenes/EyeBackground.tscn" id="5_sreuk"]
+[ext_resource type="Script" uid="uid://0gxo0ee7jex1" path="res://Scripts/eye_viewport.gd" id="5_tq6uv"]
+[ext_resource type="Script" uid="uid://dt1ftewtpmam1" path="res://Scripts/eye_backdrop.gd" id="7_12c36"]
+
+[sub_resource type="Environment" id="Environment_r84c8"]
+background_mode = 1
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_r84c8"]
 viewport_path = NodePath("WorldMenu/SubViewport")
@@ -11,21 +17,13 @@ viewport_path = NodePath("WorldMenu/SubViewport")
 [sub_resource type="BoxShape3D" id="BoxShape3D_go42g"]
 size = Vector3(5.5, 3.5, 0.1)
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_dh21y"]
+viewport_path = NodePath("Camera3D2/EyeViewport")
+
 [node name="MainMenu3D" type="Node3D" unique_id=1402848343]
 
-[node name="Room1" parent="." unique_id=20324241 instance=ExtResource("1_mncer")]
-
-[node name="playa" parent="." unique_id=990109964 instance=ExtResource("2_wicfy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1545191, 1.9234217)
-
-[node name="Marker3D" type="Marker3D" parent="." unique_id=865801846]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5530963)
-
-[node name="Camera3D2" type="Camera3D" parent="." unique_id=1208727078 node_paths=PackedStringArray("playa")]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 20.354519, 1.9234217)
-fov = 60.0
-script = ExtResource("3_go42g")
-playa = NodePath("../playa")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2094308898]
+environment = SubResource("Environment_r84c8")
 
 [node name="WorldMenu" type="Node3D" parent="." unique_id=1121699345]
 script = ExtResource("4_go42g")
@@ -92,3 +90,29 @@ custom_minimum_size = Vector2(350, 70)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "QUIT"
+
+[node name="Room1" parent="." unique_id=20324241 instance=ExtResource("1_mncer")]
+
+[node name="playa" parent="." unique_id=990109964 instance=ExtResource("2_wicfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1545191, 1.9234217)
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=865801846]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5530963)
+
+[node name="Camera3D2" type="Camera3D" parent="." unique_id=1208727078 node_paths=PackedStringArray("playa")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 20.354519, 1.9234217)
+fov = 60.0
+script = ExtResource("3_go42g")
+playa = NodePath("../playa")
+
+[node name="EyeViewport" type="SubViewport" parent="Camera3D2" unique_id=257425266]
+transparent_bg = true
+size = Vector2i(1920, 1080)
+script = ExtResource("5_tq6uv")
+
+[node name="EyeBackground" parent="Camera3D2/EyeViewport" unique_id=237224471 instance=ExtResource("5_sreuk")]
+
+[node name="EyeBackdrop" type="Sprite3D" parent="Camera3D2" unique_id=1796073468]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20.42675)
+texture = SubResource("ViewportTexture_dh21y")
+script = ExtResource("7_12c36")

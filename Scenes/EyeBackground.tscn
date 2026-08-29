@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bvf2wlslsxsla"]
+
+[ext_resource type="Script" uid="uid://bmv08wax2tutn" path="res://Scripts/EyeBackground.gd" id="1_wl42i"]
+[ext_resource type="PackedScene" uid="uid://ckbyln85tues7" path="res://eye.tscn" id="2_pv07a"]
+
+[node name="EyeBackground" type="Control" unique_id=237224471]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wl42i")
+eye_scene = ExtResource("2_pv07a")
+eye_count = 120
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=913625652]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Eyes" type="Control" parent="ColorRect" unique_id=957205146]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
