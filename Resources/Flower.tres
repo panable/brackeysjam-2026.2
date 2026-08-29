@@ -1,7 +1,11 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ckrb8fv5odlwy"]
 
 [ext_resource type="Script" uid="uid://d4gdhhvd4t6e1" path="res://Scripts/ItemData.gd" id="1_ujy8b"]
+[ext_resource type="Texture2D" uid="uid://dldplucujtie6" path="res://Sprites/Flower.png" id="2_coe7e"]
 
 [resource]
 script = ExtResource("1_ujy8b")
+name = "Flower"
+description = "Testing this works still"
+texture = ExtResource("2_coe7e")
 metadata/_custom_type_script = "uid://d4gdhhvd4t6e1"

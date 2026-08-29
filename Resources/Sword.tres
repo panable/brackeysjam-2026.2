@@ -1,7 +1,11 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bqr4phonrye74"]
 
 [ext_resource type="Script" uid="uid://d4gdhhvd4t6e1" path="res://Scripts/ItemData.gd" id="1_j662n"]
+[ext_resource type="Texture2D" uid="uid://dy7gkv2y66wrv" path="res://Sprites/Sword.png" id="2_toyaj"]
 
 [resource]
 script = ExtResource("1_j662n")
+name = "Sword"
+description = "That man can real work magic"
+texture = ExtResource("2_toyaj")
 metadata/_custom_type_script = "uid://d4gdhhvd4t6e1"

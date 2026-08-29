@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dmhaxm5byhxb2"]
 
 [ext_resource type="PackedScene" uid="uid://bso77d7jpmab2" path="res://Models/Rooms/PlantPot.glb" id="1_c7rw8"]
+[ext_resource type="Script" uid="uid://bd2ado52ebpsr" path="res://Scenes/Rooms/Props/plant_pot.gd" id="2_eqmej"]
 [ext_resource type="Material" uid="uid://dh56brq40x2hm" path="res://Materials/World/Wood.tres" id="2_u7xvp"]
 [ext_resource type="Material" uid="uid://bx8kn4wof3k1n" path="res://Materials/World/Dirt.tres" id="3_eqmej"]
 
@@ -8,9 +9,14 @@
 height = 1.0
 radius = 0.67626953
 
-[node name="PlantPot2" unique_id=623416607 instance=ExtResource("1_c7rw8")]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_r84c8"]
+height = 1.8779297
+radius = 1.5786133
 
-[node name="PlantPot" parent="." index="0" unique_id=1168047104]
+[node name="PlantPot2" unique_id=623416607 instance=ExtResource("1_c7rw8")]
+script = ExtResource("2_eqmej")
+
+[node name="PlantPot" parent="." index="0" unique_id=1113007393]
 surface_material_override/0 = ExtResource("2_u7xvp")
 surface_material_override/1 = ExtResource("3_eqmej")
 
@@ -19,3 +25,10 @@ surface_material_override/1 = ExtResource("3_eqmej")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=864854429]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("CylinderShape3D_jw7ag")
+
+[node name="Area3D" type="Area3D" parent="." index="2" unique_id=1014303273]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=1191902173]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.061035156, 0)
+shape = SubResource("CylinderShape3D_r84c8")

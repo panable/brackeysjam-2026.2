@@ -1,0 +1,114 @@
+{
+	"start": {
+		"speaker": "Billy",
+		"content": "Well howdy partner! You look mighty tuckered out, come rest a while with me? I've got plenty a yarn to spin ya if you're eager.",
+		"next_id": "offer_sword"
+	},
+
+	"offer_sword": {
+		"speaker": "Billy",
+		"content": "Partner, let me fix that old beaut up. It might take a while, so why don't you take a seat and let an old man regale you with a story of old.",
+		"choices": [
+			{
+				"text": "Show Billy the broken sword.",
+				"next_id": "story_1",
+				"required_item": "res://Resources/BrokenSword.tres",
+				"required_amount": 1,
+				"take_amount": 1
+			},
+			{
+				"text": "Maybe another time.",
+				"next_id": "leave"
+			}
+		]
+	},
+
+	"story_1": {
+		"speaker": "Billy",
+		"content": "Back in my day, me papa taught me the best way to shear a sheep. Yes sir, I can shear any sheep in less than two minutes, true as the sky is blue. The trick is shearing 'em as one full jacket. Your typical cowpoke might spend upwards of five, even ten minutes on a sheep. They just be shearing at random, but they don't understand the art form.",
+		"next_id": "story_2"
+	},
+
+	"story_2": {
+		"speaker": "Billy",
+		"content": "I pity 'em, that's for sure. At least I had me daddy to teach me right from the get-go. Cows though, now they're a different story. I can shear a sheep quick, true, but my stars, I cannot seem to milk a cow's udders effectively. Guessin' they reckon I go a bit too quick for 'em. I'm just so eager to get the milk out so I can move to the next, you understand? S'pose that's my curse, always too quick.",
+		"next_id": "story_3"
+	},
+
+	"story_3": {
+		"speaker": "Billy",
+		"content": "I mean just think, this here sword should be taking your regular smithy... well, I wouldn't even know how long! But you're here gettin' it for dirt cheap, not even chargin' ya for it! S'pose it's why you're happy to sit with me, since I'm doin' this good bit of charity for ya.",
+		"next_id": "story_4"
+	},
+
+	"story_4": {
+		"speaker": "Billy",
+		"content": "I never been much for charity actually. Givin', that is. Just feel folks should be rollin' up their own sleeves, gettin' their own hands dirty. I mean, I ain't never asked anyone for anythin', and look how I've turned out! Master sheep shearer, sword repairer...",
+		"next_id": "story_5"
+	},
+
+	"story_5": {
+		"speaker": "Billy",
+		"content": "Okay, I s'pose not a master of all, on account of the poor cows that've had the misfortune to be attempted to be milked by myself. Anyway... are you listening to me still? You ain't just dozin' off until I finish your sword, right? That'd be mighty inconsiderate.",
+		"next_id": "question"
+	},
+
+	"question": {
+		"speaker": "Billy",
+		"content": "Look, how 'bout you prove to me you were really bending an ear, and tell me... what's my least favourite animal?",
+		"choices": [
+			{
+				"text": "Sheep",
+				"next_id": "wrong",
+				"give_item": "res://Resources/BrokenSword.tres",
+				"give_amount": 1,
+				"set_flag": false
+			},
+			{
+				"text": "Cow",
+				"next_id": "correct",
+				"give_item": "res://Resources/Sword.tres",
+				"give_amount": 1,
+				"set_flag": true
+			},
+			{
+				"text": "Horse",
+				"next_id": "wrong",
+				"give_item": "res://Resources/BrokenSword.tres",
+				"give_amount": 1,
+				"set_flag": false
+			},
+			{
+				"text": "Frog",
+				"next_id": "wrong",
+				"give_item": "res://Resources/BrokenSword.tres",
+				"give_amount": 1,
+				"set_flag": false
+			}
+		]
+	},
+
+	"correct": {
+		"speaker": "Billy",
+		"content": "Ah, it's actually frogs, but I can see how you figured that answer. Least you were listenin'. Here's your sword back, should be a bit more durable now.",
+		"next_id": "end"
+	},
+
+	"wrong": {
+		"speaker": "Billy",
+		"content": "You weren't listenin' at all! Well ain't I just an absolute sucker then. Here, take ya sword back. I told ya I ain't one for charity, and boy howdy this proves it. Good luck swinging that broken blade, partner, y'ain't gettin' no help from me now.",
+		"next_id": "end"
+	},
+
+	"leave": {
+		"speaker": "Billy",
+		"content": "Suit yourself, partner. I'll be right here if ya change your mind.",
+		"next_id": "end"
+	},
+
+	"repaired_reminder": {
+		"speaker": "Billy",
+		"content": "Well howdy again, partner! Sword still holdin' together? Told ya I knew my way around a blade. Almost as well as I know my way around a sheep.",
+		"next_id": "end"
+	}
+}

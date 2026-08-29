@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://cgkswireprm2k"]
+
+[ext_resource type="Script" uid="uid://cxx3sqrs7pppi" path="res://Scripts/shop_ui.gd" id="1_ksn61"]
+[ext_resource type="PackedScene" uid="uid://dix6vskfm35jq" path="res://Scenes/UI/shop_slot.tscn" id="2_6hyjo"]
+[ext_resource type="Script" uid="uid://c3bs4wt5g3hqa" path="res://Scripts/ShopOffer.gd" id="3_0c1cl"]
+[ext_resource type="Resource" uid="uid://dksswvd8evwq7" path="res://Resources/ShopOffers/ShopFlower.tres" id="4_dlcd5"]
+[ext_resource type="Resource" uid="uid://ccj41hdevipf8" path="res://Resources/ShopOffers/Shop10.tres" id="5_larpm"]
+[ext_resource type="Resource" uid="uid://dov22pyby0kwb" path="res://Resources/ShopOffers/ShopSword.tres" id="6_j7lj3"]
+[ext_resource type="Resource" uid="uid://gkn5dcva5tej" path="res://Resources/ShopOffers/ShopRunningShoes.tres" id="7_v0jyl"]
+[ext_resource type="Resource" uid="uid://c32nac70q3dkk" path="res://Resources/ShopOffers/ShopMap.tres" id="8_0esbl"]
+[ext_resource type="Resource" uid="uid://p2206flsak03" path="res://Resources/ShopOffers/Shop5.tres" id="9_xi8hg"]
+
+[node name="ShopUI" type="Control" unique_id=602414720]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ksn61")
+shop_slot_scene = ExtResource("2_6hyjo")
+offers = Array[ExtResource("3_0c1cl")]([ExtResource("4_dlcd5"), ExtResource("5_larpm"), ExtResource("6_j7lj3"), ExtResource("7_v0jyl"), ExtResource("8_0esbl"), ExtResource("9_xi8hg")])
+
+[node name="ShopPanel" type="PanelContainer" parent="." unique_id=879877566]
+custom_minimum_size = Vector2(650, 420)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -325.0
+offset_top = -210.0
+offset_right = 325.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ShopPanel" unique_id=1154388081]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TitleLabel" type="Label" parent="ShopPanel/VBoxContainer" unique_id=1996274471]
+layout_mode = 2
+text = "Roger's Shop"
+
+[node name="CenterContainer" type="CenterContainer" parent="ShopPanel/VBoxContainer" unique_id=54362836]
+layout_mode = 2
+
+[node name="ItemsGrid" type="GridContainer" parent="ShopPanel/VBoxContainer/CenterContainer" unique_id=109858427]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 3
+
+[node name="DescriptionPanel" type="PanelContainer" parent="ShopPanel/VBoxContainer" unique_id=1273091450]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ShopPanel/VBoxContainer/DescriptionPanel" unique_id=1535695001]
+layout_mode = 2
+
+[node name="ItemName" type="Label" parent="ShopPanel/VBoxContainer/DescriptionPanel/VBoxContainer" unique_id=1437103233]
+layout_mode = 2
+text = "Select an item"
+
+[node name="Description" type="Label" parent="ShopPanel/VBoxContainer/DescriptionPanel/VBoxContainer" unique_id=543284885]
+layout_mode = 2
+text = "Take a look around."
+
+[node name="ButtonRow" type="HBoxContainer" parent="ShopPanel/VBoxContainer" unique_id=2015745836]
+layout_mode = 2
+
+[node name="BuyButton" type="Button" parent="ShopPanel/VBoxContainer/ButtonRow" unique_id=1420222874]
+layout_mode = 2
+text = "BUY"
+
+[node name="ContinueButton" type="Button" parent="ShopPanel/VBoxContainer/ButtonRow" unique_id=552371580]
+visible = false
+layout_mode = 2
+text = "CONTINUE"
+
+[node name="CloseButton" type="Button" parent="ShopPanel/VBoxContainer/ButtonRow" unique_id=1401183921]
+layout_mode = 2
+text = "LEAVE
+"

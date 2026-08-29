@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://ifdygy2cgq0" path="res://Scenes/Rooms/Modular/1_floor.tscn" id="5_udrda"]
 [ext_resource type="PackedScene" uid="uid://d4b2nguo0nd6l" path="res://Scenes/Rooms/Modular/1_wall_3.tscn" id="6_md7lx"]
 [ext_resource type="PackedScene" uid="uid://bpnionfeo78xx" path="res://Scenes/Characters/Roger_c.tscn" id="7_dufld"]
+[ext_resource type="PackedScene" uid="uid://dehhhxdb5u4b8" path="res://Scenes/shop_table.tscn" id="8_kipmh"]
+[ext_resource type="PackedScene" uid="uid://cgkswireprm2k" path="res://Scenes/UI/shop_ui.tscn" id="9_wiyv2"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
@@ -146,4 +148,10 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.99
 transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 7.9977484, 0, -11.9942875)
 
 [node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("7_dufld")]
-transform = Transform3D(-0.0013937005, 0, 0.84999883, 0, 0.85, 0, -0.84999883, 0, -0.0013937005, 0.0029976685, 0.023265898, -2.0024698)
+transform = Transform3D(-0.0013937005, 0, 0.84999883, 0, 0.85, 0, -0.84999883, 0, -0.0013937005, -1.473981, 0.023265898, -10.537041)
+
+[node name="ShopTable" parent="." unique_id=842737196 node_paths=PackedStringArray("shop_ui") instance=ExtResource("8_kipmh")]
+transform = Transform3D(-0.82997084, 0, -0.5578068, 0, 1, 0, 0.5578068, 0, -0.82997084, -2.0049322, 0.52830577, -7.752486)
+shop_ui = NodePath("../ShopUI")
+
+[node name="ShopUI" parent="." unique_id=602414720 instance=ExtResource("9_wiyv2")]

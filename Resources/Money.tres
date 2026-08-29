@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://btgvq5f64h3as"]
+
+[ext_resource type="Script" uid="uid://d4gdhhvd4t6e1" path="res://Scripts/ItemData.gd" id="1_cmewf"]
+
+[resource]
+script = ExtResource("1_cmewf")
+name = "Money"
+description = "From Rag to Riches"
+max_stack = 999
+metadata/_custom_type_script = "uid://d4gdhhvd4t6e1"

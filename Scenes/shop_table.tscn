@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dehhhxdb5u4b8"]
+
+[ext_resource type="Script" uid="uid://dc37xkrd3uoe2" path="res://Scripts/shop_table.gd" id="1_fwnro"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_fwnro"]
+size = Vector3(2.135315, 0.5595703, 0.75)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_icf5o"]
+radius = 1.425293
+
+[node name="ShopTable" type="Node3D" unique_id=842737196]
+script = ExtResource("1_fwnro")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1007301045]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5676575, -0.22021484, -0.125)
+mesh = SubResource("BoxMesh_fwnro")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=343949513]
+collision_layer = 5
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=980409677]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.58452344, 0, 0)
+shape = SubResource("CylinderShape3D_icf5o")

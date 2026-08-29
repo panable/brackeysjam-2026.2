@@ -1,0 +1,66 @@
+{
+	"start": {
+		"speaker": "Buck",
+		"content": "You wanna get through here? It's $20. Fork it over or get lost.",
+		"choices": [
+			{
+				"text": "Pay $1",
+				"next_id": "pay_1",
+				"required_item": "res://Resources/Money.tres",
+				"required_amount": 1,
+				"take_amount": 1,
+				"set_flag": false
+			},
+			{
+				"text": "Pay $2",
+				"next_id": "pay_2",
+				"required_item": "res://Resources/Money.tres",
+				"required_amount": 2,
+				"take_amount": 2,
+				"set_flag": true
+			},
+			{
+				"text": "Pay $20",
+				"next_id": "pay_20",
+				"required_item": "res://Resources/Money.tres",
+				"required_amount": 20,
+				"take_amount": 20,
+				"set_flag": true
+			},
+			{
+				"text": "I don't have enough.",
+				"next_id": "no_money"
+			}
+		]
+	},
+
+	"pay_1": {
+		"speaker": "Buck",
+		"content": "...You think I'm stupid or something?",
+		"next_id": "end"
+	},
+
+	"pay_2": {
+		"speaker": "Buck",
+		"content": "Hah! Sucker! Go on then, go right through.",
+		"next_id": "end"
+	},
+
+	"pay_20": {
+		"speaker": "Buck",
+		"content": "Hah! Sucker! Go on then, go right through.",
+		"next_id": "end"
+	},
+
+	"no_money": {
+		"speaker": "Buck",
+		"content": "Then quit wasting my time. Go bash a few of those monsters wandering around outside. They usually drop some cash. Come back when you've got something worth handing over.",
+		"next_id": "end"
+	},
+
+	"already_paid": {
+		"speaker": "Buck",
+		"content": "You already paid. What're you still bothering me for? Get through.",
+		"next_id": "end"
+	}
+}

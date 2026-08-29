@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c6rlwo0ec1bf1" path="res://Scenes/world_manager.gd" id="1_mub7f"]
 [ext_resource type="PackedScene" uid="uid://6vac72p2c7e1" path="res://playa.tscn" id="2_i0vv1"]
 [ext_resource type="PackedScene" uid="uid://dgvew44vrd1d1" path="res://Scenes/UI/DialogueUI.tscn" id="4_b8e2k"]
+[ext_resource type="PackedScene" uid="uid://cqwwipxbfupi7" path="res://Scenes/UI/InventoryUI.tscn" id="5_b8e2k"]
 
 [sub_resource type="Environment" id="Environment_t1osg"]
 background_mode = 1
@@ -45,3 +46,6 @@ offset_top = 36.0
 offset_right = 298.0
 offset_bottom = 93.0
 text = "Health 0 / 3"
+
+[node name="InventoryUI" parent="." unique_id=1610134888 instance=ExtResource("5_b8e2k")]
+mouse_filter = 2

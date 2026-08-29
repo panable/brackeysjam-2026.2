@@ -1,0 +1,38 @@
+{
+	"start": {
+		"speaker": "Marjorie",
+		"content": "Have you seen my key dearie? I... I'm quite the klutz, so I must have dropped it somewhere...",
+		"choices": [
+			{
+				"text": "Give key",
+				"next_id": "give_key",
+				"required_item": "res://Resources/Key.tres",
+				"required_amount": 1,
+				"take_amount": 1,
+				"set_flag": true
+			},
+			{
+				"text": "I haven't found it yet.",
+				"next_id": "no_key"
+			}
+		]
+	},
+
+	"give_key": {
+		"speaker": "Marjorie",
+		"content": "Thank you dearie! You'd think I'd have learnt to keep better hold of it by now. Always getting lost adventurers trying to put this key in a door when it's clearly for a drawer. Silly boys, they should learn by now that you just bang on the door 10 times and you'll get through easy.",
+		"next_id": "end"
+	},
+
+	"no_key": {
+		"speaker": "Marjorie",
+		"content": "Oh, that's alright dearie. I'm sure it'll turn up somewhere. Just keep an eye on the ground for me, would you? Knowing me, I probably dropped it somewhere painfully obvious.",
+		"next_id": "end"
+	},
+
+	"reminder": {
+		"speaker": "Marjorie",
+		"content": "Oh, hello again dearie! And don't forget what I told you, if you come across one of those stubborn doors, just give it a good knock 10 times. Works every time!",
+		"next_id": "end"
+	}
+}

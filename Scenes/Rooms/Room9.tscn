@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ifdygy2cgq0" path="res://Scenes/Rooms/Modular/1_floor.tscn" id="5_s6wtv"]
 [ext_resource type="PackedScene" uid="uid://dmhaxm5byhxb2" path="res://Scenes/Rooms/Props/plant_pot.tscn" id="6_lmjo0"]
 [ext_resource type="PackedScene" uid="uid://c0h5fxqx3aeq7" path="res://Scenes/Characters/Time_Knight_c.tscn" id="7_qwr6g"]
+[ext_resource type="Resource" uid="uid://cib86xegispic" path="res://Resources/PlayerInventory.tres" id="7_s6wtv"]
 [ext_resource type="PackedScene" uid="uid://dug106jgaujma" path="res://Scenes/Characters/Walter_c.tscn" id="8_s6wtv"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
@@ -104,11 +105,15 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.00
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0029245536, 0, 8.0024)
 
 [node name="PlantPot2" parent="." unique_id=623416607 instance=ExtResource("6_lmjo0")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.9999998, 0, -3.0000002)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.754019, 0, -0.83952516)
+inventory = ExtResource("7_s6wtv")
 
 [node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("7_qwr6g")]
 transform = Transform3D(-0.5752781, 0, 0.17045596, 0, 0.59999996, 0, -0.17045596, 0, -0.5752781, 1.9980291, -0.000383541, 7.317019)
 
 [node name="NPC2" parent="." unique_id=1446091811 instance=ExtResource("8_s6wtv")]
-transform = Transform3D(0.31450596, 0, 0.51096565, 0, 0.59999985, 0, -0.51096565, 0, 0.31450596, 2.735291, -0.0117558725, -4.269693)
+transform = Transform3D(0.31450596, 0, 0.51096565, 0, 0.59999985, 0, -0.51096565, 0, 0.31450596, 1.2174191, -0.0117558725, -6.0543947)
 dialogue_path = "res://Dialogue/walter.json"
+condition_flag = "flower_planted"
+false_entry = "start"
+true_entry = "flower_planted"

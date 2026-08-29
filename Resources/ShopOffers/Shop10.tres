@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ShopOffer" format=3 uid="uid://ccj41hdevipf8"]
+
+[ext_resource type="Script" uid="uid://c3bs4wt5g3hqa" path="res://Scripts/ShopOffer.gd" id="1_rsslb"]
+[ext_resource type="Resource" uid="uid://btgvq5f64h3as" path="res://Resources/Money.tres" id="1_sutxs"]
+
+[resource]
+script = ExtResource("1_rsslb")
+offer_name = "$10 Gold"
+preview_description = "Buy $10 for only $2!"
+full_description = "You bought $1!
+[Fine print: $1.0]"
+cost_item = ExtResource("1_sutxs")
+cost_amount = 2
+reward_item = ExtResource("1_sutxs")
+one_time_purchase = false
+metadata/_custom_type_script = "uid://c3bs4wt5g3hqa"

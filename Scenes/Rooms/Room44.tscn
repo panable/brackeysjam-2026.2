@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c2u5irowtr2df" path="res://Scenes/Rooms/Modular/2_step_down.tscn" id="5_0gbxl"]
 [ext_resource type="PackedScene" uid="uid://b8oijfuvgn66a" path="res://Scenes/Rooms/Modular/2_step_up.tscn" id="6_qv6wb"]
 [ext_resource type="PackedScene" uid="uid://dhl7waoe5cyls" path="res://Scenes/Characters/Buck_c.tscn" id="7_qv6wb"]
+[ext_resource type="Resource" uid="uid://btgvq5f64h3as" path="res://Resources/Money.tres" id="8_ddwlv"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -146,3 +147,9 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.04
 
 [node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("7_qv6wb")]
 transform = Transform3D(-0.5999837, 0, -0.004420775, 0, 0.59999996, 0, 0.004420775, 0, -0.5999837, 0.00021325584, -0.0038667917, 12.162848)
+dialogue_path = "res://Dialogue/buck.json"
+condition_flag = "buck_paid"
+false_entry = "start"
+true_entry = "already_paid"
+dialogue_flag = "buck_paid"
+take_item = ExtResource("8_ddwlv")
