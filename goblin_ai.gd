@@ -1,7 +1,9 @@
 extends CharacterBody3D
+@onready var atk_zone: atk_zone = $AtkZone
+
+@onready var player: Player = get_tree().get_first_node_in_group("player")
 
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D
-@onready var player: CharacterBody3D = $"../playa"
 
 @export_category("Movement")
 @export var movement_speed := 11.0 ## Normal movement speed.
@@ -41,6 +43,7 @@ var original_materials: Dictionary = {}
 
 
 func _ready() -> void:
+	print(player.name)
 	original_scale = scale
 
 	for mesh in find_children("*", "MeshInstance3D", true, false):
@@ -124,14 +127,14 @@ func _physics_process(delta: float) -> void:
 		30.0 * delta
 	)
 
-	look_at(
-		Vector3(
-			player.global_position.x,
-			global_position.y,
-			player.global_position.z
-		),
-		Vector3.UP
-	)
+	#look_at(
+		#Vector3(
+			#player.global_position.x,
+			#global_position.y,
+			#player.global_position.z
+		#),
+		#Vector3.UP
+	#)
 
 	move_and_slide()
 
@@ -146,7 +149,7 @@ func start_attack() -> void:
 	var target_position := player.global_position
 	target_position.y = global_position.y
 
-	look_at(target_position, Vector3.UP)
+	#look_at(target_position, Vector3.UP)
 
 	await get_tree().create_timer(attack_telegraph).timeout
 
@@ -278,8 +281,8 @@ func die() -> void:
 
 func finish_attack() -> void:
 	is_attacking = false
+	atk_zone.reset_damage_cooldown
 
 
 func damage_player() -> void:
-	print("ENEMY HIT PLAYER")
-	# player.take_damage(1)
+	atk_zone.reset_damage_cooldown()

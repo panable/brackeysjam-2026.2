@@ -8,6 +8,20 @@ class_name PlayerAnimation
 func _ready() -> void:
 	animation_tree.active = true
 
+func die() -> void:
+	animation_tree.set(
+		"parameters/conditions/is_moving",
+		false
+	)
+
+	animation_tree.set(
+		"parameters/conditions/is_idle",
+		false
+	)
+	animation_tree.set(
+		"parameters/conditions/is_dead",
+		true
+	)
 
 func set_moving(moving: bool) -> void:
 	animation_tree.set(

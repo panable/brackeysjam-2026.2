@@ -68,33 +68,33 @@ graph_offset = Vector2(-158.39998, 35.30249)
 [node name="goblin" unique_id=1934247732 instance=ExtResource("1_ov3yr")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
 
-[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(893744545) index="0" unique_id=1126613429]
-bones/1/position = Vector3(1.10588845e-08, 0.4405065, -0.016969737)
-bones/1/rotation = Quaternion(0.050763555, -3.2542127e-07, -7.55466e-09, 0.99871075)
-bones/2/rotation = Quaternion(0.26108125, -3.0684046e-08, -1.7240718e-07, 0.96531683)
-bones/3/position = Vector3(0.73466164, 1.358053, 0.4778974)
-bones/3/rotation = Quaternion(0.9868742, 5.471349e-07, -3.584762e-06, -0.16149136)
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(1022562755) index="0" unique_id=1860334485]
+bones/1/position = Vector3(-1.0696002e-08, 0.43498054, -0.006500259)
+bones/1/rotation = Quaternion(0.04225637, -3.2555033e-07, -2.2460219e-08, 0.9991069)
+bones/2/rotation = Quaternion(0.2558769, -3.0728273e-08, -1.8071988e-07, 0.9667094)
+bones/3/position = Vector3(0.73466176, 1.3608158, 0.47266263)
+bones/3/rotation = Quaternion(0.98821366, 6.007012e-07, -3.6731803e-06, -0.15308088)
 bones/3/scale = Vector3(1, 1.0000001, 1.0003337)
-bones/4/position = Vector3(-0.65759933, 1.3580528, 0.4778974)
-bones/4/rotation = Quaternion(0.98687416, 8.9719094e-07, -5.5152505e-06, -0.1614914)
+bones/4/position = Vector3(-0.65759915, 1.3608156, 0.47266263)
+bones/4/rotation = Quaternion(0.98821366, 8.5035504e-07, -5.52333e-06, -0.153081)
 bones/5/rotation = Quaternion(1, 0, -6.5168285e-07, -1.4901334e-08)
 bones/6/rotation = Quaternion(1, 0, -6.5168274e-07, 3.511609e-13)
 
-[node name="Cube_085" parent="Armature/Skeleton3D" index="0" unique_id=1577207883]
+[node name="Cube_085" parent="Armature/Skeleton3D" index="0" unique_id=101611314]
 surface_material_override/0 = ExtResource("2_bn4bw")
 
-[node name="Sphere_056" parent="Armature/Skeleton3D" index="1" unique_id=890266747]
+[node name="Sphere_056" parent="Armature/Skeleton3D" index="1" unique_id=1361406557]
 surface_material_override/0 = ExtResource("3_7rgx6")
 surface_material_override/1 = ExtResource("4_mp6g7")
 
-[node name="Sphere_060" parent="Armature/Skeleton3D" index="2" unique_id=74543918]
+[node name="Sphere_060" parent="Armature/Skeleton3D" index="2" unique_id=1676480511]
 surface_material_override/0 = ExtResource("2_bn4bw")
 surface_material_override/1 = ExtResource("3_7rgx6")
 
-[node name="Sphere_061" parent="Armature/Skeleton3D" index="3" unique_id=1444437114]
+[node name="Sphere_061" parent="Armature/Skeleton3D" index="3" unique_id=201049411]
 surface_material_override/0 = ExtResource("3_7rgx6")
 
-[node name="Sphere_062" parent="Armature/Skeleton3D" index="4" unique_id=1329614628]
+[node name="Sphere_062" parent="Armature/Skeleton3D" index="4" unique_id=350121139]
 surface_material_override/0 = ExtResource("3_7rgx6")
 surface_material_override/1 = ExtResource("2_bn4bw")
 surface_material_override/2 = ExtResource("5_y70yk")

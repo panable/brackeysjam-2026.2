@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c0wut0b8c4s12"]
+
+[ext_resource type="Script" uid="uid://ds6tbf4c3rxmr" path="res://goblin_ai.gd" id="1_phknh"]
+[ext_resource type="Texture2D" uid="uid://ch0rj26dsr8bt" path="res://kenney_prototype-textures/PNG/Red/texture_01.png" id="2_p3y0g"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k8ry5"]
+albedo_texture = ExtResource("2_p3y0g")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_g6lp7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dkhea"]
+
+[node name="BEANFOLLOWA" type="CharacterBody3D" unique_id=1967680242]
+collision_layer = 3
+script = ExtResource("1_phknh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1751123517]
+material_override = SubResource("StandardMaterial3D_k8ry5")
+mesh = SubResource("CapsuleMesh_g6lp7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1250703403]
+shape = SubResource("CapsuleShape3D_dkhea")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=247227605]
