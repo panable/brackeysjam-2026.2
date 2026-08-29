@@ -1,6 +1,8 @@
 extends CharacterBody3D
 
 
+@onready var anim_tree: AnimationTree = $goblinmodel/AnimationTree
+
 @onready var atk_zone: atk_zone = $AtkZone
 @onready var enemy_health: EnemyHealth = $EnemyHealth
 @onready var player: Player = get_tree().get_first_node_in_group("player")
@@ -41,6 +43,9 @@ var just_loaded := true
 func _ready() -> void:
 	enemy_health.died.connect(_on_enemy_died)
 
+	# Start in idle.
+	set_animation_condition("is_idle", true)
+
 
 func _physics_process(delta: float) -> void:
 	if just_loaded:
@@ -56,6 +61,7 @@ func _physics_process(delta: float) -> void:
 	# GoblinAI remains responsible for actually moving.
 	if enemy_health.is_knocked_back():
 		apply_knockback()
+		set_animation_condition("is_moving", true)
 		move_and_slide()
 		return
 
@@ -90,7 +96,12 @@ func _physics_process(delta: float) -> void:
 		distance_to_player
 	)
 
-	move_towards_player(movement_direction, delta)
+	move_towards_player(
+		movement_direction,
+		delta
+	)
+
+	update_movement_animation()
 
 	move_and_slide()
 
@@ -175,6 +186,28 @@ func stop_moving() -> void:
 	velocity.x = 0.0
 	velocity.z = 0.0
 
+	set_animation_condition("is_moving", false)
+	set_animation_condition("is_idle", true)
+
+
+func update_movement_animation() -> void:
+	var horizontal_velocity := Vector2(
+		velocity.x,
+		velocity.z
+	)
+
+	var is_moving := horizontal_velocity.length_squared() > 0.01
+
+	set_animation_condition(
+		"is_moving",
+		is_moving
+	)
+
+	set_animation_condition(
+		"is_idle",
+		not is_moving
+	)
+
 
 func start_attack() -> void:
 	is_attacking = true
@@ -182,9 +215,15 @@ func start_attack() -> void:
 
 	stop_moving()
 
+	# Tell the AnimationTree to enter the lunge.
+	set_animation_condition("lunge_start", true)
+
 	await get_tree().create_timer(
 		attack_telegraph
 	).timeout
+
+	# Reset the condition so it can trigger again next attack.
+	set_animation_condition("lunge_start", false)
 
 	if not is_instance_valid(player):
 		finish_attack()
@@ -233,6 +272,13 @@ func lunge() -> void:
 
 	stop_moving()
 
+	# Tell AnimationTree that the lunge has finished.
+	set_animation_condition("lunge_end", true)
+
+	await get_tree().physics_frame
+
+	set_animation_condition("lunge_end", false)
+
 	if is_instance_valid(player):
 		var distance_to_player := global_position.distance_to(
 			player.global_position
@@ -247,13 +293,38 @@ func lunge() -> void:
 
 
 func damage_player() -> void:
-	atk_zone.reset_damage_cooldown()
+	pass
+	#atk_zone.reset_damage_cooldown()
 
 
 func finish_attack() -> void:
 	is_attacking = false
-	atk_zone.reset_damage_cooldown()
+
+	set_animation_condition("lunge_end", true)
+
+	await get_tree().physics_frame
+
+	set_animation_condition("lunge_end", false)
+
+	#atk_zone.reset_damage_cooldown()
 
 
 func _on_enemy_died() -> void:
 	is_attacking = false
+
+	set_animation_condition("is_moving", false)
+	set_animation_condition("is_idle", false)
+	set_animation_condition("lunge_start", false)
+	set_animation_condition("lunge_end", false)
+
+	set_animation_condition("is_dead", true)
+
+
+func set_animation_condition(
+	condition_name: String,
+	value: bool
+) -> void:
+	anim_tree.set(
+		"parameters/conditions/" + condition_name,
+		value
+	)
