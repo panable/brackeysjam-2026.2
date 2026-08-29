@@ -51,12 +51,8 @@ func _physics_process(delta):
 			input_direction.y
 		)
 
-		# Convert world-space movement into the player's local space.
 		var local_direction := pivot.global_basis.inverse() * world_direction
 
-		# Animation BlendSpace2D:
-		# X = left/right
-		# Y = forward/backward
 		var animation_direction := Vector2(
 			-local_direction.x,
 			local_direction.z
@@ -64,7 +60,6 @@ func _physics_process(delta):
 
 		player_animation.set_movement_direction(animation_direction)
 
-	# Movement
 	var direction := Vector3(
 		input_direction.x,
 		0.0,
@@ -74,7 +69,6 @@ func _physics_process(delta):
 	target_velocity.x = direction.x * speed
 	target_velocity.z = direction.z * speed
 
-	# Gravity
 	if not is_on_floor():
 		target_velocity.y -= fall_acceleration * delta
 	else:
