@@ -10,6 +10,10 @@
 [ext_resource type="Resource" uid="uid://cib86xegispic" path="res://Resources/PlayerInventory.tres" id="7_s6wtv"]
 [ext_resource type="PackedScene" uid="uid://dug106jgaujma" path="res://Scenes/Characters/Walter_c.tscn" id="8_s6wtv"]
 [ext_resource type="PackedScene" uid="uid://62f8jxr8rnb2" path="res://Scenes/Props/flower.tscn" id="9_s6wtv"]
+[ext_resource type="PackedScene" uid="uid://dfahhipsvky70" path="res://Scenes/Props/garden_bed_end.tscn" id="11_ct4pw"]
+[ext_resource type="PackedScene" uid="uid://b0qhn63lh6lrp" path="res://Scenes/Props/garden_bed_mid.tscn" id="12_8244x"]
+[ext_resource type="PackedScene" uid="uid://bupfud6p5qeo7" path="res://Scenes/Props/garden_bed_top.tscn" id="13_putc8"]
+[ext_resource type="PackedScene" uid="uid://d4b2nguo0nd6l" path="res://Scenes/Rooms/Modular/1_wall_3.tscn" id="14_jwkfg"]
 
 [sub_resource type="Animation" id="Animation_s6wtv"]
 resource_name = "FlowerBloom"
@@ -143,9 +147,6 @@ transform = Transform3D(-0.9999998, 0.0003783864, -0.00045841784, 0.0003788938, 
 [node name="1_Door4" parent="." unique_id=1768098066 instance=ExtResource("4_qwr6g")]
 transform = Transform3D(0.00045846155, 0.0003783865, -0.9999998, 0.0010691701, 0.99999946, 0.00037889383, 0.9999993, -0.0010693496, 0.00045804237, 7.9992566, -0.010068938, 0.00057362166)
 
-[node name="1_Door3" parent="." unique_id=1680314788 instance=ExtResource("4_qwr6g")]
-transform = Transform3D(-0.00045854898, 0.0003783864, 0.9999998, -0.0010691701, 0.99999946, -0.00037889392, -0.9999993, -0.0010693497, -0.0004581298, -0.00074100477, -0.0070377886, 0.004236192)
-
 [node name="1_Floor8" parent="." unique_id=843167462 instance=ExtResource("5_s6wtv")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.002924, 0, 0.0024002572)
 
@@ -192,7 +193,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.00
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.0029245536, 0, 8.0024)
 
 [node name="PlantPot2" parent="." unique_id=623416607 instance=ExtResource("6_lmjo0")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.754019, 0, -0.83952516)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.402272, 0, -6.1876097)
 inventory = ExtResource("7_s6wtv")
 
 [node name="Flower2" parent="PlantPot2" unique_id=441844464 instance=ExtResource("9_s6wtv")]
@@ -203,11 +204,77 @@ autoplay = &"FlowerBloom"
 movie_quit_on_finish = true
 
 [node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("7_qwr6g")]
-transform = Transform3D(-0.5752781, 0, 0.17045596, 0, 0.59999996, 0, -0.17045596, 0, -0.5752781, 1.9980291, -0.000383541, 7.317019)
+transform = Transform3D(-0.3683601, 0, -0.47361478, 0, 0.6, 0, 0.47361478, 0, -0.3683601, 7.25155, -0.000383541, 7.190933)
 
 [node name="NPC2" parent="." unique_id=1446091811 instance=ExtResource("8_s6wtv")]
-transform = Transform3D(0.31450596, 0, 0.51096565, 0, 0.59999985, 0, -0.51096565, 0, 0.31450596, 1.2174191, -0.0117558725, -6.0543947)
+transform = Transform3D(0.48498872, 0, 0.35325044, 0, 0.5999998, 0, -0.35325044, 0, 0.48498872, 1.3645178, -0.0117558725, -2.8287332)
 dialogue_path = "res://Dialogue/walter.json"
 condition_flag = "flower_planted"
 false_entry = "start"
 true_entry = "flower_planted"
+
+[node name="GardenBed_End2" parent="." unique_id=1917080842 instance=ExtResource("11_ct4pw")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.0000004, 0, 7)
+
+[node name="GardenBed_Mid2" parent="." unique_id=242916181 instance=ExtResource("12_8244x")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.0000002, 0, 5)
+
+[node name="GardenBed_Mid3" parent="." unique_id=33354684 instance=ExtResource("12_8244x")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.0000001, 0, 3)
+
+[node name="GardenBed_Mid4" parent="." unique_id=1989171113 instance=ExtResource("12_8244x")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1, 0, 0.99999994)
+
+[node name="GardenBed_End3" parent="." unique_id=1844562638 instance=ExtResource("11_ct4pw")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 0.99999994, 0, -1)
+
+[node name="GardenBed_Top_" parent="." unique_id=1409558810 instance=ExtResource("13_putc8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.99999994, 0, -1)
+
+[node name="GardenBed_Top_2" parent="." unique_id=1938347895 instance=ExtResource("13_putc8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1, 0, 0.99999994)
+
+[node name="GardenBed_Top_3" parent="." unique_id=1953201436 instance=ExtResource("13_putc8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.0000001, 0, 3)
+
+[node name="GardenBed_Top_4" parent="." unique_id=2105458685 instance=ExtResource("13_putc8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.0000002, 0, 5)
+
+[node name="GardenBed_Top_5" parent="." unique_id=525887285 instance=ExtResource("13_putc8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.0000004, 0, 7)
+
+[node name="GardenBed_End4" parent="." unique_id=1366217995 instance=ExtResource("11_ct4pw")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 6.9999995, 0, -7.0000005)
+
+[node name="GardenBed_End5" parent="." unique_id=1167995702 instance=ExtResource("11_ct4pw")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7, 0, -5.0000005)
+
+[node name="GardenBed_Top_6" parent="." unique_id=1073628701 instance=ExtResource("13_putc8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.9999995, 0, -7.0000005)
+
+[node name="GardenBed_Top_7" parent="." unique_id=1239173535 instance=ExtResource("13_putc8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7, 0, -5.0000005)
+
+[node name="1_Wall32" parent="." unique_id=1846429604 instance=ExtResource("14_jwkfg")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="Flower2" parent="." unique_id=264925144 instance=ExtResource("9_s6wtv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.4300537, 0.3185227, -0.8643647)
+
+[node name="Flower3" parent="." unique_id=463100853 instance=ExtResource("9_s6wtv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.9578552, 0.3782761, 0.66271967)
+
+[node name="Flower4" parent="." unique_id=2085852344 instance=ExtResource("9_s6wtv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.445923, 0.37815404, 3.078621)
+
+[node name="Flower5" parent="." unique_id=823748592 instance=ExtResource("9_s6wtv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.9460146, 0.37815404, 4.6637573)
+
+[node name="Flower7" parent="." unique_id=1475529548 instance=ExtResource("9_s6wtv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.283431, 0.37815404, -4.887812)
+
+[node name="Flower8" parent="." unique_id=13734243 instance=ExtResource("9_s6wtv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.8289876, 0.37815404, -7.317017)
+
+[node name="Flower6" parent="." unique_id=1413778651 instance=ExtResource("9_s6wtv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.4451298, 0.3782761, 7.0701485)

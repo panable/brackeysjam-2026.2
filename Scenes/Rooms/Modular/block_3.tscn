@@ -1,0 +1,296 @@
+[gd_scene format=3 uid="uid://3k2j87aegcuh"]
+
+[ext_resource type="PackedScene" uid="uid://dfhot0uw8hhiu" path="res://Models/Rooms/block.glb" id="1_s0wxh"]
+[ext_resource type="Material" uid="uid://f5uck7fupvt6" path="res://Materials/World/3_Wall.tres" id="2_s0wxh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jw7ag"]
+
+[sub_resource type="Animation" id="Animation_ndrmb"]
+resource_name = "DoorClosing"
+length = 1.2
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Block:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(2, 0),
+"points": PackedFloat32Array(0.043225326, 0, 0, 0.16666667, 0.17106116, 1.0695922, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.33333337)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Block:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(2, 0),
+"points": PackedFloat32Array(1.0695922, 0, 0, 0.16666667, 0, 1.0695922, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.33333337)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Block:scale:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(2, 0),
+"points": PackedFloat32Array(0.6671367, 0, 0, 0.16666667, 0.06707592, 1.0695922, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.33333337)
+}
+
+[sub_resource type="Animation" id="Animation_uv4r1"]
+resource_name = "DoorOpening"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Block:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.11666667, 0, 0, 0, 0, -0.050000004, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.7, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Block:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 2),
+"points": PackedFloat32Array(2.7, -0.25, 0, 0.25, 0, 2.7, -0.11666667, 0, 0, 0, 2.7, -0.050000004, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.46666667, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Block:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.11666667, 0, 0, 0, 0, -0.050000004, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.7, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Block:scale:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(1.0695922, -0.25, 0, 0.25, 0, 0.2632389, -0.11666667, 0.121032424, 0.050000004, -0.051871043, 0.03217144, -0.050000004, 0.038511246, 0, 0),
+"times": PackedFloat32Array(0, 0.7, 1)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Block:scale:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(1.0695922, -0.25, 0, 0.25, 0, 1.0695922, -0.11666667, 0, 0.050000004, 0, 1.0695922, -0.050000004, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.7, 1)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Block:scale:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(1.0695922, -0.25, 0, 0.25, 0, 0.9631766, -0.11666667, 0.11821874, 0.050000004, -0.05066518, 0.056288693, -0.050000004, 0.16888392, 0, 0),
+"times": PackedFloat32Array(0, 0.7, 1)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Block:rotation:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.050000004, 0, 0, 0),
+"times": PackedFloat32Array(0.7, 1)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Block:rotation:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.050000004, 0, 0, 0),
+"times": PackedFloat32Array(0.7, 1)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Block:rotation:z")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(-1.5707963, -0.25, 0, 0.25, 0, -1.5707963, -0.050000004, 0, 0, 0),
+"times": PackedFloat32Array(0.7, 1)
+}
+
+[sub_resource type="Animation" id="Animation_3fltu"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Block:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Block:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(2.7, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Block:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Block:scale:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1.0695922, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Block:scale:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1.0695922, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Block:scale:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1.0695922, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Block:rotation:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Block:rotation:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Block:rotation:z")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-1.5707963, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3fltu"]
+_data = {
+&"DoorClosing": SubResource("Animation_ndrmb"),
+&"DoorOpening": SubResource("Animation_uv4r1"),
+&"RESET": SubResource("Animation_3fltu")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ndrmb"]
+animation = &"DoorClosing"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_eyt4s"]
+animation = &"DoorOpening"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jv3a0"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3e0n4"]
+advance_mode = 2
+advance_condition = &"room_cleared"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_jw7ag"]
+states/DoorClosing/node = SubResource("AnimationNodeAnimation_ndrmb")
+states/DoorClosing/position = Vector2(339.5, 100.5)
+states/DoorOpening/node = SubResource("AnimationNodeAnimation_eyt4s")
+states/DoorOpening/position = Vector2(526, 101)
+states/Start/position = Vector2(200, 100.5)
+transitions = ["Start", "DoorClosing", SubResource("AnimationNodeStateMachineTransition_jv3a0"), "DoorClosing", "DoorOpening", SubResource("AnimationNodeStateMachineTransition_3e0n4")]
+
+[node name="block" unique_id=1952296378 instance=ExtResource("1_s0wxh")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="0" unique_id=1760369767]
+transform = Transform3D(6.3752665e-08, 1.0695922, 0, -1.0695922, 6.3752665e-08, 0, 0, 0, 1.0695922, 0, 2.7, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1828733710]
+transform = Transform3D(2.4974675, 0, 0, 0, 0.5126374, 0, 0, 0, 2.0379674, 1.3363436, 1.4451154, 0)
+shape = SubResource("BoxShape3D_jw7ag")
+
+[node name="Block" parent="." index="1" unique_id=1331121976]
+transform = Transform3D(8.075197e-08, 1.0695922, 0, -1.0695922, 8.075197e-08, 0, 0, 0, 1.0695922, 0, 2.7, 0)
+surface_material_override/0 = ExtResource("2_s0wxh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2" unique_id=47949768]
+libraries/ = SubResource("AnimationLibrary_3fltu")
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="3" unique_id=536136580]
+tree_root = SubResource("AnimationNodeStateMachine_jw7ag")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/room_cleared = false

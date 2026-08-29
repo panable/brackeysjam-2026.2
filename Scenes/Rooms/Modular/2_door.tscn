@@ -4,13 +4,14 @@
 [ext_resource type="Material" uid="uid://86t4y7oywc3y" path="res://Materials/World/2_Floor.tres" id="2_kva5e"]
 [ext_resource type="Material" uid="uid://ct7xbmm16g2ib" path="res://Materials/World/2_Wall.tres" id="3_apwi6"]
 [ext_resource type="Material" uid="uid://uu2oc0e7orqo" path="res://Materials/World/2_Barrier.tres" id="4_6y7dn"]
+[ext_resource type="PackedScene" uid="uid://bc3l455jfyghg" path="res://Scenes/Rooms/Modular/block_2.tscn" id="5_kva5e"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ojgwb"]
 size = Vector3(0.29174805, 5, 1)
 
 [node name="2_Door" unique_id=157010418 instance=ExtResource("1_ojgwb")]
 
-[node name="Cube_035" parent="." index="0" unique_id=380284610]
+[node name="Cube_035" parent="." index="0" unique_id=101168893]
 surface_material_override/0 = ExtResource("2_kva5e")
 surface_material_override/1 = ExtResource("3_apwi6")
 surface_material_override/2 = ExtResource("4_6y7dn")
@@ -28,3 +29,7 @@ shape = SubResource("BoxShape3D_ojgwb")
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="Cube_035/StaticBody3D" index="2" unique_id=607295000]
 transform = Transform3D(11.415548, 0, 0, 0, 0.30282173, 0, 0, 0, 1, -0.02596426, 3.2944002, -1.5015206)
 shape = SubResource("BoxShape3D_ojgwb")
+
+[node name="block" parent="." index="1" unique_id=1952296378 instance=ExtResource("5_kva5e")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+visible = false
