@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://baruacp8276fg"]
+
+[ext_resource type="PackedScene" uid="uid://cqgmwb43a0wei" path="res://Models/Characters/scorpion.glb" id="1_l2vv1"]
+[ext_resource type="Material" uid="uid://cimro0w5hgnh2" path="res://Materials/Characters/Purple.tres" id="2_g6pus"]
+[ext_resource type="Material" uid="uid://cyxlbytgm8gl4" path="res://Materials/Characters/EnemyEyes.tres" id="3_ti2me"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_l2vv1"]
+animation = &"Scorpion_Die"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_g6pus"]
+animation = &"Scorpion_Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ti2me"]
+animation = &"Scorpion_Shoot"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yv116"]
+animation = &"Scorpion_Walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lyen1"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_q4nx3"]
+advance_mode = 2
+advance_condition = &"is_moving"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_e7c3n"]
+advance_mode = 2
+advance_condition = &"is_idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k4in7"]
+advance_mode = 2
+advance_condition = &"is_dead"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k7t5r"]
+advance_mode = 2
+advance_condition = &"is_dead"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bc783"]
+advance_mode = 2
+advance_condition = &"is_attacking"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_84hvh"]
+advance_mode = 2
+advance_condition = &"is_attacking"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_f3twy"]
+advance_mode = 2
+advance_condition = &"has_attacked"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_jw7ag"]
+states/Scorpion_Die/node = SubResource("AnimationNodeAnimation_l2vv1")
+states/Scorpion_Die/position = Vector2(432.5, 9.5)
+states/Scorpion_Idle/node = SubResource("AnimationNodeAnimation_g6pus")
+states/Scorpion_Idle/position = Vector2(348, 100.25)
+states/Scorpion_Shoot/node = SubResource("AnimationNodeAnimation_ti2me")
+states/Scorpion_Shoot/position = Vector2(430.8997, 184.4225)
+states/Scorpion_Walk/node = SubResource("AnimationNodeAnimation_yv116")
+states/Scorpion_Walk/position = Vector2(532, 100.125)
+transitions = ["Start", "Scorpion_Idle", SubResource("AnimationNodeStateMachineTransition_lyen1"), "Scorpion_Idle", "Scorpion_Walk", SubResource("AnimationNodeStateMachineTransition_q4nx3"), "Scorpion_Walk", "Scorpion_Idle", SubResource("AnimationNodeStateMachineTransition_e7c3n"), "Scorpion_Idle", "Scorpion_Die", SubResource("AnimationNodeStateMachineTransition_k4in7"), "Scorpion_Walk", "Scorpion_Die", SubResource("AnimationNodeStateMachineTransition_k7t5r"), "Scorpion_Idle", "Scorpion_Shoot", SubResource("AnimationNodeStateMachineTransition_bc783"), "Scorpion_Walk", "Scorpion_Shoot", SubResource("AnimationNodeStateMachineTransition_84hvh"), "Scorpion_Shoot", "Scorpion_Walk", SubResource("AnimationNodeStateMachineTransition_f3twy")]
+graph_offset = Vector2(-240.60031, 25.9225)
+
+[node name="scorpion" unique_id=654240421 instance=ExtResource("1_l2vv1")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(686161210) index="0" unique_id=496731628]
+bones/1/position = Vector3(-9.181778e-16, 0.508575, -1.3097856)
+bones/1/rotation = Quaternion(0.44156232, 0.5522881, 0.4415625, 0.5522891)
+bones/2/rotation = Quaternion(-0.7933911, 0.29715267, -0.4450389, 0.2901229)
+bones/3/rotation = Quaternion(0.22213064, 0.048875727, 0.4034256, 0.886294)
+bones/4/position = Vector3(-0.84114426, 2.143409, 1.1504191)
+bones/4/rotation = Quaternion(-0.15402968, 0.0029820767, -0.0033500367, 0.9880561)
+bones/5/position = Vector3(-0.841144, 2.1434152, -1.3016435)
+bones/5/rotation = Quaternion(0.17019044, -0.07609055, 0.007777463, 0.98243827)
+bones/6/position = Vector3(-0.14956596, 1.5869384, 0.59128416)
+bones/6/rotation = Quaternion(0.56848544, -0.008793388, -0.068920724, 0.8197542)
+bones/7/position = Vector3(0.24559827, 1.2509022, 0.5780335)
+bones/7/rotation = Quaternion(0.7870559, -0.30689442, 0.31147704, 0.4351331)
+bones/8/position = Vector3(0.19084719, 0.8101608, 0.60419905)
+bones/8/rotation = Quaternion(0.8725476, -0.18864748, 0.3363074, 0.29995036)
+bones/9/position = Vector3(0.30551443, 0.8237395, -0.5065983)
+bones/9/rotation = Quaternion(0.57380265, 0.039011136, -0.7159047, -0.39586502)
+bones/10/position = Vector3(0.2804554, 1.2242074, -0.55561393)
+bones/10/rotation = Quaternion(-0.5045422, 0.0019376576, 0.700858, 0.50421387)
+bones/11/position = Vector3(0.10528804, 1.6258252, -0.6229141)
+bones/11/rotation = Quaternion(-0.3776497, 0.040454075, 0.5632067, 0.73385453)
+
+[node name="Cube_089" parent="Armature/Skeleton3D" index="0" unique_id=1697300991]
+surface_material_override/0 = ExtResource("2_g6pus")
+surface_material_override/1 = ExtResource("3_ti2me")
+
+[node name="Cube_090" parent="Armature/Skeleton3D" index="1" unique_id=529206052]
+surface_material_override/0 = ExtResource("2_g6pus")
+
+[node name="Sphere_064" parent="Armature/Skeleton3D" index="2" unique_id=794252799]
+surface_material_override/0 = ExtResource("2_g6pus")
+
+[node name="Sphere_065" parent="Armature/Skeleton3D" index="3" unique_id=1697123114]
+surface_material_override/0 = ExtResource("2_g6pus")
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2" unique_id=22476951]
+tree_root = SubResource("AnimationNodeStateMachine_jw7ag")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/has_attacked = false
+parameters/conditions/is_attacking = false
+parameters/conditions/is_dead = false
+parameters/conditions/is_idle = false
+parameters/conditions/is_moving = false
