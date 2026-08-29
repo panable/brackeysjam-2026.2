@@ -3,7 +3,7 @@ extends MeshInstance3D
 @onready var collision_shape_3d: CollisionShape3D = $Area3D/CollisionShape3D
 
 var attacking := false
-var attack_queued := false
+var attack_on_cooldown := false
 
 # Normal resting position
 const REST_POS := Vector3(0.8, 0.3, -0.7)
@@ -19,10 +19,10 @@ const END_ROT := Vector3(0, 70, 0)
 
 const SWING_TIME := 0.16
 const RETURN_TIME := 0.14
+const ATTACK_COOLDOWN := 0.1
 
 
 func _ready() -> void:
-	# Make sure the sword starts in its normal position
 	position = REST_POS
 	rotation_degrees = REST_ROT
 
@@ -42,18 +42,15 @@ func deactivate_col() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("attack"):
-
-		if attacking:
-			attack_queued = true
-		else:
+		if not attacking and not attack_on_cooldown:
 			attack()
 
 
 func attack() -> void:
 	attacking = true
-	attack_queued = false
+	attack_on_cooldown = true
 
-	# Snap from resting position to the attack starting position
+	# Snap to attack starting position
 	position = START_POS
 	rotation_degrees = START_ROT
 
@@ -79,7 +76,7 @@ func attack() -> void:
 	# Disable hitbox
 	tween.tween_callback(deactivate_col)
 
-	# Quickly return to normal resting position
+	# Return to resting position
 	tween.tween_property(
 		self,
 		"position",
@@ -101,6 +98,7 @@ func attack() -> void:
 func finish_attack() -> void:
 	attacking = false
 
-	if attack_queued:
-		attack_queued = false
-		attack()
+	# Start cooldown independently from the attack animation
+	await get_tree().create_timer(ATTACK_COOLDOWN).timeout
+
+	attack_on_cooldown = false

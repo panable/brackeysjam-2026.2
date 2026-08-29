@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://byjbvwekxrks6" path="res://Player.gd" id="1_bcfd2"]
 [ext_resource type="PackedScene" uid="uid://s6qnhfpt1k13" path="res://Jack.tscn" id="4_851w8"]
 [ext_resource type="Texture2D" uid="uid://brq087miusp3j" path="res://kenney_prototype-textures/PNG/Orange/texture_01.png" id="4_jmce6"]
+[ext_resource type="Script" uid="uid://pc4iaeqix5ys" path="res://Health.gd" id="5_bcfd2"]
 [ext_resource type="Script" uid="uid://dc2s1b3f151a8" path="res://stick.gd" id="5_duytu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_45v56"]
@@ -49,6 +50,9 @@ debug_color = Color(0.99999994, 0.2506524, 0.8676591, 1)
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1066016875]
 transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, 0, 18.09, 0)
 fov = 50.0
+
+[node name="Node" type="Node" parent="." unique_id=222334849]
+script = ExtResource("5_bcfd2")
 
 [connection signal="timeout" from="Pivot/stick/Timer" to="Pivot/stick" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Pivot/stick/Area3D" to="Pivot/stick" method="_on_area_3d_body_entered"]
