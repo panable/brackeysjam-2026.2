@@ -6,16 +6,16 @@ var attacking := false
 var attack_on_cooldown := false
 
 # Normal resting position
-const REST_POS := Vector3(0.8, 0.3, -0.7)
-const REST_ROT := Vector3(0, -40, 0)
+const REST_POS := Vector3(-0.4, 0.2, 0.16)
+const REST_ROT := Vector3(-65, -165, -8)
 
 # Attack wind-up position
-const START_POS := Vector3(1.0, 0.3, -0.4)
-const START_ROT := Vector3(0, -70, 0)
+const START_POS := Vector3(-0.68, 0.6, 0.82)
+const START_ROT := Vector3(-72, -121, -92)
 
 # Attack end position
-const END_POS := Vector3(-1.0, 0.3, -0.4)
-const END_ROT := Vector3(0, 70, 0)
+const END_POS := Vector3(0.6, 0.3, 0.8)
+const END_ROT := Vector3(-72, -54, -92)
 
 const SWING_TIME := 0.16
 const RETURN_TIME := 0.14
