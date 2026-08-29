@@ -44,7 +44,7 @@ material_override = SubResource("StandardMaterial3D_rq4hd")
 mesh = SubResource("BoxMesh_73ttu")
 
 [node name="stick" type="MeshInstance3D" parent="Pivot" unique_id=1071700896]
-transform = Transform3D(0.12, 0, 0, 0, 0.08999026, -0.76604444, 0, 0.10724621, 0.64278764, 0.3, 0.3000002, -0.7)
+transform = Transform3D(0.09192533, -4.78914e-09, -0.6427875, 0, 0.13999999, -5.3218432e-08, 0.077134505, 5.7074763e-09, 0.76604444, 0.8, 0.3000002, -0.7)
 material_override = SubResource("StandardMaterial3D_45v56")
 mesh = SubResource("BoxMesh_g6lp7")
 script = ExtResource("5_duytu")

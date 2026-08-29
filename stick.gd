@@ -1,47 +1,106 @@
 extends MeshInstance3D
 
-@onready var timer: Timer = $Timer
-var can_attack = true;
-var currentSwordPos = position
-var currentSwordRot = rotation_degrees
-var extendSwordRot = Vector3.RIGHT * 0
-var extendSwordPos = currentSwordPos - Vector3.BACK * 1
 @onready var collision_shape_3d: CollisionShape3D = $Area3D/CollisionShape3D
-@onready var playa: CharacterBody3D = $"../.."
-@onready var room: CSGBox3D = $"../../../room"
 
-# Called when the node enters the scene tree for the first time.
+var attacking := false
+var attack_queued := false
+
+# Normal resting position
+const REST_POS := Vector3(0.8, 0.3, -0.7)
+const REST_ROT := Vector3(0, -40, 0)
+
+# Attack wind-up position
+const START_POS := Vector3(1.0, 0.3, -0.4)
+const START_ROT := Vector3(0, -70, 0)
+
+# Attack end position
+const END_POS := Vector3(-1.0, 0.3, -0.4)
+const END_ROT := Vector3(0, 70, 0)
+
+const SWING_TIME := 0.16
+const RETURN_TIME := 0.14
+
+
 func _ready() -> void:
-	print(rotation_degrees)
-	pass
-	
+	# Make sure the sword starts in its normal position
+	position = REST_POS
+	rotation_degrees = REST_ROT
+
+
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	body.queue_free()
-	
-func activate_col(): 
+	if body.has_method("take_damage"):
+		body.take_damage(1, global_position)
+
+
+func activate_col() -> void:
 	collision_shape_3d.disabled = false
-func deactivate_col(): 
+
+
+func deactivate_col() -> void:
 	collision_shape_3d.disabled = true
-func activate_move():
-	playa.can_move = true
-func deactivate_move():
-	playa.can_move = false
+
 
 func _input(event: InputEvent) -> void:
-	if event.is_action("attack") and can_attack:
-		var tween = get_tree().create_tween()
-		tween.tween_callback(deactivate_move)
-		tween.tween_property(self, "position", extendSwordPos, 0.15)
-		tween.tween_property(self, "rotation_degrees", extendSwordRot, 0.1)
-		tween.tween_callback(activate_col)
-		tween.tween_property(self, "rotation_degrees", currentSwordRot, 0.1)
-		tween.tween_callback(deactivate_col)
-		tween.tween_property(self, "position", currentSwordPos, 0.1)
-		tween.tween_callback(activate_move)
-		timer.start()
-		can_attack = false
-		#tween.tween_property(self, "scale", Vector3(1.0, 1.0, 1.0), 2.0)
-		#tween.tween_property(self, "scale", Vector3(0.2, 0.2, 0.2), 2.0)
+	if event.is_action_pressed("attack"):
 
-func _on_timer_timeout() -> void:
-	can_attack = true
+		if attacking:
+			attack_queued = true
+		else:
+			attack()
+
+
+func attack() -> void:
+	attacking = true
+	attack_queued = false
+
+	# Snap from resting position to the attack starting position
+	position = START_POS
+	rotation_degrees = START_ROT
+
+	activate_col()
+
+	var tween := get_tree().create_tween()
+
+	# Swing RIGHT -> LEFT
+	tween.tween_property(
+		self,
+		"position",
+		END_POS,
+		SWING_TIME
+	).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+
+	tween.parallel().tween_property(
+		self,
+		"rotation_degrees",
+		END_ROT,
+		SWING_TIME
+	).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+
+	# Disable hitbox
+	tween.tween_callback(deactivate_col)
+
+	# Quickly return to normal resting position
+	tween.tween_property(
+		self,
+		"position",
+		REST_POS,
+		RETURN_TIME
+	).set_trans(Tween.TRANS_LINEAR)
+
+	tween.parallel().tween_property(
+		self,
+		"rotation_degrees",
+		REST_ROT,
+		RETURN_TIME
+	).set_trans(Tween.TRANS_LINEAR)
+
+	# Finish attack
+	tween.tween_callback(finish_attack)
+
+
+func finish_attack() -> void:
+	attacking = false
+
+	if attack_queued:
+		attack_queued = false
+		attack()
