@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://62f8jxr8rnb2"]
+
+[ext_resource type="PackedScene" uid="uid://cr0u02ugd1dkf" path="res://Models/Props/Flower.glb" id="1_i67jr"]
+[ext_resource type="Material" uid="uid://ywsmda3qoytu" path="res://Materials/Characters/DarkGreen.tres" id="2_eeoti"]
+[ext_resource type="Material" uid="uid://shamllcmbbve" path="res://Materials/Characters/Pink.tres" id="3_lo4fo"]
+[ext_resource type="Material" uid="uid://cbqxho4rpr42x" path="res://Materials/Characters/White.tres" id="4_t0pq4"]
+
+[node name="Flower2" unique_id=441844464 instance=ExtResource("1_i67jr")]
+
+[node name="Flower" parent="." index="0" unique_id=1796030552]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_eeoti")
+surface_material_override/1 = ExtResource("3_lo4fo")
+surface_material_override/2 = ExtResource("4_t0pq4")
