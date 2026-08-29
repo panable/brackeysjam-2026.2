@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://s6qnhfpt1k13"]
+
+[ext_resource type="PackedScene" uid="uid://4bq3q5e2vs68" path="res://Models/Characters/Player.glb" id="1_5hdb2"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yrc8n"]
+animation = &"Player_Die"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ixrp8"]
+animation = &"Player_Do"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2yx2u"]
+animation = &"Player_Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cghfs"]
+animation = &"Player_FowardRun"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_a4ibf"]
+animation = &"Player_BackwardRun"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_k5x86"]
+animation = &"Player_LeftStrafe"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_a31cv"]
+animation = &"Player_RightStrafe"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_5hdb2"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_cghfs")
+blend_point_0/pos = Vector2(0, 1)
+blend_point_0/name = &"Player_FowardRun"
+blend_point_1/node = SubResource("AnimationNodeAnimation_a4ibf")
+blend_point_1/pos = Vector2(0, -1)
+blend_point_1/name = &"Player_BackwardRun"
+blend_point_2/node = SubResource("AnimationNodeAnimation_k5x86")
+blend_point_2/pos = Vector2(-1, 0)
+blend_point_2/name = &"Player_LeftStrafe"
+blend_point_3/node = SubResource("AnimationNodeAnimation_a31cv")
+blend_point_3/pos = Vector2(1, 0)
+blend_point_3/name = &"Player_RightStrafe"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nep3o"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_sbre0"]
+advance_mode = 2
+advance_condition = &"is_moving"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_v57be"]
+advance_mode = 2
+advance_condition = &"is_idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nbao5"]
+advance_mode = 2
+advance_condition = &"is_dead"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hg2kf"]
+advance_mode = 2
+advance_condition = &"is_dead"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rdr85"]
+advance_mode = 2
+advance_condition = &"is_doing"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_c328s"]
+break_loop_at_end = true
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_jw7ag"]
+states/Player_Die/node = SubResource("AnimationNodeAnimation_yrc8n")
+states/Player_Die/position = Vector2(345.4125, -8.900024)
+states/Player_Do/node = SubResource("AnimationNodeAnimation_ixrp8")
+states/Player_Do/position = Vector2(345.70624, 202.09998)
+states/Player_Idle/node = SubResource("AnimationNodeAnimation_2yx2u")
+states/Player_Idle/position = Vector2(346, 99.5)
+states/Running/node = SubResource("AnimationNodeBlendSpace2D_5hdb2")
+states/Running/position = Vector2(586.99493, 100.13001)
+transitions = ["Start", "Player_Idle", SubResource("AnimationNodeStateMachineTransition_nep3o"), "Player_Idle", "Running", SubResource("AnimationNodeStateMachineTransition_sbre0"), "Running", "Player_Idle", SubResource("AnimationNodeStateMachineTransition_v57be"), "Player_Idle", "Player_Die", SubResource("AnimationNodeStateMachineTransition_nbao5"), "Running", "Player_Die", SubResource("AnimationNodeStateMachineTransition_hg2kf"), "Player_Idle", "Player_Do", SubResource("AnimationNodeStateMachineTransition_rdr85"), "Player_Do", "Player_Idle", SubResource("AnimationNodeStateMachineTransition_c328s")]
+graph_offset = Vector2(-46.200184, -121.45004)
+
+[node name="Player" unique_id=1495614187 instance=ExtResource("1_5hdb2")]
+
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(704922322) index="0" unique_id=1085311873]
+bones/1/position = Vector3(-1.02221995e-10, 0.9014702, -0.03859387)
+bones/1/rotation = Quaternion(-0.0027476698, -3.258402e-07, 8.9531227e-10, 0.99999624)
+bones/2/rotation = Quaternion(0.0421754, -3.175811e-08, -2.8825568e-08, 0.9991102)
+bones/3/rotation = Quaternion(0.9986868, -0.04990417, -0.00057280995, -0.011575325)
+bones/4/rotation = Quaternion(0.9973449, 0.053038973, -0.0026366601, 0.049831215)
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="3" unique_id=319114362]
+active = false
+tree_root = SubResource("AnimationNodeStateMachine_jw7ag")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/is_dead = false
+parameters/conditions/is_doing = false
+parameters/conditions/is_idle = false
+parameters/conditions/is_moving = true
+parameters/Running/blend_position = Vector2(0, 0)
