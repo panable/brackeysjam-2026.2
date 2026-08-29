@@ -6,8 +6,8 @@ var attacking := false
 var attack_on_cooldown := false
 
 # Normal resting position
-const REST_POS := Vector3(-0.4, 0.2, 0.16)
-const REST_ROT := Vector3(-65, -165, -8)
+var REST_POS: Vector3
+var REST_ROT: Vector3
 
 # Attack wind-up position
 const START_POS := Vector3(-0.68, 0.6, 0.82)
@@ -23,8 +23,8 @@ const ATTACK_COOLDOWN := 0.1
 
 
 func _ready() -> void:
-	position = REST_POS
-	rotation_degrees = REST_ROT
+	REST_POS = position
+	REST_ROT = rotation_degrees
 
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
