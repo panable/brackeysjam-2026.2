@@ -1,5 +1,6 @@
 class_name Player
 extends CharacterBody3D
+@onready var health: Health = $Health
 
 @export var speed := 14.0
 @export var fall_acceleration := 75.0
@@ -16,7 +17,7 @@ func _process(_delta):
 	var mouse := get_viewport().get_mouse_position()
 	var center := get_viewport().get_visible_rect().size / 2.0
 
-	var direction := center - mouse
+	var direction := mouse - center
 
 	pivot.rotation.y = atan2(direction.x, direction.y)
 
@@ -76,3 +77,10 @@ func _physics_process(delta):
 
 	velocity = target_velocity
 	move_and_slide()
+
+
+func _on_health_died() -> void:
+	can_move = false
+	player_animation.die()
+	await get_tree().create_timer(1).timeout
+	get_tree().reload_current_scene()

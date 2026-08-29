@@ -7,7 +7,9 @@
 [node name="Dungeon8" type="Node3D" unique_id=967692656]
 script = ExtResource("1_hm8mf")
 
-[node name="Room1" parent="." unique_id=20324241 instance=ExtResource("1_8d5dt")]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=87360682]
+
+[node name="Room1" parent="NavigationRegion3D" unique_id=20324241 instance=ExtResource("1_8d5dt")]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1965805402]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -4, 19.277153, 0.008392222)

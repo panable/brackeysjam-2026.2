@@ -4,10 +4,17 @@
 [ext_resource type="PackedScene" uid="uid://cw8778lw2tgyb" path="res://Scenes/Rooms/Room3.tscn" id="1_vryag"]
 [ext_resource type="PackedScene" uid="uid://c1aylrnw1jm4c" path="res://Scenes/Dungeons/door_portal.tscn" id="3_5xa2a"]
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_g6lp7"]
+vertices = PackedVector3Array(-9.69831, 5, 9.55169, -5.19831, 5, 9.55169, -9.44831, 5, 9.05169, -9.44831, 5, -9.19831, -5.19831, 5, -9.69831, -9.69831, 5, -9.69831, 1.3016901, 5, 9.05169, -2.69831, 5, 9.55169, 1.5516901, 5, 9.55169, 1.5516901, 5, -9.69831, -2.69831, 5, -9.69831, 1.3016901, 5, -9.19831, -4.44831, 0.5, 8.30169, -4.19831, 0.5, 9.05169, -3.69831, 0.5, 9.05169, -3.44831, 0.5, 8.30169, -8.19831, 0.5, 8.05169, 0.3016901, 0.5, 7.80169, 0.0516901, 0.5, -8.19831, -4.44831, 0.5, -8.44831, -8.44831, 0.5, -7.69831, -3.44831, 0.5, -8.44831, -3.69831, 0.75, -9.19831, -4.19831, 0.75, -9.19831, -0.1983099, 0.5, 8.30169, -7.69831, 0.5, -8.44831)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Array(3, 2, 5), PackedInt32Array(5, 2, 0), PackedInt32Array(8, 7, 6), PackedInt32Array(11, 10, 9), PackedInt32Array(11, 9, 6), PackedInt32Array(6, 9, 8), PackedInt32Array(13, 12, 14), PackedInt32Array(14, 12, 15), PackedInt32Array(15, 16, 17), PackedInt32Array(17, 16, 20), PackedInt32Array(17, 20, 19), PackedInt32Array(17, 19, 18), PackedInt32Array(22, 21, 23), PackedInt32Array(23, 21, 19), PackedInt32Array(15, 12, 16), PackedInt32Array(17, 24, 15), PackedInt32Array(20, 25, 19), PackedInt32Array(19, 21, 18)]
+
 [node name="Dungeon3" type="Node3D" unique_id=39397122]
 script = ExtResource("1_1shr8")
 
-[node name="Room1" parent="." unique_id=20324241 instance=ExtResource("1_vryag")]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=196036261]
+navigation_mesh = SubResource("NavigationMesh_g6lp7")
+
+[node name="Room1" parent="NavigationRegion3D" unique_id=20324241 instance=ExtResource("1_vryag")]
 
 [node name="Doorways" type="Node" parent="." unique_id=1513991030]
 

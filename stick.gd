@@ -6,16 +6,17 @@ var attacking := false
 var attack_on_cooldown := false
 
 # Normal resting position
-const REST_POS := Vector3(0.8, 0.3, -0.7)
-const REST_ROT := Vector3(0, -40, 0)
+var REST_POS: Vector3
+var REST_ROT: Vector3
 
 # Attack wind-up position
-const START_POS := Vector3(1.0, 0.3, -0.4)
-const START_ROT := Vector3(0, -70, 0)
+const START_POS := Vector3(-0.68, 0.6, 0.82)
+const START_ROT := Vector3(-72, -121, -92)
 
 # Attack end position
-const END_POS := Vector3(-1.0, 0.3, -0.4)
-const END_ROT := Vector3(0, 70, 0)
+const END_POS := Vector3(0.6, 0.3, 0.8)
+const END_ROT := Vector3(-72, -54, -92)
+@onready var area_3d: Area3D = $Area3D
 
 const SWING_TIME := 0.16
 const RETURN_TIME := 0.14
@@ -23,13 +24,14 @@ const ATTACK_COOLDOWN := 0.1
 
 
 func _ready() -> void:
-	position = REST_POS
-	rotation_degrees = REST_ROT
+	area_3d.body_entered.connect(_on_area_3d_body_entered)
+	REST_POS = position
+	REST_ROT = rotation_degrees
 
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	if body.has_method("take_damage"):
-		body.take_damage(1, global_position)
+	if "enemy_health" in body:
+		body.enemy_health.take_damage(1)
 
 
 func activate_col() -> void:

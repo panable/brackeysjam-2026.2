@@ -14,7 +14,7 @@ ambient_light_color = Color(0.47466052, 0.4051787, 0.46016657, 1)
 ambient_light_energy = 0.49
 ssao_enabled = true
 ssao_radius = 3.59
-ssao_intensity = 2.3
+ssao_intensity = 3.35
 ssao_sharpness = 1.0
 fog_light_energy = 1.6
 volumetric_fog_density = 0.0232
@@ -33,7 +33,7 @@ current_dungeon = NodePath("../Dungeon1")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=444365118]
 environment = SubResource("Environment_t1osg")
 
-[node name="playa" parent="." unique_id=990109964 instance=ExtResource("2_i0vv1")]
+[node name="playa" parent="." unique_id=990109964 groups=["player"] instance=ExtResource("2_i0vv1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4891863, 1.3000001, 1.950155)
 
 [node name="Dungeon1" parent="." unique_id=535005868 instance=ExtResource("1_mmlet")]
