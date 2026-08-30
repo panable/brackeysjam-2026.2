@@ -10,12 +10,12 @@ func _process(_delta: float) -> void:
 	var doors := get_tree().get_nodes_in_group("door")
 	var enemies := get_tree().get_nodes_in_group("enemy")
 
-	if killed_enemies.get(current_dungeon.room_id, false) and enemies.size() > 0:
-		for enemy in enemies:
-			enemy.queue_free()
+	#if killed_enemies.get(current_dungeon.room_id, false) and enemies.size() > 0:
+		#for enemy in enemies:
+			#enemy.queue_free()
 
 	if enemies.size() == 0:
-		killed_enemies[current_dungeon.room_id] = true
+		#killed_enemies[current_dungeon.room_id] = true
 
 		for door in doors:
 			door.clear_room()

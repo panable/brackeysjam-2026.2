@@ -28,12 +28,12 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 10.4
 destination_room = "uid://b84wsgd42d8wy"
 
 [node name="North" parent="Doorways/Entrances" unique_id=1123465142 instance=ExtResource("2_qvmbe")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.29999995, 0.8, -3.5500002)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.29999995, 0.8, -3.65)
 destination_room = "uid://d2grl2bxa2jud"
 destination_entrace = "South"
 
 [node name="South" parent="Doorways/Entrances" unique_id=1048002829 instance=ExtResource("2_qvmbe")]
-transform = Transform3D(8.940697e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 8.940697e-08, 0.09999995, 0.8, 8.650002)
+transform = Transform3D(8.940697e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 8.940697e-08, 0.09999995, 0.8, 8.550001)
 destination_room = "uid://dmru5kh2af3oj"
 destination_entrace = "North"
 
