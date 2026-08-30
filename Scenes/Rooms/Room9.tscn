@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c0h5fxqx3aeq7" path="res://Scenes/Characters/Time_Knight_c.tscn" id="7_qwr6g"]
 [ext_resource type="Resource" uid="uid://cib86xegispic" path="res://Resources/PlayerInventory.tres" id="7_s6wtv"]
 [ext_resource type="PackedScene" uid="uid://dug106jgaujma" path="res://Scenes/Characters/Walter_c.tscn" id="8_s6wtv"]
+[ext_resource type="Script" uid="uid://d32tysew7f3qx" path="res://Scripts/flower.gd" id="9_8244x"]
 [ext_resource type="PackedScene" uid="uid://62f8jxr8rnb2" path="res://Scenes/Props/flower.tscn" id="9_s6wtv"]
 [ext_resource type="PackedScene" uid="uid://dfahhipsvky70" path="res://Scenes/Props/garden_bed_end.tscn" id="11_ct4pw"]
 [ext_resource type="PackedScene" uid="uid://b0qhn63lh6lrp" path="res://Scenes/Props/garden_bed_mid.tscn" id="12_8244x"]
@@ -197,6 +198,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.40
 inventory = ExtResource("7_s6wtv")
 
 [node name="Flower2" parent="PlantPot2" unique_id=441844464 instance=ExtResource("9_s6wtv")]
+script = ExtResource("9_8244x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PlantPot2" unique_id=687843203]
 libraries/ = SubResource("AnimationLibrary_i8x7i")
@@ -211,7 +213,7 @@ false_entry = "room_9_default"
 true_entry = "room_9_flower_planted"
 
 [node name="NPC2" parent="." unique_id=1446091811 instance=ExtResource("8_s6wtv")]
-transform = Transform3D(0.48498872, 0, 0.35325044, 0, 0.5999998, 0, -0.35325044, 0, 0.48498872, 1.3645178, -0.0117558725, -2.8287332)
+transform = Transform3D(0.2768634, 0, 0.5323031, 0, 0.5999997, 0, -0.5323031, 0, 0.2768634, 0.53787625, -0.0117558725, -3.2051198)
 dialogue_path = "res://Dialogue/walter.json"
 condition_flag = "flower_planted"
 false_entry = "start"
