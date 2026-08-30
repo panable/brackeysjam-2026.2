@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ddqooitltlvx8"]
+
+[ext_resource type="PackedScene" uid="uid://bk5yvkv0snnyy" path="res://Models/Props/Desk.glb" id="1_3a8qn"]
+[ext_resource type="Material" uid="uid://b6q7v82himcm3" path="res://Materials/Characters/DarkBrown.tres" id="2_njym3"]
+[ext_resource type="Material" uid="uid://cdhlf1dc0vluc" path="res://Materials/Characters/Cream.tres" id="3_45aov"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jw7ag"]
+
+[node name="Desk" unique_id=3148942 instance=ExtResource("1_3a8qn")]
+
+[node name="Cube_001" parent="." index="0" unique_id=1733726959]
+surface_material_override/0 = ExtResource("2_njym3")
+surface_material_override/1 = ExtResource("3_45aov")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_001" index="0" unique_id=272196205]
+transform = Transform3D(1, 0, 0, 0, 1.888442, 0, 0, 0, 16.985373, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_001/StaticBody3D" index="0" unique_id=308804748]
+transform = Transform3D(3.2429962, 0, 0, 0, 0.7270542, 0, 0, 0, 0.08556339, 0, 0.367194, 0)
+shape = SubResource("BoxShape3D_jw7ag")

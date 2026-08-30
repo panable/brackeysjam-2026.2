@@ -7,7 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://b5i57i5272y5q" path="res://Scenes/Rooms/Modular/2_wall_1.tscn" id="5_cwamf"]
 [ext_resource type="PackedScene" uid="uid://c0h5fxqx3aeq7" path="res://Scenes/Characters/Time_Knight_c.tscn" id="8_0jyu7"]
 [ext_resource type="PackedScene" uid="uid://dplwekunaeb6o" path="res://Scenes/Characters/Tom_c.tscn" id="9_0jyu7"]
+[ext_resource type="PackedScene" uid="uid://dimut542fwbua" path="res://Scenes/Props/rug.tscn" id="9_4hxt6"]
 [ext_resource type="PackedScene" uid="uid://bupcdg46unrrx" path="res://Scenes/Characters/Tim_c.tscn" id="9_e7vj6"]
+[ext_resource type="PackedScene" uid="uid://cma8jqk36acsy" path="res://Scenes/Props/barrell.tscn" id="10_tdxfk"]
+[ext_resource type="PackedScene" uid="uid://ddqooitltlvx8" path="res://Scenes/Props/desk.tscn" id="11_4hxt6"]
+[ext_resource type="PackedScene" uid="uid://cyium3uo1d0x2" path="res://Scenes/Props/chair.tscn" id="12_tdxfk"]
+[ext_resource type="PackedScene" uid="uid://m4vuxg8tj32h" path="res://Scenes/Rooms/Props/door.tscn" id="13_h0tib"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -188,10 +193,64 @@ transform = Transform3D(1, 4.3711392e-08, 1.4210855e-14, -4.371139e-08, 1, -4.37
 transform = Transform3D(-1, 4.3711392e-08, -8.742279e-08, 4.3711385e-08, 1, 4.3711392e-08, 8.742279e-08, 4.3711385e-08, -1, -0.0011825404, -3.501773e-07, 15.998669)
 
 [node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("8_0jyu7")]
-transform = Transform3D(0.5052884, 0, -0.32354847, 0, 0.6, 0, 0.32354847, 0, 0.5052884, -3.1189227, -0.0027110018, 2.7675557)
+transform = Transform3D(0.59815687, 1.1409545e-08, -0.04699325, -1.5278214e-08, 0.59999996, -4.8795123e-08, 0.04699325, 4.984185e-08, 0.59815687, -6.739616, -0.0027110018, 12.123648)
 
 [node name="NPC2" parent="." unique_id=589014949 instance=ExtResource("9_e7vj6")]
-transform = Transform3D(-0.85, 0, -1.2834644e-07, 0, 0.85, 0, 1.2834644e-07, 0, -0.85, 9.001858, 0.013831347, 13.991008)
+transform = Transform3D(-0.69709605, 0, -0.48637167, 0, 0.8500005, 0, 0.48637167, 0, -0.69709605, 8.1814995, 0.013831347, 14.502631)
 
 [node name="NPC3" parent="." unique_id=946721801 instance=ExtResource("9_0jyu7")]
-transform = Transform3D(-0.85, 0, -1.2834644e-07, 0, 0.85, 0, 1.2834644e-07, 0, -0.85, -0.9991495, 0.0062355697, 13.992301)
+transform = Transform3D(-0.5770563, 0, 0.6241043, 0, 0.85, 0, -0.6241043, 0, -0.5770563, 0.26836482, 0.0062355697, 4.3004565)
+
+[node name="Rug" parent="." unique_id=1590738221 instance=ExtResource("9_4hxt6")]
+transform = Transform3D(-9.9982815, 0, -4.9599885e-07, 0, 1, 0, 8.740775e-07, 0, -5.6735654, 6.993822e-07, 0, 8)
+
+[node name="Barrell" parent="." unique_id=1857609700 instance=ExtResource("10_tdxfk")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.974432, 0.049999237, 16.43482)
+
+[node name="Barrell2" parent="." unique_id=1609022143 instance=ExtResource("10_tdxfk")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.504023, 0.049999237, 16.434822)
+
+[node name="Barrell3" parent="." unique_id=849586279 instance=ExtResource("10_tdxfk")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.2655325, 1.3906248, 16.434822)
+
+[node name="Barrell4" parent="." unique_id=1405187931 instance=ExtResource("10_tdxfk")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 12.365127, 0.049999237, 1.2863711)
+
+[node name="Barrell5" parent="." unique_id=550181696 instance=ExtResource("10_tdxfk")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 12.365127, 0.049999237, 2.7567804)
+
+[node name="Barrell6" parent="." unique_id=783054899 instance=ExtResource("10_tdxfk")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 12.365127, 1.5536628, 1.9952716)
+
+[node name="Barrell7" parent="." unique_id=86330695 instance=ExtResource("10_tdxfk")]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, -12.4654665, 0.049999237, 12.39429)
+
+[node name="Barrell8" parent="." unique_id=2126727017 instance=ExtResource("10_tdxfk")]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, -12.4654665, 0.049999237, 10.923881)
+
+[node name="Barrell9" parent="." unique_id=1535486685 instance=ExtResource("10_tdxfk")]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, -12.465467, 0.049999237, 5.31319)
+
+[node name="Barrell10" parent="." unique_id=1191422415 instance=ExtResource("10_tdxfk")]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, -12.465467, 0.049999237, 3.8427808)
+
+[node name="Desk" parent="." unique_id=3148942 instance=ExtResource("11_4hxt6")]
+transform = Transform3D(-2.1456884e-07, 0, 2, 0, 1, 0, -2, 0, -2.1456884e-07, 5.153555, 0.05000019, 8.108267)
+
+[node name="Desk2" parent="." unique_id=882792396 instance=ExtResource("11_4hxt6")]
+transform = Transform3D(-2.1456884e-07, 0, 2, 0, 1, 0, -2, 0, -2.1456884e-07, -4.846445, 0.05000019, 8.108267)
+
+[node name="Chair" parent="." unique_id=985286460 instance=ExtResource("12_tdxfk")]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 7.120201, 0.049998283, 8.124705)
+
+[node name="Chair2" parent="." unique_id=1180394361 instance=ExtResource("12_tdxfk")]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, 3.1202013, 0.049998283, 8.124706)
+
+[node name="Chair3" parent="." unique_id=511893904 instance=ExtResource("12_tdxfk")]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, -2.8797987, 0.049998283, 8.124706)
+
+[node name="Chair4" parent="." unique_id=572026679 instance=ExtResource("12_tdxfk")]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, -6.879799, 0.049998283, 8.124707)
+
+[node name="Door2" parent="." unique_id=1751437828 instance=ExtResource("13_h0tib")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -13.248089, 0, 8.000001)

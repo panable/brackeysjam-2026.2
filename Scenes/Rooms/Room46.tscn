@@ -7,6 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://b5i57i5272y5q" path="res://Scenes/Rooms/Modular/2_wall_1.tscn" id="5_ditqv"]
 [ext_resource type="PackedScene" uid="uid://c2u5irowtr2df" path="res://Scenes/Rooms/Modular/2_step_down.tscn" id="6_uv3tx"]
 [ext_resource type="PackedScene" uid="uid://c0h5fxqx3aeq7" path="res://Scenes/Characters/Time_Knight_c.tscn" id="7_3gv0p"]
+[ext_resource type="PackedScene" uid="uid://dimut542fwbua" path="res://Scenes/Props/rug.tscn" id="8_7ki7u"]
+[ext_resource type="PackedScene" uid="uid://ddqooitltlvx8" path="res://Scenes/Props/desk.tscn" id="9_7lfcv"]
+[ext_resource type="PackedScene" uid="uid://cyium3uo1d0x2" path="res://Scenes/Props/chair.tscn" id="10_bbblf"]
+[ext_resource type="PackedScene" uid="uid://cma8jqk36acsy" path="res://Scenes/Props/barrell.tscn" id="11_m456m"]
+[ext_resource type="PackedScene" uid="uid://cbq4g6mpwod3m" path="res://Scenes/Characters/Molly_c.tscn" id="12_bbblf"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -242,3 +247,45 @@ transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -1.0
 
 [node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("7_3gv0p")]
 transform = Transform3D(-0.5076198, 0, 0.31987816, 0, 0.59999996, 0, -0.31987816, 0, -0.5076198, -10.030497, -0.0077504404, 10.423726)
+
+[node name="Rug" parent="." unique_id=1590738221 instance=ExtResource("8_7ki7u")]
+transform = Transform3D(-7.851661, 0, -7.059995e-07, 0, 1, 0, 6.86414e-07, 0, -8.075693, 0, 0, 0)
+
+[node name="Desk" parent="." unique_id=3148942 instance=ExtResource("9_7lfcv")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 12.438648, 0.0501709, -4.069099)
+
+[node name="Desk2" parent="." unique_id=2110262710 instance=ExtResource("9_7lfcv")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 12.438648, 0.0501709, 3.9309008)
+
+[node name="Desk3" parent="." unique_id=1333369585 instance=ExtResource("9_7lfcv")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -12.561352, 0.0501709, -4.069097)
+
+[node name="Desk4" parent="." unique_id=174059766 instance=ExtResource("9_7lfcv")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -12.561352, 0.0501709, 3.9309032)
+
+[node name="Chair" parent="." unique_id=985286460 instance=ExtResource("10_bbblf")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.5610895, 0.0501709, -12.617446)
+
+[node name="Chair2" parent="." unique_id=1628909443 instance=ExtResource("10_bbblf")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.6100664, 0.0501709, -12.617446)
+
+[node name="Chair3" parent="." unique_id=748185496 instance=ExtResource("10_bbblf")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.5610914, 0.0501709, 12.621316)
+
+[node name="Chair4" parent="." unique_id=1353136083 instance=ExtResource("10_bbblf")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.6100645, 0.0501709, 12.621316)
+
+[node name="Barrell" parent="." unique_id=1857609700 instance=ExtResource("11_m456m")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12.501007, 0.0501709, 6.3270054)
+
+[node name="Barrell2" parent="." unique_id=2144658088 instance=ExtResource("11_m456m")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12.427378, 0.0501709, -6.423013)
+
+[node name="Barrell3" parent="." unique_id=1334908353 instance=ExtResource("11_m456m")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -12.530674, 0.0501709, -6.369276)
+
+[node name="Barrell4" parent="." unique_id=199191317 instance=ExtResource("11_m456m")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -12.592166, 0.0501709, 6.2870116)
+
+[node name="NPC2" parent="." unique_id=942715532 instance=ExtResource("12_bbblf")]
+transform = Transform3D(0.59999996, 0, 1.0490733e-07, 0, 0.59999996, 0, -1.0490733e-07, 0, 0.59999996, -8.742278e-08, 0, -1)

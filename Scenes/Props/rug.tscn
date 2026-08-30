@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dimut542fwbua"]
+
+[ext_resource type="PackedScene" uid="uid://cg6sae0bxhl2y" path="res://Models/Props/Rug.glb" id="1_h0f6y"]
+[ext_resource type="Material" uid="uid://cimro0w5hgnh2" path="res://Materials/Characters/Purple.tres" id="2_ih6xk"]
+
+[node name="Rug" unique_id=1590738221 instance=ExtResource("1_h0f6y")]
+
+[node name="Cube_009" parent="." index="0" unique_id=768299565]
+surface_material_override/0 = ExtResource("2_ih6xk")

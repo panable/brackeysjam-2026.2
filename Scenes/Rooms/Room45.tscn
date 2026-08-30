@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://c2u5irowtr2df" path="res://Scenes/Rooms/Modular/2_step_down.tscn" id="5_o8mbm"]
 [ext_resource type="PackedScene" uid="uid://b8oijfuvgn66a" path="res://Scenes/Rooms/Modular/2_step_up.tscn" id="6_wmrxv"]
 [ext_resource type="PackedScene" uid="uid://cal46bsrfosxf" path="res://Scenes/Characters/Ham_c.tscn" id="7_nctl0"]
+[ext_resource type="PackedScene" uid="uid://dimut542fwbua" path="res://Scenes/Props/rug.tscn" id="8_o8mbm"]
+[ext_resource type="PackedScene" uid="uid://ddqooitltlvx8" path="res://Scenes/Props/desk.tscn" id="9_wmrxv"]
+[ext_resource type="PackedScene" uid="uid://cma8jqk36acsy" path="res://Scenes/Props/barrell.tscn" id="10_0mmda"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -146,3 +149,21 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.04
 
 [node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("7_nctl0")]
 transform = Transform3D(-0.6, 0, -5.2453668e-08, 0, 0.6, 0, 5.2453668e-08, 0, -0.6, -0.0074437237, 0.0032306314, 12.29691)
+
+[node name="Rug" parent="." unique_id=1590738221 instance=ExtResource("8_o8mbm")]
+transform = Transform3D(-3.0404437, 0, -5.2697476e-07, 0, 1, 0, 2.6580403e-07, 0, -6.027889, 3.496911e-07, 0, 4)
+
+[node name="Desk" parent="." unique_id=3148942 instance=ExtResource("9_wmrxv")]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, -8.263907, 0.049804688, 8.203762)
+
+[node name="Desk2" parent="." unique_id=2131501791 instance=ExtResource("9_wmrxv")]
+transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, -8.263908, 0.049804688, -0.13437295)
+
+[node name="Barrell" parent="." unique_id=1857609700 instance=ExtResource("10_0mmda")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8.239868, 0.050048828, 4.6048517)
+
+[node name="Barrell2" parent="." unique_id=831653986 instance=ExtResource("10_0mmda")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8.239868, 0.050048828, 3.2309043)
+
+[node name="Barrell3" parent="." unique_id=1042652339 instance=ExtResource("10_0mmda")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8.239868, 1.5583267, 3.9280784)
