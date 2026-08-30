@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://6vac72p2c7e1" path="res://playa.tscn" id="2_i0vv1"]
 [ext_resource type="PackedScene" uid="uid://dgvew44vrd1d1" path="res://Scenes/UI/DialogueUI.tscn" id="4_b8e2k"]
 [ext_resource type="PackedScene" uid="uid://cqwwipxbfupi7" path="res://Scenes/UI/InventoryUI.tscn" id="5_b8e2k"]
+[ext_resource type="Script" uid="uid://cm1kephfla6ju" path="res://Scenes/health-tracka.gd" id="5_mb8r7"]
 
 [sub_resource type="Environment" id="Environment_t1osg"]
 background_mode = 1
@@ -46,6 +47,7 @@ offset_top = 36.0
 offset_right = 298.0
 offset_bottom = 93.0
 text = "Health 0 / 3"
+script = ExtResource("5_mb8r7")
 
 [node name="InventoryUI" parent="." unique_id=1610134888 instance=ExtResource("5_b8e2k")]
 mouse_filter = 2
