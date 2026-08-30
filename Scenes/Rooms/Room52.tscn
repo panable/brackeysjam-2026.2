@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://bdas047dt6wem" path="res://Scenes/Rooms/Modular/3_wall.tscn" id="2_x4y8k"]
 [ext_resource type="PackedScene" uid="uid://ywugr7ge6dnv" path="res://Scenes/Rooms/Modular/3_wall_c.tscn" id="3_83l7y"]
 [ext_resource type="PackedScene" uid="uid://bs46jlrf2dn4l" path="res://Scenes/Rooms/Modular/3_door.tscn" id="4_jehns"]
+[ext_resource type="PackedScene" uid="uid://dpw0hv3nl41uq" path="res://Scenes/Props/crystal.tscn" id="5_x4y8k"]
+[ext_resource type="PackedScene" uid="uid://ca4wyfus167vr" path="res://Scenes/Props/rubble.tscn" id="6_83l7y"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -83,3 +85,18 @@ transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 8, 0
 
 [node name="3_Door3" parent="." unique_id=465150519 instance=ExtResource("4_jehns")]
 transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, -4, 0, 4.0929575e-07)
+
+[node name="Crystal" parent="." unique_id=260263892 instance=ExtResource("5_x4y8k")]
+transform = Transform3D(-0.47647697, 0, 0.1515576, 0, 0.5, 0, -0.1515576, 0, -0.47647697, -3.6847703, -0.12371826, 3.7572901)
+
+[node name="Crystal2" parent="." unique_id=887898488 instance=ExtResource("5_x4y8k")]
+transform = Transform3D(-0.47647697, 0, 0.1515576, 0, 0.5, 0, -0.1515576, 0, -0.47647697, -3.6847708, -0.12371826, -3.9537647)
+
+[node name="Crystal3" parent="." unique_id=835013174 instance=ExtResource("5_x4y8k")]
+transform = Transform3D(-0.47647697, 0, 0.1515576, 0, 0.5, 0, -0.1515576, 0, -0.47647697, 7.6460795, -0.12371826, 3.774136)
+
+[node name="Crystal4" parent="." unique_id=532929959 instance=ExtResource("5_x4y8k")]
+transform = Transform3D(-0.47647697, 0, 0.1515576, 0, 0.5, 0, -0.1515576, 0, -0.47647697, 7.6460786, -0.12371826, -3.8363535)
+
+[node name="Rubble" parent="." unique_id=1547588693 instance=ExtResource("6_83l7y")]
+transform = Transform3D(-0.3472663, 0, 0.35973063, 0, 0.5, 0, -0.35973063, 0, -0.3472663, 1.5798157, 0.09307902, -0.11497893)

@@ -23,7 +23,7 @@ script = ExtResource("1_7f3ae")
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="CharacterBody3D" unique_id=96493979]
 
 [node name="stump" parent="CharacterBody3D" unique_id=250468708 instance=ExtResource("1_yrbwk")]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0.5305908, 0)
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, -0.2596346, 0)
 script = ExtResource("3_hp336")
 
 [node name="EnemyHealth" type="Node" parent="CharacterBody3D" unique_id=1748695435 node_paths=PackedStringArray("free_me")]

@@ -2,8 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://ywugr7ge6dnv" path="res://Scenes/Rooms/Modular/3_wall_c.tscn" id="4_8pcwg"]
 [ext_resource type="PackedScene" uid="uid://bs46jlrf2dn4l" path="res://Scenes/Rooms/Modular/3_door.tscn" id="4_t0x48"]
+[ext_resource type="PackedScene" uid="uid://ca4wyfus167vr" path="res://Scenes/Props/rubble.tscn" id="5_t0x48"]
 [ext_resource type="PackedScene" uid="uid://btc7kplul3pnp" path="res://Scenes/Rooms/Modular/3_floor.tscn" id="5_t6xwy"]
 [ext_resource type="PackedScene" uid="uid://bdas047dt6wem" path="res://Scenes/Rooms/Modular/3_wall.tscn" id="6_sqpcf"]
+[ext_resource type="PackedScene" uid="uid://dkjdajw37smr4" path="res://Scenes/Props/tent2.tscn" id="6_t6xwy"]
+[ext_resource type="PackedScene" uid="uid://cd76bu13geqfm" path="res://Scenes/Props/fire.tscn" id="7_sqpcf"]
+[ext_resource type="PackedScene" uid="uid://butel2so6412m" path="res://Scenes/Props/sign.tscn" id="8_kl8vw"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -98,3 +102,18 @@ transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 8, 0
 
 [node name="3_Door3" parent="." unique_id=465150519 instance=ExtResource("4_t0x48")]
 transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, -8, 0, 7.5898686e-07)
+
+[node name="Rubble" parent="." unique_id=1547588693 instance=ExtResource("5_t0x48")]
+transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, -7.067963, 0.09324973, 3.0697148)
+
+[node name="Rubble2" parent="." unique_id=976949981 instance=ExtResource("5_t0x48")]
+transform = Transform3D(0.5, 0, 8.742278e-08, 0, 0.5, 0, -8.742278e-08, 0, 0.5, 7.1649756, 0.09324973, -3.249878)
+
+[node name="Tent" parent="." unique_id=1579890252 instance=ExtResource("6_t6xwy")]
+transform = Transform3D(-2.7770566e-08, 0, 0.6544076, 0, 0.60983384, 0, -0.6353164, 0, -2.8605069e-08, 0.07624287, 0.95562196, 2.1182108)
+
+[node name="Fire" parent="." unique_id=1246189208 instance=ExtResource("7_sqpcf")]
+transform = Transform3D(-0.4943642, 0, -4.6435602e-08, 0, 1, 0, 4.321869e-08, 0, -0.53116137, 3.5370638, 0.014325023, 3.071716)
+
+[node name="Sign_" parent="." unique_id=1918404254 instance=ExtResource("8_kl8vw")]
+transform = Transform3D(0.97155195, 0, -1.509958e-07, 0, 0.9742315, 0, -1.4670027e-07, 0, -1, -3.1338196, 0.28923714, 0.97229034)

@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://bdas047dt6wem" path="res://Scenes/Rooms/Modular/3_wall.tscn" id="2_totwp"]
 [ext_resource type="PackedScene" uid="uid://ywugr7ge6dnv" path="res://Scenes/Rooms/Modular/3_wall_c.tscn" id="3_h2l8n"]
 [ext_resource type="PackedScene" uid="uid://bs46jlrf2dn4l" path="res://Scenes/Rooms/Modular/3_door.tscn" id="4_bwl0h"]
+[ext_resource type="PackedScene" uid="uid://ca4wyfus167vr" path="res://Scenes/Props/rubble.tscn" id="5_h2l8n"]
+[ext_resource type="PackedScene" uid="uid://dpw0hv3nl41uq" path="res://Scenes/Props/crystal.tscn" id="6_bwl0h"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -139,3 +141,21 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16, 
 
 [node name="3_Door3" parent="." unique_id=465150519 instance=ExtResource("4_bwl0h")]
 transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -4.0000005, 0, -3.9999998)
+
+[node name="Rubble" parent="." unique_id=1547588693 instance=ExtResource("5_h2l8n")]
+transform = Transform3D(-0.0074511385, 0, -0.49994454, 0, 0.5, 0, 0.49994454, 0, -0.0074511385, -7.0445476, 0.09312766, 3.2080595)
+
+[node name="Rubble2" parent="." unique_id=182913322 instance=ExtResource("5_h2l8n")]
+transform = Transform3D(-0.0074511385, 0, -0.49994454, 0, 0.5, 0, 0.49994454, 0, -0.0074511385, 19.545738, 0.09312766, -3.271334)
+
+[node name="Crystal" parent="." unique_id=260263892 instance=ExtResource("6_bwl0h")]
+transform = Transform3D(0.25346076, 0, 0.96734565, 0, 1, 0, -0.96734565, 0, 0.25346076, 2.0540786, -0.28051758, -2.8593009)
+
+[node name="Crystal2" parent="." unique_id=2030719667 instance=ExtResource("6_bwl0h")]
+transform = Transform3D(-0.9652679, 0, -0.26126212, 0, 1, 0, 0.26126212, 0, -0.9652679, 9.996679, -0.28051758, 3.1017773)
+
+[node name="Crystal3" parent="." unique_id=1826569871 instance=ExtResource("6_bwl0h")]
+transform = Transform3D(-0.47328162, 0, -0.1612591, 0, 0.5, 0, 0.1612591, 0, -0.47328162, 18.060322, -0.28051758, 4.239831)
+
+[node name="Crystal4" parent="." unique_id=501935795 instance=ExtResource("6_bwl0h")]
+transform = Transform3D(-0.48947608, 0, -0.10204482, 0, 0.5, 0, 0.10204482, 0, -0.48947608, -6.402609, -0.28051758, -3.9320135)

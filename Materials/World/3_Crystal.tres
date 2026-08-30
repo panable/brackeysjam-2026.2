@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bow1loybkx2wy"]
+
+[resource]
+depth_draw_mode = 1
+specular_mode = 2
+albedo_color = Color(0.43357393, 0.8691116, 0.8188721, 1)
+metallic = 0.12
+metallic_specular = 0.9
+roughness = 0.2
+emission = Color(0.25253177, 0.5909514, 0.5068841, 1)

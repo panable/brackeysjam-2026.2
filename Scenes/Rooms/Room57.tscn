@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://m4vuxg8tj32h" path="res://Scenes/Rooms/Props/door.tscn" id="7_pt71x"]
 [ext_resource type="PackedScene" uid="uid://12nqyceo1hri" path="res://Scenes/Rooms/Modular/one_way_door_collider.tscn" id="8_hi63g"]
 [ext_resource type="PackedScene" uid="uid://dlnpix86qgikt" path="res://Scenes/Characters/Marco_c.tscn" id="9_k07mq"]
+[ext_resource type="PackedScene" uid="uid://ca4wyfus167vr" path="res://Scenes/Props/rubble.tscn" id="10_y0a1j"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -132,3 +133,6 @@ entry_name = "trapped"
 condition_flag = "pablo_cell_opened"
 false_entry = "trapped"
 true_entry = "freed"
+
+[node name="Rubble" parent="." unique_id=1547588693 instance=ExtResource("10_y0a1j")]
+transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 3.864053, 0.09300559, -3.093445)

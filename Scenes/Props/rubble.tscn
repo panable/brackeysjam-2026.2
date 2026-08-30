@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ca4wyfus167vr"]
+
+[ext_resource type="PackedScene" uid="uid://brre4yhj0ndf1" path="res://Models/Props/Rubble.glb" id="1_h3vx5"]
+[ext_resource type="Material" uid="uid://d1r8f22ur4iuv" path="res://Materials/World/3_Brick.tres" id="2_trq1q"]
+
+[node name="Rubble" unique_id=1547588693 instance=ExtResource("1_h3vx5")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Cube" parent="." index="0" unique_id=2122649514]
+material_override = ExtResource("2_trq1q")

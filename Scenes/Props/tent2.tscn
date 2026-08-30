@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dkjdajw37smr4"]
+
+[ext_resource type="PackedScene" uid="uid://cmjdfyrsxknp7" path="res://Models/Props/Tent.glb" id="1_s4grs"]
+[ext_resource type="Material" uid="uid://dsgo8wqrxc7nu" path="res://Materials/World/3_Floor.tres" id="2_s4grs"]
+[ext_resource type="Material" uid="uid://dkmwns4hpp04k" path="res://Materials/Characters/LightBrown.tres" id="3_rjjlc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jw7ag"]
+
+[node name="Tent" unique_id=1579890252 instance=ExtResource("1_s4grs")]
+
+[node name="Plane" parent="." index="0" unique_id=853487000]
+surface_material_override/0 = ExtResource("2_s4grs")
+surface_material_override/1 = ExtResource("3_rjjlc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1518977956]
+transform = Transform3D(6.969964, 0, 0, 0, 6.707286, 0, 0, 0, 6.945399, -0.7577362, 1.5790558, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1961367917]
+shape = SubResource("BoxShape3D_jw7ag")

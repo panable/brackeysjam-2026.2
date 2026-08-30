@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dpw0hv3nl41uq"]
+
+[ext_resource type="PackedScene" uid="uid://eglsqc82lqcl" path="res://Models/Props/Crystal.glb" id="1_200vn"]
+[ext_resource type="Material" uid="uid://dsgo8wqrxc7nu" path="res://Materials/World/3_Floor.tres" id="2_kxb6e"]
+[ext_resource type="Material" uid="uid://bow1loybkx2wy" path="res://Materials/World/3_Crystal.tres" id="3_gxs1y"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_jw7ag"]
+
+[node name="Crystal" unique_id=260263892 instance=ExtResource("1_200vn")]
+
+[node name="Cube_013" parent="." index="0" unique_id=1304106300]
+surface_material_override/0 = ExtResource("2_kxb6e")
+surface_material_override/1 = ExtResource("3_gxs1y")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_013" index="0" unique_id=1803329034]
+transform = Transform3D(2.6, 0, 0, 0, 1.9165974, 0, 0, 0, 2.7, -0.08297825, 1.8350296, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_013/StaticBody3D" index="0" unique_id=854559522]
+shape = SubResource("CylinderShape3D_jw7ag")
