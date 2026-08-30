@@ -4,6 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://c1aylrnw1jm4c" path="res://Scenes/Dungeons/door_portal.tscn" id="1_pum03"]
 [ext_resource type="PackedScene" uid="uid://bsnogpwad5jtp" path="res://Scenes/Rooms/Room42.tscn" id="2_c08la"]
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_g6lp7"]
+vertices = PackedVector3Array(-9.50152, 5, -5.5956435, -9.50152, 5, -2.0956435, -9.00152, 5, -5.3456435, 13.49848, 5, -5.0956435, 13.49848, 5, -5.5956435, 11.99848, 0.5, 4.4043565, 12.49848, 0.5, 3.9043565, 12.74848, 0.5, 0.40435648, 12.49848, 0.5, -3.8456435, 11.99848, 0.5, -4.3456435, -8.25152, 0.5, -4.0956435, -8.00152, 0.5, 4.4043565, -9.00152, 5, 5.4043565, -9.50152, 5, 4.9043565, -9.50152, 5, 5.6543565, 13.49848, 5, 5.6543565, 13.49848, 5, 5.1543565)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(3, 2, 4), PackedInt32Array(4, 2, 0), PackedInt32Array(7, 6, 5), PackedInt32Array(8, 7, 9), PackedInt32Array(9, 7, 5), PackedInt32Array(9, 5, 11), PackedInt32Array(9, 11, 10), PackedInt32Array(14, 13, 12), PackedInt32Array(16, 15, 12), PackedInt32Array(12, 15, 14)]
+
 [node name="Dungeon42" type="Node3D" unique_id=1690216011]
 script = ExtResource("1_c08la")
 room_id = "42"
@@ -26,4 +30,7 @@ destination_room = "uid://u35y2ew5w26n"
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 12.500001, 0.8, -1.1920929e-07)
 gizmo_extents = 0.26
 
-[node name="Room1" parent="." unique_id=20324241 instance=ExtResource("2_c08la")]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1733273478]
+navigation_mesh = SubResource("NavigationMesh_g6lp7")
+
+[node name="Room1" parent="NavigationRegion3D" unique_id=20324241 instance=ExtResource("2_c08la")]
