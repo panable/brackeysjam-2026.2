@@ -7,8 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://ifdygy2cgq0" path="res://Scenes/Rooms/Modular/1_floor.tscn" id="5_syrkg"]
 [ext_resource type="PackedScene" uid="uid://d4b2nguo0nd6l" path="res://Scenes/Rooms/Modular/1_wall_3.tscn" id="6_u8o5a"]
 [ext_resource type="PackedScene" uid="uid://bohxn0ir5yhgb" path="res://Scenes/Rooms/Modular/1_tunnel.tscn" id="7_rj2n6"]
+[ext_resource type="PackedScene" uid="uid://m4vuxg8tj32h" path="res://Scenes/Rooms/Props/door.tscn" id="8_2nxt3"]
 [ext_resource type="PackedScene" uid="uid://bk4gerbaww8uc" path="res://Scenes/Rooms/Modular/1_step_up.tscn" id="8_uxlch"]
+[ext_resource type="Script" uid="uid://wrsjitwlbsa0" path="res://Scenes/Rooms/Props/oneway.gd" id="9_i1wgw"]
 [ext_resource type="PackedScene" uid="uid://byohrhhl6x0qp" path="res://Scenes/Rooms/Props/rail.tscn" id="9_mcrqp"]
+[ext_resource type="PackedScene" uid="uid://12nqyceo1hri" path="res://Scenes/Rooms/Modular/one_way_door_collider.tscn" id="10_hut03"]
 [ext_resource type="PackedScene" uid="uid://cnmboopidlwfr" path="res://Scenes/Rooms/Props/rail_end.tscn" id="10_ss56e"]
 [ext_resource type="PackedScene" uid="uid://dxua8uourhn8q" path="res://Scenes/Props/rocks.tscn" id="11_mcrqp"]
 
@@ -102,6 +105,14 @@ transform = Transform3D(-1.6093648e-07, 0, 1, 0, 1, 0, -1, 0, -1.6093648e-07, 0.
 
 [node name="1_Tunnel" parent="." unique_id=90287768 instance=ExtResource("7_rj2n6")]
 transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 4.0026617, 0, -7.997338)
+
+[node name="Door2" parent="1_Tunnel" unique_id=1751437828 instance=ExtResource("8_2nxt3")]
+transform = Transform3D(1.3113417e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113417e-07, 0.099999905, 0.1, -1.2342248)
+script = ExtResource("9_i1wgw")
+room_id_link = "71"
+
+[node name="one_way_door_collider" parent="1_Tunnel/Door2" unique_id=2010904796 instance=ExtResource("10_hut03")]
+transform = Transform3D(1.3113417e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113417e-07, 0.23422289, 0, 0)
 
 [node name="1_StepUp2" parent="." unique_id=1258062770 instance=ExtResource("8_uxlch")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.0000005, 0, 7.9999995)
