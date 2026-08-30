@@ -36,6 +36,7 @@ func _on_body_exited(body: Node3D) -> void:
 
 
 func damage_player() -> void:
+	print("TRYH DMG PLAYA")
 	if not is_instance_valid(player):
 		return
 

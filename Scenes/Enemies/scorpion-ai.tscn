@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dt6egi67qw2ix"]
+
+[ext_resource type="Script" uid="uid://dvhegp5ob8h6q" path="res://Scenes/Enemies/scorpion_ai.gd" id="1_8uln6"]
+[ext_resource type="Script" uid="uid://ct04ulfwrf23h" path="res://Scenes/Enemies/atk_zone.gd" id="2_dtx46"]
+[ext_resource type="Script" uid="uid://c8drn2k102qjw" path="res://Scenes/Enemies/enemy_health.gd" id="3_idrbu"]
+[ext_resource type="PackedScene" uid="uid://baruacp8276fg" path="res://Scenes/Enemies/scorpion.tscn" id="4_v0vqd"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_f1jpd"]
+radius = 1.162
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g6lp7"]
+height = 1.0
+
+[node name="ScorpionAi" type="Node3D" unique_id=1412398291 groups=["enemy"]]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1482817606]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0)
+collision_layer = 3
+script = ExtResource("1_8uln6")
+
+[node name="scorpion" parent="CharacterBody3D" unique_id=654240421 instance=ExtResource("4_v0vqd")]
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="CharacterBody3D" unique_id=2115920233]
+
+[node name="AtkZone" type="Area3D" parent="CharacterBody3D" unique_id=949763087]
+transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0)
+collision_mask = 4
+script = ExtResource("2_dtx46")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D/AtkZone" unique_id=1618235022]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 0.83333313, 0.16666666)
+shape = SubResource("SphereShape3D_f1jpd")
+
+[node name="EnemyHealth" type="Node" parent="CharacterBody3D" unique_id=4745032 node_paths=PackedStringArray("free_me")]
+script = ExtResource("3_idrbu")
+free_me = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1533903530]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9983974, 0)
+shape = SubResource("CapsuleShape3D_g6lp7")
+
+[connection signal="area_entered" from="CharacterBody3D/AtkZone" to="CharacterBody3D/AtkZone" method="_on_area_entered"]
+[connection signal="area_exited" from="CharacterBody3D/AtkZone" to="CharacterBody3D/AtkZone" method="_on_area_exited"]
+[connection signal="body_entered" from="CharacterBody3D/AtkZone" to="CharacterBody3D/AtkZone" method="_on_body_entered"]
+[connection signal="body_exited" from="CharacterBody3D/AtkZone" to="CharacterBody3D/AtkZone" method="_on_body_exited"]

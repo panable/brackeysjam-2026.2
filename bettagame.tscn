@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c7oyhejvt7mk8" path="res://kenney_prototype-textures/PNG/Dark/texture_04.png" id="5_xufpc"]
 [ext_resource type="PackedScene" uid="uid://cjptpwhndlxt4" path="res://Scenes/Enemies/goblin-ai.tscn" id="6_k8ry5"]
 [ext_resource type="PackedScene" uid="uid://3urgup52qxha" path="res://Scenes/Enemies/stump-ai.tscn" id="7_bhnw4"]
+[ext_resource type="PackedScene" uid="uid://dt6egi67qw2ix" path="res://Scenes/Enemies/scorpion-ai.tscn" id="8_45v56"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bhnw4"]
 albedo_texture = ExtResource("2_1wjec")
@@ -318,4 +319,8 @@ process_mode = 4
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 8.6, 1.4, 0)
 
 [node name="StumpAi" parent="." unique_id=1757472003 instance=ExtResource("7_bhnw4")]
+process_mode = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2.6, 0)
+
+[node name="ScorpionAi" parent="." unique_id=1412398291 instance=ExtResource("8_45v56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8, 0.8, -6.2000003)

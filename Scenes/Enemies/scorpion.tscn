@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cqgmwb43a0wei" path="res://Models/Characters/scorpion.glb" id="1_l2vv1"]
 [ext_resource type="Material" uid="uid://cimro0w5hgnh2" path="res://Materials/Characters/Purple.tres" id="2_g6pus"]
+[ext_resource type="Script" uid="uid://dnkqgxaqcrgsd" path="res://Scenes/Enemies/rotater.gd" id="2_ti2me"]
 [ext_resource type="Material" uid="uid://cyxlbytgm8gl4" path="res://Materials/Characters/EnemyEyes.tres" id="3_ti2me"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_l2vv1"]
@@ -61,40 +62,41 @@ graph_offset = Vector2(-240.60031, 25.9225)
 
 [node name="scorpion" unique_id=654240421 instance=ExtResource("1_l2vv1")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+script = ExtResource("2_ti2me")
 
-[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(686161210) index="0" unique_id=496731628]
-bones/1/position = Vector3(-9.181778e-16, 0.508575, -1.3097856)
-bones/1/rotation = Quaternion(0.44156232, 0.5522881, 0.4415625, 0.5522891)
-bones/2/rotation = Quaternion(-0.7933911, 0.29715267, -0.4450389, 0.2901229)
-bones/3/rotation = Quaternion(0.22213064, 0.048875727, 0.4034256, 0.886294)
-bones/4/position = Vector3(-0.84114426, 2.143409, 1.1504191)
-bones/4/rotation = Quaternion(-0.15402968, 0.0029820767, -0.0033500367, 0.9880561)
-bones/5/position = Vector3(-0.841144, 2.1434152, -1.3016435)
-bones/5/rotation = Quaternion(0.17019044, -0.07609055, 0.007777463, 0.98243827)
-bones/6/position = Vector3(-0.14956596, 1.5869384, 0.59128416)
-bones/6/rotation = Quaternion(0.56848544, -0.008793388, -0.068920724, 0.8197542)
-bones/7/position = Vector3(0.24559827, 1.2509022, 0.5780335)
-bones/7/rotation = Quaternion(0.7870559, -0.30689442, 0.31147704, 0.4351331)
-bones/8/position = Vector3(0.19084719, 0.8101608, 0.60419905)
-bones/8/rotation = Quaternion(0.8725476, -0.18864748, 0.3363074, 0.29995036)
-bones/9/position = Vector3(0.30551443, 0.8237395, -0.5065983)
-bones/9/rotation = Quaternion(0.57380265, 0.039011136, -0.7159047, -0.39586502)
-bones/10/position = Vector3(0.2804554, 1.2242074, -0.55561393)
-bones/10/rotation = Quaternion(-0.5045422, 0.0019376576, 0.700858, 0.50421387)
-bones/11/position = Vector3(0.10528804, 1.6258252, -0.6229141)
-bones/11/rotation = Quaternion(-0.3776497, 0.040454075, 0.5632067, 0.73385453)
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(1798090067) index="0" unique_id=1737669773]
+bones/1/position = Vector3(1.7463575e-15, 1.1601281, -1.3097856)
+bones/1/rotation = Quaternion(0.52301425, 0.4758734, 0.5230143, 0.47587463)
+bones/2/rotation = Quaternion(9.607396e-07, 7.652959e-07, -0.7016722, 0.7124999)
+bones/3/rotation = Quaternion(-1.0381403e-06, -5.4151855e-07, 0.6340298, 0.77330863)
+bones/4/position = Vector3(-0.5722486, 2.212651, 1.1223648)
+bones/4/rotation = Quaternion(-0.15296762, -0.01148416, 0.07168379, 0.985561)
+bones/5/position = Vector3(-0.57224864, 2.212657, -1.2104667)
+bones/5/rotation = Quaternion(0.15302087, 0.010753873, 0.07157048, 0.98556924)
+bones/6/position = Vector3(-0.14311935, 1.5868798, 0.5912841)
+bones/6/rotation = Quaternion(0.55933607, -0.10196198, -0.2025074, 0.79733163)
+bones/7/position = Vector3(-0.17620234, 1.1448327, 0.5429654)
+bones/7/rotation = Quaternion(0.76833177, -0.053582747, -0.18823439, 0.60939556)
+bones/8/position = Vector3(-0.2032289, 0.61798364, 0.4230144)
+bones/8/rotation = Quaternion(0.86927176, -0.051581092, -0.22751372, 0.435825)
+bones/9/position = Vector3(-0.20521496, 0.5919836, -0.39223754)
+bones/9/rotation = Quaternion(0.83375204, 0.21247086, -0.28528365, -0.42228776)
+bones/10/position = Vector3(-0.17729606, 1.1110647, -0.57590806)
+bones/10/rotation = Quaternion(-0.7642925, -0.27881506, 0.2743186, 0.51270705)
+bones/11/position = Vector3(-0.14991729, 1.5481889, -0.6014837)
+bones/11/rotation = Quaternion(-0.5953263, -0.34614763, 0.14883824, 0.70965886)
 
-[node name="Cube_089" parent="Armature/Skeleton3D" index="0" unique_id=1697300991]
+[node name="Cube_089" parent="Armature/Skeleton3D" index="0" unique_id=1431465943]
 surface_material_override/0 = ExtResource("2_g6pus")
 surface_material_override/1 = ExtResource("3_ti2me")
 
-[node name="Cube_090" parent="Armature/Skeleton3D" index="1" unique_id=529206052]
+[node name="Cube_090" parent="Armature/Skeleton3D" index="1" unique_id=206547481]
 surface_material_override/0 = ExtResource("2_g6pus")
 
-[node name="Sphere_064" parent="Armature/Skeleton3D" index="2" unique_id=794252799]
+[node name="Sphere_064" parent="Armature/Skeleton3D" index="2" unique_id=597190254]
 surface_material_override/0 = ExtResource("2_g6pus")
 
-[node name="Sphere_065" parent="Armature/Skeleton3D" index="3" unique_id=1697123114]
+[node name="Sphere_065" parent="Armature/Skeleton3D" index="3" unique_id=720264068]
 surface_material_override/0 = ExtResource("2_g6pus")
 
 [node name="AnimationTree" type="AnimationTree" parent="." index="2" unique_id=22476951]
