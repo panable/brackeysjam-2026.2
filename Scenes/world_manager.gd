@@ -7,6 +7,7 @@ var current_dungeon: Dungeon
 var killed_enemies: Dictionary = {}
 
 func _process(_delta: float) -> void:
+	print(GameState.visited_rooms)
 	var doors := get_tree().get_nodes_in_group("door")
 	var enemies := get_tree().get_nodes_in_group("enemy")
 
@@ -41,6 +42,8 @@ func transition_dungeon(destination_room: String, destination_entrace: String):
 	playa.set_collision_layer_value(3, true)
 	playa.set_collision_layer_value(1, true)
 	playa.set_physics_process(true)
+	GameState.visit_room(current_dungeon.room_id)
 	
 func _ready() -> void:
+	GameState.visit_room(current_dungeon.room_id)
 	current_dungeon.transition_requested.connect(transition_dungeon)

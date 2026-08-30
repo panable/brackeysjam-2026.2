@@ -35,9 +35,7 @@ current_dungeon = NodePath("../Dungeon1")
 environment = SubResource("Environment_t1osg")
 
 [node name="playa" parent="." unique_id=990109964 groups=["player"] instance=ExtResource("2_i0vv1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4891863, 1.3000001, 1.950155)
-
-[node name="Dungeon1" parent="." unique_id=535005868 instance=ExtResource("1_mmlet")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5891862, 1.3000001, 1.950155)
 
 [node name="DialogueUI" parent="." unique_id=1035567338 instance=ExtResource("4_b8e2k")]
 
@@ -51,3 +49,5 @@ script = ExtResource("5_mb8r7")
 
 [node name="InventoryUI" parent="." unique_id=1610134888 instance=ExtResource("5_b8e2k")]
 mouse_filter = 2
+
+[node name="Dungeon1" parent="." unique_id=535005868 instance=ExtResource("1_mmlet")]
