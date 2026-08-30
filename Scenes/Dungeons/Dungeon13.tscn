@@ -43,6 +43,11 @@ navigation_mesh = SubResource("NavigationMesh_g6lp7")
 
 [node name="NPC2" parent="." unique_id=1288896559 groups=["molly"] instance=ExtResource("4_jtq3h")]
 transform = Transform3D(-0.5869841, 0, 0.12429711, 0, 0.6000001, 0, -0.12429711, 0, -0.5869841, 5.4919105, 0.061223697, 5.485926)
+dialogue_path = "res://Dialogue/molly.json"
+entry_name = "saved"
+condition_flag = "\"molly_dead\""
+false_entry = "saved"
+true_entry = "dead"
 
 [node name="mollydier" type="Node" parent="NPC2" unique_id=1594548543]
 script = ExtResource("5_01qtu")
