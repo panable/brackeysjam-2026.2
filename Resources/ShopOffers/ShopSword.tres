@@ -8,10 +8,10 @@
 [resource]
 script = ExtResource("4_glut7")
 offer_name = "Sword"
-preview_description = "A genuine sword for only $1! Sharp, sturdy, and definitely built to last."
-full_description = "It breaks after one use.
-
-Turns out \"built to last\" meant one swing."
+preview_description = "The sign of a true warrior is the quality of his blade. And this beauty may bcome cheap at $1, but don't let that illustrious price fool you, this blade is made from the finest materials in all the land, wielded by the previous King to strike down over a thousand deserters to solidify his rule. You too can have the power of the king if you purchase this cutting edge edge.
+"
+full_description = "I oughta be charging more for that thing honestly, lucky bugger. No refunds mate.
+"
 icon = ExtResource("2_tg2y2")
 cost_item = ExtResource("1_m1d7j")
 reward_item = ExtResource("3_t6672")

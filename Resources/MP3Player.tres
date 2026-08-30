@@ -1,7 +1,10 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://12aep6pxgqkq"]
 
 [ext_resource type="Script" uid="uid://d4gdhhvd4t6e1" path="res://Scripts/ItemData.gd" id="1_k3rfo"]
+[ext_resource type="Texture2D" uid="uid://cfvy0oppss8k2" path="res://Sprites/MP3Player.png" id="2_15s16"]
 
 [resource]
 script = ExtResource("1_k3rfo")
+name = "MP3 Player"
+texture = ExtResource("2_15s16")
 metadata/_custom_type_script = "uid://d4gdhhvd4t6e1"

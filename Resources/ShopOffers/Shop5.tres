@@ -3,12 +3,15 @@
 [ext_resource type="Script" uid="uid://c3bs4wt5g3hqa" path="res://Scripts/ShopOffer.gd" id="1_3s101"]
 [ext_resource type="Resource" uid="uid://dvbvrnc5yiq1q" path="res://Resources/Silver.tres" id="1_q55gv"]
 [ext_resource type="Resource" uid="uid://btgvq5f64h3as" path="res://Resources/Money.tres" id="2_86w4l"]
+[ext_resource type="Texture2D" uid="uid://v5084rdv77gk" path="res://Sprites/Money.png" id="2_x72bk"]
 
 [resource]
 script = ExtResource("1_3s101")
 offer_name = "$5 Gold"
-preview_description = "Exchange 100 Silver for 5 Gold."
+preview_description = "Got useless silver weighing down your pockets? Want some gold to spend at this here shop? Well you're in luck, because we can convery your silver into gold! Trade in 100 silver, and we'll pay you an entire $5 in gold! You could buy anything in this shop with that kinda cash! 
+"
 full_description = "You traded 100 Silver for 5 Gold."
+icon = ExtResource("2_x72bk")
 cost_item = ExtResource("1_q55gv")
 cost_amount = 100
 reward_item = ExtResource("2_86w4l")

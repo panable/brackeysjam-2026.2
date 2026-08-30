@@ -244,6 +244,7 @@ transform = Transform3D(1.3113417e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113417e-07, 12, 
 
 [node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("6_835qd")]
 transform = Transform3D(-0.43425408, 0, -0.41403306, 0, 0.59999996, 0, 0.41403306, 0, -0.43425408, 0.9813175, 0.010388494, -0.024098244)
+dialogue_path = "res://Dialogue/hershey.json"
 
 [node name="Rug" parent="." unique_id=1590738221 instance=ExtResource("7_60yiw")]
 transform = Transform3D(-9.436571, 0, -8.2497127e-07, 0, 1, 0, 8.2497127e-07, 0, -9.436571, 5.9604645e-08, 0, -5.2108035e-15)

@@ -1,11 +1,14 @@
 class_name EnemyHealth
 extends Node
-
+const MONEY = preload("uid://btgvq5f64h3as")
+const PLAYER_INVENTORY = preload("uid://cib86xegispic")
 
 signal health_changed(current_health: float, max_health: float)
 signal damaged(amount: float)
 signal died
 
+@export_category("money")
+@export var money_amt: int = 1
 
 @export_category("Health")
 @export var max_health: float = 3.0
@@ -103,7 +106,8 @@ func take_damage(amount: float) -> void:
 
 	if current_health <= 0.0:
 		died.emit()
-
+		PLAYER_INVENTORY.add_item(MONEY, money_amt)
+		print("kiling blow")
 		await get_tree().create_timer(
 			knockback_duration
 		).timeout

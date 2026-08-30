@@ -16,7 +16,10 @@ func _init() -> void:
 func starting_inventory() -> void:
 
 	var money: ItemData = preload("res://Resources/Money.tres")
+	var sword: ItemData = preload("res://Resources/BrokenSword.tres")
+	var broken_sword: ItemData = preload("res://Resources/BrokenSword.tres")
 	add_item(money, 20)
+	add_item(broken_sword, 1)
 	
 	
 func add_item(new_item: ItemData, amount: int = 1) -> int:
