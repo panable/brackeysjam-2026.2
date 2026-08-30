@@ -11,19 +11,20 @@
 [ext_resource type="PackedScene" uid="uid://ddqooitltlvx8" path="res://Scenes/Props/desk.tscn" id="9_7lfcv"]
 [ext_resource type="PackedScene" uid="uid://cyium3uo1d0x2" path="res://Scenes/Props/chair.tscn" id="10_bbblf"]
 [ext_resource type="PackedScene" uid="uid://cma8jqk36acsy" path="res://Scenes/Props/barrell.tscn" id="11_m456m"]
-[ext_resource type="PackedScene" uid="uid://cbq4g6mpwod3m" path="res://Scenes/Characters/Molly_c.tscn" id="12_bbblf"]
+[ext_resource type="PackedScene" uid="uid://cf3apxxlqha25" path="res://Scenes/Enemies/stump-aiBoss.tscn" id="12_bbblf"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="AreaLight3D" type="AreaLight3D" parent="." unique_id=1401246055]
-transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, 0.0041413247, 3.8164845, -0.07040548)
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, 0.0041413247, 4.4975147, -0.07040548)
 light_color = Color(0.81263554, 0.7314163, 0.7153787, 1)
 light_energy = 80.76
 shadow_enabled = true
 shadow_bias = 0.674
 shadow_normal_bias = 0.0
 shadow_opacity = 0.57
+area_range = 5.508
 area_size = Vector2(24.045559, 23.980637)
 
 [node name="2_Floor2" parent="." unique_id=1411981116 instance=ExtResource("1_ruqd6")]
@@ -287,5 +288,5 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -12.
 [node name="Barrell4" parent="." unique_id=199191317 instance=ExtResource("11_m456m")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -12.592166, 0.0501709, 6.2870116)
 
-[node name="NPC2" parent="." unique_id=942715532 instance=ExtResource("12_bbblf")]
-transform = Transform3D(0.59999996, 0, 1.0490733e-07, 0, 0.59999996, 0, -1.0490733e-07, 0, 0.59999996, -8.742278e-08, 0, -1)
+[node name="stump-ai" parent="." unique_id=1757472003 instance=ExtResource("12_bbblf")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 0.1347961, 0.050048828, -0.43579102)

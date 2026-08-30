@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c587s8a605qip"]
 
 [ext_resource type="PackedScene" uid="uid://b0ihh3lth1o0l" path="res://Scenes/Rooms/TestRoom.tscn" id="1_mncer"]
+[ext_resource type="Texture2D" uid="uid://ohndbupboi0b" path="res://LOGO.png" id="2_5uqhi"]
 [ext_resource type="PackedScene" uid="uid://6vac72p2c7e1" path="res://playa.tscn" id="2_wicfy"]
 [ext_resource type="Script" uid="uid://bxpodlqif1ghn" path="res://camera_3d.gd" id="3_go42g"]
 [ext_resource type="Script" uid="uid://c2shnwjltc6x5" path="res://Scripts/MenuUI.gd" id="4_go42g"]
@@ -66,24 +67,16 @@ offset_bottom = 107.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TitleLabel" type="Label" parent="WorldMenu/SubViewport/MenuContainer/VBoxContainer" unique_id=776939330]
+[node name="TextureRect" type="TextureRect" parent="WorldMenu/SubViewport/MenuContainer/VBoxContainer" unique_id=18659881]
 layout_mode = 2
-theme_override_font_sizes/font_size = 48
-text = "MISDUNGEON"
-horizontal_alignment = 1
+texture = ExtResource("2_5uqhi")
+expand_mode = 5
 
 [node name="StartButton" type="Button" parent="WorldMenu/SubViewport/MenuContainer/VBoxContainer" unique_id=446711125]
 custom_minimum_size = Vector2(350, 70)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "START"
-
-[node name="SettingsButton" type="Button" parent="WorldMenu/SubViewport/MenuContainer/VBoxContainer" unique_id=1044542390]
-custom_minimum_size = Vector2(350, 70)
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
-text = "SETTINGS
-"
 
 [node name="ExitButton" type="Button" parent="WorldMenu/SubViewport/MenuContainer/VBoxContainer" unique_id=1155458744]
 custom_minimum_size = Vector2(350, 70)

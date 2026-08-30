@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ifdygy2cgq0" path="res://Scenes/Rooms/Modular/1_floor.tscn" id="5_0r1oo"]
 [ext_resource type="PackedScene" uid="uid://d4b2nguo0nd6l" path="res://Scenes/Rooms/Modular/1_wall_3.tscn" id="6_pkxys"]
 [ext_resource type="PackedScene" uid="uid://dxua8uourhn8q" path="res://Scenes/Props/rocks.tscn" id="7_pbsva"]
+[ext_resource type="PackedScene" uid="uid://3urgup52qxha" path="res://Scenes/Enemies/stump-ai.tscn" id="8_5ycuv"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
@@ -143,3 +144,9 @@ transform = Transform3D(0.60212374, 0, -0.44750613, 0, 1.0345764, 0, 0.44626838,
 
 [node name="Rocks_2" parent="." unique_id=592214687 instance=ExtResource("7_pbsva")]
 transform = Transform3D(-1.3435732, 0, -0.648627, 0, 1, 0, 0.6297758, 0, -1.3837909, 7.521955, -0.3158074, -8.126605)
+
+[node name="stump-ai" parent="." unique_id=1757472003 instance=ExtResource("8_5ycuv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.1930237, 0.050048828, 0.8402326)
+
+[node name="stump-ai2" parent="." unique_id=837073174 instance=ExtResource("8_5ycuv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.1777034, 0.050048828, -8.736319)

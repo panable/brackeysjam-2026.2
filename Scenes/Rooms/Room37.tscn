@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://duiwymejna7kb" path="res://Scenes/Rooms/Modular/2_door.tscn" id="4_pad8f"]
 [ext_resource type="PackedScene" uid="uid://b5i57i5272y5q" path="res://Scenes/Rooms/Modular/2_wall_1.tscn" id="5_kyilh"]
 [ext_resource type="PackedScene" uid="uid://bfxikqr4ka7cy" path="res://Scenes/Props/tut.tscn" id="6_yxm4v"]
+[ext_resource type="PackedScene" uid="uid://cjptpwhndlxt4" path="res://Scenes/Enemies/goblin-ai.tscn" id="7_kehjx"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -187,3 +188,9 @@ transform = Transform3D(-4.371141e-08, -4.371139e-08, 1, 4.3711385e-08, 1, 4.371
 
 [node name="tut2" parent="." unique_id=1639960867 instance=ExtResource("6_yxm4v")]
 transform = Transform3D(-1.2199904, 0, -1.06654944e-07, 0, 1, 0, 1.06654944e-07, 0, -1.2199904, 1.2034538, 0.050049324, 7.544305)
+
+[node name="gb_ai" parent="." unique_id=1753076045 instance=ExtResource("7_kehjx")]
+transform = Transform3D(-0.6, 0, -5.2453668e-08, 0, 0.6, 0, 5.2453668e-08, 0, -0.6, 5.866212, 0.052730415, 9.22705)
+
+[node name="gb_ai2" parent="." unique_id=1578659045 instance=ExtResource("7_kehjx")]
+transform = Transform3D(-0.6, 0, -5.2453668e-08, 0, 0.6, 0, 5.2453668e-08, 0, -0.6, -5.3780127, 0.052730415, 10.004761)

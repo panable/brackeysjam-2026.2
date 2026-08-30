@@ -13,7 +13,6 @@ func _ready() -> void:
 	area.input_event.connect(_on_area_input_event)
 
 	start_button.pressed.connect(_on_start_pressed)
-	settings_button.pressed.connect(_on_settings_pressed)
 	exit_button.pressed.connect(_on_exit_pressed)
 
 

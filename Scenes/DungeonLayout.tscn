@@ -196,10 +196,10 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -22,
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -14, 0, -150)
 
 [node name="Room44" parent="." unique_id=1705166852 instance=ExtResource("44_gwfji")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -18, 10, -166)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -17.999832, 10.011841, -166.01318)
 
 [node name="Room45" parent="." unique_id=1247178019 instance=ExtResource("45_roxcx")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -18, 22, -186)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -17.985168, 21.992554, -186.00598)
 
 [node name="Room46" parent="." unique_id=283937216 instance=ExtResource("46_hwdq3")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -18, 35, -214)
