@@ -1,26 +1,31 @@
 {
 	"start": {
 		"speaker": "Marco",
-		"content": "Through here, I've found a shortcut to the exit!"
+		"content": "Through here, I've found a shortcut to the exit!",
+		"next_id": "loop_1"
 	},
 
 	"loop_1": {
 		"speaker": "Marco",
-		"content": "Back already? Oh... you didn't see it? Go back in, you must've missed it - it's in the second room."
+		"content": "Back already? Oh... you didn't see it? Go back in, you must've missed it - it's in the second room.",
+		"next_id": "loop_2"
 	},
 
 	"loop_2": {
 		"speaker": "Marco",
-		"content": "Seriously? No luck? Hmmm... actually, it was the 4th room. Yeah, in the 4th room, there's a false wall at the top. It'll take you straight to the exit."
+		"content": "Seriously? No luck? Hmmm... actually, it was the 4th room. Yeah, in the 4th room, there's a false wall at the top. It'll take you straight to the exit.",
+		"next_id": "loop_3"
 	},
 
 	"loop_3": {
 		"speaker": "Marco",
-		"content": "Okay, this time for sure. Once you get to the 6th room, you'll see someone, then just go out the other door of the room. Trust me."
+		"content": "Okay, this time for sure. Once you get to the 6th room, you'll see someone, then just go out the other door of the room. Trust me.",
+		"next_id": "loop_4"
 	},
 
 	"loop_4": {
 		"speaker": "Marco",
-		"content": "Straight through that door is the shortcut."
+		"content": "Straight through that door is the shortcut.",
+		"next_id": "end"
 	}
 }

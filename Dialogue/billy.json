@@ -7,7 +7,7 @@
 
 	"offer_sword": {
 		"speaker": "Billy",
-		"content": "Partner, let me fix that old beaut up. It might take a while, so why don't you take a seat and let an old man regale you with a story of old.",
+		"content": "Say, if you've got a broken sword lyin' around, bring it to me. I can fix that old beaut up for ya. Might take a while though, so you'd better be ready to sit through one of my stories.",
 		"choices": [
 			{
 				"text": "Show Billy the broken sword.",
@@ -17,10 +17,20 @@
 				"take_amount": 1
 			},
 			{
+				"text": "I'll find a broken sword.",
+				"next_id": "need_sword"
+			},
+			{
 				"text": "Maybe another time.",
 				"next_id": "leave"
 			}
 		]
+	},
+
+	"need_sword": {
+		"speaker": "Billy",
+		"content": "No rush, partner. Find yourself a busted-up sword and bring it back to me. I'll see what I can do with it.",
+		"next_id": "end"
 	},
 
 	"story_1": {

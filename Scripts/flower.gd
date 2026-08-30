@@ -1,28 +1,46 @@
 extends Node3D
 
-@onready var animation_player: AnimationPlayer = $"../AnimationPlayer"
-@onready var flower: Node3D = $"."
+@onready var animation_player: AnimationPlayer = get_parent().get_node("AnimationPlayer")
 
 
 func _ready() -> void:
-	# If the flower has already been planted, show the completed state.
 	if GameState.get_flag("flower_planted"):
-		flower.show()
-		animation_player.play("FlowerBloom")
-		animation_player.seek(animation_player.current_animation_length, true)
+		show()
+		_set_finished_state()
 	else:
-		flower.hide()
+		hide()
 
 
 func plant_flower() -> void:
-	# Prevent planting it multiple times.
-	if GameState.get_flag("flower_planted"):
-		return
+	print("plant_flower called")
+
+	show()
 
 	GameState.set_flag("flower_planted", true)
 
-	flower.show()
+	if animation_player == null:
+		print("ERROR: AnimationPlayer is null")
+		return
 
+	if not animation_player.has_animation("FlowerBloom"):
+		print("ERROR: FlowerBloom animation does not exist")
+		print("Available animations: ", animation_player.get_animation_list())
+		return
+
+	print("Playing FlowerBloom")
 	animation_player.play("FlowerBloom")
 
-	print("Flower planted!")
+
+func _set_finished_state() -> void:
+	if animation_player == null:
+		return
+
+	if not animation_player.has_animation("FlowerBloom"):
+		return
+
+	animation_player.play("FlowerBloom")
+	animation_player.seek(
+		animation_player.get_animation("FlowerBloom").length,
+		true
+	)
+	animation_player.stop()

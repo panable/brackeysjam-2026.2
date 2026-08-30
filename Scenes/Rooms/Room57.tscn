@@ -130,10 +130,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40000153, 0.7, 0.3000002)
 [node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("9_k07mq")]
 transform = Transform3D(-0.6, 0, -5.2453668e-08, 0, 0.6, 0, 5.2453668e-08, 0, -0.6, 3.8043048, 0.10113275, 8.490345)
 dialogue_path = "res://Dialogue/marco.json"
-entry_name = "trapped"
-condition_flag = "pablo_cell_opened"
-false_entry = "trapped"
-true_entry = "freed"
 
 [node name="Rubble" parent="." unique_id=1547588693 instance=ExtResource("10_y0a1j")]
 transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 3.864053, 0.09300559, -3.093445)

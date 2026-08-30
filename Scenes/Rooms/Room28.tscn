@@ -197,10 +197,12 @@ transform = Transform3D(0.59815687, 1.1409545e-08, -0.04699325, -1.5278214e-08, 
 entry_name = "room_28"
 
 [node name="NPC2" parent="." unique_id=589014949 instance=ExtResource("9_e7vj6")]
-transform = Transform3D(-0.69709605, 0, -0.48637167, 0, 0.8500005, 0, 0.48637167, 0, -0.69709605, 8.1814995, 0.013831347, 14.502631)
+transform = Transform3D(-0.69709605, 0, -0.48637167, 0, 0.8500005, 0, 0.48637167, 0, -0.69709605, 8.1814995, 0.052529544, 14.528405)
+dialogue_path = "res://Dialogue/tim.json"
 
 [node name="NPC3" parent="." unique_id=946721801 instance=ExtResource("9_0jyu7")]
 transform = Transform3D(-0.5770563, 0, 0.6241043, 0, 0.85, 0, -0.6241043, 0, -0.5770563, 0.26836482, 0.0062355697, 4.3004565)
+dialogue_path = "res://Dialogue/tim.json"
 
 [node name="Rug" parent="." unique_id=1590738221 instance=ExtResource("9_4hxt6")]
 transform = Transform3D(-9.9982815, 0, -4.9599885e-07, 0, 1, 0, 8.740775e-07, 0, -5.6735654, 6.993822e-07, 0, 8)
