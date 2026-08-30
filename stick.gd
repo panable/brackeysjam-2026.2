@@ -1,6 +1,8 @@
 extends MeshInstance3D
 const MONEY = preload("uid://btgvq5f64h3as")
 const PLAYER_INVENTORY = preload("uid://cib86xegispic")
+var sword: ItemData = preload("res://Resources/BrokenSword.tres")
+var broken_sword: ItemData = preload("res://Resources/BrokenSword.tres")
 @onready var collision_shape_3d: CollisionShape3D = $Area3D/CollisionShape3D
 
 var attacking := false
@@ -23,6 +25,8 @@ const SWING_TIME := 0.16
 const RETURN_TIME := 0.14
 const ATTACK_COOLDOWN := 0.1
 
+@export
+var damage_amt: int = 1
 
 func _ready() -> void:
 	area_3d.body_entered.connect(_on_area_3d_body_entered)
@@ -31,8 +35,13 @@ func _ready() -> void:
 
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
+	#if attack_on_cooldown:
+		#return
+		
 	if "enemy_health" in body:
-		body.enemy_health.take_damage(1)
+		body.enemy_health.take_damage(damage_amt)
+		if PLAYER_INVENTORY.has_item(broken_sword, 1):
+			PLAYER_INVENTORY.remove_item(broken_sword, 1)
 
 
 func activate_col() -> void:

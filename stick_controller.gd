@@ -9,7 +9,11 @@ var broken_sword_dat: ItemData = preload("res://Resources/BrokenSword.tres")
 func _process(delta: float) -> void:
 	if PLAYER_INVENTORY.has_item(sword_dat, 1) or PLAYER_INVENTORY.has_item(broken_sword_dat, 1):
 		sword.process_mode = Node.PROCESS_MODE_INHERIT
+		sword.visible = true
 		stick.process_mode = Node.PROCESS_MODE_DISABLED
+		stick.visible = false
 	else:
 		sword.process_mode = Node.PROCESS_MODE_DISABLED
+		sword.visible = false
 		stick.process_mode = Node.PROCESS_MODE_INHERIT
+		stick.visible = true

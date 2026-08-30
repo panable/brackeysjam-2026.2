@@ -170,6 +170,7 @@ process_mode = 4
 transform = Transform3D(-0.2715236, 0.17931291, -0.6197757, -0.58956194, 0.20419662, 0.31736496, 0.262091, 0.64509743, 0.07181695, -0.45349416, 0.23633572, -0.14734487)
 mesh = SubResource("ArrayMesh_bcfd2")
 script = ExtResource("5_duytu")
+damage_amt = 3
 
 [node name="Timer" type="Timer" parent="Pivot/Sword" unique_id=893106426]
 wait_time = 0.6
