@@ -7,10 +7,10 @@
 [resource]
 script = ExtResource("1_kpxxs")
 offer_name = "Map"
-preview_description = "Lost? Not anymore! This map will lead you straight to the exit. Guaranteed!"
-full_description = "Roger takes your $5 and runs away.
-
-There was no map."
+preview_description = "Lost in a dungeon with no idea how to get out? Not to worry, as this trusty dungeon map will point you directly to the exit! You'll be out,breathing the fresh air, smelling the freshly cut grass, taking in the world outside the dreary walls before you know it! Just pay $5 for this map, and freedom awaits posthaste!
+"
+full_description = "Cheers for the cash drongo, but you ain't taking this map - would kill me business. No refunds mate.
+"
 icon = ExtResource("2_rkshj")
 cost_item = ExtResource("1_shihm")
 cost_amount = 5

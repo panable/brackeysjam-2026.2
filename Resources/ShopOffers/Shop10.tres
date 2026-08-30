@@ -2,13 +2,17 @@
 
 [ext_resource type="Script" uid="uid://c3bs4wt5g3hqa" path="res://Scripts/ShopOffer.gd" id="1_rsslb"]
 [ext_resource type="Resource" uid="uid://btgvq5f64h3as" path="res://Resources/Money.tres" id="1_sutxs"]
+[ext_resource type="Texture2D" uid="uid://v5084rdv77gk" path="res://Sprites/Money.png" id="2_j0gyp"]
 
 [resource]
 script = ExtResource("1_rsslb")
 offer_name = "$10 Gold"
-preview_description = "Buy $10 for only $2!"
-full_description = "You bought $1!
-[Fine print: $1.0]"
+preview_description = "For just $2, you can get it exchanged for a fantastic sum of $10! Is there any better way to spend your money than getting even more money? I don't think so! Justbthink of the dividends! You could put that money into saving for a house, or even better, spend it right here in this shop! So what are you waiting for? A big green BUY button? Get it today, while stocks last!
+"
+full_description = "[Fine print: $1.0]
+You're a right dropkick for buying that. Read closer next time. No refunds mate.
+"
+icon = ExtResource("2_j0gyp")
 cost_item = ExtResource("1_sutxs")
 cost_amount = 2
 reward_item = ExtResource("1_sutxs")

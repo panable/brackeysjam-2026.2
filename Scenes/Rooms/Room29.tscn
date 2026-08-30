@@ -121,6 +121,7 @@ transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, -1
 
 [node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("7_6381c")]
 transform = Transform3D(-0.6, 0, -5.2453668e-08, 0, 0.6, 0, 5.2453668e-08, 0, -0.6, -6.0353622, 0.024457574, 2.8930564)
+dialogue_path = "res://Dialogue/skittles.json"
 
 [node name="Rug" parent="." unique_id=1590738221 instance=ExtResource("8_tq3lv")]
 transform = Transform3D(-8.969526, 0, -1.4562964e-07, 0, 1, 0, 7.8414087e-07, 0, -1.6658089, -2, 0, 1.7484555e-07)

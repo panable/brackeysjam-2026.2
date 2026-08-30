@@ -8,8 +8,10 @@
 [resource]
 script = ExtResource("1_p7a54")
 offer_name = "Flower"
-preview_description = "Magic beans are overrated. This flower's got just as much magic in it. Trust me."
-full_description = "It's just a flower."
+preview_description = "There is little in this world as beautiful as the humble flower. For a measly $3, you could have one of your very own! Plant it in a nice, pretty pot with healthy soil. Make sure to give it lots of sunlight, plenty of water and a healthy dosing of love. Then, you'll have a beautiful fixture, sure to brighten any room, and always make you have that feeling that today is gonna be a good day.\"
+"
+full_description = "Good, glad to be rid of that bloody thing. No refunds mate.
+"
 icon = ExtResource("1_krva0")
 cost_item = ExtResource("1_hii5g")
 cost_amount = 3

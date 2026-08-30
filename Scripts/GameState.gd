@@ -12,6 +12,7 @@ var flags: Dictionary = {
 	"buck_paid": false,
 	"billy_choices_correct": false,
 	"pablo_cell_opened": false,
+	"leonard_returned": false,
 
 	# Roger's shop one-time purchase flags
 	"shop_bought_Shop5": false,

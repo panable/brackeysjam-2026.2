@@ -8,10 +8,10 @@
 [resource]
 script = ExtResource("1_dgryp")
 offer_name = "Running Shoes"
-preview_description = "Need to get somewhere fast? These shoes will have you running faster than ever!"
-full_description = "They make you run faster!
-
-Unfortunately, when you stop running, you'll need to stop and catch your breath."
+preview_description = "Tired of walking everywhere? Playing a game that feels too slow and just needs to get going already? Well look no further than the all new Running Shoes! With a sleek design, aerogel lining and completely breathable material, these puppies will get you where you need to go ultra fast in ultra style! So what are you waiting for? Get yourself a pair of Running Shoes for just $4 today! *disclaimer running shoes TM do not guarantee physical performance, shopkeeper inc can not and will not be held responsible for lack of wearer's cardio capabilties. upon purchasing running shoes TM, buyer signs away right to complain, annoy or litogate owner of shopkeeper inc (shopkeeper).
+"
+full_description = "Hope you haven't been skipping cardio at the gym, otherwise those won't do you any good. No refunds mate.
+"
 icon = ExtResource("1_kwf0c")
 cost_item = ExtResource("2_d4eno")
 cost_amount = 10
