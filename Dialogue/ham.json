@@ -1,0 +1,26 @@
+{
+	"start": {
+		"speaker": "Ham",
+		"content": "You made it through here? How did you afford the entry fee?",
+		"choices": [
+			{
+				"text": "I paid a $1",
+				"next_id": "paid_one_dollar"
+			},
+			{
+				"text": "I've got fat stacks of cash",
+				"next_id": "paid_full_price"
+			}
+		]
+	},
+
+	"paid_one_dollar": {
+		"speaker": "Ham",
+		"content": "That Buck... he's such a moron, couldn't count to save his life."
+	},
+
+	"paid_full_price": {
+		"speaker": "Ham",
+		"content": "Must be nice to throw that kinda money down the drain. Oh well, better in our pockets than yours."
+	}
+}

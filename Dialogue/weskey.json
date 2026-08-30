@@ -1,0 +1,28 @@
+{
+	"start": {
+		"speaker": "Weskey",
+		"content": "Roger send you? Hasn't that bloody shark had enough yet?",
+		"choices": [
+			{
+				"text": "Why are you chained up?",
+				"next_id": "why_chained"
+			}
+		]
+	},
+
+	"why_chained": {
+		"speaker": "Weskey",
+		"content": "Roger hates competition. Ever since we were little tykes, he would make damn sure he was hoardin' all the good toys. And the second I had somethin' go my way for once, the second I had somethin' that other people wanted, he saw fit to take it from me and have me locked away.",
+		"choices": [
+			{
+				"text": "What did he take?",
+				"next_id": "what_did_he_take"
+			}
+		]
+	},
+
+	"what_did_he_take": {
+		"speaker": "Weskey",
+		"content": "The exit. To the dungeon, I mean; it's a collapsible door. He took it from me, now he's hiding it away so that he can siphon every last dollar from everyone in this place, since there's no other way out. You oughta wring his neck, I reckon."
+	}
+}

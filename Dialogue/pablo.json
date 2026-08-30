@@ -1,0 +1,11 @@
+{
+	"trapped": {
+		"speaker": "Pablo",
+		"content": "Hey kid... let me outta here..."
+	},
+
+	"freed": {
+		"speaker": "Pablo",
+		"content": "Thanks kid... I've got another favour to ask... can you find the exit?"
+	}
+}

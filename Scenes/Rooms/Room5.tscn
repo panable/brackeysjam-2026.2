@@ -75,6 +75,7 @@ transform = Transform3D(-1, 0, -8.7422784e-08, 0, 1, 0, 8.7422784e-08, 0, -1, 4.
 
 [node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("7_xg3cn")]
 transform = Transform3D(0.009703282, 0, -0.5999216, 0, 0.6, 0, 0.5999216, 0, 0.009703282, 5.4451504, 0.04509461, 0.0018117436)
+dialogue_path = "res://Dialogue/yasmin.json"
 
 [node name="Rocks_" parent="." unique_id=1396706831 instance=ExtResource("8_vivwi")]
 transform = Transform3D(0.07761112, 0, 0.9969837, 0, 1, 0, -0.9969837, 0, 0.07761112, 0.20166042, -0.5114251, 3.0857544)
