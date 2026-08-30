@@ -147,13 +147,5 @@ transform = Transform3D(-2.1855695e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855695e-07, -4
 [node name="Rocks_2" parent="." unique_id=1396706831 instance=ExtResource("7_dain0")]
 transform = Transform3D(1.2304368, 0, 0.18918197, 0, 1, 0, -0.17376448, 0, 1.339609, 9.39818, -0.546837, 0.52916485)
 
-[node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("7_p3n85")]
-transform = Transform3D(-0.47252312, 0, -0.3697593, 0, 0.6, 0, 0.3697593, 0, -0.47252312, 5.485926, 0.061223697, -3.3919106)
-dialogue_path = "res://Dialogue/molly.json"
-entry_name = "saved"
-condition_flag = "molly_dead"
-false_entry = "saved"
-true_entry = "dead"
-
 [node name="Rocks_" parent="." unique_id=1762619007 instance=ExtResource("7_dain0")]
 transform = Transform3D(-1.4342854, 0, -0.09999694, 0, 1, 0, 0.10077617, 0, -1.423195, -0.7942229, -0.29084402, -7.8845015)
