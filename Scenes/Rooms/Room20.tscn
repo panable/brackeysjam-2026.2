@@ -9,6 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://bpnionfeo78xx" path="res://Scenes/Characters/Roger_c.tscn" id="7_dufld"]
 [ext_resource type="PackedScene" uid="uid://dehhhxdb5u4b8" path="res://Scenes/shop_table.tscn" id="8_kipmh"]
 [ext_resource type="PackedScene" uid="uid://cgkswireprm2k" path="res://Scenes/UI/shop_ui.tscn" id="9_wiyv2"]
+[ext_resource type="PackedScene" uid="uid://cyormjqtc1lkv" path="res://Models/Props/ShopkeepersStall.glb" id="10_udrda"]
+[ext_resource type="PackedScene" uid="uid://dfahhipsvky70" path="res://Scenes/Props/garden_bed_end.tscn" id="11_6jacq"]
+[ext_resource type="PackedScene" uid="uid://bupfud6p5qeo7" path="res://Scenes/Props/garden_bed_top.tscn" id="12_1sahl"]
+[ext_resource type="PackedScene" uid="uid://dxua8uourhn8q" path="res://Scenes/Props/rocks.tscn" id="13_1sahl"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
@@ -148,10 +152,43 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.99
 transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 7.9977484, 0, -11.9942875)
 
 [node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("7_dufld")]
-transform = Transform3D(-0.0013937005, 0, 0.84999883, 0, 0.85, 0, -0.84999883, 0, -0.0013937005, -1.473981, 0.023265898, -10.537041)
+transform = Transform3D(-0.0013937005, 0, 0.84999883, 0, 0.85, 0, -0.84999883, 0, -0.0013937005, 1.0080137, 0.023265898, -9.166532)
 
 [node name="ShopTable" parent="." unique_id=842737196 node_paths=PackedStringArray("shop_ui") instance=ExtResource("8_kipmh")]
-transform = Transform3D(-0.82997084, 0, -0.5578068, 0, 1, 0, 0.5578068, 0, -0.82997084, -2.0049322, 0.52830577, -7.752486)
+transform = Transform3D(-0.82997084, 0, -0.5578068, 0, 1, 0, 0.5578068, 0, -0.82997084, 10.784601, 0.52830577, -0.10835027)
 shop_ui = NodePath("../ShopUI")
 
 [node name="ShopUI" parent="." unique_id=602414720 instance=ExtResource("9_wiyv2")]
+
+[node name="ShopkeepersStall" parent="." unique_id=1972246521 instance=ExtResource("10_udrda")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.9667886, 1.2133826, -6.740699)
+
+[node name="GardenBed_End2" parent="." unique_id=1917080842 instance=ExtResource("11_6jacq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9669798, 0, 3.7079468)
+
+[node name="GardenBed_End3" parent="." unique_id=826101116 instance=ExtResource("11_6jacq")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.0330201, 0, 3.7079468)
+
+[node name="GardenBed_End4" parent="." unique_id=60981779 instance=ExtResource("11_6jacq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03302, 0, 3.7079465)
+
+[node name="GardenBed_End5" parent="." unique_id=614676581 instance=ExtResource("11_6jacq")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.03302, 0, 3.7079463)
+
+[node name="GardenBed_Top_" parent="." unique_id=1409558810 instance=ExtResource("12_1sahl")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.8480528, 0.11142096, 3.6604614)
+
+[node name="GardenBed_Top_2" parent="." unique_id=519791152 instance=ExtResource("12_1sahl")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.0039577, 0.11105475, 3.8196278)
+
+[node name="GardenBed_Top_3" parent="." unique_id=892510587 instance=ExtResource("12_1sahl")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.1482334, 0.11129889, 3.8546908)
+
+[node name="Rocks_2" parent="." unique_id=1965284971 instance=ExtResource("13_1sahl")]
+transform = Transform3D(-0.008715694, 0, 0.9999624, 0, 1, 0, -0.9999624, 0, -0.008715694, 10.950359, -0.14608014, -11.2432165)
+
+[node name="GardenBed_Top_4" parent="." unique_id=1772196837 instance=ExtResource("12_1sahl")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.068417, 0.11129889, 3.7975528)
+
+[node name="Rocks_" parent="." unique_id=1396706831 instance=ExtResource("13_1sahl")]
+transform = Transform3D(0.9995552, 0, 0.029823529, 0, 1, 0, -0.029823529, 0, 0.9995552, -3.4628909, -0.3151055, -3.441406)

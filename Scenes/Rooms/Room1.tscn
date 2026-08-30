@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bq0cprwgavwrj" path="res://Scenes/Rooms/Modular/1_wall_c.tscn" id="5_kdtvj"]
 [ext_resource type="PackedScene" uid="uid://ifdygy2cgq0" path="res://Scenes/Rooms/Modular/1_floor.tscn" id="6_53t85"]
 [ext_resource type="PackedScene" uid="uid://dnip0iuv8xgaa" path="res://Scenes/Rooms/Modular/1_door.tscn" id="6_uc76g"]
+[ext_resource type="PackedScene" uid="uid://bngq5uedwknpo" path="res://Scenes/Characters/Marjorie_c.tscn" id="7_53t85"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
@@ -85,3 +86,6 @@ transform = Transform3D(-7.351371e-08, 0, 1, 0, 1, 0, -1, 0, -7.351371e-08, -2.0
 
 [node name="1_Floor17" parent="." unique_id=1259920476 instance=ExtResource("6_53t85")]
 transform = Transform3D(-7.351371e-08, 0, 1, 0, 1, 0, -1, 0, -7.351371e-08, -1.9999996, 0, 6)
+
+[node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("7_53t85")]
+transform = Transform3D(-5.2453668e-08, 0, 1.2, 0, 1.2, 0, -1.2, 0, -5.2453668e-08, -0.38468662, 0.049999237, -3.574479)

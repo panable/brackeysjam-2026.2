@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://bngq5uedwknpo" path="res://Scenes/Characters/Marjorie_c.tscn" id="7_uyi4e"]
 [ext_resource type="Resource" uid="uid://de1hawq7vvgo1" path="res://Resources/Key.tres" id="8_3lyih"]
 [ext_resource type="PackedScene" uid="uid://dxua8uourhn8q" path="res://Scenes/Props/rocks.tscn" id="9_yc6jn"]
-[ext_resource type="PackedScene" uid="uid://6vac72p2c7e1" path="res://playa.tscn" id="10_8xxjn"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -89,6 +88,3 @@ transform = Transform3D(-0.99808735, 0, -0.061819952, 0, 1, 0, 0.061819952, 0, -
 
 [node name="Rocks_" parent="." unique_id=463092666 instance=ExtResource("9_yc6jn")]
 transform = Transform3D(0.030924765, 0, -0.99952173, 0, 1, 0, 0.99952173, 0, 0.030924765, 0.8195416, -0.63839704, 3.8262959)
-
-[node name="playa" parent="." unique_id=990109964 instance=ExtResource("10_8xxjn")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.588786, 0.45000023, 3.2117577)

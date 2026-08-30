@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://d2nm630byr03t"]
+
+[ext_resource type="PackedScene" uid="uid://cyormjqtc1lkv" path="res://Models/Props/ShopkeepersStall.glb" id="1_pubb0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jw7ag"]
+
+[node name="ShopkeepersStall" unique_id=1972246521 instance=ExtResource("1_pubb0")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=899801627]
+transform = Transform3D(6.933784, 0, 0, 0, 3.046409, 0, 0, 0, 7.7291117, 1.6412904, 0.051651, -1.1297197)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=958201324]
+shape = SubResource("BoxShape3D_jw7ag")
