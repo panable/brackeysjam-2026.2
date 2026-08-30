@@ -21,6 +21,11 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 
 destination_room = "uid://bh73aq1b1bgs5"
 destination_entrace = "South"
 
+[node name="South" parent="Doorways/Entrances" unique_id=891237568 instance=ExtResource("1_gyif4")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 0.8, 5.5499997)
+destination_room = "uid://ccq0v0l6vofbg"
+destination_entrace = "North"
+
 [node name="Exits" type="Node" parent="Doorways" unique_id=1915629284]
 
 [node name="North" type="Marker3D" parent="Doorways/Exits" unique_id=1321505751]
