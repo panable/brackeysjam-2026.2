@@ -4,9 +4,18 @@
 [ext_resource type="PackedScene" uid="uid://c1aylrnw1jm4c" path="res://Scenes/Dungeons/door_portal.tscn" id="2_hq81v"]
 [ext_resource type="PackedScene" uid="uid://drww4s4kgmysq" path="res://Scenes/Rooms/Room59.tscn" id="3_ocrs4"]
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_g6lp7"]
+vertices = PackedVector3Array(3.7495556, 4.5, -6.500444, 3.7495556, 4.5, -5.500444, 4.2495556, 4.5, -5.500444, 4.2495556, 4.5, -6.500444, -21.500444, 5, -5.750444, -21.500444, 5, -2.000444, -21.000444, 5, -5.500444, 2.7495556, 5, -5.500444, 9.749556, 5, -5.500444, 5.9995556, 5, -5.500444, 9.499556, 5, -5.000444, 9.249556, 5, 5.499556, -14.750444, 5, 5.499556, 9.749556, 5, 5.749556, 4.4995556, 0.5, -4.250444, 4.2495556, 0.5, -4.750444, 3.4995556, 0.5, -4.250444, -4.5004444, 0.5, 0.99955606, -5.7504444, 0.5, 1.4995561, -5.7504444, 0.5, 4.499556, 4.7495556, 0.5, 4.249556, 4.2495556, 0.5, 3.499556, -5.7504444, 0.5, -4.500444, -5.7504444, 0.5, -1.7504439, -4.5004444, 0.5, -0.75044394, 8.499556, 0.5, -3.750444, 7.9995556, 0.5, -4.250444, 5.2495556, 0.5, 0.74955606, 7.2495556, 0.5, 0.74955606, 8.249556, 0.5, 1.7495561, 8.249556, 0.5, 3.999556, 4.2495556, 0.5, 1.9995561, -7.2504444, 0.5, -1.2504439, -17.500444, 0.5, -4.500444, -16.500444, 0.5, -3.500444, -7.2504444, 0.5, 0.99955606, -16.500444, 0.5, -1.7504439, -17.500444, 0.5, -0.75044394, -19.750444, 0.5, 4.499556, -19.500444, 0.5, -0.75044394, -20.500444, 0.5, -1.5004439, -20.500444, 0.5, 3.749556, -19.000444, 4, -1.7504439, -18.000444, 4, -1.7504439, -17.500444, 4, -2.500444, -18.000444, 4, -3.500444, -19.500444, 4, -3.000444, -21.750444, 5, 5.749556, -17.250444, 5, 5.749556, -21.500444, 5, 5.249556, -21.750444, 5, -1.7504439, 6.7495556, 4, 1.7495561, 5.7495556, 4, 1.7495561, 5.2495556, 4, 2.499556, 5.9995556, 4, 3.749556, 7.2495556, 4, 2.999556, -16.250444, 4.5, 5.499556, -16.250444, 4.5, 6.499556, -15.750444, 4.5, 6.499556, -15.750444, 4.5, 5.499556)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(6, 5, 4), PackedInt32Array(7, 6, 4), PackedInt32Array(10, 9, 8), PackedInt32Array(12, 11, 13), PackedInt32Array(11, 10, 13), PackedInt32Array(13, 10, 8), PackedInt32Array(16, 15, 14), PackedInt32Array(18, 17, 19), PackedInt32Array(19, 17, 21), PackedInt32Array(19, 21, 20), PackedInt32Array(23, 22, 24), PackedInt32Array(24, 22, 16), PackedInt32Array(14, 26, 25), PackedInt32Array(14, 25, 16), PackedInt32Array(16, 25, 27), PackedInt32Array(27, 25, 28), PackedInt32Array(25, 30, 29), PackedInt32Array(25, 29, 28), PackedInt32Array(31, 21, 16), PackedInt32Array(16, 21, 24), PackedInt32Array(24, 21, 17), PackedInt32Array(31, 16, 27), PackedInt32Array(23, 32, 22), PackedInt32Array(22, 32, 34), PackedInt32Array(22, 34, 33), PackedInt32Array(18, 19, 35), PackedInt32Array(35, 19, 36), PackedInt32Array(36, 19, 37), PackedInt32Array(37, 19, 38), PackedInt32Array(41, 40, 39), PackedInt32Array(41, 39, 38), PackedInt32Array(38, 39, 37), PackedInt32Array(34, 32, 36), PackedInt32Array(36, 32, 35), PackedInt32Array(43, 42, 44), PackedInt32Array(44, 42, 45), PackedInt32Array(45, 42, 46), PackedInt32Array(49, 48, 47), PackedInt32Array(49, 47, 50), PackedInt32Array(52, 51, 53), PackedInt32Array(53, 51, 55), PackedInt32Array(53, 55, 54), PackedInt32Array(59, 58, 56), PackedInt32Array(56, 58, 57)]
+
 [node name="Dungeon59" type="Node3D" unique_id=1947303618]
 script = ExtResource("1_k6qm1")
 room_id = "59"
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=552032072]
+navigation_mesh = SubResource("NavigationMesh_g6lp7")
+
+[node name="Room1" parent="NavigationRegion3D" unique_id=20324241 instance=ExtResource("3_ocrs4")]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1319119923]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -6, 25.145002, 0.008392632)
@@ -35,5 +44,3 @@ gizmo_extents = 0.26
 [node name="North" type="Marker3D" parent="Doorways/Exits" unique_id=320883750]
 transform = Transform3D(-2.1855695e-07, 0, -1, 0, 1, 0, 1, 0, -2.1855695e-07, 4.000002, 0.8, -4.4)
 gizmo_extents = 0.26
-
-[node name="Room1" parent="." unique_id=20324241 instance=ExtResource("3_ocrs4")]

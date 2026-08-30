@@ -4,9 +4,18 @@
 [ext_resource type="PackedScene" uid="uid://c1aylrnw1jm4c" path="res://Scenes/Dungeons/door_portal.tscn" id="2_o1ylv"]
 [ext_resource type="PackedScene" uid="uid://djyuhdoiv1sp8" path="res://Scenes/Rooms/Room30.tscn" id="3_o1ylv"]
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_g6lp7"]
+vertices = PackedVector3Array(-9.659198, 5, -13.595644, -9.659198, 5, -9.095644, -9.159198, 5, -13.345644, 9.090802, 5, -13.345644, 9.590802, 5, -1.095644, 9.590802, 5, -13.595644, -2.6591978, 0.5, -7.595644, -2.6591978, 0.5, -11.595644, -3.4091978, 0.5, -11.595644, -3.6591978, 0.5, -7.345644, -8.409198, 0.5, -3.845644, -7.659198, 0.5, -3.845644, -3.6591978, 0.5, -6.095644, -3.6591978, 0.5, -12.345644, -7.909198, 0.5, -12.345644, -8.409198, 0.5, -11.845644, -7.409198, 0.5, -3.345644, -2.9091978, 0.5, -5.595644, 6.840802, 0.5, -9.095644, 8.340802, 0.5, -9.845644, 8.090802, 0.5, -12.345644, 3.8408022, 0.5, -12.345644, 3.5908022, 0.5, -11.595644, -1.6591978, 0.5, -7.345644, -1.6591978, 0.5, -6.095644, 2.3408022, 0.5, -2.095644, 7.090802, 0.5, -4.345644, 3.3408022, 0.5, -2.095644, 7.840802, 1.75, -8.595644, 8.340802, 1.75, -4.845644, 8.340802, 1.75, -8.595644, 9.590802, 5, 5.654356, 9.590802, 5, 1.154356, 9.090802, 5, 5.404356, -9.159198, 5, 5.404356, -9.659198, 5, -6.845644, -9.659198, 5, 5.654356, -7.409198, 0.5, 0.404356, -7.159198, 0.5, 0.654356, -5.409198, 0.5, 0.404356, -4.659198, 0.5, 2.654356, -6.159198, 0.5, 3.654356, -6.159198, 0.5, 4.404356, -3.6591978, 0.5, 4.154356, -3.4091978, 0.5, 3.654356, -4.909198, 0.5, 0.904356, 2.0908022, 0.5, -0.345644, 2.5908022, 0.5, 3.654356, 2.8408022, 0.5, -0.095644, 4.840802, 0.5, 4.404356, 7.840802, 0.5, 4.404356, 8.340802, 0.5, 3.904356, 3.5908022, 0.5, -0.095644, 4.090802, 0.5, -1.595644, 7.340802, 0.5, -3.845644, 8.340802, 0.5, -3.845644, 4.090802, 0.5, -0.845644, -7.909198, 0.5, 1.154356, -8.409198, 0.5, 0.654356, -8.409198, 0.5, 3.904356, -7.909198, 0.5, 4.404356, -6.909198, 0.5, 3.654356, -7.909198, 0.5, 2.154356, -6.659198, 1.75, 1.654356, -6.409198, 1.75, 2.404356, -5.909198, 1.75, 2.154356, -5.909198, 1.75, 1.654356)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 5), PackedInt32Array(7, 6, 8), PackedInt32Array(8, 6, 9), PackedInt32Array(11, 10, 12), PackedInt32Array(12, 10, 9), PackedInt32Array(13, 8, 14), PackedInt32Array(14, 8, 15), PackedInt32Array(15, 8, 9), PackedInt32Array(15, 9, 10), PackedInt32Array(11, 12, 16), PackedInt32Array(16, 12, 17), PackedInt32Array(19, 18, 20), PackedInt32Array(20, 18, 22), PackedInt32Array(20, 22, 21), PackedInt32Array(7, 23, 6), PackedInt32Array(25, 24, 23), PackedInt32Array(18, 26, 22), PackedInt32Array(22, 26, 25), PackedInt32Array(22, 25, 23), PackedInt32Array(22, 23, 7), PackedInt32Array(26, 27, 25), PackedInt32Array(30, 29, 28), PackedInt32Array(33, 32, 31), PackedInt32Array(36, 35, 34), PackedInt32Array(34, 33, 36), PackedInt32Array(36, 33, 31), PackedInt32Array(38, 37, 39), PackedInt32Array(39, 37, 16), PackedInt32Array(44, 43, 40), PackedInt32Array(40, 43, 41), PackedInt32Array(41, 43, 42), PackedInt32Array(24, 25, 17), PackedInt32Array(17, 25, 46), PackedInt32Array(17, 46, 45), PackedInt32Array(45, 46, 44), PackedInt32Array(39, 16, 45), PackedInt32Array(45, 16, 17), PackedInt32Array(44, 40, 45), PackedInt32Array(48, 47, 46), PackedInt32Array(46, 47, 44), PackedInt32Array(51, 50, 49), PackedInt32Array(48, 52, 47), PackedInt32Array(47, 52, 49), PackedInt32Array(54, 53, 26), PackedInt32Array(26, 53, 27), PackedInt32Array(54, 55, 56), PackedInt32Array(56, 55, 52), PackedInt32Array(52, 55, 49), PackedInt32Array(49, 55, 51), PackedInt32Array(56, 53, 54), PackedInt32Array(38, 57, 37), PackedInt32Array(37, 57, 58), PackedInt32Array(60, 59, 61), PackedInt32Array(61, 59, 62), PackedInt32Array(41, 42, 61), PackedInt32Array(61, 42, 60), PackedInt32Array(57, 62, 58), PackedInt32Array(58, 62, 59), PackedInt32Array(65, 64, 66), PackedInt32Array(66, 64, 63)]
+
 [node name="Dungeon30" type="Node3D" unique_id=5581875]
 script = ExtResource("1_ph1e2")
 room_id = "30"
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=469530175]
+navigation_mesh = SubResource("NavigationMesh_g6lp7")
+
+[node name="Room1" parent="NavigationRegion3D" unique_id=20324241 instance=ExtResource("3_o1ylv")]
 
 [node name="Doorways" type="Node" parent="." unique_id=334973544]
 
@@ -35,5 +44,3 @@ gizmo_extents = 0.26
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1284092747]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 26.045, -4.021608)
 fov = 50.0
-
-[node name="Room1" parent="." unique_id=20324241 instance=ExtResource("3_o1ylv")]

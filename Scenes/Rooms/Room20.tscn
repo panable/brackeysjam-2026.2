@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://ifdygy2cgq0" path="res://Scenes/Rooms/Modular/1_floor.tscn" id="5_udrda"]
 [ext_resource type="PackedScene" uid="uid://d4b2nguo0nd6l" path="res://Scenes/Rooms/Modular/1_wall_3.tscn" id="6_md7lx"]
 [ext_resource type="PackedScene" uid="uid://bpnionfeo78xx" path="res://Scenes/Characters/Roger_c.tscn" id="7_dufld"]
-[ext_resource type="PackedScene" uid="uid://cyormjqtc1lkv" path="res://Models/Props/ShopkeepersStall.glb" id="10_udrda"]
 [ext_resource type="PackedScene" uid="uid://dfahhipsvky70" path="res://Scenes/Props/garden_bed_end.tscn" id="11_6jacq"]
+[ext_resource type="PackedScene" uid="uid://d2nm630byr03t" path="res://Scenes/Props/shopkeepers_stall.tscn" id="11_md7lx"]
 [ext_resource type="PackedScene" uid="uid://bupfud6p5qeo7" path="res://Scenes/Props/garden_bed_top.tscn" id="12_1sahl"]
 [ext_resource type="PackedScene" uid="uid://dxua8uourhn8q" path="res://Scenes/Props/rocks.tscn" id="13_1sahl"]
 
@@ -152,9 +152,6 @@ transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 7.99
 [node name="NPC2" parent="." unique_id=1288896559 instance=ExtResource("7_dufld")]
 transform = Transform3D(0.009612736, 0, 0.8499458, 0, 0.85000014, 0, -0.8499458, 0, 0.009612736, 0.9958814, 0, -9.156827)
 
-[node name="ShopkeepersStall" parent="." unique_id=1972246521 instance=ExtResource("10_udrda")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.9667886, 1.2133826, -6.740699)
-
 [node name="GardenBed_End2" parent="." unique_id=1917080842 instance=ExtResource("11_6jacq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9669798, 0, 3.7079468)
 
@@ -184,3 +181,6 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.06
 
 [node name="Rocks_" parent="." unique_id=1396706831 instance=ExtResource("13_1sahl")]
 transform = Transform3D(0.9995552, 0, 0.029823529, 0, 1, 0, -0.029823529, 0, 0.9995552, -3.4628909, -0.3151055, -3.441406)
+
+[node name="ShopkeepersStall" parent="." unique_id=1972246521 instance=ExtResource("11_md7lx")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.96030396, 1.2131385, -7.033203)

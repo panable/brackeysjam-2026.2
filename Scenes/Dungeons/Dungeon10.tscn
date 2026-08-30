@@ -4,15 +4,22 @@
 [ext_resource type="Script" uid="uid://dlwfb4ud68h73" path="res://Scripts/dungeon.gd" id="1_taai6"]
 [ext_resource type="PackedScene" uid="uid://c1aylrnw1jm4c" path="res://Scenes/Dungeons/door_portal.tscn" id="3_svprl"]
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_g6lp7"]
+vertices = PackedVector3Array(-9.698048, 4.9977036, -1.6956468, -9.698048, 4.9977036, 2.8043532, -9.198048, 4.9977036, -1.4456468, 17.051952, 4.9977036, -1.4456468, 17.551952, 4.9977036, 2.8043532, 17.551952, 4.9977036, -1.6956468, -0.94804764, 0.49770355, 3.8043532, -0.94804764, 0.49770355, 3.5543532, -2.1980476, 0.49770355, 3.3043532, -2.1980476, 0.49770355, 4.304353, -5.4480476, 0.49770355, 5.804353, -2.1980476, 0.49770355, 6.054353, -0.94804764, 0.49770355, 8.304354, -0.94804764, 0.49770355, 6.304353, -5.4480476, 0.49770355, 8.304354, -3.4480476, 0.49770355, 0.80435324, -3.4480476, 0.49770355, -0.44564676, -7.6980476, 0.49770355, -0.44564676, -8.448048, 0.49770355, 0.30435324, -8.448048, 0.49770355, 5.304353, -1.4480476, 1.9977036, -0.44564676, -2.4480476, 1.9977036, 0.054353237, -1.4480476, 1.9977036, 2.3043532, 1.3019524, 1.9977036, 1.3043532, 0.55195236, 1.9977036, -0.44564676, 0.55195236, 0.49770355, 4.304353, 2.3019524, 0.49770355, 1.8043532, 7.5519524, 0.49770355, 1.3043532, 8.801952, 0.49770355, 0.80435324, 8.801952, 0.49770355, -0.44564676, 1.8019524, 0.49770355, -0.44564676, 9.051952, 0.49770355, 4.804353, 9.051952, 0.49770355, 3.3043532, 7.5519524, 0.49770355, 3.0543532, 5.5519524, 0.49770355, 6.554353, 0.55195236, 0.49770355, 6.054353, 6.0519524, 0.49770355, 8.304354, 10.051952, 0.49770355, 3.0543532, 10.301952, 0.49770355, 5.304353, 10.051952, 0.49770355, 1.3043532, 12.801952, 0.49770355, -0.44564676, 13.801952, 0.49770355, 2.8043532, 11.551952, 0.49770355, 8.304354, 15.801952, 0.49770355, 8.304354, 16.301952, 0.49770355, 7.804353, 16.301952, 0.49770355, 2.3043532, 16.301952, 2.7477036, 1.3043532, 16.301952, 2.7477036, 0.30435324, 15.551952, 2.7477036, -0.44564676, 14.051952, 2.7477036, -0.44564676, 14.551952, 2.7477036, 1.8043532, 17.551952, 4.9977036, 9.554354, 17.551952, 4.9977036, 5.304353, 17.051952, 4.9977036, 9.304354, -9.198048, 4.9977036, 9.304354, -9.698048, 4.9977036, 5.304353, -9.698048, 4.9977036, 9.554354, 7.3019524, 1.9977036, 8.304354, 10.301952, 1.9977036, 8.304354, 9.301952, 1.9977036, 5.804353, 6.8019524, 1.9977036, 7.054353, -6.4480476, 1.7477036, 8.304354, -6.1980476, 1.7477036, 7.304353, -6.4480476, 1.7477036, 6.554353, -8.198048, 1.7477036, 6.554353, -7.9480476, 1.7477036, 8.304354)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 5), PackedInt32Array(7, 6, 8), PackedInt32Array(8, 6, 9), PackedInt32Array(9, 11, 10), PackedInt32Array(13, 12, 11), PackedInt32Array(11, 12, 10), PackedInt32Array(10, 12, 14), PackedInt32Array(15, 8, 9), PackedInt32Array(17, 16, 15), PackedInt32Array(17, 15, 18), PackedInt32Array(18, 15, 9), PackedInt32Array(18, 9, 10), PackedInt32Array(18, 10, 19), PackedInt32Array(20, 24, 21), PackedInt32Array(21, 24, 23), PackedInt32Array(21, 23, 22), PackedInt32Array(6, 7, 25), PackedInt32Array(25, 7, 26), PackedInt32Array(28, 27, 29), PackedInt32Array(29, 27, 26), PackedInt32Array(29, 26, 30), PackedInt32Array(32, 31, 33), PackedInt32Array(33, 31, 34), PackedInt32Array(13, 35, 12), PackedInt32Array(12, 35, 34), PackedInt32Array(12, 34, 36), PackedInt32Array(25, 26, 35), PackedInt32Array(35, 26, 34), PackedInt32Array(34, 26, 33), PackedInt32Array(33, 26, 27), PackedInt32Array(32, 37, 31), PackedInt32Array(31, 37, 38), PackedInt32Array(28, 29, 39), PackedInt32Array(39, 29, 40), PackedInt32Array(37, 39, 38), PackedInt32Array(38, 39, 41), PackedInt32Array(41, 39, 40), PackedInt32Array(43, 42, 44), PackedInt32Array(44, 42, 38), PackedInt32Array(44, 38, 41), PackedInt32Array(44, 41, 45), PackedInt32Array(47, 46, 48), PackedInt32Array(48, 46, 50), PackedInt32Array(48, 50, 49), PackedInt32Array(53, 52, 51), PackedInt32Array(56, 55, 54), PackedInt32Array(54, 53, 56), PackedInt32Array(56, 53, 51), PackedInt32Array(60, 59, 57), PackedInt32Array(57, 59, 58), PackedInt32Array(62, 61, 63), PackedInt32Array(63, 61, 65), PackedInt32Array(63, 65, 64)]
+
 [node name="Dungeon10" type="Node3D" unique_id=650768345]
 script = ExtResource("1_taai6")
 room_id = "10"
 
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=762400929]
+navigation_mesh = SubResource("NavigationMesh_g6lp7")
+
+[node name="Room1" parent="NavigationRegion3D" unique_id=20324241 instance=ExtResource("1_mg5yg")]
+
 [node name="Camera3D" type="Camera3D" parent="." unique_id=664843684]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 4, 22.489632, 4.008393)
 fov = 50.0
-
-[node name="Room1" parent="." unique_id=20324241 instance=ExtResource("1_mg5yg")]
 
 [node name="Doorways" type="Node" parent="." unique_id=217261677]
 
