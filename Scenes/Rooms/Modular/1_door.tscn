@@ -2,13 +2,21 @@
 
 [ext_resource type="PackedScene" uid="uid://di6mo7b41ij7r" path="res://Models/Rooms/1_Door.glb" id="1_5vye3"]
 [ext_resource type="Script" uid="uid://b43x8xdejti22" path="res://Scenes/Rooms/Modular/DoorController.gd" id="2_v0b5f"]
+[ext_resource type="Material" uid="uid://b8h84bmimt403" path="res://Materials/World/1_Wall.tres" id="3_v0b5f"]
+[ext_resource type="Material" uid="uid://dt64qgy52mk05" path="res://Materials/World/1_Floor.tres" id="4_xxiik"]
 [ext_resource type="PackedScene" uid="uid://b20i3q5ohpjh2" path="res://Scenes/Rooms/Modular/block_1.tscn" id="5_280ra"]
+[ext_resource type="Material" uid="uid://dmc448o3h632w" path="res://Materials/World/1_Rock.tres" id="5_i07uh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_25k0i"]
 size = Vector3(0.29174805, 5, 1)
 
 [node name="1_Door2" unique_id=144542780 groups=["door"] instance=ExtResource("1_5vye3")]
 script = ExtResource("2_v0b5f")
+
+[node name="1_Door" parent="." index="0" unique_id=1625854138]
+surface_material_override/0 = ExtResource("3_v0b5f")
+surface_material_override/1 = ExtResource("4_xxiik")
+surface_material_override/2 = ExtResource("5_i07uh")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=212749794]
 

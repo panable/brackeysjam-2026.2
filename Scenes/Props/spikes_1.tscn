@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dy1t70csg3578"]
+
+[ext_resource type="PackedScene" uid="uid://c5v0q7wncwl88" path="res://Models/Props/spikes1.glb" id="1_0yarv"]
+[ext_resource type="Material" uid="uid://dmc448o3h632w" path="res://Materials/World/1_Rock.tres" id="2_kwjwh"]
+
+[node name="spikes1" unique_id=113535369 instance=ExtResource("1_0yarv")]
+
+[node name="Spikes_1" parent="." index="0" unique_id=1724492520]
+surface_material_override/0 = ExtResource("2_kwjwh")

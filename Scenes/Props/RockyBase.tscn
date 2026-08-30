@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bop00sdgunrhj"]
+
+[ext_resource type="PackedScene" uid="uid://domnh6uulrtnk" path="res://Models/Props/GardenBed_Top..glb" id="1_o0cuk"]
+[ext_resource type="Material" uid="uid://dmc448o3h632w" path="res://Materials/World/1_Rock.tres" id="2_8udmg"]
+
+[node name="GardenBed_Top_" unique_id=1409558810 instance=ExtResource("1_o0cuk")]
+
+[node name="GardenBed_Top" parent="." index="0" unique_id=506173627]
+surface_material_override/0 = ExtResource("2_8udmg")
+surface_material_override/1 = ExtResource("2_8udmg")

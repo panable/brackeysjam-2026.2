@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cce4ge2djaxmp"]
+
+[ext_resource type="PackedScene" uid="uid://ce5fb6ydqxjbj" path="res://Models/Props/spikes2.glb" id="1_7tcte"]
+[ext_resource type="Material" uid="uid://dmc448o3h632w" path="res://Materials/World/1_Rock.tres" id="2_kdh81"]
+
+[node name="spikes2" unique_id=623965165 instance=ExtResource("1_7tcte")]
+
+[node name="Cube_007" parent="." index="0" unique_id=179481183]
+surface_material_override/0 = ExtResource("2_kdh81")
