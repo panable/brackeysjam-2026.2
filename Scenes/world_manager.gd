@@ -5,6 +5,12 @@ extends Node
 @export
 var current_dungeon: Dungeon
 
+func _process(delta: float) -> void:
+	var doors := get_tree().get_nodes_in_group("door")
+	var enemies := get_tree().get_nodes_in_group("enemies")
+	
+	doors.get
+
 func transition_dungeon(destination_room: String, destination_entrace: String):
 	playa.set_collision_layer_value(3, false)
 	playa.set_collision_layer_value(1, false)

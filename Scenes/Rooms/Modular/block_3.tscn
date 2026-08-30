@@ -283,7 +283,7 @@ transform = Transform3D(6.3752665e-08, 1.0695922, 0, -1.0695922, 6.3752665e-08, 
 transform = Transform3D(2.4974675, 0, 0, 0, 0.5126374, 0, 0, 0, 2.0379674, 1.3363436, 1.4451154, 0)
 shape = SubResource("BoxShape3D_jw7ag")
 
-[node name="Block" parent="." index="1" unique_id=1331121976]
+[node name="Block" parent="." index="1" unique_id=943159757]
 transform = Transform3D(8.075197e-08, 1.0695922, 0, -1.0695922, 8.075197e-08, 0, 0, 0, 1.0695922, 0, 2.7, 0)
 surface_material_override/0 = ExtResource("2_s0wxh")
 

@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://htmoi7p4qthw" path="res://Scenes/Enemies/stump.gd" id="4_bhnw4"]
 [ext_resource type="Texture2D" uid="uid://c7oyhejvt7mk8" path="res://kenney_prototype-textures/PNG/Dark/texture_04.png" id="5_xufpc"]
 [ext_resource type="PackedScene" uid="uid://cjptpwhndlxt4" path="res://Scenes/Enemies/goblin-ai.tscn" id="6_k8ry5"]
+[ext_resource type="PackedScene" uid="uid://3urgup52qxha" path="res://Scenes/Enemies/stump-ai.tscn" id="7_bhnw4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bhnw4"]
 albedo_texture = ExtResource("2_1wjec")
@@ -313,4 +314,8 @@ light_energy = 2.912
 omni_range = 23.0
 
 [node name="gb_ai" parent="." unique_id=1753076045 instance=ExtResource("6_k8ry5")]
+process_mode = 4
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 8.6, 1.4, 0)
+
+[node name="StumpAi" parent="." unique_id=1757472003 instance=ExtResource("7_bhnw4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2.6, 0)

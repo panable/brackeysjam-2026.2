@@ -11,7 +11,7 @@ size = Vector3(1, 3.055, 1.368)
 [sub_resource type="SphereShape3D" id="SphereShape3D_g6lp7"]
 radius = 0.659
 
-[node name="gb_ai" type="Node3D" unique_id=1753076045]
+[node name="gb_ai" type="Node3D" unique_id=1753076045 groups=["enemy"]]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1064028992]
