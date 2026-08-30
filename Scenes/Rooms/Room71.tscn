@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://byohrhhl6x0qp" path="res://Scenes/Rooms/Props/rail.tscn" id="5_ljci2"]
 [ext_resource type="PackedScene" uid="uid://cnmboopidlwfr" path="res://Scenes/Rooms/Props/rail_end.tscn" id="6_vg036"]
 [ext_resource type="PackedScene" uid="uid://dou637n1qtmim" path="res://Scenes/Rooms/Props/cart.tscn" id="7_j63an"]
+[ext_resource type="PackedScene" uid="uid://ca4wyfus167vr" path="res://Scenes/Props/rubble.tscn" id="8_yiwwe"]
+[ext_resource type="PackedScene" uid="uid://dpw0hv3nl41uq" path="res://Scenes/Props/crystal.tscn" id="9_jvqr3"]
+[ext_resource type="PackedScene" uid="uid://cv2pjqyd5xd1h" path="res://Scenes/Props/rocks_3.tscn" id="10_rj3ff"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -110,3 +113,36 @@ transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, -1
 
 [node name="Cart2" parent="3_Door3" unique_id=239849045 instance=ExtResource("7_j63an")]
 transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, -1.6093247e-06, 0, 1.9999971)
+
+[node name="Rubble" parent="." unique_id=1547588693 instance=ExtResource("8_yiwwe")]
+transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, -7.8497314, 0.09312766, -0.013110428)
+
+[node name="Crystal" parent="." unique_id=260263892 instance=ExtResource("9_jvqr3")]
+transform = Transform3D(-0.489292, 0, 0.10292405, 0, 0.5, 0, -0.10292405, 0, -0.489292, -7.956978, 0.22875977, -2.3744721)
+
+[node name="Crystal2" parent="." unique_id=2006272555 instance=ExtResource("9_jvqr3")]
+transform = Transform3D(-0.489292, 0, 0.10292405, 0, 0.5, 0, -0.10292405, 0, -0.489292, -7.956978, 0.22875977, 2.2109275)
+
+[node name="Rocks_9" parent="Crystal2" unique_id=1396706831 instance=ExtResource("10_rj3ff")]
+transform = Transform3D(-2.9922993, 0, 0.4826408, 0, 0.22423841, 0, -0.6682571, 0, -2.1611547, -30.335737, -0.15552908, 2.3934364)
+
+[node name="Rocks_10" parent="Crystal2" unique_id=1296996941 instance=ExtResource("10_rj3ff")]
+transform = Transform3D(-1.6624923, 0, 1.8605942, 0, 0.2242384, 0, -2.576149, 0, -1.2007164, -32.5291, -0.15552908, 4.576067)
+
+[node name="Rocks_11" parent="Crystal2" unique_id=1598707499 instance=ExtResource("10_rj3ff")]
+transform = Transform3D(-1.5398645, 0, -1.9148506, 0, 0.22423838, 0, 2.6512716, 0, -1.1121496, -32.15106, -0.15552908, 6.373223)
+
+[node name="Rocks_12" parent="Crystal2" unique_id=1163864725 instance=ExtResource("10_rj3ff")]
+transform = Transform3D(-0.51265, 0, -2.1832187, 0, 0.22423841, 0, 3.0228486, 0, -0.37025532, -29.537773, -0.15552908, 17.214584)
+
+[node name="Rocks_13" parent="Crystal2" unique_id=895539270 instance=ExtResource("10_rj3ff")]
+transform = Transform3D(-2.4867456, 0, -1.2953103, 0, 0.22423838, 0, 1.793465, 0, -1.7960237, -27.24466, -0.15552908, 19.29216)
+
+[node name="Rocks_14" parent="Crystal2" unique_id=432954304 instance=ExtResource("10_rj3ff")]
+transform = Transform3D(2.7273421, 0, -1.011657, 0, 0.22423835, 0, 1.4007239, 0, 1.9697917, -25.469452, -0.15552908, 18.821705)
+
+[node name="Rocks_2" parent="Crystal2" unique_id=1520591130 instance=ExtResource("10_rj3ff")]
+transform = Transform3D(-1.5781326, 0, -0.24990106, 0, 1, 0, 0.27482483, 0, -1.4350117, -31.48928, -0.42799002, 4.1949635)
+
+[node name="Rocks_3" parent="Crystal2" unique_id=473165062 instance=ExtResource("10_rj3ff")]
+transform = Transform3D(-0.7484859, 0, 1.2878217, 0, 1, 0, -1.4162626, 0, -0.6806059, -28.644482, -0.42799002, 17.718872)

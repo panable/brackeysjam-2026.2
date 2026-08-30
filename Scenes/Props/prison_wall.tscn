@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ckwwvqljghwbc"]
+
+[ext_resource type="PackedScene" uid="uid://oj8wybo8e07g" path="res://Models/Props/PrisonWall.glb" id="1_8biw4"]
+[ext_resource type="Material" uid="uid://br8rjlueft0wl" path="res://Materials/World/3_Rock.tres" id="2_y1bsx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jw7ag"]
+
+[node name="PrisonWall2" unique_id=174829349 instance=ExtResource("1_8biw4")]
+
+[node name="Cube" parent="." index="0" unique_id=267322723]
+material_override = ExtResource("2_y1bsx")
+
+[node name="PrisonWall" parent="." index="1" unique_id=57881453]
+material_override = ExtResource("2_y1bsx")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=1019603245]
+transform = Transform3D(4.453774, 0, 0, 0, 8.020912, 0, 0, 0, 1, -2, 3.4723604, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=666027895]
+shape = SubResource("BoxShape3D_jw7ag")

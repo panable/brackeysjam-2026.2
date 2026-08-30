@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://bs46jlrf2dn4l" path="res://Scenes/Rooms/Modular/3_door.tscn" id="4_ohyd8"]
 [ext_resource type="PackedScene" uid="uid://suq7lh4cw26p" path="res://Scenes/Rooms/Modular/3_step_down.tscn" id="5_3oi3x"]
 [ext_resource type="PackedScene" uid="uid://dn34fdfm84ro6" path="res://Scenes/Rooms/Modular/3_step_up.tscn" id="5_cank1"]
+[ext_resource type="PackedScene" uid="uid://ca4wyfus167vr" path="res://Scenes/Props/rubble.tscn" id="7_3oi3x"]
+[ext_resource type="PackedScene" uid="uid://dpw0hv3nl41uq" path="res://Scenes/Props/crystal.tscn" id="8_8t0he"]
+[ext_resource type="PackedScene" uid="uid://dt6egi67qw2ix" path="res://Scenes/Enemies/scorpion-ai.tscn" id="9_3u8pj"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -160,3 +163,18 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16, 
 
 [node name="1_StepDown2" parent="." unique_id=627106933 instance=ExtResource("5_3oi3x")]
 transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -8, 0, -3.9999993)
+
+[node name="Rubble" parent="." unique_id=1547588693 instance=ExtResource("7_3oi3x")]
+transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 15.800127, 0.09307807, 3.668972)
+
+[node name="Rubble2" parent="." unique_id=1318762838 instance=ExtResource("7_3oi3x")]
+transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, -7.998524, 0.09307807, -3.2830975)
+
+[node name="Crystal" parent="." unique_id=260263892 instance=ExtResource("8_8t0he")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -11.128519, -0.28087544, 2.9998884)
+
+[node name="Crystal2" parent="." unique_id=1534799977 instance=ExtResource("8_8t0he")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.818209, -0.28087544, -2.8854606)
+
+[node name="ScorpionAi" parent="." unique_id=1412398291 instance=ExtResource("9_3u8pj")]
+transform = Transform3D(-0.20705539, 0, 0.7727406, 0, 0.8, 0, -0.7727406, 0, -0.20705539, 4.188369, 0.050001144, 0.09320485)
