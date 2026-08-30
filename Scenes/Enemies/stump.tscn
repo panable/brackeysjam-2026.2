@@ -46,28 +46,21 @@ graph_offset = Vector2(-39.59977, -92.92496)
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
 
 [node name="Skeleton3D" parent="Stump" parent_id_path=PackedInt32Array(1967349781) index="0" unique_id=2139140877]
-bones/0/position = Vector3(2.8385231e-14, 0.8595066, -0.048871994)
-bones/0/rotation = Quaternion(-0.11124121, -1.9349875e-07, 2.1659469e-08, 0.9937935)
-bones/1/position = Vector3(0.8880743, 1.4459239, -1.5148343)
-bones/1/rotation = Quaternion(0.60368526, -2.597681e-07, -1.9670566e-07, 0.79722273)
-bones/2/position = Vector3(0.8880743, 0.6611895, -1.3207321)
-bones/2/rotation = Quaternion(0.736308, -2.2047948e-07, -2.3991961e-07, 0.6766466)
-bones/3/position = Vector3(-0.9033859, 1.4459239, -1.5148343)
-bones/3/rotation = Quaternion(0.60368526, -2.597681e-07, -1.9670566e-07, 0.79722273)
-bones/4/position = Vector3(-0.9033859, 0.6611895, -1.3207321)
-bones/4/rotation = Quaternion(0.736308, -2.2047948e-07, -2.3991961e-07, 0.6766466)
+bones/0/rotation = Quaternion(0.7071068, -1.3767878e-07, -1.3767878e-07, 0.7071068)
+bones/1/position = Vector3(0.8880743, 1.3521674, 0.568844)
+bones/2/position = Vector3(0.8880743, 1.4164187, -0.739685)
+bones/2/rotation = Quaternion(0.9999018, 0.014016147, -3.2580934e-07, -4.567041e-09)
+bones/3/position = Vector3(-0.9033859, 1.4164187, 0.3264117)
+bones/3/rotation = Quaternion(0.9999018, -0.014016147, -3.2580934e-07, 4.567041e-09)
+bones/4/position = Vector3(-0.9033859, 1.3521674, -0.47806352)
 
 [node name="Cube_088" parent="Stump/Skeleton3D" index="0" unique_id=755246616]
 surface_material_override/0 = ExtResource("2_6iuxx")
 surface_material_override/1 = ExtResource("3_d04fb")
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=1761814598]
-active = false
-
 [node name="AnimationTree" type="AnimationTree" parent="." index="2" unique_id=392594318]
-active = false
 tree_root = SubResource("AnimationNodeStateMachine_lpjj2")
 anim_player = NodePath("../AnimationPlayer")
-parameters/conditions/is_dead = true
+parameters/conditions/is_dead = false
 parameters/conditions/is_idle = false
 parameters/conditions/is_moving = true

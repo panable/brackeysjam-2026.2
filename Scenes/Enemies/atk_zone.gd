@@ -24,7 +24,7 @@ func _on_body_entered(body: Node3D) -> void:
 	player = body as Player
 	player_inside = true
 
-	damage_player()
+	#damage_player()
 
 
 func _on_body_exited(body: Node3D) -> void:
@@ -32,7 +32,7 @@ func _on_body_exited(body: Node3D) -> void:
 	player_inside = false
 	player = null
 
-	reset_damage_cooldown()
+	#reset_damage_cooldown()
 
 
 func damage_player() -> void:

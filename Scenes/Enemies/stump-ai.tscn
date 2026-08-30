@@ -2,11 +2,17 @@
 
 [ext_resource type="Script" uid="uid://c738g213hjc2b" path="res://Scenes/Enemies/stump_ai.gd" id="1_7f3ae"]
 [ext_resource type="PackedScene" uid="uid://d2stvqam04qmw" path="res://Scenes/Enemies/stump.tscn" id="1_yrbwk"]
+[ext_resource type="Script" uid="uid://c8drn2k102qjw" path="res://Scenes/Enemies/enemy_health.gd" id="3_7aw4x"]
+[ext_resource type="Script" uid="uid://dnkqgxaqcrgsd" path="res://Scenes/Enemies/rotater.gd" id="3_hp336"]
+[ext_resource type="Script" uid="uid://ct04ulfwrf23h" path="res://Scenes/Enemies/atk_zone.gd" id="4_hp336"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_7f3ae"]
-size = Vector3(1, 1, 0.7010498)
+[sub_resource type="SphereShape3D" id="SphereShape3D_jjfjr"]
+radius = 0.827
 
-[node name="StumpAi" type="Node3D" unique_id=1757472003]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g6lp7"]
+radius = 0.6269531
+
+[node name="stump-ai" type="Node3D" unique_id=1757472003 groups=["enemy"]]
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1566555838]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.33273494, 0)
@@ -14,11 +20,30 @@ collision_layer = 3
 wall_min_slide_angle = 0.19373155
 script = ExtResource("1_7f3ae")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1125136303]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9150194, 0.1494751)
-shape = SubResource("BoxShape3D_7f3ae")
-
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="CharacterBody3D" unique_id=96493979]
 
 [node name="stump" parent="CharacterBody3D" unique_id=250468708 instance=ExtResource("1_yrbwk")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0.5305908, 0)
+script = ExtResource("3_hp336")
+
+[node name="EnemyHealth" type="Node" parent="CharacterBody3D" unique_id=1748695435 node_paths=PackedStringArray("free_me")]
+script = ExtResource("3_7aw4x")
+free_me = NodePath("../..")
+
+[node name="AtkZone" type="Area3D" parent="CharacterBody3D" unique_id=1243734673]
+transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 0.28436708, -0.27391028)
+collision_mask = 4
+script = ExtResource("4_hp336")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D/AtkZone" unique_id=2083080044]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 0.83333313, 0.16666666)
+shape = SubResource("SphereShape3D_jjfjr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1897629769]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2847967, 0)
+shape = SubResource("CapsuleShape3D_g6lp7")
+
+[connection signal="area_entered" from="CharacterBody3D/AtkZone" to="CharacterBody3D/AtkZone" method="_on_area_entered"]
+[connection signal="area_exited" from="CharacterBody3D/AtkZone" to="CharacterBody3D/AtkZone" method="_on_area_exited"]
+[connection signal="body_entered" from="CharacterBody3D/AtkZone" to="CharacterBody3D/AtkZone" method="_on_body_entered"]
+[connection signal="body_exited" from="CharacterBody3D/AtkZone" to="CharacterBody3D/AtkZone" method="_on_body_exited"]

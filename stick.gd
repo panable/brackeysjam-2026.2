@@ -1,6 +1,8 @@
 extends MeshInstance3D
 
 @onready var collision_shape_3d: CollisionShape3D = $Area3D/CollisionShape3D
+const MONEY = preload("uid://btgvq5f64h3as")
+const PLAYER_INVENTORY = preload("uid://cib86xegispic")
 
 var attacking := false
 var attack_on_cooldown := false
@@ -32,6 +34,9 @@ func _ready() -> void:
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if "enemy_health" in body:
 		body.enemy_health.take_damage(1)
+		if body.enemy_health.is_dead():
+			PLAYER_INVENTORY.add_item(MONEY, 2)
+			print("kiling blow")
 
 
 func activate_col() -> void:
