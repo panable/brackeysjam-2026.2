@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dgvew44vrd1d1" path="res://Scenes/UI/DialogueUI.tscn" id="4_b8e2k"]
 [ext_resource type="PackedScene" uid="uid://cqwwipxbfupi7" path="res://Scenes/UI/InventoryUI.tscn" id="5_b8e2k"]
 [ext_resource type="Script" uid="uid://cm1kephfla6ju" path="res://Scenes/health-tracka.gd" id="5_mb8r7"]
-[ext_resource type="PackedScene" uid="uid://dbrdh2jkvtrhv" path="res://Scenes/Dungeons/Dungeon10.tscn" id="6_mb8r7"]
+[ext_resource type="PackedScene" uid="uid://c46iv1yhdp6o8" path="res://Scenes/Dungeons/Dungeon1.tscn" id="6_mb8r7"]
 
 [sub_resource type="Environment" id="Environment_t1osg"]
 background_mode = 1
@@ -29,7 +29,7 @@ volumetric_fog_sky_affect = 0.266
 
 [node name="WorldManager" type="Node" parent="." unique_id=311855638 node_paths=PackedStringArray("current_dungeon")]
 script = ExtResource("1_mub7f")
-current_dungeon = NodePath("../Dungeon10")
+current_dungeon = NodePath("../Dungeon1")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=444365118]
 environment = SubResource("Environment_t1osg")
@@ -50,4 +50,4 @@ script = ExtResource("5_mb8r7")
 [node name="InventoryUI" parent="." unique_id=1610134888 instance=ExtResource("5_b8e2k")]
 mouse_filter = 2
 
-[node name="Dungeon10" parent="." unique_id=650768345 instance=ExtResource("6_mb8r7")]
+[node name="Dungeon1" parent="." unique_id=535005868 instance=ExtResource("6_mb8r7")]
