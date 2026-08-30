@@ -1,0 +1,31 @@
+{
+	"room_9_default": {
+		"speaker": "Time Knight",
+		"content": "You're still here? I mean, we just met, but frankly, you should've escaped by now. I would have. Obviously. Do better, kid."
+	},
+
+	"room_9_flower_planted": {
+		"speaker": "Time Knight",
+		"content": "What, you needed some extra motivation from a plant? Couldn't figure it out, so needed some words of encouragement? Weak. I'd have escaped 3 times over by now."
+	},
+
+	"room_24": {
+		"speaker": "Time Knight",
+		"content": "Idiot, what're you still doing here? Haven't figured out where the exit is yet? It's laughable, really, I've actually been out of the dungeon since I last saw you, it's that easy for me. I bet you'll try walking on the spikes too. Idiot."
+	},
+
+	"room_28": {
+		"speaker": "Time Knight",
+		"content": "I just had a word with the Dungeon Master, and we both agree that you're an incompetent buffoon. Honestly, it's not even a hard dungeon, and yet you're here, waiting? You're a joke, honestly. My grandmother escapes dungeons better than you."
+	},
+
+	"room_47": {
+		"speaker": "Time Knight",
+		"content": "Congratulations, you found the Dungeon Master... AFTER A MILLENNIA! Frankly, I'm shocked he's even still alive down here with how long you took to arrive. Honestly, I'd have caught him before he had even taken off running, but obviously I'm a much superior specimen than yourself."
+	},
+
+	"room_68": {
+		"speaker": "Time Knight",
+		"content": "This course is child's play. For me at least, I'm sure it'll take you 30,000 attempts to beat it. Don't worry, I'll help speed up your attempts with this tip... give up. You suck."
+	}
+}

@@ -7,8 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://ifdygy2cgq0" path="res://Scenes/Rooms/Modular/1_floor.tscn" id="5_udrda"]
 [ext_resource type="PackedScene" uid="uid://d4b2nguo0nd6l" path="res://Scenes/Rooms/Modular/1_wall_3.tscn" id="6_md7lx"]
 [ext_resource type="PackedScene" uid="uid://bpnionfeo78xx" path="res://Scenes/Characters/Roger_c.tscn" id="7_dufld"]
-[ext_resource type="PackedScene" uid="uid://dehhhxdb5u4b8" path="res://Scenes/shop_table.tscn" id="8_kipmh"]
-[ext_resource type="PackedScene" uid="uid://cgkswireprm2k" path="res://Scenes/UI/shop_ui.tscn" id="9_wiyv2"]
 [ext_resource type="PackedScene" uid="uid://cyormjqtc1lkv" path="res://Models/Props/ShopkeepersStall.glb" id="10_udrda"]
 [ext_resource type="PackedScene" uid="uid://dfahhipsvky70" path="res://Scenes/Props/garden_bed_end.tscn" id="11_6jacq"]
 [ext_resource type="PackedScene" uid="uid://bupfud6p5qeo7" path="res://Scenes/Props/garden_bed_top.tscn" id="12_1sahl"]
@@ -151,14 +149,8 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.99
 [node name="1_Wall33" parent="." unique_id=1307739775 instance=ExtResource("6_md7lx")]
 transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 7.9977484, 0, -11.9942875)
 
-[node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("7_dufld")]
-transform = Transform3D(-0.0013937005, 0, 0.84999883, 0, 0.85, 0, -0.84999883, 0, -0.0013937005, 1.0080137, 0.023265898, -9.166532)
-
-[node name="ShopTable" parent="." unique_id=842737196 node_paths=PackedStringArray("shop_ui") instance=ExtResource("8_kipmh")]
-transform = Transform3D(-0.0011158948, 0, -1.8973957, 0, 1.4592018, 0, 1.0008461, 0, -0.002115504, 5.8201456, 0.9598243, -9.598855)
-shop_ui = NodePath("../ShopUI")
-
-[node name="ShopUI" parent="." unique_id=602414720 instance=ExtResource("9_wiyv2")]
+[node name="NPC2" parent="." unique_id=1288896559 instance=ExtResource("7_dufld")]
+transform = Transform3D(0.009612736, 0, 0.8499458, 0, 0.85000014, 0, -0.8499458, 0, 0.009612736, 0.9958814, 0, -9.156827)
 
 [node name="ShopkeepersStall" parent="." unique_id=1972246521 instance=ExtResource("10_udrda")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.9667886, 1.2133826, -6.740699)

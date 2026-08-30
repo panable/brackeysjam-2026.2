@@ -205,6 +205,10 @@ movie_quit_on_finish = true
 
 [node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("7_qwr6g")]
 transform = Transform3D(-0.3683601, 0, -0.47361478, 0, 0.6, 0, 0.47361478, 0, -0.3683601, 7.25155, -0.000383541, 7.190933)
+entry_name = "room_9_default"
+condition_flag = "flower_planted"
+false_entry = "room_9_default"
+true_entry = "room_9_flower_planted"
 
 [node name="NPC2" parent="." unique_id=1446091811 instance=ExtResource("8_s6wtv")]
 transform = Transform3D(0.48498872, 0, 0.35325044, 0, 0.5999998, 0, -0.35325044, 0, 0.48498872, 1.3645178, -0.0117558725, -2.8287332)

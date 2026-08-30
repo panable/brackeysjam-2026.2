@@ -194,6 +194,7 @@ transform = Transform3D(-1, 4.3711392e-08, -8.742279e-08, 4.3711385e-08, 1, 4.37
 
 [node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("8_0jyu7")]
 transform = Transform3D(0.59815687, 1.1409545e-08, -0.04699325, -1.5278214e-08, 0.59999996, -4.8795123e-08, 0.04699325, 4.984185e-08, 0.59815687, -6.739616, -0.0027110018, 12.123648)
+entry_name = "room_28"
 
 [node name="NPC2" parent="." unique_id=589014949 instance=ExtResource("9_e7vj6")]
 transform = Transform3D(-0.69709605, 0, -0.48637167, 0, 0.8500005, 0, 0.48637167, 0, -0.69709605, 8.1814995, 0.013831347, 14.502631)

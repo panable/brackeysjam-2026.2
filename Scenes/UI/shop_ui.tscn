@@ -22,7 +22,7 @@ shop_slot_scene = ExtResource("2_6hyjo")
 offers = Array[ExtResource("3_0c1cl")]([ExtResource("4_dlcd5"), ExtResource("5_larpm"), ExtResource("6_j7lj3"), ExtResource("7_v0jyl"), ExtResource("8_0esbl"), ExtResource("9_xi8hg")])
 
 [node name="ShopPanel" type="PanelContainer" parent="." unique_id=879877566]
-custom_minimum_size = Vector2(650, 420)
+custom_minimum_size = Vector2(700, 600)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -55,6 +55,7 @@ columns = 3
 [node name="DescriptionPanel" type="PanelContainer" parent="ShopPanel/VBoxContainer" unique_id=1273091450]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
+size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ShopPanel/VBoxContainer/DescriptionPanel" unique_id=1535695001]
 layout_mode = 2
@@ -66,9 +67,12 @@ text = "Select an item"
 [node name="Description" type="Label" parent="ShopPanel/VBoxContainer/DescriptionPanel/VBoxContainer" unique_id=543284885]
 layout_mode = 2
 text = "Take a look around."
+vertical_alignment = 3
+autowrap_mode = 3
 
 [node name="ButtonRow" type="HBoxContainer" parent="ShopPanel/VBoxContainer" unique_id=2015745836]
 layout_mode = 2
+size_flags_horizontal = 4
 
 [node name="BuyButton" type="Button" parent="ShopPanel/VBoxContainer/ButtonRow" unique_id=1420222874]
 layout_mode = 2

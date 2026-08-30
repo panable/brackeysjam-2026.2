@@ -509,3 +509,4 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.0
 
 [node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("7_3d4pl")]
 transform = Transform3D(-0.27522838, 0, 0.5331503, 0, 0.59999985, 0, -0.5331503, 0, -0.27522838, -2.9943738, -0.0006208904, 14.8537855)
+entry_name = "room_24"
