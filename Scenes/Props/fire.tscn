@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cd76bu13geqfm"]
+
+[ext_resource type="PackedScene" uid="uid://b38bbx7odfcc" path="res://Models/Props/Fire.glb" id="1_ppeke"]
+[ext_resource type="Material" uid="uid://br51a6u1qm0sx" path="res://Materials/Characters/DarkGrey.tres" id="2_qku5n"]
+[ext_resource type="Material" uid="uid://b6q7v82himcm3" path="res://Materials/Characters/DarkBrown.tres" id="3_538c8"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_jw7ag"]
+
+[node name="Fire" unique_id=1246189208 instance=ExtResource("1_ppeke")]
+
+[node name="Icosphere_006" parent="." index="0" unique_id=29502595]
+surface_material_override/0 = ExtResource("2_qku5n")
+
+[node name="Cube_020" parent="." index="1" unique_id=69700922]
+surface_material_override/0 = ExtResource("3_538c8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=415809521]
+transform = Transform3D(3.1000001, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0.60800135, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=280580493]
+shape = SubResource("CylinderShape3D_jw7ag")

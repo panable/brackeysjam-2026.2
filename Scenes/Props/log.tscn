@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bihrt71x45qae"]
+
+[ext_resource type="PackedScene" uid="uid://4l0lguxblve2" path="res://Models/Props/Log.glb" id="1_w3qxo"]
+[ext_resource type="Material" uid="uid://b6q7v82himcm3" path="res://Materials/Characters/DarkBrown.tres" id="2_r86wv"]
+[ext_resource type="Material" uid="uid://dkmwns4hpp04k" path="res://Materials/Characters/LightBrown.tres" id="3_88dgc"]
+
+[node name="Log" unique_id=1143538468 instance=ExtResource("1_w3qxo")]
+
+[node name="Cube_011" parent="." index="0" unique_id=1422391198]
+surface_material_override/0 = ExtResource("2_r86wv")
+surface_material_override/1 = ExtResource("3_88dgc")

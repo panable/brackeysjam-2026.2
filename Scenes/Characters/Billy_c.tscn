@@ -8,3 +8,6 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
 npc_name = "Billy"
 
 [node name="Billy2" parent="ModelRoot" parent_id_path=PackedInt32Array(2030884967) index="0" unique_id=188099636 instance=ExtResource("2_7280a")]
+
+[node name="CollisionShape3D" parent="Area3D" parent_id_path=PackedInt32Array(516356364) index="0" unique_id=377420007]
+transform = Transform3D(1.3567377, 0, 0, 0, 0.99999976, 0, 0, 0, 1.9511678, 0, 0.99999976, 3.7376091)
