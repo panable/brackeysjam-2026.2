@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://b5i57i5272y5q" path="res://Scenes/Rooms/Modular/2_wall_1.tscn" id="5_8hpkl"]
 [ext_resource type="PackedScene" uid="uid://c2u5irowtr2df" path="res://Scenes/Rooms/Modular/2_step_down.tscn" id="6_5xhap"]
 [ext_resource type="PackedScene" uid="uid://bd3non2fknhba" path="res://Scenes/Characters/Skittles_c.tscn" id="7_6381c"]
+[ext_resource type="PackedScene" uid="uid://dimut542fwbua" path="res://Scenes/Props/rug.tscn" id="8_tq3lv"]
+[ext_resource type="PackedScene" uid="uid://cma8jqk36acsy" path="res://Scenes/Props/barrell.tscn" id="9_xgumm"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -119,3 +121,24 @@ transform = Transform3D(-4.3711395e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711395e-08, -1
 
 [node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("7_6381c")]
 transform = Transform3D(-0.6, 0, -5.2453668e-08, 0, 0.6, 0, 5.2453668e-08, 0, -0.6, -6.0353622, 0.024457574, 2.8930564)
+
+[node name="Rug" parent="." unique_id=1590738221 instance=ExtResource("8_tq3lv")]
+transform = Transform3D(-8.969526, 0, -1.4562964e-07, 0, 1, 0, 7.8414087e-07, 0, -1.6658089, -2, 0, 1.7484555e-07)
+
+[node name="Barrell" parent="." unique_id=1857609700 instance=ExtResource("9_xgumm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.1302534, 0.0501709, -4.4765697)
+
+[node name="Barrell3" parent="." unique_id=995804088 instance=ExtResource("9_xgumm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.849568, 1.4280396, -4.4765697)
+
+[node name="Barrell2" parent="." unique_id=2076549702 instance=ExtResource("9_xgumm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.603395, 0.0501709, -4.4765697)
+
+[node name="Barrell4" parent="." unique_id=1229064590 instance=ExtResource("9_xgumm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.6693873, 0.0501709, 4.43326)
+
+[node name="Barrell5" parent="." unique_id=336751526 instance=ExtResource("9_xgumm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.9500729, 1.4280396, 4.43326)
+
+[node name="Barrell6" parent="." unique_id=554984908 instance=ExtResource("9_xgumm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.1962458, 0.0501709, 4.43326)
