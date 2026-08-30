@@ -9,6 +9,7 @@ var timer_active := false
 func _ready() -> void:
 	# Molly has already been saved, so do nothing.
 	if GameState.get_flag("molly_saved"):
+		queue_free()
 		return
 
 	timer_active = true
@@ -16,6 +17,9 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	if GameState.get_flag("molly_saved"):
+		queue_free()
+		return
 	print("MOLLIE: molly_saved = ", GameState.get_flag("molly_saved"))
 	print("MOLLIE: molly_died = ", GameState.get_flag("molly_dead"))
 	if not timer_active:

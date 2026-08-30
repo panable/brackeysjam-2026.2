@@ -19,6 +19,9 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
+	if GameState.get_flag("molly_saved"):
+		get_parent().queue_free()
+		return
 	apply_gravity(delta)
 
 	# Don't do anything else while dead.
