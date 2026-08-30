@@ -10,7 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://bohxn0ir5yhgb" path="res://Scenes/Rooms/Modular/1_tunnel.tscn" id="8_abb5f"]
 [ext_resource type="PackedScene" uid="uid://byohrhhl6x0qp" path="res://Scenes/Rooms/Props/rail.tscn" id="9_ta50k"]
 [ext_resource type="PackedScene" uid="uid://cnmboopidlwfr" path="res://Scenes/Rooms/Props/rail_end.tscn" id="10_8rqoe"]
+[ext_resource type="PackedScene" uid="uid://m4vuxg8tj32h" path="res://Scenes/Rooms/Props/door.tscn" id="10_iejlh"]
 [ext_resource type="PackedScene" uid="uid://dxua8uourhn8q" path="res://Scenes/Props/rocks.tscn" id="11_8rqoe"]
+[ext_resource type="Script" uid="uid://wrsjitwlbsa0" path="res://Scenes/Rooms/Props/oneway.gd" id="11_qnwan"]
+[ext_resource type="PackedScene" uid="uid://12nqyceo1hri" path="res://Scenes/Rooms/Modular/one_way_door_collider.tscn" id="12_y7qcj"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
@@ -111,6 +114,14 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.00
 
 [node name="1_Tunnel" parent="." unique_id=90287768 instance=ExtResource("8_abb5f")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.7484555e-07, 0, 4)
+
+[node name="Door2" parent="1_Tunnel" unique_id=1751437828 instance=ExtResource("10_iejlh")]
+transform = Transform3D(1.3113417e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113417e-07, -4.7683716e-07, 0, -1.4342233)
+script = ExtResource("11_qnwan")
+room_id_link = "25"
+
+[node name="one_way_door_collider" parent="1_Tunnel/Door2" unique_id=2010904796 instance=ExtResource("12_y7qcj")]
+transform = Transform3D(1.3113417e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113417e-07, 0.23422289, 0, 0)
 
 [node name="Rail2" parent="." unique_id=385074005 instance=ExtResource("9_ta50k")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.1524091e-07, 0, 4)
