@@ -5,13 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://glfncrv37l2" path="res://Scenes/Rooms/Modular/2_wall_2.tscn" id="3_4744a"]
 [ext_resource type="PackedScene" uid="uid://duiwymejna7kb" path="res://Scenes/Rooms/Modular/2_door.tscn" id="4_x0ul6"]
 [ext_resource type="PackedScene" uid="uid://b5i57i5272y5q" path="res://Scenes/Rooms/Modular/2_wall_1.tscn" id="5_uvhjg"]
-<<<<<<< HEAD
-[ext_resource type="PackedScene" uid="uid://ci1qnhg571qjh" path="res://Scenes/Characters/Leonard_c.tscn" id="6_avic2"]
-=======
 [ext_resource type="PackedScene" uid="uid://dqh6bvuwk7pqh" path="res://Scenes/Characters/leonard.tscn" id="6_avic2"]
 [ext_resource type="PackedScene" uid="uid://dimut542fwbua" path="res://Scenes/Props/rug.tscn" id="7_jgy8s"]
 [ext_resource type="PackedScene" uid="uid://cyium3uo1d0x2" path="res://Scenes/Props/chair.tscn" id="8_4744a"]
->>>>>>> refs/remotes/origin/main
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -122,11 +118,6 @@ transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -8, 
 [node name="2_Wall_1" parent="." unique_id=146063753 instance=ExtResource("5_uvhjg")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -7.9999995, 0, 4.0000005)
 
-<<<<<<< HEAD
-[node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("6_avic2")]
-transform = Transform3D(-0.4566231, 0, -0.5305613, 0, 0.7, 0, 0.5305613, 0, -0.4566231, 0.9410259, 0.006947756, 0.8846113)
-dialogue_path = "res://Dialogue/leonard.json"
-=======
 [node name="Leonard2" parent="." unique_id=607612770 instance=ExtResource("6_avic2")]
 transform = Transform3D(-0.49497464, 0, -0.49497482, 0, 0.7, 0, 0.49497482, 0, -0.49497464, 1.0000001, 0, 0.99999994)
 
@@ -138,4 +129,3 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.3
 
 [node name="Chair2" parent="." unique_id=994423430 instance=ExtResource("8_4744a")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.383626, 0, -4.4410105)
->>>>>>> refs/remotes/origin/main

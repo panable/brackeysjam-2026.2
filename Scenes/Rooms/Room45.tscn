@@ -149,9 +149,6 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.04
 
 [node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("7_nctl0")]
 transform = Transform3D(-0.6, 0, -5.2453668e-08, 0, 0.6, 0, 5.2453668e-08, 0, -0.6, -0.0074437237, 0.0032306314, 12.29691)
-<<<<<<< HEAD
-dialogue_path = "res://Dialogue/ham.json"
-=======
 
 [node name="Rug" parent="." unique_id=1590738221 instance=ExtResource("8_o8mbm")]
 transform = Transform3D(-3.0404437, 0, -5.2697476e-07, 0, 1, 0, 2.6580403e-07, 0, -6.027889, 3.496911e-07, 0, 4)
@@ -170,4 +167,3 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8.2
 
 [node name="Barrell3" parent="." unique_id=1042652339 instance=ExtResource("10_0mmda")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8.239868, 1.5583267, 3.9280784)
->>>>>>> refs/remotes/origin/main
