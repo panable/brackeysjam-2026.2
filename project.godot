@@ -29,6 +29,8 @@ window/stretch/aspect="expand"
 [global_group]
 
 player=""
+enemy=""
+door=""
 
 [input]
 

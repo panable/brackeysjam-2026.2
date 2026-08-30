@@ -4,13 +4,15 @@
 [ext_resource type="Material" uid="uid://f5uck7fupvt6" path="res://Materials/World/3_Wall.tres" id="2_yj75b"]
 [ext_resource type="Material" uid="uid://d1r8f22ur4iuv" path="res://Materials/World/3_Brick.tres" id="3_oero6"]
 [ext_resource type="PackedScene" uid="uid://3k2j87aegcuh" path="res://Scenes/Rooms/Modular/block_3.tscn" id="4_yj75b"]
+[ext_resource type="Script" uid="uid://b43x8xdejti22" path="res://Scenes/Rooms/Modular/DoorController.gd" id="5_oero6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x2tcy"]
 size = Vector3(0.29174805, 5, 1)
 
-[node name="3_Door2" unique_id=659803188 instance=ExtResource("1_xe7mm")]
+[node name="3_Door2" unique_id=659803188 groups=["door"] instance=ExtResource("1_xe7mm")]
+script = ExtResource("5_oero6")
 
-[node name="3_Door" parent="." index="0" unique_id=459463223]
+[node name="3_Door" parent="." index="0" unique_id=138530705]
 surface_material_override/0 = ExtResource("2_yj75b")
 surface_material_override/1 = ExtResource("3_oero6")
 
@@ -30,4 +32,3 @@ shape = SubResource("BoxShape3D_x2tcy")
 
 [node name="block" parent="." index="2" unique_id=1952296378 instance=ExtResource("4_yj75b")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
-visible = false

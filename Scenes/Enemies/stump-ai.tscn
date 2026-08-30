@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://3urgup52qxha"]
+
+[ext_resource type="Script" uid="uid://c738g213hjc2b" path="res://Scenes/Enemies/stump_ai.gd" id="1_7f3ae"]
+[ext_resource type="PackedScene" uid="uid://d2stvqam04qmw" path="res://Scenes/Enemies/stump.tscn" id="1_yrbwk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7f3ae"]
+size = Vector3(1, 1, 0.7010498)
+
+[node name="StumpAi" type="Node3D" unique_id=1757472003]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1566555838]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.33273494, 0)
+collision_layer = 3
+wall_min_slide_angle = 0.19373155
+script = ExtResource("1_7f3ae")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1125136303]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9150194, 0.1494751)
+shape = SubResource("BoxShape3D_7f3ae")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="CharacterBody3D" unique_id=96493979]
+
+[node name="stump" parent="CharacterBody3D" unique_id=250468708 instance=ExtResource("1_yrbwk")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0.5305908, 0)

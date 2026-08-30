@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://duiwymejna7kb"]
 
 [ext_resource type="PackedScene" uid="uid://bd5ptkcdus8g6" path="res://Models/Rooms/2_Door.glb" id="1_ojgwb"]
+[ext_resource type="Script" uid="uid://b43x8xdejti22" path="res://Scenes/Rooms/Modular/DoorController.gd" id="2_apwi6"]
 [ext_resource type="Material" uid="uid://86t4y7oywc3y" path="res://Materials/World/2_Floor.tres" id="2_kva5e"]
 [ext_resource type="Material" uid="uid://ct7xbmm16g2ib" path="res://Materials/World/2_Wall.tres" id="3_apwi6"]
 [ext_resource type="Material" uid="uid://uu2oc0e7orqo" path="res://Materials/World/2_Barrier.tres" id="4_6y7dn"]
@@ -9,9 +10,10 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_ojgwb"]
 size = Vector3(0.29174805, 5, 1)
 
-[node name="2_Door" unique_id=157010418 instance=ExtResource("1_ojgwb")]
+[node name="2_Door" unique_id=157010418 groups=["door"] instance=ExtResource("1_ojgwb")]
+script = ExtResource("2_apwi6")
 
-[node name="Cube_035" parent="." index="0" unique_id=101168893]
+[node name="Cube_035" parent="." index="0" unique_id=651236686]
 surface_material_override/0 = ExtResource("2_kva5e")
 surface_material_override/1 = ExtResource("3_apwi6")
 surface_material_override/2 = ExtResource("4_6y7dn")
@@ -32,4 +34,3 @@ shape = SubResource("BoxShape3D_ojgwb")
 
 [node name="block" parent="." index="1" unique_id=1952296378 instance=ExtResource("5_kva5e")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
-visible = false
