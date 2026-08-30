@@ -6,6 +6,7 @@
 
 [node name="Dungeon64" type="Node3D" unique_id=44548786]
 script = ExtResource("1_n7ay7")
+room_id = "64"
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1630445044]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.9, 28.444996, -8.041607)

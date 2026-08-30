@@ -10,6 +10,7 @@ polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Arr
 
 [node name="Dungeon3" type="Node3D" unique_id=39397122]
 script = ExtResource("1_1shr8")
+room_id = "3"
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=196036261]
 navigation_mesh = SubResource("NavigationMesh_g6lp7")

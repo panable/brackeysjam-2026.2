@@ -6,6 +6,7 @@
 
 [node name="Dungeon8" type="Node3D" unique_id=967692656]
 script = ExtResource("1_hm8mf")
+room_id = "8"
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=87360682]
 

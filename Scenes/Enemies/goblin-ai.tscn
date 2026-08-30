@@ -38,8 +38,9 @@ script = ExtResource("3_acdor")
 transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 0.83333313, 0.16666666)
 shape = SubResource("SphereShape3D_g6lp7")
 
-[node name="EnemyHealth" type="Node" parent="CharacterBody3D" unique_id=88699488]
+[node name="EnemyHealth" type="Node" parent="CharacterBody3D" unique_id=88699488 node_paths=PackedStringArray("free_me")]
 script = ExtResource("4_wxu1l")
+free_me = NodePath("../..")
 
 [connection signal="area_entered" from="CharacterBody3D/AtkZone" to="CharacterBody3D/AtkZone" method="_on_area_entered"]
 [connection signal="area_exited" from="CharacterBody3D/AtkZone" to="CharacterBody3D/AtkZone" method="_on_area_exited"]

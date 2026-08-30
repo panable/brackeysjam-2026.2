@@ -10,6 +10,8 @@ signal died
 @export_category("Health")
 @export var max_health: float = 3.0
 
+@export_category("ToFree")
+@export var free_me: Node
 
 @export_category("Hit Flash")
 @export var hit_flash_duration: float = 0.12
@@ -212,7 +214,7 @@ func hit_animation() -> void:
 
 
 func die() -> void:
-	get_parent().queue_free()
+	free_me.queue_free()
 
 
 func is_dead() -> bool:

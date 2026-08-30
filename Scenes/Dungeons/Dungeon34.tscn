@@ -6,6 +6,7 @@
 
 [node name="Dungeon34" type="Node3D" unique_id=1116816115]
 script = ExtResource("1_tuqqm")
+room_id = "34"
 
 [node name="Doorways" type="Node" parent="." unique_id=1932410241]
 

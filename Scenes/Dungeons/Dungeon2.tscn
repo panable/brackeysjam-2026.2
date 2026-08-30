@@ -11,6 +11,7 @@ polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(3, 2, 0), PackedInt32Arr
 
 [node name="Dungeon2" type="Node3D" unique_id=1556231601]
 script = ExtResource("1_qvmbe")
+room_id = "2"
 
 [node name="Doorways" type="Node" parent="." unique_id=1310699601]
 
@@ -32,26 +33,26 @@ destination_room = "uid://d2grl2bxa2jud"
 destination_entrace = "South"
 
 [node name="South" parent="Doorways/Entrances" unique_id=1048002829 instance=ExtResource("2_qvmbe")]
-transform = Transform3D(8.940697e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 8.940697e-08, 0.29999995, 0.8, 8.650002)
+transform = Transform3D(8.940697e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 8.940697e-08, 0.09999995, 0.8, 8.650002)
 destination_room = "uid://dmru5kh2af3oj"
 destination_entrace = "North"
 
 [node name="Exits" type="Node" parent="Doorways" unique_id=227345347]
 
 [node name="West" type="Marker3D" parent="Doorways/Exits" unique_id=541273855]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 0.8, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.3, 0.8, 2.3)
 gizmo_extents = 0.26
 
 [node name="East" type="Marker3D" parent="Doorways/Exits" unique_id=1292777004]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8, 0.8, 4)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.7, 0.8, 2.4)
 gizmo_extents = 0.26
 
 [node name="North" type="Marker3D" parent="Doorways/Exits" unique_id=2092327952]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0.8, -0.55)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0.8, -1.75)
 gizmo_extents = 0.26
 
 [node name="South" type="Marker3D" parent="Doorways/Exits" unique_id=2113194771]
-transform = Transform3D(8.940697e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 8.940697e-08, 4.4703484e-08, 0.8, 8.650002)
+transform = Transform3D(8.940697e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 8.940697e-08, 4.4703484e-08, 0.8, 5.3500013)
 gizmo_extents = 0.26
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1255471594]
