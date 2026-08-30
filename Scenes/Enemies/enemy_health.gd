@@ -214,8 +214,8 @@ func hit_animation() -> void:
 
 
 func die() -> void:
+	await get_tree().create_timer(1.2).timeout
 	free_me.queue_free()
-
 
 func is_dead() -> bool:
 	return current_health <= 0.0
