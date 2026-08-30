@@ -33,7 +33,10 @@ shape = SubResource("SphereShape3D_f1jpd")
 
 [node name="EnemyHealth" type="Node" parent="CharacterBody3D" unique_id=4745032 node_paths=PackedStringArray("free_me")]
 script = ExtResource("3_idrbu")
+money_amt = 3
+max_health = 5.0
 free_me = NodePath("../..")
+knockback_speed = 20.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1533903530]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9983974, 0)
