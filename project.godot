@@ -31,7 +31,6 @@ window/stretch/aspect="expand"
 player=""
 enemy=""
 door=""
-molly=""
 
 [input]
 

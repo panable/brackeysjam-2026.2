@@ -150,14 +150,15 @@ _data = {
 
 [node name="Door2" unique_id=1751437828 instance=ExtResource("1_88sax")]
 
-[node name="DoorL" parent="Door" parent_id_path=PackedInt32Array(19742742) index="0" unique_id=1400507205]
+[node name="DoorL" parent="Door" parent_id_path=PackedInt32Array(1109212170) index="0" unique_id=1766366562]
 transform = Transform3D(2.3113975e-08, -0.528786, -0.8487548, -1, -4.3711374e-08, 4.8554144e-15, -3.7100264e-08, 0.8487548, -0.528786, 0, 0, 1)
 surface_material_override/0 = ExtResource("2_16wvt")
 
-[node name="DoorR" parent="Door" parent_id_path=PackedInt32Array(19742742) index="1" unique_id=1557824508]
+[node name="DoorR" parent="Door" parent_id_path=PackedInt32Array(1109212170) index="1" unique_id=1478529586]
 transform = Transform3D(-8.553826e-08, -0.52503014, -0.85108364, -1, 1.6292068e-07, -7.1054274e-15, -1.3865913e-07, -0.85108364, 0.52503014, 0, 0, -1)
 surface_material_override/0 = ExtResource("2_16wvt")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=938367333]
+active = false
 libraries/ = SubResource("AnimationLibrary_8p5an")
 autoplay = &"OpenDoubleDoor"
