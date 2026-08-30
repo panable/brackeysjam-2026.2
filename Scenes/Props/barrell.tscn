@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cma8jqk36acsy"]
+
+[ext_resource type="PackedScene" uid="uid://v0enccajbqad" path="res://Models/Props/Barrell.glb" id="1_0irma"]
+[ext_resource type="Material" uid="uid://b6q7v82himcm3" path="res://Materials/Characters/DarkBrown.tres" id="2_2vfj6"]
+[ext_resource type="Material" uid="uid://br51a6u1qm0sx" path="res://Materials/Characters/DarkGrey.tres" id="2_duugb"]
+[ext_resource type="Material" uid="uid://dkmwns4hpp04k" path="res://Materials/Characters/LightBrown.tres" id="3_t6xwn"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_jw7ag"]
+
+[node name="Barrell" unique_id=1857609700 instance=ExtResource("1_0irma")]
+
+[node name="Barrel" parent="." index="0" unique_id=316867330]
+surface_material_override/0 = ExtResource("2_duugb")
+surface_material_override/1 = ExtResource("3_t6xwn")
+surface_material_override/2 = ExtResource("2_2vfj6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Barrel" index="0" unique_id=1039697178]
+transform = Transform3D(1.480035, 0, 0, 0, 0.731606, 0, 0, 0, 1.9090316, 0, 0.69915533, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Barrel/StaticBody3D" index="0" unique_id=1787001424]
+shape = SubResource("CylinderShape3D_jw7ag")

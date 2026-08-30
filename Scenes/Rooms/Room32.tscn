@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://duiwymejna7kb" path="res://Scenes/Rooms/Modular/2_door.tscn" id="4_fpgio"]
 [ext_resource type="PackedScene" uid="uid://b5i57i5272y5q" path="res://Scenes/Rooms/Modular/2_wall_1.tscn" id="5_gi5cw"]
 [ext_resource type="PackedScene" uid="uid://dp8nrjd5lmcng" path="res://Scenes/Characters/Hershey_c.tscn" id="6_835qd"]
+[ext_resource type="PackedScene" uid="uid://dimut542fwbua" path="res://Scenes/Props/rug.tscn" id="7_60yiw"]
+[ext_resource type="PackedScene" uid="uid://ddqooitltlvx8" path="res://Scenes/Props/desk.tscn" id="8_fpgio"]
+[ext_resource type="PackedScene" uid="uid://cma8jqk36acsy" path="res://Scenes/Props/barrell.tscn" id="9_fpgio"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -240,4 +243,40 @@ transform = Transform3D(1.3113417e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113417e-07, 11.9
 transform = Transform3D(1.3113417e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113417e-07, 12, 0, -1.0490733e-06)
 
 [node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("6_835qd")]
-transform = Transform3D(-0.43425408, 0, -0.41403306, 0, 0.59999996, 0, 0.41403306, 0, -0.43425408, -0.01868257, 0.010388494, -1.0240982)
+transform = Transform3D(-0.43425408, 0, -0.41403306, 0, 0.59999996, 0, 0.41403306, 0, -0.43425408, 0.9813175, 0.010388494, -0.024098244)
+
+[node name="Rug" parent="." unique_id=1590738221 instance=ExtResource("7_60yiw")]
+transform = Transform3D(-9.436571, 0, -8.2497127e-07, 0, 1, 0, 8.2497127e-07, 0, -9.436571, 5.9604645e-08, 0, -5.2108035e-15)
+
+[node name="Desk" parent="." unique_id=3148942 instance=ExtResource("8_fpgio")]
+transform = Transform3D(-1.7838203, -0.45056263, 0.0771933, -1.2668211e-07, 0.08535077, 1.992702, -0.9044255, 0.88865554, -0.15225047, -5.5695567, 1.1984797, 7.851065)
+
+[node name="Desk2" parent="." unique_id=1116412197 instance=ExtResource("8_fpgio")]
+transform = Transform3D(-0.8297418, -7.954427e-08, -1.8197607, -1.1115461e-14, -1, 1.7484555e-07, -1.8197607, 3.6269167e-08, 0.8297418, -7, 1.3998713, 6.119594e-07)
+
+[node name="Desk3" parent="." unique_id=141235285 instance=ExtResource("8_fpgio")]
+transform = Transform3D(-1.4174894, 0, -1.41093, 0, 1, 0, 1.41093, 0, -1.4174894, -4.3925185, 0, -7.777789)
+
+[node name="Desk4" parent="." unique_id=438146646 instance=ExtResource("8_fpgio")]
+transform = Transform3D(-2, -7.1853776e-08, -2.2674081e-07, 1.0450279e-07, 0.5696155, -1.6438227, 2.472699e-07, -0.82191133, -1.139231, 7.0646505, 0.82884777, 12.954188)
+
+[node name="Desk5" parent="." unique_id=1853408215 instance=ExtResource("8_fpgio")]
+transform = Transform3D(-1.0220268, 0, -1.7191455, 0, 1, 0, 1.7191455, 0, -1.0220268, 5.2336087, 0, 3.0133488)
+
+[node name="Desk6" parent="." unique_id=696233757 instance=ExtResource("8_fpgio")]
+transform = Transform3D(-1.6345165, 0.5629525, 0.24636129, 1.2420738e-07, 0.21375456, -1.9537748, -1.1525433, -0.7983693, -0.34938544, 4.9999995, 1.1038911, -6.0000005)
+
+[node name="Barrell" parent="." unique_id=1857609700 instance=ExtResource("9_fpgio")]
+transform = Transform3D(-0.32360455, 0.9461925, -4.1359392e-08, 0, -4.371139e-08, -1, -0.9461925, -0.32360455, 1.4145198e-08, 7.5854397, 0.60512877, 8.818196)
+
+[node name="Barrell2" parent="." unique_id=268844345 instance=ExtResource("9_fpgio")]
+transform = Transform3D(-0.98230815, -0.18727261, 8.1859435e-09, -1.990062e-15, -4.3711385e-08, -1, 0.18727261, -0.98230815, 4.293805e-08, 10.224279, 0.60512877, 5.5750484)
+
+[node name="Barrell3" parent="." unique_id=1032025557 instance=ExtResource("9_fpgio")]
+transform = Transform3D(0.026286857, 0.99965453, -4.3696286e-08, -1.990062e-15, -4.3711385e-08, -1, -0.99965453, 0.026286857, -1.1490371e-09, 8.650537, 0.60512877, -2.046374)
+
+[node name="Barrell4" parent="." unique_id=593849793 instance=ExtResource("9_fpgio")]
+transform = Transform3D(0.54832476, 0.83626544, -3.6554326e-08, -2.1944356e-15, -4.371139e-08, -1, -0.83626544, 0.54832476, -2.396804e-08, -10.279372, 0.60512877, 4.113716)
+
+[node name="Barrell5" parent="." unique_id=2082124181 instance=ExtResource("9_fpgio")]
+transform = Transform3D(-0.46064824, 0.8875827, -3.879748e-08, -4.1424765e-15, -4.3711392e-08, -1, -0.8875827, -0.46064824, 2.0135577e-08, -10.234412, 0.60512877, -5.1264186)

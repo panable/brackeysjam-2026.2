@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://glfncrv37l2" path="res://Scenes/Rooms/Modular/2_wall_2.tscn" id="3_h6j4g"]
 [ext_resource type="PackedScene" uid="uid://duiwymejna7kb" path="res://Scenes/Rooms/Modular/2_door.tscn" id="4_yyvax"]
 [ext_resource type="PackedScene" uid="uid://b5i57i5272y5q" path="res://Scenes/Rooms/Modular/2_wall_1.tscn" id="5_iby2t"]
+[ext_resource type="PackedScene" uid="uid://dimut542fwbua" path="res://Scenes/Props/rug.tscn" id="6_yyvax"]
+[ext_resource type="PackedScene" uid="uid://butel2so6412m" path="res://Scenes/Props/sign.tscn" id="7_iby2t"]
+[ext_resource type="PackedScene" uid="uid://m4vuxg8tj32h" path="res://Scenes/Rooms/Props/door.tscn" id="8_odjjq"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -114,3 +117,12 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -7.9
 
 [node name="2_Wall_4" parent="." unique_id=1108150887 instance=ExtResource("5_iby2t")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.0000005, 0, 3.9999995)
+
+[node name="Rug" parent="." unique_id=1590738221 instance=ExtResource("6_yyvax")]
+transform = Transform3D(-8.866942, 0, -1.8700646e-07, 0, 1, 0, 7.7517274e-07, 0, -2.1391046, -2, 0, 1.7484555e-07)
+
+[node name="Sign_" parent="." unique_id=1918404254 instance=ExtResource("7_iby2t")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.9942834, 0.28931057, 2.8937376)
+
+[node name="Door2" parent="." unique_id=1751437828 instance=ExtResource("8_odjjq")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.2178955, 0, -8.0585403e-07)

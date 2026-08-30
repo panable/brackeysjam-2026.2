@@ -33,6 +33,7 @@ transform = Transform3D(0.60000014, 0, 0, 0, 0.60000014, 0, 0, 0, 0.60000014, 0,
 transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0)
 collision_mask = 4
 script = ExtResource("3_acdor")
+damage = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D/AtkZone" unique_id=1141824649]
 transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 0.83333313, 0.16666666)

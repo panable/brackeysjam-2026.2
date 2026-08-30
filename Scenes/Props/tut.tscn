@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bfxikqr4ka7cy"]
+
+[ext_resource type="PackedScene" uid="uid://crorpkeagj8lo" path="res://Models/Props/tut.glb" id="1_a6fvy"]
+[ext_resource type="Material" uid="uid://cimro0w5hgnh2" path="res://Materials/Characters/Purple.tres" id="2_p0cb1"]
+
+[node name="tut" unique_id=1639960867 instance=ExtResource("1_a6fvy")]
+
+[node name="Text_002" parent="." index="0" unique_id=1444076401]
+surface_material_override/0 = ExtResource("2_p0cb1")

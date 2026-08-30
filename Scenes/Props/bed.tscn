@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cg8nggp6hkktf"]
+
+[ext_resource type="PackedScene" uid="uid://dpn4ts3yhiwve" path="res://Models/Props/Bed.glb" id="1_lp0ee"]
+[ext_resource type="Material" uid="uid://b6q7v82himcm3" path="res://Materials/Characters/DarkBrown.tres" id="2_p4oya"]
+[ext_resource type="Material" uid="uid://cdhlf1dc0vluc" path="res://Materials/Characters/Cream.tres" id="3_jj8e4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jw7ag"]
+
+[node name="Bed" unique_id=1081245431 instance=ExtResource("1_lp0ee")]
+
+[node name="Cube_008" parent="." index="0" unique_id=619353754]
+surface_material_override/0 = ExtResource("2_p4oya")
+surface_material_override/1 = ExtResource("3_jj8e4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=167485772]
+transform = Transform3D(2.9222114, 0, 0, 0, 1, 0, 0, 0, 1.6259048, 0, 0.5080304, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=382714166]
+shape = SubResource("BoxShape3D_jw7ag")
