@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://ifdygy2cgq0" path="res://Scenes/Rooms/Modular/1_floor.tscn" id="5_jbjq7"]
 [ext_resource type="PackedScene" uid="uid://d4b2nguo0nd6l" path="res://Scenes/Rooms/Modular/1_wall_3.tscn" id="6_p3jaw"]
 [ext_resource type="PackedScene" uid="uid://miqiswjo833m" path="res://Scenes/Rooms/Modular/1_step_down.tscn" id="7_icjwg"]
+[ext_resource type="PackedScene" uid="uid://dxua8uourhn8q" path="res://Scenes/Props/rocks.tscn" id="8_02aoe"]
+[ext_resource type="PackedScene" uid="uid://butel2so6412m" path="res://Scenes/Props/sign.tscn" id="9_jbjq7"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
@@ -161,3 +163,18 @@ transform = Transform3D(-2.1855695e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855695e-07, 0.
 
 [node name="1_StepDown2" parent="." unique_id=627106933 instance=ExtResource("7_icjwg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7.9380636)
+
+[node name="Rocks_" parent="." unique_id=1396706831 instance=ExtResource("8_02aoe")]
+transform = Transform3D(0.40350595, 0, 0.914977, 0, 1, 0, -0.914977, 0, 0.40350595, 8.005294, 0.40440744, 1.4463354)
+
+[node name="Rocks_3" parent="." unique_id=366349069 instance=ExtResource("8_02aoe")]
+transform = Transform3D(-0.8805345, 0, -0.4739823, 0, 1, 0, 0.4739823, 0, -0.8805345, 7.727517, 1.2132223, 23.679607)
+
+[node name="Rocks_4" parent="." unique_id=1965624990 instance=ExtResource("8_02aoe")]
+transform = Transform3D(0.93146896, 0, 0.36382115, 0, 1, 0, -0.36382115, 0, 0.93146896, 0.5009945, 1.2132223, -7.632511)
+
+[node name="Rocks_2" parent="." unique_id=641063379 instance=ExtResource("8_02aoe")]
+transform = Transform3D(-0.4280216, 0, -0.9037684, 0, 1, 0, 0.9037684, 0, -0.4280216, -0.013982309, 0.8088149, 10.614214)
+
+[node name="Sign_" parent="." unique_id=1918404254 instance=ExtResource("9_jbjq7")]
+transform = Transform3D(-0.98138577, 0, 0.7569812, 0, 1.3189029, 0, -1.1370102, 0, -0.6533719, 1.6463519, 0.28960335, 23.46307)

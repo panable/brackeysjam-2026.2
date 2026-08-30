@@ -16,6 +16,9 @@ extends Node3D
 # The amount is controlled by "take_amount" in the dialogue JSON.
 @export var take_item: ItemData
 
+var player_camera : Camera3D
+var cutscene_camera: Camera3D
+
 @onready var interaction_area: Area3D = $Area3D
 @onready var dialogue: Control = get_node("/root/RealGame/DialogueUI")
 
@@ -95,6 +98,9 @@ func interact() -> void:
 	player.can_move = false
 	is_talking = true
 	player.set_process_unhandled_input(false)
+	player_camera = get_viewport().get_camera_3d()
+	cutscene_camera = player.get_node("Pivot").get_node("CutsceneCamera")
+	cutscene_camera.make_current()
 
 	var selected_entry := entry_name
 
@@ -330,6 +336,7 @@ func _on_finished() -> void:
 	if player:
 		player.set_process_unhandled_input(true)
 		player.can_move = true
+		player_camera.make_current()
 
 	is_talking = false
 
