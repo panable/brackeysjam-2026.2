@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://cts1fs58ftu8u"]
+
+[ext_resource type="Script" uid="uid://b0ahi1lib00il" path="res://Scenes/Enemies/stump_ai_mollie.gd" id="1_6e73v"]
+[ext_resource type="PackedScene" uid="uid://d2stvqam04qmw" path="res://Scenes/Enemies/stump.tscn" id="2_car5v"]
+[ext_resource type="Script" uid="uid://cp1gfh7ibjjx3" path="res://Scenes/Enemies/mollyrotater.gd" id="3_6e73v"]
+[ext_resource type="Script" uid="uid://c8drn2k102qjw" path="res://Scenes/Enemies/enemy_health.gd" id="4_dmyla"]
+[ext_resource type="Script" uid="uid://ct04ulfwrf23h" path="res://Scenes/Enemies/atk_zone.gd" id="5_h7do0"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_wff37"]
+radius = 0.827
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_k7n27"]
+radius = 0.6269531
+
+[node name="StumpAiMolly" type="Node3D" unique_id=279173028]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1673428241]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.33273494, 0)
+collision_layer = 3
+wall_min_slide_angle = 0.19373155
+script = ExtResource("1_6e73v")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="CharacterBody3D" unique_id=2017138231]
+
+[node name="stump" parent="CharacterBody3D" unique_id=250468708 instance=ExtResource("2_car5v")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, -0.2596346, 0)
+script = ExtResource("3_6e73v")
+
+[node name="EnemyHealth" type="Node" parent="CharacterBody3D" unique_id=20472457 node_paths=PackedStringArray("free_me")]
+script = ExtResource("4_dmyla")
+money_amt = 3
+free_me = NodePath("../..")
+
+[node name="AtkZone" type="Area3D" parent="CharacterBody3D" unique_id=440653739]
+transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 0.28436708, -0.27391028)
+collision_mask = 4
+script = ExtResource("5_h7do0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D/AtkZone" unique_id=24376997]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 0.83333313, 0.16666666)
+shape = SubResource("SphereShape3D_wff37")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1684167431]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2847967, 0)
+shape = SubResource("CapsuleShape3D_k7n27")
+
+[connection signal="area_entered" from="CharacterBody3D/AtkZone" to="CharacterBody3D/AtkZone" method="_on_area_entered"]
+[connection signal="area_exited" from="CharacterBody3D/AtkZone" to="CharacterBody3D/AtkZone" method="_on_area_exited"]
+[connection signal="body_entered" from="CharacterBody3D/AtkZone" to="CharacterBody3D/AtkZone" method="_on_body_entered"]
+[connection signal="body_exited" from="CharacterBody3D/AtkZone" to="CharacterBody3D/AtkZone" method="_on_body_exited"]

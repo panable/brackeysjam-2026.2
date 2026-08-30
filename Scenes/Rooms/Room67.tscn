@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://bs46jlrf2dn4l" path="res://Scenes/Rooms/Modular/3_door.tscn" id="4_a3cr6"]
 [ext_resource type="PackedScene" uid="uid://dn34fdfm84ro6" path="res://Scenes/Rooms/Modular/3_step_up.tscn" id="5_h2e5i"]
 [ext_resource type="PackedScene" uid="uid://suq7lh4cw26p" path="res://Scenes/Rooms/Modular/3_step_down.tscn" id="6_g3a1t"]
+[ext_resource type="PackedScene" uid="uid://ca4wyfus167vr" path="res://Scenes/Props/rubble.tscn" id="7_piu3x"]
+[ext_resource type="PackedScene" uid="uid://dpw0hv3nl41uq" path="res://Scenes/Props/crystal.tscn" id="8_a3cr6"]
+[ext_resource type="PackedScene" uid="uid://dt6egi67qw2ix" path="res://Scenes/Enemies/scorpion-ai.tscn" id="9_a3cr6"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -193,3 +196,21 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16, 
 
 [node name="1_StepDown2" parent="." unique_id=627106933 instance=ExtResource("6_g3a1t")]
 transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -8, 0, -7.9999995)
+
+[node name="Rubble" parent="." unique_id=1547588693 instance=ExtResource("7_piu3x")]
+transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 15.886803, 0.09324973, 3.5455186)
+
+[node name="Rubble2" parent="." unique_id=1087473986 instance=ExtResource("7_piu3x")]
+transform = Transform3D(6.556708e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, 6.556708e-08, -7.8513627, 0.09324973, -7.291802)
+
+[node name="Crystal" parent="." unique_id=260263892 instance=ExtResource("8_a3cr6")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.31859, -0.095891, -6.409015)
+
+[node name="Crystal2" parent="." unique_id=68720405 instance=ExtResource("8_a3cr6")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -10.202724, -0.095891, 2.1207275)
+
+[node name="ScorpionAi" parent="." unique_id=1412398291 instance=ExtResource("9_a3cr6")]
+transform = Transform3D(-0.6099388, 0, 0.51766264, 0, 0.8, 0, -0.51766264, 0, -0.6099388, -3.4809763, 0.049999237, -2.212717)
+
+[node name="ScorpionAi2" parent="." unique_id=945049050 instance=ExtResource("9_a3cr6")]
+transform = Transform3D(0.77256197, 0, -0.20772104, 0, 0.8, 0, 0.20772104, 0, 0.77256197, 11.595464, 0.049999237, -2.2127182)

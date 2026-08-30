@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cv2pjqyd5xd1h"]
+
+[ext_resource type="PackedScene" uid="uid://b8c3uvis1s8cg" path="res://Models/Props/Rocks..glb" id="1_pmus1"]
+[ext_resource type="Material" uid="uid://br8rjlueft0wl" path="res://Materials/World/3_Rock.tres" id="2_pmus1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jw7ag"]
+
+[node name="Rocks_" unique_id=1396706831 instance=ExtResource("1_pmus1")]
+
+[node name="Cube" parent="." index="0" unique_id=1348112234]
+material_override = ExtResource("2_pmus1")
+surface_material_override/0 = ExtResource("2_pmus1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=270441463]
+transform = Transform3D(2.3030977, 0, 0, 0, 1, 0, 0, 0, 2.3100264, -0.19569016, -0.017901674, 0.17665568)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=229369409]
+transform = Transform3D(0.9999998, 0, 0, 0, 2.2551413, 0, 0, 0, 0.9999998, 0, 0.769999, 0)
+shape = SubResource("BoxShape3D_jw7ag")

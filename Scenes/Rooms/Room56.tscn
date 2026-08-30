@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bs46jlrf2dn4l" path="res://Scenes/Rooms/Modular/3_door.tscn" id="4_2civd"]
 [ext_resource type="PackedScene" uid="uid://ca4wyfus167vr" path="res://Scenes/Props/rubble.tscn" id="5_3uu0n"]
 [ext_resource type="PackedScene" uid="uid://dpw0hv3nl41uq" path="res://Scenes/Props/crystal.tscn" id="6_hsawa"]
+[ext_resource type="PackedScene" uid="uid://dt6egi67qw2ix" path="res://Scenes/Enemies/scorpion-ai.tscn" id="7_2civd"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -157,3 +158,6 @@ transform = Transform3D(6.556708e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, 6.556708e-08, 
 
 [node name="Crystal" parent="." unique_id=260263892 instance=ExtResource("6_hsawa")]
 transform = Transform3D(-0.9331208, 0, 0.35956314, 0, 1, 0, -0.35956314, 0, -0.9331208, 0, -0.14135742, 0)
+
+[node name="ScorpionAi" parent="." unique_id=1412398291 instance=ExtResource("7_2civd")]
+transform = Transform3D(-0.8, 0, -1.2079664e-07, 0, 0.8, 0, 1.2079664e-07, 0, -0.8, 5.0000005, 0, 4.9999995)

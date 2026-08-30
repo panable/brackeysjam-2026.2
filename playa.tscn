@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://6vac72p2c7e1"]
 
 [ext_resource type="Script" uid="uid://byjbvwekxrks6" path="res://Player.gd" id="1_bcfd2"]
+[ext_resource type="Script" uid="uid://d3k4rek6lc0ld" path="res://stick_controller.gd" id="2_6dpp0"]
 [ext_resource type="Material" uid="uid://dkmwns4hpp04k" path="res://Materials/Characters/LightBrown.tres" id="3_bcfd2"]
 [ext_resource type="PackedScene" uid="uid://s6qnhfpt1k13" path="res://Jack.tscn" id="4_851w8"]
 [ext_resource type="Script" uid="uid://pc4iaeqix5ys" path="res://Health.gd" id="5_bcfd2"]
@@ -159,6 +160,7 @@ script = ExtResource("1_bcfd2")
 
 [node name="Pivot" type="Node3D" parent="." unique_id=49544663]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+script = ExtResource("2_6dpp0")
 
 [node name="Player" parent="Pivot" unique_id=1495614187 instance=ExtResource("4_851w8")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.40000004, 0)
@@ -166,15 +168,15 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.40000004, 0)
 [node name="Sword" type="MeshInstance3D" parent="Pivot" unique_id=1838071834]
 process_mode = 4
 transform = Transform3D(-0.2715236, 0.17931291, -0.6197757, -0.58956194, 0.20419662, 0.31736496, 0.262091, 0.64509743, 0.07181695, -0.45349416, 0.23633572, -0.14734487)
-visible = false
 mesh = SubResource("ArrayMesh_bcfd2")
 script = ExtResource("5_duytu")
+damage_amt = 3
 
 [node name="Timer" type="Timer" parent="Pivot/Sword" unique_id=893106426]
 wait_time = 0.6
 
 [node name="Area3D" type="Area3D" parent="Pivot/Sword" unique_id=896922902]
-collision_mask = 2
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Pivot/Sword/Area3D" unique_id=2027998498]
 transform = Transform3D(1, 0, 0, 0, 1, 1.1920929e-05, 0, 0, 1.0000013, -0.0013296604, 0.745615, -0.023022369)

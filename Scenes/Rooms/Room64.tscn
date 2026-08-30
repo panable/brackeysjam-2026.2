@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bs46jlrf2dn4l" path="res://Scenes/Rooms/Modular/3_door.tscn" id="4_ch8ra"]
 [ext_resource type="PackedScene" uid="uid://suq7lh4cw26p" path="res://Scenes/Rooms/Modular/3_step_down.tscn" id="5_6giwg"]
 [ext_resource type="PackedScene" uid="uid://dn34fdfm84ro6" path="res://Scenes/Rooms/Modular/3_step_up.tscn" id="6_0nwgd"]
+[ext_resource type="PackedScene" uid="uid://ca4wyfus167vr" path="res://Scenes/Props/rubble.tscn" id="7_c6xga"]
+[ext_resource type="PackedScene" uid="uid://dpw0hv3nl41uq" path="res://Scenes/Props/crystal.tscn" id="8_ch8ra"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -100,3 +102,12 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.49
 
 [node name="1_StepDown2" parent="." unique_id=627106933 instance=ExtResource("5_6giwg")]
 transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 3.9999998, 0, -3.4969108e-07)
+
+[node name="Rubble" parent="." unique_id=1547588693 instance=ExtResource("7_c6xga")]
+transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 3.995874, 0.09300559, 15.56781)
+
+[node name="Rubble2" parent="." unique_id=1205726212 instance=ExtResource("7_c6xga")]
+transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 3.9967623, 0.09300559, 0.9124595)
+
+[node name="Crystal" parent="." unique_id=260263892 instance=ExtResource("8_ch8ra")]
+transform = Transform3D(-0.94096035, 0, -0.3385168, 0, 1, 0, 0.3385168, 0, -0.94096035, 4.0000005, -0.08886719, 7.9999995)

@@ -2,12 +2,14 @@ extends Node
 
 signal flag_changed(flag_name: String, value: bool)
 
+var visited_rooms: Dictionary = {}
 
 var flags: Dictionary = {
 	# General game flags
 	"locked Door": false,
 	"flower_planted": false,
 	"molly_dead": false,
+	"molly_saved": false,
 	"key_given_to_marjorie": false,
 	"buck_paid": false,
 	"billy_choices_correct": false,
@@ -87,4 +89,13 @@ func reset_all_flags() -> void:
 			false
 		)
 
+	visited_rooms.clear()
+
 	print("ALL FLAGS RESET")
+	
+func visit_room(room_id: String) -> void:
+	visited_rooms[room_id] = true
+
+
+func has_visited_room(room_id: String) -> bool:
+	return visited_rooms.has(room_id)	

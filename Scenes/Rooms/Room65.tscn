@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://ywugr7ge6dnv" path="res://Scenes/Rooms/Modular/3_wall_c.tscn" id="3_qja3j"]
 [ext_resource type="PackedScene" uid="uid://bs46jlrf2dn4l" path="res://Scenes/Rooms/Modular/3_door.tscn" id="4_mgyir"]
 [ext_resource type="PackedScene" uid="uid://10lmihvnxhoc" path="res://Scenes/Characters/Pablo_c.tscn" id="5_epajk"]
+[ext_resource type="PackedScene" uid="uid://ca4wyfus167vr" path="res://Scenes/Props/rubble.tscn" id="6_mgyir"]
+[ext_resource type="PackedScene" uid="uid://cv2pjqyd5xd1h" path="res://Scenes/Props/rocks_3.tscn" id="7_rgwgk"]
+[ext_resource type="PackedScene" uid="uid://ckwwvqljghwbc" path="res://Scenes/Props/prison_wall.tscn" id="8_rgwgk"]
 
 [node name="Room1" type="Node3D" unique_id=20324241]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
@@ -101,4 +104,43 @@ transform = Transform3D(1, 0, 1.4210855e-14, 0, 1, 0, -1.4210855e-14, 0, 1, -8, 
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 8, 0, -6.3977757e-07)
 
 [node name="NPC" parent="." unique_id=1288896559 instance=ExtResource("5_epajk")]
-transform = Transform3D(-0.15120448, 0, 0.58063513, 0, 0.5999999, 0, -0.58063513, 0, -0.15120448, -5.002266, -0.0038650036, 0.0002389751)
+transform = Transform3D(-0.15120448, 0, 0.58063513, 0, 0.5999999, 0, -0.58063513, 0, -0.15120448, -5.002266, 0.055092692, 0.0002389751)
+
+[node name="Rubble" parent="." unique_id=1547588693 instance=ExtResource("6_mgyir")]
+transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 7.090576, 0.09300559, 0.06365905)
+
+[node name="Rocks_" parent="." unique_id=1396706831 instance=ExtResource("7_rgwgk")]
+transform = Transform3D(-1.2895218, 0, 1.9994383, 0, 0.26165715, 0, -1.9067489, 0, -1.3522068, -7.5470557, -0.04069954, 4.0726285)
+
+[node name="Rocks_2" parent="." unique_id=1764217464 instance=ExtResource("7_rgwgk")]
+transform = Transform3D(-2.1558473, 0.000120599274, 0.8475524, 0.0008748043, 0.26165712, -0.0007226763, -0.8086826, -3.8451195e-05, -2.2594683, -7.8236747, -0.04069954, -3.6978319)
+
+[node name="Rocks_3" parent="." unique_id=627955587 instance=ExtResource("7_rgwgk")]
+transform = Transform3D(-1.652896, 2.1496726e-05, -1.6801581, 0.0008750319, 0.3352368, -0.000722528, 1.603851, -0.00016074502, -1.7315373, -8.251174, -0.03649956, 1.4657109)
+
+[node name="Rocks_4" parent="." unique_id=264854041 instance=ExtResource("7_rgwgk")]
+transform = Transform3D(-0.18334047, -3.6681802e-05, -2.4060874, 0.0008745498, 0.13674212, -0.00072284247, 2.2945468, -5.504924e-05, -0.19225362, -4.6970477, -0.058926642, 2.1614478)
+
+[node name="Rocks_5" parent="." unique_id=191360927 instance=ExtResource("7_rgwgk")]
+transform = Transform3D(-2.2781887, 4.556085e-05, -0.34526905, 0.0008745496, 0.13674212, -0.0007228424, 0.3292639, -4.7960195e-05, -2.3889341, -5.0239596, -0.058926642, -1.7279742)
+
+[node name="PrisonWall2" parent="." unique_id=174829349 instance=ExtResource("8_rgwgk")]
+transform = Transform3D(8.246866e-08, 0, -0.5, 0, 0.5, 0, 0.42355222, 0, 9.735359e-08, -1.7535645, 0, 4.0890923)
+
+[node name="PrisonWall8" parent="." unique_id=150294616 instance=ExtResource("8_rgwgk")]
+transform = Transform3D(8.246866e-08, 0, -0.5, 0, 0.5, 0, 0.42355222, 0, 9.735359e-08, -1.7535644, 0, 5.783301)
+
+[node name="PrisonWall3" parent="." unique_id=1706481765 instance=ExtResource("8_rgwgk")]
+transform = Transform3D(8.246866e-08, 0, -0.5, 0, 0.5, 0, 0.42355222, 0, 9.735359e-08, -1.7535646, 0, 2.3948834)
+
+[node name="PrisonWall4" parent="." unique_id=1725601752 instance=ExtResource("8_rgwgk")]
+transform = Transform3D(8.246866e-08, 0, -0.5, 0, 0.5, 0, 0.42355222, 0, 9.735359e-08, -1.7535647, 0, 0.7006747)
+
+[node name="PrisonWall5" parent="." unique_id=1531777187 instance=ExtResource("8_rgwgk")]
+transform = Transform3D(8.246866e-08, 0, -0.5, 0, 0.5, 0, 0.42355222, 0, 9.735359e-08, -1.753565, 0, -0.99353415)
+
+[node name="PrisonWall6" parent="." unique_id=1845481484 instance=ExtResource("8_rgwgk")]
+transform = Transform3D(8.246866e-08, 0, -0.5, 0, 0.5, 0, 0.42355222, 0, 9.735359e-08, -1.7535651, 0, -2.687743)
+
+[node name="PrisonWall7" parent="." unique_id=1326064162 instance=ExtResource("8_rgwgk")]
+transform = Transform3D(8.246866e-08, 0, -0.5, 0, 0.5, 0, 0.42355222, 0, 9.735359e-08, -1.7535652, 0, -4.381952)
